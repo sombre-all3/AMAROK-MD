@@ -83,7 +83,7 @@ ${edmsg}
 ┃❉│ 
 ${srmsg}
 ┃❉╰─────────────────
-╰═══════⊷❍'
+╰═══════⊷❍
 %readmore`.trimStart(),
   header: '┍━ *_「 %category 」_*',
   body: '```│ ❐ %cmd %islimit %isPremium```',
