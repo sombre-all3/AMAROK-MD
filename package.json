@@ -1,7 +1,7 @@
 {
   "name": "Cyber-Md",
   "version": "0.1.1",
-  "description": "Cyber md bot created by cybxkid",
+  "description": "Cyber md bot created by cybxkid with many features",
   "depecrated": false,
   "main": "cyber.js",
   "directories": {
