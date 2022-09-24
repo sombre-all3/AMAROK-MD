@@ -27,8 +27,7 @@ let tags = {
   'info': 'ɪɴғᴏ',
 }
 const defaultMenu = {
-  before: '
-= `╭═══〘 ${BOT_INFO.split(";")[0]} 〙═══⊷❍
+  before: '=`╭═══〘 ${BOT_INFO.split(";")[0]} 〙═══⊷❍
 ┃❉╭──────────────
 ┃❉│
 ┃❉│ Owner : ${BOT_INFO.split(";")[1]}
