@@ -1,6 +1,13 @@
+//smaple only !!! errors found
+
+
+
+
+
 let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
+let pp = '.src/safu.jpg'
 let tags = {
   'main': 'Main',
   'game': 'Game',
@@ -27,23 +34,23 @@ let tags = {
   '': 'No Category',
 }
 const defaultMenu = {
-  before: 
- = `╭═══〘 ${BOT_INFO.split(";")[0]} 〙═══⊷❍
+  before: `
+╭═══〘 type ur bot name bro 〙═══⊷❍
 ┃❉╭──────────────
 ┃❉│
-┃❉│ Owner : ${BOT_INFO.split(";")[1]}
+┃❉│ Owner : 
 ┃❉│ User : ${message.senderName}
-┃❉│ Mode : ${MODE}
-┃❉│ Server : ${config.HEROKU.APP_NAME}
-┃❉│ Total RAM: ${total}
-┃❉│ Available RAM: ${used}
-┃❉│ Disk Space: 620 GB
-┃❉│ Version: ${config.VERSION}
+┃❉│ Mode : Public
+┃❉│ Server : Amzon AWS
+┃❉│ Total RAM: 128 GB
+┃❉│ Available RAM: 64 GB
+┃❉│ Disk Space: 1 TB
+┃❉│ Version: 1.0.1
 ┃❉│
 ┃❉│
 ┃❉│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃❉│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃❉│   ${BOT_INFO.split(";")[0]}
+┃❉│  ꏳꌩꌃꏂꋪꉧꀘꀤꀷ
 ┃❉│ 
 ┃❉╰───────────────
 ╰═════════════════⊷
@@ -54,44 +61,31 @@ const defaultMenu = {
 ${gmsg}
 ┃❉╰─────────────────
 ╰══════════════════⊷❍
-╭════〘 Download 〙════⊷❍
+╭════〘 %me 〙════⊷❍
 ┃❉╭─────────────────
 ┃❉│ 
-${dlmsg}
-┃❉╰─────────────────
-╰══════════════════⊷❍
-╭════〘 Logo Maker 〙════⊷❍
-┃❉╭─────────────────
+\`\`\`┃ ᴏɪ, %name!\`\`\`
+┃
+┃❉│ %emos *ʟɪᴍɪᴛ* : %limit Limit
+┃❉│ %emos *ʟᴇᴠᴇʟ* : \`\`\`%level (%exp / %maxexp))\`\`\`
+\`\`\`┃❉│  %totalexp xᴘ ɪɴ ᴛᴏᴛᴀʟ\`\`\`
 ┃❉│ 
-┃❉│ logo
-${tms}
-┃❉╰─────────────────
-╰══════════════════⊷❍
-╭════〘 Owner 〙════⊷❍
-┃❉╭─────────────────
+┃❉│ %emos *ᴅᴀᴛᴇ* : \`\`\`%week, %date\`\`\`
+┃❉│ %emos *ᴅᴀᴛᴇ ᴀʀᴀʙɪᴄ* : \`\`\`%dateIslamic\`\`\`
+┃❉│ %emos *ᴛɪᴍᴇ* : \`\`\`%time\`\`\`
 ┃❉│ 
-${ownmsg}
-┃❉╰─────────────────
-╰══════════════════⊷❍
-╭════〘 Edit 〙════⊷❍
-┃❉╭─────────────────
+┃❉│ %emos *ᴜᴘᴛɪᴍᴇ* : \`\`\`%uptime (%muptime)\`\`\`
+┃❉│ %emos *ᴅᴀᴛᴀʙᴀsᴇ* : \`\`\`%rtotalreg of %totalreg\`\`\`
 ┃❉│ 
-${edmsg}
-┃❉╰─────────────────
-╰══════════════════⊷❍
-╭════〘 Search 〙════⊷❍
-┃❉╭─────────────────
-┃❉│ 
-${srmsg}
 ┃❉╰─────────────────
 ╰══════════════════⊷❍
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '╭════〘 %category 〙════⊷❍\n┃❉╭─────────────────\n',
+  body: '┃❉│  %cmd %islimit %isPremium',
+  footer: '┃❉╰─────────────────\n╰══════════════════⊷❍\n',
   after: `
 *%npmname@^%version*
-${'```%npmdesc```'}
+${'%npmdesc'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
