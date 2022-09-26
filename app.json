@@ -1,39 +1,10 @@
 {
-    "name": "CYBER MD BOT",
-    "description": "Cyber Bot MD created by cybxkid with many features",
-    "keywords": [
-        "Cyber Md",
-        "WhatsApp",
-        "Cyberxkid",
-        "multi-device"
-    ],
-    "website": "https://github.com/Diegoson",
-    "repository": "https://github.com/Diegoson/CYBER-MD-BOT",
-    "logo": "https://i.ibb.co/nkkhhFJ/20220924-111939.jpg",
-    "success_url": "https://dashboard.heroku.com/apps/",
-    "env": {
-        "HEROKU": {
-            "description": "Are you deploying the bot in heroku or not?",
-            "required": true,
-            "value": "YES"
-        },
-        "HEROKU_APP_NAME": {
-            "description": "Use the same App name as first one.",
-            "required": true
-        }
-    },
-    "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-        }
-    ],
-    "addons": [
-        {
-            "plan": "heroku-postgresql",
-            "options": {
-                "version": "13"
-            }
-        }
-    ],
-    "stack": "container"
-}
+  "name": "CYBER-MD",
+  "description": "Cyber Bot MD created by cybxkid with many features",
+  "repository": "https://github.com/Diegoson/CYBER-MD-BOT",
+  "logo": "https://i.ibb.co/nkkhhFJ/20220924-111939.jpg",
+  "keywords": [
+    "bot",
+    "whatsapp",
+    "whatsapp-bot"
+  ]
