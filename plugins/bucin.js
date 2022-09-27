@@ -143,5 +143,4 @@ global.bucin = [
   "Just one wish, loved by you ....",
   "I'm without you like an ambulance without a sound..",
   "It's enough that Antarctica is far away. Between us.",
-  "Im Cyber Md Bot l was created by cyberxkid known as Diegoson Fenandez.",
 ]
