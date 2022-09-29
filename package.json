@@ -1,6 +1,6 @@
 {
   "name": "Cyber-Md",
-  "version": "0.0.4",
+  "version": "4.3.0",
   "description": "Cyber md bot created by cybxkid with many features",
   "depecrated": false,
   "main": "cyber.js",
@@ -32,8 +32,8 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@adiwajshing/baileys": "^0.2.4",
-    "awesome-phonenumber": "^2.70.0",
+    "@adiwajshing/baileys": "^4.1.0",
+    "awesome-phonenumber": "^0.2.4",
     "brainly-scraper-v2": "^1.1.2",
     "cfonts": "^2.9.3",
     "chalk": "^4.1.1",
