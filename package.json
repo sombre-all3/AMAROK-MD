@@ -2,7 +2,7 @@
   "name": "CYBER-MD",
   "version": "4.0.0",
   "description": "Automated whatsapp md bot created using nodejs",
-  "depecrated" :false,
+  "depecrated": false,
   "main": "cyber.js",
   "scripts": {
     "start": "node cyber.js",
@@ -10,7 +10,7 @@
   },
   "keywords": [
     "termux",
-    "whatsapp",
+    "jswhatsapp",
     "2022",
     "base",
     "baileys-md",
