@@ -38,8 +38,8 @@ const defaultMenu = {
 ╭═══〘 CYBER MD 〙═══⊷❍
 ┃❉╭──────────────
 ┃❉│
-┃❉│ Owner : 
-┃❉│ User : ${message.senderName}
+┃❉│ Owner : Cyber kid
+┃❉│ User : %$
 ┃❉│ Mode : Public
 ┃❉│ Server : Amzon AWS
 ┃❉│ Total RAM: 128 GB
