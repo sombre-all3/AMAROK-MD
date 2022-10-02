@@ -34,11 +34,11 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭═══〘 type ur bot name bro 〙═══⊷❍
+╭═══〘 CYBER MD 〙═══⊷❍
 ┃❉╭──────────────
 ┃❉│
-┃❉│ Owner : 
-┃❉│ User : ${message.senderName}
+┃❉│ Owner : Cyber kid
+┃❉│ User : %name
 ┃❉│ Mode : Public
 ┃❉│ Server : Amzon AWS
 ┃❉│ Total RAM: 128 GB
