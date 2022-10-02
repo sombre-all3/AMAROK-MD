@@ -5,7 +5,7 @@
   "depecrated" :false,
   "main": "cyber.js",
   "scripts": {
-    "start": "node xeon.js",
+    "start": "node cyber.js",
     "test": "node test.js"
   },
   "keywords": [
