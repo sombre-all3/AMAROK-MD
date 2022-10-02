@@ -39,7 +39,7 @@ const defaultMenu = {
 ┃❉╭──────────────
 ┃❉│
 ┃❉│ Owner : Cyber kid
-┃❉│ User : %$
+┃❉│ User : %name
 ┃❉│ Mode : Public
 ┃❉│ Server : Amzon AWS
 ┃❉│ Total RAM: 128 GB
@@ -50,7 +50,7 @@ const defaultMenu = {
 ┃❉│
 ┃❉│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃❉│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃❉│  ꏳꌩꌃꏂꋪꉧꀘꀤꀷ
+┃❉│  ᴄʏʙᴇʀ ᴍᴅ ʙᴏᴛ
 ┃❉│ 
 ┃❉╰───────────────
 ╰═════════════════⊷
