@@ -1,18 +1,27 @@
 require('./config.js')
-let { WAConnection: _WAConnection } = require('@adiwajshing/baileys')
-let { generate } = require('qrcode-terminal')
-let syntaxerror = require('syntax-error')
-let simple = require('./lib/simple')
-//  let logs = require('./lib/logs')
-let { promisify } = require('util')
-let yargs = require('yargs/yargs')
-let Readline = require('readline')
-let cp = require('child_process')
-let path = require('path')
-let fs = require('fs')
+const { WAConnection: _WAConnection } = require('@adiwajshing/baileys')
+const cloudDBAdapter = require('./lib/cloudDBAdapter')
+const { generate } = require('qrcode-terminal')
+const syntaxerror = require('syntax-error')
+const simple = require('./lib/simple')
+//  const logs = require('./lib/logs')
+const { promisify } = require('util')
+const yargs = require('yargs/yargs')
+const Readline = require('readline')
+const cp = require('child_process')
+const _ = require('lodash')
+const path = require('path')
+const fs = require('fs')
+var low
+try {
+  low = require('lowdb')
+} catch (e) {
+  low = require('./lib/lowdb')
+}
+const { Low, JSONFile } = low
 
-let rl = Readline.createInterface(process.stdin, process.stdout)
-let WAConnection = simple.WAConnection(_WAConnection)
+const rl = Readline.createInterface(process.stdin, process.stdout)
+const WAConnection = simple.WAConnection(_WAConnection)
 
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
@@ -23,42 +32,28 @@ global.timestamp = {
 const PORT = process.env.PORT || 3000
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&,.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
-global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
-if (!global.DATABASE.data.users) global.DATABASE.data = {
-  users: {},
-  chats: {},
-  stats: {},
-  msgs: {},
-  sticker: {},
-}
-if (!global.DATABASE.data.chats) global.DATABASE.data.chats = {}
-if (!global.DATABASE.data.stats) global.DATABASE.data.stats = {}
-if (!global.DATABASE.data.stats) global.DATABASE.data.msgs = {}
-if (!global.DATABASE.data.sticker) global.DATABASE.data.sticker = {}
+global.db = new Low(
+  /https?:\/\//.test(opts['db'] || '') ?
+    new cloudDBAdapter(opts['db']) :
+    new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)
+)
+global.DATABASE = global.db // Backwards Compatibility
+
 global.conn = new WAConnection()
-conn.version = [3,3234,9]
-let authFile = `${opts._[0] || 'toxic'}.json`
+let authFile = `${opts._[0] || 'session'}.data.json`
 if (fs.existsSync(authFile)) conn.loadAuthInfo(authFile)
 if (opts['trace']) conn.logger.level = 'trace'
 if (opts['debug']) conn.logger.level = 'debug'
 if (opts['big-qr'] || opts['server']) conn.on('qr', qr => generate(qr, { small: false }))
-let lastJSON = JSON.stringify(global.DATABASE.data)
-if (!opts['test']) setInterval(() => {
-  conn.logger.info('Saving database . . .')
-  if (JSON.stringify(global.DATABASE.data) == lastJSON) conn.logger.info('Database is up to date')
-  else {
-    global.DATABASE.save()
-    conn.logger.info('Done saving database!')
-    lastJSON = JSON.stringify(global.DATABASE.data)
-  }
+if (!opts['test']) setInterval(async () => {
+  await global.db.write()
 }, 60 * 1000) // Save every minute
 if (opts['server']) require('./server')(global.conn, PORT)
 
-
-
-
+conn.version = [3, 3234, 9]
+conn.connectOptions.maxQueryResponseTime = 60_000
 if (opts['test']) {
   conn.user = {
     jid: '2219191@s.whatsapp.net',
@@ -101,10 +96,20 @@ if (opts['test']) {
   rl.on('line', line => conn.sendMessage('123@s.whatsapp.net', line.trim(), 'conversation'))
 } else {
   rl.on('line', line => {
-    global.DATABASE.save()
     process.send(line.trim())
   })
-  conn.connect().then(() => {
+  conn.connect().then(async () => {
+    await global.db.read()
+    global.db.data = {
+      users: {},
+      chats: {},
+      stats: {},
+      msgs: {},
+      sticker: {},
+      settings: {},
+      ...(global.db.data || {})
+    }
+    global.db.chain = _.chain(global.db.data)
     fs.writeFileSync(authFile, JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
     global.timestamp.connect = new Date
   })
@@ -119,19 +124,22 @@ global.reloadHandler = function () {
     conn.off('chat-update', conn.handler)
     conn.off('message-delete', conn.onDelete)
     conn.off('group-participants-update', conn.onParticipantsUpdate)
+    conn.off('group-update', conn.onGroupUpdate)
     conn.off('CB:action,,call', conn.onCall)
   }
-  conn.welcome = 'ᴏɪ, @user!\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ɢʀᴏᴜᴘ @subject\n\n@desc'
-  conn.bye = 'ᴏᴋᴇ ʙᴇɪ @user!'
-  conn.spromote = '@user ɴᴏᴡ ᴀɴ ᴀᴅᴅᴍɪɴ!'
-  conn.sdemote = '@user ʟᴏɴɢᴇʀ ᴀɴ ᴀᴅᴅᴍɪɴ!'
+  conn.welcome = 'Hai, @user!\nWelcome to the group @subject\n\n@desc'
+  conn.bye = '@user GoodBye'
+  conn.spromote = '@user now admin'
+  conn.sdemote = '@user not admin now'
   conn.handler = handler.handler
   conn.onDelete = handler.delete
   conn.onParticipantsUpdate = handler.participantsUpdate
+  conn.onGroupUpdate = handler.GroupUpdate
   conn.onCall = handler.onCall
   conn.on('chat-update', conn.handler)
   conn.on('message-delete', conn.onDelete)
   conn.on('group-participants-update', conn.onParticipantsUpdate)
+  conn.on('group-update', conn.onGroupUpdate)
   conn.on('CB:action,,call', conn.onCall)
   if (isInit) {
     conn.on('error', conn.logger.error)
@@ -166,20 +174,19 @@ for (let filename of fs.readdirSync(pluginFolder).filter(pluginFilter)) {
     delete global.plugins[filename]
   }
 }
-console.log(Object.keys(global.plugins))
 global.reload = (_event, filename) => {
   if (pluginFilter(filename)) {
     let dir = path.join(pluginFolder, filename)
     if (dir in require.cache) {
       delete require.cache[dir]
-      if (fs.existsSync(dir)) conn.logger.info(`re - require plugin '${filename}'`)
+      if (fs.existsSync(dir)) conn.logger.info(`back - requires plugin '${filename}'`)
       else {
-        conn.logger.warn(`deleted plugin '${filename}'`)
+        conn.logger.warn(`removed plugin '${filename}'`)
         return delete global.plugins[filename]
       }
-    } else conn.logger.info(`requiring new plugin '${filename}'`)
+    } else conn.logger.info(`need new plugin '${filename}'`)
     let err = syntaxerror(fs.readFileSync(dir), filename)
-    if (err) conn.logger.error(`syntax error while loading '${filename}'\n${err}`)
+    if (err) conn.logger.error(`syntax error when loading '${filename}'\n${err}`)
     else try {
       global.plugins[filename] = require(dir)
     } catch (e) {
@@ -192,7 +199,6 @@ global.reload = (_event, filename) => {
 Object.freeze(global.reload)
 fs.watch(path.join(__dirname, 'plugins'), global.reload)
 global.reloadHandler()
-process.on('exit', () => global.DATABASE.save())
 
 
 
@@ -218,7 +224,6 @@ async function _quickTest() {
     ])
   }))
   let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm] = test
-  console.log(test)
   let s = global.support = {
     ffmpeg,
     ffprobe,
@@ -230,9 +235,9 @@ async function _quickTest() {
   require('./lib/sticker').support = s
   Object.freeze(global.support)
 
-  if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
-  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
-  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
+  if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg to send videos (pkg install ffmpeg)')
+  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('Stickers cant be animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
+  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp in ffmpeg is not installed (pkg install imagemagick)')
 }
 
 _quickTest()
