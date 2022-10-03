@@ -1,18 +1,18 @@
-console.log('Starting...')
+console.log('Start...')
 let { spawn } = require('child_process')
 let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
-const CFonts  = require('cfonts')
-CFonts.say('CYBER MD BOT\n WHATSAPP BOT\nby cyber kid\nv 1.0.0', {
-  font: 'shade',
+const CFonts = require('cfonts')
+CFonts.say('Ammu', {
+  colors: ['#f2aa4c'],
+  font: 'block',
   align: 'center',
-  gradient: ['red', 'magenta']
 })
 CFonts.say(`'${package.name}' By @${package.author.name || package.author}`, {
+  colors: ['#f2aa4c'],
   font: 'console',
   align: 'center',
-  gradient: ['red', 'magenta']
 })
 
 var isRunning = false
@@ -25,9 +25,9 @@ function start(file) {
   isRunning = true
   let args = [path.join(__dirname, file), ...process.argv.slice(2)]
   CFonts.say([process.argv[0], ...args].join(' '), {
+    colors: ['#f2aa4c'],
     font: 'console',
     align: 'center',
-    gradient: ['red', 'magenta']
   })
   let p = spawn(process.argv[0], args, {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc']
