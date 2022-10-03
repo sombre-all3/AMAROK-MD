@@ -1,11 +1,19 @@
 {
   "name": "CYBER-MD",
-  "description": "Cyber Bot MD created by cybxkid with many features",
+  "description": "Cyber Not MD Created By Cyber X Kid With Many Features",
   "repository": "https://github.com/Diegoson/CYBER-MD-BOT",
   "logo": "https://i.imgur.com/KicIWqa.jpeg",
-  "keywords": [
-    "bot",
-    "whatsapp",
-    "whatsapp-bot"
-   ]
-}
+  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
+  "buildpacks": [
+              {
+                
+                "url": "heroku/nodejs"
+              },
+              {
+                "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+              },
+              {
+                "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+              }
+            ]
+          }   
