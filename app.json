@@ -17,7 +17,7 @@
       "value": "null"
     },
     "MODE": {
-      "description": "mode",
+      "description": "set mode private or public",
       "required": true,
       "value": "private"
     },
@@ -42,7 +42,7 @@
     "STICKER_PACKNAME": {
       "description": "sticker pack info required",
       "required": false,
-      "value": "Abu;Jsl"
+      "value": "☯︎ᴀᴍᴀʀᴏᴋ☯︎"
     },
     "LANGUAGE": {
       "description": "bot language required add your bot language here.",
