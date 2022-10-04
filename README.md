@@ -1,4 +1,4 @@
-<h1 align="center">☠︎︎A̸M̸A̸R̸O̸K̸ M̸D̸☠︎︎<br></h1>
+<h1 align="center">☯︎ᴀᴍᴀʀᴏᴋ ᴍᴅ ʙᴏᴛ☯︎<br></h1>
 <p align="center">
 <img src="https://i.imgur.com/vwNY4lg.jpeg" width="200" height="200"></p>
 
