@@ -13,6 +13,11 @@
       "required": false,
       "value": ""
     },
+    "SESSION_ID": {
+      "description": "session id required add your session id jere",
+      "required": true,
+      "value": ""
+    },
     "ANTILINK_ACTION": {
       "description": "kick",
       "required": false,
