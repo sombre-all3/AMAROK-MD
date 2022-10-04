@@ -15,6 +15,7 @@ module.exports = {
     process.env.HANDLER === "false" || process.env.HANDLER === "null"
       ? "^"
       : "^[,]",
+  SESSION_ID: (process.env.SESSION_ID || '').trim(),
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
   PACKNAME: process.env.PACKNAME || "ᴀᴍᴀʀᴏᴋ",
