@@ -1,58 +1,58 @@
 {
   "name": "AMAROK MD",
-  "description": "amarok md - made by cybxkid",
-  "keywords": ["whatsapp-bot", "multi-device", "amarok-md", "cybxkid"],
-  "repository": "https://github.com/Diegoson/AMAROK-MD",
+  "description": "𝚊𝚖𝚊𝚛𝚘𝚔 𝚖𝚍 𝚋𝚘𝚝 𝚙𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚌𝚢𝚋𝚎𝚛𝚡𝚔𝚒𝚍",
   "logo": "https://i.imgur.com/vwNY4lg.jpeg",
+  "keywords": ["whatsapp"],
+  "repository": "https://github.com/Diegoson/AMAROK-MD",
+  "website": "https://github.com/Diegoson",
+  "success_url": "https://github.com/Diegoson",
   "stack": "container",
   "env": {
-    "SESSION_ID": {
-      "description": "session id required add your session id here",
-      "required": true,
+    "ANTI_LINK": {
+      "description": "true/false",
+      "required": false,
       "value": ""
     },
-    "SUDO": {
-      "description": "add admin sudo here(Example..27686881509)",
-      "required": true,
-      "value": "null"
+    "ANTILINK_ACTION": {
+      "description": "kick",
+      "required": false,
+      "value": ""
     },
-    "MODE": {
-      "description": "set mode private or public",
-      "required": true,
-      "value": "private"
+    "RMBG_KEY": {
+      "description": "Remove bg api key required",
+      "required": false,
+      "value": ""
+    },
+    "HANDLERS": {
+      "description": "prefix for commands, enter false for no prefix",
+      "required": false,
+      "value": ""
+    },
+    "HANDLERS": {
+      "description": "prefix for commands, enter false for no prefix",
+      "required": false,
+      "value": ""
+    },
+    "PACKNAME": {
+      "description": "Sticker Packname",
+      "required": false
+    },
+
+    "AUTHOR": {
+      "description": "Sticker Pack AUTHOR required",
+      "required": false
+    },
+    "SUDO": {
+      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "required": false
     },
     "HEROKU_APP_NAME": {
-      "description": "heroku app name, same as above entered",
+      "description": "Heroku app name, same as above entered",
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "heroku account api key, https://dashboard.heroku.com/account",
+      "description": "Heroku account api key, https://dashboard.heroku.com/account",
       "required": true
-    },
-    "LOG_MSG": {
-      "description": "show whatsapp msgs in log",
-      "required": false,
-      "value": "false"
-    },
-    "PREFIX": {
-      "description": "prefix for bot. all so can be null or false multi prefix",
-      "required": true,
-      "value": "."
-    },
-    "STICKER_PACKNAME": {
-      "description": "sticker pack info required",
-      "required": false,
-      "value": "☯︎ᴀᴍᴀʀᴏᴋ☯︎"
-    },
-    "LANGUAGE": {
-      "description": "bot language required add your bot language here.",
-      "required": false,
-      "value": "english"
     }
-  },
-  "addons": [
-    {
-      "plan": "heroku-postgresql"
-    }
-  ]
+  }
 }
