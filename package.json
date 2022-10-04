@@ -1,15 +1,15 @@
 {
-   "name": "abu-md",
+   "name": "amarok-md",
    "version": "2.0.0",
-   "description": "Abu MD - Simple whatsapp Multi Device bot based on @adiwajshing/baileys.",
+   "description": "Amarok MD- Simple whatsapp Multi Device bot based on @adiwajshing/baileys.",
    "main": "index.js",
    "scripts": {
       "start": "pm2 start . --attach --name ❀"
    },
-   "author": "Jsl",
+   "author": "Cyberxkid",
    "license": "ISC",
    "dependencies": {
-      "@adiwajshing/baileys": "git+https://github.com/Afx-Abu/Baileys.git",
+      "@adiwajshing/baileys": "git+https://github.com/Diegoson/Baileys.git",
       "@adiwajshing/keyed-db": "^0.2.4",
       "acrcloud": "^1.4.0",
       "wa-sticker-formatter": "^4.3.2",
