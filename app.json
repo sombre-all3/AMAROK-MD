@@ -1,17 +1,17 @@
 {
-  "name": "Abu MD",
-  "description": "Abu MD - Simple WhatsApp Multi Device Bot",
-  "keywords": ["whatsapp-bot", "multi-device", "Jsl", "abu-md", "abu"],
-  "repository": "https://github.com/5hefin/Alexa-MD",
+  "name": "AMAROK MD",
+  "description": "Amarok Md - made by cybxkid",
+  "keywords": ["whatsapp-bot", "multi-device", "amarok-md", "cybxkid"],
+  "repository": "https://github.com/Diegoson/AMAROK-MD",
   "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "session id",
+      "description": "session id required add your session id here",
       "required": true,
       "value": ""
     },
     "SUDO": {
-      "description": "admin",
+      "description": "add admin sudo here(Example..27686881509)",
       "required": true,
       "value": "null"
     },
@@ -39,12 +39,12 @@
       "value": "."
     },
     "STICKER_PACKNAME": {
-      "description": "sticker pack info",
+      "description": "sticker pack info required",
       "required": false,
       "value": "Abu;Jsl"
     },
     "LANGUAGE": {
-      "description": "bot language.",
+      "description": "bot language required add your bot language here.",
       "required": false,
       "value": "english"
     }
