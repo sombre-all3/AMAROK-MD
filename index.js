@@ -1,62 +1,55 @@
 const {
   default: makeWASocket,
   useSingleFileAuthState,
+  Browsers,
   makeInMemoryStore,
-  fetchLatestBaileysVersion,
-  Browsers
 } = require("@adiwajshing/baileys");
-const {
-     DATABASE,
-     VERSION
-} = require('./config');
 const fs = require("fs");
-const { 
-         Message,
-         Image, 
-         Video,
-         PluginDB,
-         Greetings,
-         serialize
- } = require("./lib/");
+const { serialize } = require("./lib/serialize");
+const { Message, Image, Sticker } = require("./lib/Base");
 const pino = require("pino");
 const path = require("path");
-const events = require("./lib/events");
+const events = require("./lib/event");
 const got = require("got");
 const config = require("./config");
 
-const { DataTypes } = require('sequelize');
-
-const AbuDB = config.DATABASE.define('Abu', {
-    info: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    value: {
-        type: DataTypes.TEXT,
-        allowNull: false
-    }
+const { PluginDB } = require("./lib/database/plugins");
+const Greetings = require("./lib/Greetings");
+const { decodeJid, loadDatabase } = require("./lib");
+const { bind } = require("./lib/store");
+const store = makeInMemoryStore({
+  logger: pino().child({ level: "silent", stream: "store" }),
 });
-
-async function bot() {
+require("events").EventEmitter.defaultMaxListeners = 100;
+async function Amarok() {
+  console.log("Syncing Database");
   await config.DATABASE.sync();
   const { state, saveState } = useSingleFileAuthState(
-    "./session.json",
+    "./media/session.json",
     pino({ level: "silent" })
   );
-  const { version, isLatest } = await fetchLatestBaileysVersion();
-     const conn = makeWASocket({
-          logger: pino({ level: "silent" }),
-          auth: state,
-          printQRInTerminal: true,
-          browser: ['Abu MD','Safari','1.0.0'],
-          version
-     });
+  let conn = makeWASocket({
+    logger: pino({ level: "silent" }),
+    auth: state,
+    printQRInTerminal: true,
+
+    browser: Browsers.macOS("Desktop"),
+    downloadHistory: false,
+    syncFullHistory: false,
+  });
+  store.bind(conn.ev);
+  //store.readFromFile("./database/store.json");
+  setInterval(() => {
+    store.writeToFile("./database/store.json");
+    console.log("saved store");
+  }, 30 * 60 * 1000);
 
   conn.ev.on("connection.update", async (s) => {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
-      console.log("Abu "+VERSION);
-      }
+      console.log("Amarok");
+      console.log("ℹ️ Connecting to WhatsApp... Please Wait.");
+    }
 
     if (
       connection === "close" &&
@@ -65,12 +58,14 @@ async function bot() {
       lastDisconnect.error.output.statusCode != 401
     ) {
       console.log(lastDisconnect.error.output.payload);
-      bot();
+      Amarok();
     }
 
     if (connection === "open") {
-      console.log("Login Successful!..✅");
-      console.log("Installing Plugins..✅.");
+      loadDatabase();
+      conn.sendMessage(conn.user.id, { text: "connected ✔✔" });
+      console.log("✅ Login Successful!");
+      console.log("⬇️ Installing External Plugins...");
 
       let plugins = await PluginDB.findAll();
       plugins.map(async (plugin) => {
@@ -86,6 +81,8 @@ async function bot() {
           }
         }
       });
+
+      console.log("⬇️  Installing Plugins...");
 
       fs.readdirSync("./plugins").forEach((plugin) => {
         if (path.extname(plugin).toLowerCase() == ".js") {
@@ -106,30 +103,43 @@ async function bot() {
           let msg = await serialize(JSON.parse(JSON.stringify(ms)), conn);
           if (!msg.message) return;
           let text_msg = msg.body;
-          if (config.LOG_MSG === 'true') {
           if (text_msg) console.log(text_msg);
-          }
+          
           events.commands.map(async (command) => {
-            if (msg.type === "videoMessage" && command.on === "video") {
-              whats = new Video(conn, msg, ms);
-              console.log(whats);
-            }
+            if (
+              command.fromMe &&
+              !config.SUDO.split(",").includes(
+                msg.sender.split("@")[0] || !msg.isSelf
+              )
+            )
+              return;
+
             if (command.pattern && command.pattern.test(text_msg)) {
-              var match = text_msg.match(command.pattern)[1] || false;
+              
+              var match = text_msg.trim().split(/ +/).slice(1).join(" ");
               whats = new Message(conn, msg, ms);
+              
               command.function(whats, match, msg, conn);
-            } else if (command.on === "text") {
+            } else if (text_msg && command.on === "text") {
+              msg.prefix = text_msg.match(new RegExp(config.HANDLERS)) ? text_msg.match(new RegExp(config.HANDLERS))[0] : ''
               whats = new Message(conn, msg, ms);
-              command.function(whats, text_msg, msg, conn);
+              command.function(whats, text_msg, msg, conn, m);
             } else if (
               (command.on === "image" || command.on === "photo") &&
               msg.type === "imageMessage"
             ) {
               whats = new Image(conn, msg, ms);
-              command.function(whats, text_msg, msg, conn);
+              command.function(whats, text_msg, msg, conn, m, ms);
+            } else if (
+              command.on === "sticker" &&
+              msg.type === "stickerMessage"
+            ) {
+              whats = new Sticker(conn, msg, ms);
+              command.function(whats, msg, conn, m, ms);
             }
           });
         });
+        
       } catch (e) {
         console.log(e + "\n\n\n\n\n" + JSON.stringify(msg));
       }
@@ -142,4 +152,4 @@ async function bot() {
   });
 }
 
-bot();
+Amarok();
