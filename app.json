@@ -3,6 +3,7 @@
   "description": "Amarok Md - made by cybxkid",
   "keywords": ["whatsapp-bot", "multi-device", "amarok-md", "cybxkid"],
   "repository": "https://github.com/Diegoson/AMAROK-MD",
+  "logo": "https://i.imgur.com/vwNY4lg.jpeg",
   "stack": "container",
   "env": {
     "SESSION_ID": {
