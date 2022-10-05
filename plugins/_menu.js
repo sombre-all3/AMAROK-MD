@@ -81,6 +81,7 @@ command(
         {
           buttonId: '${prefix}list',
           buttonText: { displayText: serif_B("⫷OWNER⫸") },
+        },
       ],
     });
   }
