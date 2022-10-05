@@ -18,10 +18,11 @@ module.exports = {
       : "^[,]",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
-  PACKNAME: process.env.PACKNAME || "amarok",
+  PACKNAME: process.env.PACKNAME || "𝘢𝘮𝘢𝘳𝘰𝘬",
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
-  AUTHOR: process.env.AUTHOR || "Diegoson",
+  AUTHOR: process.env.AUTHOR || "𝘋𝘪𝘦𝘨𝘰𝘴𝘰𝘯",
+  BOT_INFO: process.env.BOT_INFO || '𝘈𝘮𝘢𝘳𝘰𝘬;0;https:https://i.imgur.com/w5wr6c1.jpeg;https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -44,7 +45,7 @@ module.exports = {
   mongodb_url: process.env.MONGODB_URI || "Enter-Mongo-URI-HERE",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
-  OWNER_NAME: process.env.OWNER_NAME || "Cyberxkid",
-  BOT_NAME: process.env.BOT_NAME || "Amarok md",
+  OWNER_NAME: process.env.OWNER_NAME || "𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥",
+  BOT_NAME: process.env.BOT_NAME || "𝘈𝘮𝘢𝘳𝘰𝘬 𝘮𝘥",
   WORK_TYPE: process.env.WORK_TYPE || "private",
 };
