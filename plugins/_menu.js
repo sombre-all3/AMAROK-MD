@@ -1,3 +1,12 @@
+
+┃❁│
+┃❁│ 
+┃❁│ 
+┃❁│ 
+┃❁│ 
+┃❁│ 
+┃❁│
+
 const events = require("../lib/event");
 const {
   command,
@@ -19,16 +28,16 @@ command(
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
       .split(",");
-    let menu = `╭━━━━━ᆫ ${BOT_NAME} ᄀ━━━
- ▍☯  *OWNER* :  ${OWNER_NAME}
- ▍☯ *PREFIX* : ${prefix}
- ▍☯ *HOST NAME* :${hostname()}
- ▍☯ *DATE* : ${date}
- ▍☯ *TIME* : ${time}
- ▍☯ *COMMANDS* : ${events.commands.length} 
- ▍☯ *UPTIME* : ${clockString(uptime())} 
-╰━━━━━━━━━━━━━━━
-╔═════════════════\n╽`
+   let menu = `╭═════〘  ${BOT_NAME} 〙══════⊷❍
+┃❁│  *OWNER* :  ${OWNER_NAME}
+┃❁│*PREFIX* : ${prefix}
+┃❁│ *HOST NAME* :${hostname()}
+┃❁│  *DATE* : ${date}
+┃❁│*TIME* : ${time}
+┃❁│  *COMMANDS* : ${events.commands.length} 
+┃❁│  *UPTIME* : ${clockString(uptime())} 
+╰═════════════════⊷
+╭═════════════════⊷\n╽`
     let cmnd = [];.   
     let cmd;
     let category = [];
@@ -54,15 +63,15 @@ command(
     });
     cmnd.sort();
     category.sort().forEach((cmmd) => {
-      menu += `\n┠─────〔${cmmd}〕\n╿\n╿╔═════════════════`;
+      menu += `\n┠─────〔${cmmd}〕\n╿\n╿╭═════════════════⊷`;
       let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
         menu += `\n╿┠ ${cmd.trim()}`;
       });
-      menu += `\n╿╚═════════════════\n╿`;
+      menu += `\n╿╰═════════════════⊷\n╿`;
     });
 
-    menu += `\n╚═════════════════`;
+    menu += `\n╰══════════════════⊷❍`;
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.imgur.com/w5wr6c1.jpeg'},
       caption: serif_B(menu.toUpperCase()),
