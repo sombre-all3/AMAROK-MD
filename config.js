@@ -18,10 +18,10 @@ module.exports = {
       : "^[,]",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
-  PACKNAME: process.env.PACKNAME || "ᴀᴍᴀʀᴏᴋ",
+  PACKNAME: process.env.PACKNAME || "amarok",
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
-  AUTHOR: process.env.AUTHOR || "ᴅɪᴇɢᴏsᴏɴ",
+  AUTHOR: process.env.AUTHOR || "Diegoson",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -43,7 +43,7 @@ module.exports = {
   SUDO: process.env.SUDO || "27686881509",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
-  OWNER_NAME: process.env.OWNER_NAME || "ᴄʏʙᴇʀxᴋɪᴅ",
-  BOT_NAME: process.env.BOT_NAME || "ᴀᴍᴀʀᴏᴋ ᴍᴅ",
+  OWNER_NAME: process.env.OWNER_NAME || "Cyberxkid",
+  BOT_NAME: process.env.BOT_NAME || "Amarok md",
   WORK_TYPE: process.env.WORK_TYPE || "private",
 };
