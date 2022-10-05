@@ -38,6 +38,11 @@
       "required": false,
       "value": ""
     },
+    "BOT_NAME": {
+      "description": "Name of AI chatbot(𝘌𝘹𝘱𝘭 𝘈𝘮𝘢𝘳𝘰𝘬)",
+      "required": true,
+      "value":"𝘈𝘮𝘢𝘳𝘰𝘬"
+    },
     "PACKNAME": {
       "description": "Sticker Packname",
       "required": false
