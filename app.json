@@ -23,6 +23,11 @@
       "required": false,
       "value": ""
     },
+    "ALIVE": {
+      "description": "Alive message {image/link}, {sender} can also be used",
+      "required": false,
+      "value":""
+    },
     "RMBG_KEY": {
       "description": "Remove bg api key required",
       "required": false,
