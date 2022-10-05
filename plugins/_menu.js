@@ -64,7 +64,7 @@ command(
 
     menu += `\n╚═════════════════`;
     return await message.client.sendMessage(message.jid, {
-      image: { url: `https://wallpapercave.com/wp/wp3891779.jpg` },
+      image: { url: `https://i.imgur.com/vwNY4lg.jpeg` },
       caption: serif_B(menu.toUpperCase()),
       footer: tiny(
         `amarok Public Bot\nVersion : ${require("../package.json").version}`
