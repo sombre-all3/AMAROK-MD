@@ -20,13 +20,13 @@ command(
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
       .split(",");
    let menu = `╭═════〘  ${BOT_NAME} 〙══════⊷❍
-┃❁│  *OWNER* :  ${OWNER_NAME}
-┃❁│*PREFIX* : ${prefix}
+┃❁│ *OWNER* :  ${OWNER_NAME}
+┃❁│ *PREFIX* : ${prefix}
 ┃❁│ *HOST NAME* :${hostname()}
-┃❁│  *DATE* : ${date}
-┃❁│*TIME* : ${time}
-┃❁│  *COMMANDS* : ${events.commands.length} 
-┃❁│  *UPTIME* : ${clockString(uptime())} 
+┃❁│ *DATE* : ${date}
+┃❁│ *TIME* : ${time}
+┃❁│ *COMMANDS* : ${events.commands.length} 
+┃❁│ *UPTIME* : ${clockString(uptime())} 
 ╰═════════════════⊷
 ╭═════════════════⊷\n╽`
     let cmnd = [];.   
