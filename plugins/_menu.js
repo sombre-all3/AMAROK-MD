@@ -1,12 +1,3 @@
-
-┃❁│
-┃❁│ 
-┃❁│ 
-┃❁│ 
-┃❁│ 
-┃❁│ 
-┃❁│
-
 const events = require("../lib/event");
 const {
   command,
