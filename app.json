@@ -29,7 +29,7 @@
       "value":""
     },
     "RMBG_KEY": {
-      "description": "Remove bg api key required",
+      "description": "Remove bg api key required get it here(https://www.remove.bg/api",
       "required": false,
       "value": ""
     },
