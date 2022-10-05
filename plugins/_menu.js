@@ -79,7 +79,7 @@ command(
           buttonText: { displayText: serif_B("⫷LIST⫸") },
         },
         {
-          buttonId: '${prefix}owner',
+          buttonId: '${prefix}owner`,
           buttonText: { displayText: serif_B("⫷OWNER⫸") },
         },
       ],
