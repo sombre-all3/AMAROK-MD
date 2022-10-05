@@ -72,12 +72,15 @@ command(
       buttons: [
         {
           buttonId: `${prefix}ping`,
-          buttonText: { displayText: serif_B("PING 👩‍💻") },
+          buttonText: { displayText: serif_B("⫷PING⫸") },
         },
         {
           buttonId: `${prefix}list`,
-          buttonText: { displayText: serif_B("LIST👩‍💻  ") },
+          buttonText: { displayText: serif_B("⫷LIST⫸") },
         },
+        {
+          buttonId: '${prefix}list',
+          buttonText: { displayText: serif_B("⫷OWNER⫸") },
       ],
     });
   }
