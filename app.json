@@ -26,7 +26,7 @@
     "ALIVE": {
       "description": "Alive message {image/link}, {sender} can also be used",
       "required": false,
-      "value":""
+      "value": "https://i.imgur.com/w5wr6c1.jpeg",
     },
     "RMBG_KEY": {
       "description": "Remove bg api key required get it here(https://www.remove.bg/api",
@@ -49,16 +49,16 @@
       "value":"𝘈𝘮𝘢𝘳𝘰𝘬"
     },
     "PACKNAME": {
-      "description": "Sticker Packname",
+      "description": "Sticker Packname set sticker pack name(𝘌𝘹𝘱𝘭 𝘈𝘮𝘢𝘳𝘰𝘬)",
       "required": false
     },
 
     "AUTHOR": {
-      "description": "Sticker Pack AUTHOR required",
+      "description": "Sticker pack author required",
       "required": false
     },
     "SUDO": {
-      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "description": "sudo numbers with country code (𝘌𝘹𝘢𝘮𝘱𝘭𝘦 27686881509)",
       "required": false
     },
     "MONGODB_URI": {
@@ -70,7 +70,7 @@
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Heroku account api key, https://dashboard.heroku.com/account",
+      "description": "Heroku account api key, (https://dashboard.heroku.com/account)",
       "required": true
     }
   }
