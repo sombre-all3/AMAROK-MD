@@ -12,7 +12,7 @@
       "value": ""
      },
      "SESSION_ID": {
-       "description": "session id required add your session id)",
+       "description": "session id required add your session id here",
        "required": true,
        "value": ""
     },
