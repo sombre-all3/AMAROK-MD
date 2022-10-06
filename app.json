@@ -2,7 +2,6 @@
   "name": "amarok-md",
   "description": "amarok md powered by cyberxkid",
   "logo": "https://i.imgur.com/vwNY4lg.jpeg",
-  "keywords": ["amarok-bot", "multi-device"],
   "repository": "https://github.com/Diegoson/AMAROK-MD",
   "keywords": ["Amarok","Bot","Amarok-Md"],
   "env": {
@@ -13,7 +12,7 @@
     },
     "SUDO": {
       "description": "sudo numbers with country code Example 27686881509",
-      "required": false,
+      "required": false
     },
     "ANTI_LINK": {
       "description": "true/false",
@@ -27,21 +26,21 @@
     },
     "PACKNAME": {
       "description": "Sticker Packname required Example Amarok",
-      "required": false,
+      "required": false
     },
     "RMBG_KEY": {
-      "description": "Remove bg api key required get it here https://www.remove.bg/api",
+      "description": "Remove bg api key required get it here(https://www.remove.bg/api)",
       "required": false,
       "value": ""
     },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR required Example Diegoson",
-      "required": false,
+      "required": false
     },
     "ALIVE": {
       "description": "Alive message {image/link}, {sender} can also be used",
       "required": false,
-      "value": "https://i.imgur.com/w5wr6c1.jpeg",
+      "value": "https://i.imgur.com/w5wr6c1.jpeg"
     },
     "MODE": {
       "description": "Work Type set public or private",
@@ -49,15 +48,15 @@
       "value": "private"
     },
     "MONGODB_URI": {
-      "description": "A secret String for Mongodb Connection.Required",
+      "description": "A secret String for Mongodb Connection.(Required)"
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
-      "required": true,
+      "required": true
     },
     "HEROKU_API_KEY": {
       "description": "Heroku account api key, https://dashboard.heroku.com/account",
-      "required": true,
+      "required": true
     }
 
 },
