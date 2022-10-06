@@ -10,14 +10,24 @@
       "description": "set true or false",
       "required": false,
       "value": ""
+     },
+     "SESSION_ID": {
+       "description": "session id required add your session id)",
+       "required": true,
+       "value": ""
     },
     "ANTILINK_ACTION": {
       "description": "kicked when you send link",
       "required": false,
       "value": ""
     },
+    "ALIVE": {
+      "description": "Alive message {image/link}, {sender} can also be used",
+      "required": false,
+      "value": "https://i.imgur.com/w5wr6c1.jpeg",
+    },
     "RMBG_KEY": {
-      "description": "Remove bg api key ",
+      "description": "Remove bg api key needed get it here (https://www.remove.bg/api)",
       "required": false,
       "value": ""
     },
@@ -37,6 +47,9 @@
     "SUDO": {
       "description": "sudo numbers with country code (Example 27686882509)",
       "required": false
+    },
+    "MONGODB_URI": {
+     "description": "A secret String for Mongodb Connection.(Required)",
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
