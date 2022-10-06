@@ -38,11 +38,6 @@
       "required": false,
       "value": ""
     },
-    "HANDLERS": {
-      "description": "prefix for commands, enter false for no prefix",
-      "required": false,
-      "value": ""
-    },
     "BOT_NAME": {
       "description": "Name of AI chatbot(𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘈𝘮𝘢𝘳𝘰𝘬)",
       "required": true,
