@@ -38,6 +38,11 @@
       "required": false,
       "value": ""
     },
+    "HANDLERS": {
+      "description": "prefix for commands, enter false for no prefix",
+      "required": false,
+      "value": ""
+    },
     "BOT_NAME": {
       "description": "Name of AI chatbot(𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘈𝘮𝘢𝘳𝘰𝘬)",
       "required": true,
@@ -45,26 +50,28 @@
     },
     "PACKNAME": {
       "description": "Sticker Packname set sticker pack name(𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘈𝘮𝘢𝘳𝘰𝘬)",
-      "required": false,
+      "required": false
     },
+
     "AUTHOR": {
       "description": "Sticker pack author required (𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘋𝘪𝘦𝘨𝘰𝘴𝘰𝘯)",
-      "required": false,
+      "required": false
     },
     "SUDO": {
       "description": "sudo numbers with country code (𝘌𝘹𝘢𝘮𝘱𝘭𝘦 27686881509)",
-      "required": false,
+      "required": false
     },
     "MONGODB_URI": {
-      "description": "A secret String for Mongodb Connection.(𝘙𝘦𝘲𝘶𝘪𝘳𝘦𝘥)",
+    "description": "A secret String for Mongodb Connection.(𝘙𝘦𝘲𝘶𝘪𝘳𝘦𝘥)"
+  
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
-      "required": true,
+      "required": true
     },
     "HEROKU_API_KEY": {
       "description": "Heroku account api key, (https://dashboard.heroku.com/account)",
-      "required": true,
+      "required": true
     }
   }
 }
