@@ -1,63 +1,75 @@
 {
   "name": "amarok-md",
-  "description": "amarok md powered by cybxkid",
-  "logo": "https://i.imgur.com/vwNY4lg.jpeg",
-  "keywords": ["whatsapp"],
+  "description": "amarok md powered by cyberxkid",
+  "keywords": ["abu-bot", "multi-device"],
   "repository": "https://github.com/Diegoson/AMAROK-MD",
-  "stack": "container",
+  "keywords": ["Amarok","Bot","Amarok-Md"],
   "env": {
+   "SESSION_ID": {
+      "description": "session id needed add your session id here",
+      "required": false,
+      "value": ""
+    },
+    "SUDO": {
+      "description": "sudo numbers with country code Example 27686881509",
+      "required": false
+    },
     "ANTI_LINK": {
-      "description": "set true or false",
-      "required": false,
-      "value": ""
-    },
-     "SESSION_ID": {
-       "description": "session id required add your session id here",
-       "required": true,
-       "value": ""
-    },
-    "ANTILINK_ACTION": {
-      "description": "kicked when you send link",
-      "required": false,
-      "value": ""
-    },
-    "ALIVE": {
-      "description": "Alive message {image/link}, {sender} can also be used",
-      "required": false,
-      "value": "https://i.imgur.com/w5wr6c1.jpeg",
-    },
-    "RMBG_KEY": {
-      "description": "Remove bg api key needed get it here https://www.remove.bg/api",
+      "description": "true/false",
       "required": false,
       "value": ""
     },
     "HANDLERS": {
-      "description": "prefix for commands, enter false for no prefix",
+      "description": "prefix for commands/ using false command work without . ",
       "required": false,
-      "value": ""
+      "value": "."
     },
     "PACKNAME": {
-      "description": "Sticker Packname required Example amarok",
-      "required": false,
+      "description": "Sticker Packname required Example Amarok",
+      "required": false
+    },
+    "GOODBYE_MSG": {
+      "description": "goodbye Message",
+      "required": false
     },
     "AUTHOR": {
-      "description": "Sticker Pack AUTHOR needed Example Diegoson",
-      "required": false,
+      "description": "Sticker Pack AUTHOR required Example Diegoson",
+      "required": false
     },
-    "SUDO": {
-      "description": "sudo numbers with country code Example 27686882509",
+    "MODE": {
+      "description": "Work Type set public or private",
       "required": false,
-    },
-    "MONGODB_URI": {
-      "description": "A secret String for Mongodb Connection. Required",
+      "value": "private"
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
-      "required": true,
+      "required": true
     },
     "HEROKU_API_KEY": {
       "description": "Heroku account api key, https://dashboard.heroku.com/account",
-      "required": true,
+      "required": true
     }
+
+},
+"buildpacks": [
+
+  {
+
+      "url": "heroku/nodejs"
+
+  },
+
+  {
+
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+
+  },
+
+  {
+
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+
   }
+
+]
 }
