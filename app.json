@@ -62,7 +62,7 @@
       "required": false
     },
     "MONGODB_URI": {
-    "description": "A secret String for Mongodb Connection.(𝘙𝘦𝘲𝘶𝘪𝘳𝘦𝘥)"
+    "description": "A secret String for Mongodb Connection.(𝘙𝘦𝘲𝘶𝘪𝘳𝘦𝘥)",
   
     },
     "HEROKU_APP_NAME": {
