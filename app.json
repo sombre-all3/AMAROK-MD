@@ -1,7 +1,8 @@
 {
   "name": "amarok-md",
   "description": "amarok md powered by cyberxkid",
-  "keywords": ["abu-bot", "multi-device"],
+  "logo": "https://i.imgur.com/vwNY4lg.jpeg",
+  "keywords": ["amarok-bot", "multi-device"],
   "repository": "https://github.com/Diegoson/AMAROK-MD",
   "keywords": ["Amarok","Bot","Amarok-Md"],
   "env": {
@@ -28,18 +29,27 @@
       "description": "Sticker Packname required Example Amarok",
       "required": false
     },
-    "GOODBYE_MSG": {
-      "description": "goodbye Message",
-      "required": false
+    "RMBG_KEY": {
+      "description": "Remove bg api key required get it here(https://www.remove.bg/api)",
+      "required": false,
+      "value": ""
     },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR required Example Diegoson",
-      "required": false
+      "required": false,
+    },
+    "ALIVE": {
+      "description": "Alive message {image/link}, {sender} can also be used",
+      "required": false,
+      "value": "https://i.imgur.com/w5wr6c1.jpeg",
     },
     "MODE": {
       "description": "Work Type set public or private",
       "required": false,
       "value": "private"
+    },
+    "MONGODB_URI": {
+      "description": "A secret String for Mongodb Connection.(Required)",
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
