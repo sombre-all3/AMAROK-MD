@@ -1,6 +1,6 @@
 {
   "name": "amarok-md",
-  "description": "𝚊𝚖𝚊𝚛𝚘𝚔 𝚖𝚍 𝚋𝚘𝚝 𝚙𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚌𝚢𝚋𝚎𝚛𝚡𝚔𝚒𝚍",
+  "description": "amarok md powered by cyberxkid,
   "logo": "https://i.imgur.com/vwNY4lg.jpeg",
   "keywords": ["whatsapp"],
   "repository": "https://github.com/Diegoson/AMAROK-MD",
@@ -46,7 +46,7 @@
     "BOT_NAME": {
       "description": "Name of AI chatbot(Example Amarok)",
       "required": true,
-      "value":"𝘈𝘮𝘢𝘳𝘰𝘬"
+      "value":"Amarok"
     },
     "PACKNAME": {
       "description": "Sticker Packname set sticker pack name(Example Amarok)",
