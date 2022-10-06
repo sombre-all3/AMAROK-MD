@@ -38,26 +38,26 @@
     },
     "PACKNAME": {
       "description": "Sticker Packname required Example amarok",
-      "required": false
+      "required": false,
     },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR needed Example Diegoson",
-      "required": false
+      "required": false,
     },
     "SUDO": {
       "description": "sudo numbers with country code (Example 27686882509)",
-      "required": false
+      "required": false,
     },
     "MONGODB_URI": {
       "description": "A secret String for Mongodb Connection.(Required)",
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
-      "required": true
+      "required": true,
     },
     "HEROKU_API_KEY": {
       "description": "Heroku account api key, https://dashboard.heroku.com/account",
-      "required": true
+      "required": true,
     }
   }
 }
