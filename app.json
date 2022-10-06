@@ -1,7 +1,7 @@
 {
   "name": "amarok-md",
   "description": "amarok md powered by cybxkid",
-  "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+  "logo": "https://i.imgur.com/vwNY4lg.jpeg",
   "keywords": ["whatsapp"],
   "repository": "https://github.com/Diegoson/AMAROK-MD",
   "stack": "container",
@@ -49,7 +49,7 @@
       "required": false
     },
     "MONGODB_URI": {
-     "description": "A secret String for Mongodb Connection.(Required)",
+      "description": "A secret String for Mongodb Connection.(Required)",
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
