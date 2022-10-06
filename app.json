@@ -67,5 +67,5 @@
       "description": "Heroku account api key, (https://dashboard.heroku.com/account)",
       "required": true,
     }
-  ]
+  }
 }
