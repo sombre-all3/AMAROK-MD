@@ -24,7 +24,7 @@ module.exports = {
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
   AUTHOR: process.env.AUTHOR || "Diegoson",
-  BOT_INFO: process.env.BOT_INFO || 'Amarok,https://i.imgur.com/w5wr6c1.jpeg,https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
+  BOT_INFO: process.env.BOT_INFO || 'Amarok;Cyber;0;https://i.imgur.com/w5wr6c1.jpeg;https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
