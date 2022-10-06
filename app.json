@@ -1,11 +1,11 @@
 {
-  "name": "amarok-md",
-  "description": "amarok md powered by cyberxkid",
-  "logo": "https://i.imgur.com/vwNY4lg.jpeg",
+  "name": "x-asena",
+  "description": "X-asena Multi Device whatsappbot",
+  "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
   "keywords": ["whatsapp"],
-  "repository": "https://github.com/Diegoson/AMAROK-MD",
-  "website": "https://github.com/Diegoson",
-  "success_url": "https://github.com/Diegoson",
+  "repository": "https://github.com/Neeraj-x0/x-asena",
+  "website": "https://github.com/Neeraj-x0/x-asena",
+  "success_url": "https://github.com/Neeraj-x0/x-asena",
   "stack": "container",
   "env": {
     "ANTI_LINK": {
@@ -13,23 +13,13 @@
       "required": false,
       "value": ""
     },
-    "SESSION_ID": {
-      "description": "session id required add your (session id here)",
-      "required": true,
-      "value": ""
-    },
     "ANTILINK_ACTION": {
-      "description": "get kicked while you sand link(Example www.google.com)",
+      "description": "kick",
       "required": false,
       "value": ""
-    },
-    "ALIVE": {
-      "description": "Alive message {image/link}, {sender} can also be used",
-      "required": false,
-      "value": "https://i.imgur.com/w5wr6c1.jpeg",
     },
     "RMBG_KEY": {
-      "description": "Remove bg api key required get it here(https://www.remove.bg/api)",
+      "description": "Remove bg api key ",
       "required": false,
       "value": ""
     },
@@ -42,59 +32,31 @@
       "description": "prefix for commands, enter false for no prefix",
       "required": false,
       "value": ""
-    },
-    "BOT_NAME": {
-      "description": "Name of AI chatbot(Example Amarok)",
-      "required": true,
-      "value":"Amarok"
     },
     "PACKNAME": {
-      "description": "Sticker Packname set sticker pack name(Example Amarok)",
-      "required": false,
+      "description": "Sticker Packname",
+      "required": false
     },
 
+    "GOODBYE_MSG": {
+      "description": "goodbye Message",
+      "required": false
+    },
     "AUTHOR": {
-      "description": "Sticker pack author required (Example Diegoson)",
-      "required": false,
+      "description": "Sticker Pack AUTHOR",
+      "required": false
     },
     "SUDO": {
-      "description": "sudo numbers with country code (Example 27686881509)",
-      "required": false,
-    },
-    "MONGODB_URI": {
-    "description": "A secret String for Mongodb Connection.(Required)"
-  
+      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "required": false
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
-      "required": true,
+      "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Heroku account api key, (https://dashboard.heroku.com/account)",
-      "required": true,
-
+      "description": "Heroku account api key, https://dashboard.heroku.com/account",
+      "required": true
     }
-   },
-
-      "buildpacks": [
-    {
-     "url": "heroku/nodejs"
-   },
-   {
-    "url": "https://github.com/ItsJimi/heroku-buildpack-pm2"
-   },
-   {
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-   },
-   {
-    "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-  }
-],
- 
-  "formation": {
-      "worker": {
-          "quantity": 1,
-          "size": "free"
-      }
   }
 }
