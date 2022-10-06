@@ -14,12 +14,12 @@
       "value": ""
     },
     "SESSION_ID": {
-      "description": "session id required add your (session id 𝘩ere)",
+      "description": "session id required add your (session id here)",
       "required": true,
       "value": ""
     },
     "ANTILINK_ACTION": {
-      "description": "get kicked while you sand link(𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘸𝘸𝘸.𝘨𝘰𝘰𝘨𝘭𝘦.𝘤𝘰𝘮)",
+      "description": "get kicked while you sand link(Example www.google.com)",
       "required": false,
       "value": ""
     },
@@ -44,25 +44,25 @@
       "value": ""
     },
     "BOT_NAME": {
-      "description": "Name of AI chatbot(𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘈𝘮𝘢𝘳𝘰𝘬)",
+      "description": "Name of AI chatbot(Example Amarok)",
       "required": true,
       "value":"𝘈𝘮𝘢𝘳𝘰𝘬"
     },
     "PACKNAME": {
-      "description": "Sticker Packname set sticker pack name(𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘈𝘮𝘢𝘳𝘰𝘬)",
+      "description": "Sticker Packname set sticker pack name(Example Amarok)",
       "required": false,
     },
 
     "AUTHOR": {
-      "description": "Sticker pack author required (𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘋𝘪𝘦𝘨𝘰𝘴𝘰𝘯)",
+      "description": "Sticker pack author required (Example Diegoson)",
       "required": false,
     },
     "SUDO": {
-      "description": "sudo numbers with country code (𝘌𝘹𝘢𝘮𝘱𝘭𝘦 27686881509)",
+      "description": "sudo numbers with country code (Example 27686881509)",
       "required": false,
     },
     "MONGODB_URI": {
-    "description": "A secret String for Mongodb Connection.(𝘙𝘦𝘲𝘶𝘪𝘳𝘦𝘥)"
+    "description": "A secret String for Mongodb Connection.(Required)"
   
     },
     "HEROKU_APP_NAME": {
