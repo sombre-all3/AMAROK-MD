@@ -47,7 +47,6 @@
       "description": "Sticker Packname set sticker pack name(𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘈𝘮𝘢𝘳𝘰𝘬)",
       "required": false
     },
-
     "AUTHOR": {
       "description": "Sticker pack author required (𝘌𝘹𝘢𝘮𝘱𝘭𝘦 𝘋𝘪𝘦𝘨𝘰𝘴𝘰𝘯)",
       "required": false
