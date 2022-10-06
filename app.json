@@ -10,7 +10,7 @@
       "description": "set true or false",
       "required": false,
       "value": ""
-     },
+    },
      "SESSION_ID": {
        "description": "session id required add your session id here",
        "required": true,
