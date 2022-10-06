@@ -1,20 +1,18 @@
 {
-  "name": "x-asena",
-  "description": "X-asena Multi Device whatsappbot",
+  "name": "amarok-md",
+  "description": "amarok md powered by cybxkid",
   "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
   "keywords": ["whatsapp"],
-  "repository": "https://github.com/Neeraj-x0/x-asena",
-  "website": "https://github.com/Neeraj-x0/x-asena",
-  "success_url": "https://github.com/Neeraj-x0/x-asena",
+  "repository": "https://github.com/Diegoson/AMAROK-MD",
   "stack": "container",
   "env": {
     "ANTI_LINK": {
-      "description": "true/false",
+      "description": "set true or false",
       "required": false,
       "value": ""
     },
     "ANTILINK_ACTION": {
-      "description": "kick",
+      "description": "kicked when you send link",
       "required": false,
       "value": ""
     },
@@ -28,26 +26,16 @@
       "required": false,
       "value": ""
     },
-    "HANDLERS": {
-      "description": "prefix for commands, enter false for no prefix",
-      "required": false,
-      "value": ""
-    },
     "PACKNAME": {
-      "description": "Sticker Packname",
-      "required": false
-    },
-
-    "GOODBYE_MSG": {
-      "description": "goodbye Message",
+      "description": "Sticker Packname required Example amarok",
       "required": false
     },
     "AUTHOR": {
-      "description": "Sticker Pack AUTHOR",
+      "description": "Sticker Pack AUTHOR needed Example Diegoson",
       "required": false
     },
     "SUDO": {
-      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "description": "sudo numbers with country code (Example 27686882509)",
       "required": false
     },
     "HEROKU_APP_NAME": {
