@@ -8,7 +8,7 @@ const toBool = (x) => x == "true";
 DATABASE_URL = process.env.DATABASE_URL || "./lib/database.db";
 let HANDLER = "false";
 module.exports = {
-  VERSION: 'v4.0.1',
+  VERSION: 'require('./package.json').version',
   IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f","deb80cd12ababea1c9b9a8ad6ce3fab2","78c84c62b32a88e86daf87dd509a657a"],
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   SESSION_ID:process.env.SESSION_ID || " ",
