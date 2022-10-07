@@ -14,6 +14,7 @@ module.exports = {
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   ALIVE: process.env.ALIVE || "https://i.imgur.com/c9CNgT5.jpeg",
   LANG: process.env.LANG || "EN",
+  AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? '𝘈𝘮𝘢𝘳𝘰𝘬¹¹ꫂ;Amarok md;https://i.imgur.com/c9CNgT5.jpeg' : process.env.AUDIO_DATA',
   HANDLERS:
     process.env.HANDLER === "false" || process.env.HANDLER === "null"
       ? "^"
