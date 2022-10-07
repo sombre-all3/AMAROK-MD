@@ -21,8 +21,8 @@ module.exports = {
       : "^[,]",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
-  PACKNAME: process.env.PACKNAME || "amarok",
-  AUTHOR: process.env.AUTHOR || "Diegoson",
+  PACKNAME: process.env.PACKNAME || "𝘢𝘮𝘢𝘳𝘰𝘬",
+  AUTHOR: process.env.AUTHOR || "𝘋𝘪𝘦𝘨𝘰𝘴𝘰𝘯",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -41,12 +41,12 @@ module.exports = {
           },
           logging: false,
         }),
-  BOT_INFO: process.env.BOT_INFO || 'Amarok;Diegoson;0;https://i.imgur.com/w5wr6c1.jpeg;https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
+  BOT_INFO: process.env.BOT_INFO || '𝘈𝘮𝘢𝘳𝘰𝘬;𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥;0;https://i.imgur.com/w5wr6c1.jpeg;https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
   SUDO: process.env.SUDO || "27686881509",
   mongodb_url: process.env.MONGODB_URI || "Enter-Mongo-URI-HERE",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
-  OWNER_NAME: process.env.OWNER_NAME || "Cyberxkid",
-  BOT_NAME: process.env.BOT_NAME || "Amarok md",
+  OWNER_NAME: process.env.OWNER_NAME || "𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥",
+  BOT_NAME: process.env.BOT_NAME || "𝘈𝘮𝘢𝘳𝘰𝘬 𝘮𝘥",
   WORK_TYPE: process.env.WORK_TYPE || "private",
 };
