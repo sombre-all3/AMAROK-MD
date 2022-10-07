@@ -24,7 +24,6 @@ module.exports = {
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
   AUTHOR: process.env.AUTHOR || "Diegoson",
-  BOT_INFO: process.env.BOT_INFO || 'Amarok;Diegoson;0;https://i.imgur.com/w5wr6c1.jpeg;https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -43,6 +42,7 @@ module.exports = {
           },
           logging: false,
         }),
+  BOT_INFO: process.env.BOT_INFO || 'Amarok;Diegoson;0;https://i.imgur.com/w5wr6c1.jpeg;https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
   SUDO: process.env.SUDO || "27686881509",
   mongodb_url: process.env.MONGODB_URI || "Enter-Mongo-URI-HERE",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
