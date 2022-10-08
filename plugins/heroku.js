@@ -1,6 +1,6 @@
 const got = require("got");
 const Heroku = require("heroku-client");
-const { command, isPrivate } = require("../lib/");
+const { command, isPrivate, tiny } = require("../lib/");
 const Config = require("../config");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
@@ -8,6 +8,12 @@ const simpleGit = require("simple-git");
 const { secondsToDHMS } = require("../lib");
 const git = simpleGit();
 const exec = require("child_process").exec;
+
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Amarok - Diegoson
+*/
 
 command(
   {
@@ -24,6 +30,12 @@ command(
     });
   }
 );
+
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License. 
+Amarok - Diegoson
+*/
 
 command(
   {
@@ -49,6 +61,12 @@ command(
       });
   }
 );
+
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Amarok - Diegoson
+*/
 
 command(
   {
@@ -87,6 +105,12 @@ Remaning    : ${secondsToDHMS(remaining)}`;
   }
 );
 
+/* Copyright (C) 2022 X-Electra.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+X-Asena - X-Electra
+*/
+
 command(
   {
     pattern: "setvar ",
@@ -97,10 +121,10 @@ command(
   },
   async (message, match) => {
     if (!match)
-      return await message.sendMessage(`_Example: .setvar SUDO:27686881509_`);
+      return await message.sendMessage(`_Example: .setvar SUDO:918113921898_`);
     const [key, value] = match.split(":");
     if (!key || !value)
-      return await message.sendMessage(`_Example: .setvar SUDO:27686881509_`);
+      return await message.sendMessage(`_Example: .setvar SUDO:918113921898_`);
     heroku
       .patch(baseURI + "/config-vars", {
         body: {
@@ -115,6 +139,12 @@ command(
       });
   }
 );
+
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Amarok - Diegoson
+*/
 
 command(
   {
@@ -146,6 +176,12 @@ command(
   }
 );
 
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Amarok - Diegoson
+*/
+
 command(
   {
     pattern: "getvar ",
@@ -173,6 +209,12 @@ command(
   }
 );
 
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Amarok - Diegoson
+*/
+
 command(
   {
     pattern: "allvar",
@@ -197,6 +239,12 @@ command(
   }
 );
 
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Amarok - Diegoson
+*/
+
 command(
   {
     pattern: "update",
@@ -204,28 +252,70 @@ command(
     type: "heroku",
     desc: "Checks for update.",
   },
-  async (message) => {
+  async (message, match,{prefix}) => {
+    if (match === "now") {
+      await git.fetch();
+      var commits = await git.log([
+        Config.BRANCH + "..origin/" + Config.BRANCH,
+      ]);
+      if (commits.total === 0) {
+        return await message.sendMessage("_Already on latest version_");
+      } else {
+        await message.reply("_Updating_");
+
+        try {
+          var app = await heroku.get("/apps/" + Config.HEROKU_APP_NAME);
+        } catch {
+          await message.sendMessage("_Invalid Heroku Details_");
+          await new Promise((r) => setTimeout(r, 1000));
+        }
+
+        git.fetch("upstream", Config.BRANCH);
+        git.reset("hard", ["FETCH_HEAD"]);
+
+        var git_url = app.git_url.replace(
+          "https://",
+          "https://api:" + Config.HEROKU_API_KEY + "@"
+        );
+
+        try {  
+          await git.addRemote("heroku", git_url);
+        } catch {
+          console.log("heroku remote error");
+        }
+        await git.push("heroku", Config.BRANCH);
+
+        await message.sendMessage("UPDATED");
+      }
+    }
     await git.fetch();
     var commits = await git.log([Config.BRANCH + "..origin/" + Config.BRANCH]);
     if (commits.total === 0) {
       await message.sendMessage("_Already on latest version_");
     } else {
-      var updates = "Update Available*\n\n\n Changes:\n```";
-      commits["all"].map((commit) => {
-        updates +=
-          "🔹 [" +
-          commit.date.substring(0, 10) +
-          "]: " +
-          commit.message +
-          " <" +
-          commit.author_name +
-          ">\n";
+      var availupdate = "*ᴜᴘᴅᴀᴛᴇs ᴀᴠᴀɪʟᴀʙʟᴇ* \n\n";
+      commits["all"].map((commit, num) => {
+        availupdate += num + 1 + " ●  " + tiny(commit.message) + "\n";
       });
-
-      await message.sendMessage(updates + "```");
+      return await message.client.sendMessage(message.jid, {
+        text: availupdate,
+        footer: tiny("click here to update"),
+        buttons: [
+          {
+            buttonId: `${prefix}update now`,
+            buttonText: { displayText: tiny("update now") },
+          },
+        ],
+      });
     }
   }
 );
+
+/* Copyright (C) 2022 Diegoson.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Amarok - Diegoson
+*/
 
 command(
   {
@@ -234,37 +324,63 @@ command(
     type: "heroku",
     desc: "Updates the Bot",
   },
-  async (message) => {
-    await git.fetch();
-    var commits = await git.log([Config.BRANCH + "..origin/" + Config.BRANCH]);
-    if (commits.total === 0) {
-      return await message.sendMessage("_Already on latest version_");
-    } else {
-      await message.reply("_Updating_");
+  async (message) => {}
+);
 
-      try {
-        var app = await heroku.get("/apps/" + Config.HEROKU_APP_NAME);
-      } catch {
-        await message.sendMessage("_Invalid Heroku Details_");
-        await new Promise((r) => setTimeout(r, 1000));
-      }
-
-      git.fetch("upstream", Config.BRANCH);
-      git.reset("hard", ["FETCH_HEAD"]);
-
-      var git_url = app.git_url.replace(
-        "https://",
-        "https://api:" + Config.HEROKU_API_KEY + "@"
-      );
-
-      try {
-        await git.addRemote("heroku", git_url);
-      } catch {
-        console.log("heroku remote error");
-      }
-      await git.push("heroku", Config.BRANCH);
-
-      await message.sendMessage("UPDATED");
-    }
+//Credits Mask-ser
+//created by mask ser for HERMIT_MD
+const { SUDO } = require("../config");
+const { Function } = require("../lib/");
+Function(
+  { pattern: "setsudo ?(.*)", fromMe: true, desc: "set sudo", type: "user" },
+  async (m, mm) => {
+    var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
+      "@"
+    )[0];
+    if (!newSudo)
+      return await m.sendMessage("*reply to a number*", { quoted: m });
+    var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
+    setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
+    await m.sendMessage("```new sudo numbers are: ```" + setSudo, {
+      quoted: m,
+    });
+    await m.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
+    await heroku
+      .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
+      .then(async (app) => {});
+  }
+);
+Function(
+  {
+    pattern: "delsudo ?(.*)",
+    fromMe: true,
+    desc: "delete sudo sudo",
+    type: "user",
+  },
+  async (m, mm) => {
+    var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
+      "@"
+    )[0];
+    if (!newSudo) return await m.sendMessage("*Need reply/mention/number*");
+    var setSudo = SUDO.replace(newSudo, "").replace(/,,/g, ",");
+    setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
+    await m.sendMessage("```NEW SUDO NUMBERS ARE: ```" + setSudo, {
+      quoted: m,
+    });
+    await m.sendMessage("_IT TAKES 30 SECONDS TO MAKE EFFECT_", { quoted: m });
+    await heroku
+      .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
+      .then(async (app) => {});
+  }
+);
+Function(
+  { pattern: "getsudo ?(.*)", fromMe: true, desc: "shows sudo", type: "user" },
+  async (m) => {
+    const vars = await heroku
+      .get(baseURI + "/config-vars")
+      .catch(async (error) => {
+        return await m.send("HEROKU : " + error.body.message);
+      });
+    await m.send("```" + `SUDO Numbers are : ${vars.SUDO}` + "```");
   }
 );
