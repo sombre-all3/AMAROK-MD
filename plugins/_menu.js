@@ -80,7 +80,7 @@ command(
         },
         {
           buttonId: `${prefix}owner`,
-          buttonText: { displayText: serif_B("⫷OWNER⫸") },
+          buttonText: { displayText: serif_B("⫷SUPPORT GROUP⫸") },
         },
       ],
     });
