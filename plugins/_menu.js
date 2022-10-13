@@ -29,7 +29,7 @@ command(
 ┃❁│ *UPTIME* : ${clockString(uptime())} 
 ╰═════════════════⊷
 ╭═════════════════⊷\n╽`
-    let cmnd = [];.   
+    let cmnd = [];   
     let cmd;
     let category = [];
     events.commands.map((command, num) => {
