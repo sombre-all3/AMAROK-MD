@@ -74,18 +74,18 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     menu += ` ╰━━━━━━━━━━━──⊷\n`
     menu += `_🔖Send ${prefix}help <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
-      image: { url: `https://wallpapercave.com/wp/wp3891779.jpg` },
+      image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
       caption: menu,
       footer: tiny(
-        `Secktor Md\nVersion : ${require("../package.json").version}` ),
+        `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
           buttonId: `${prefix}ping`,
-          buttonText: { displayText: tiny("Alive") },
+          buttonText: { displayText: tiny("⫷ALIVE⫸") },
         },
         {
           buttonId: `${prefix}list`,
-          buttonText: { displayText: tiny("LIST ") },
+          buttonText: { displayText: tiny("⫷LIST⫸") },
         },
       ],
     });
