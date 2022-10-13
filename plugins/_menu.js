@@ -67,7 +67,7 @@ command(
       image: { url: `https://i.imgur.com/w5wr6c1.jpeg'},
       caption: serif_B(menu.toUpperCase()),
       footer: tiny(
-        `amarok Public Bot\nVersion : ${require("../package.json").version}`
+        `Amarok Public Bot\nVersion : ${require("../package.json").version}`
       ),
       buttons: [
         {
