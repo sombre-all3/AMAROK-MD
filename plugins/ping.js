@@ -1,18 +1,16 @@
-const { Jsl } = require("../lib/");
-
-Jsl({pattern: "ping ?(.*)",
-    fromMe: isPublic,
-    desc: "Measures ping",
-    type: "utility",
- },
+command(
+  {
+    pattern: "ping",
+    fromMe: isPrivate,
+    desc: "To check ping",
+    type: "user",
+  },
   async (message, match) => {
     const start = new Date().getTime();
-    await message.sendMessage("```_❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯_```");
+    await message.sendMessage("```Ping!```");
     const end = new Date().getTime();
     return await message.sendMessage(
-      "_ʀᴇsᴘᴏɴsᴇ ɪɴ ' + (end - start) + ' _ᴍs_"
+      "*Pong!*\n ```" + (end - start) + "``` *ms*"
     );
   }
 );
-
-
