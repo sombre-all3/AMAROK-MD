@@ -9,10 +9,10 @@ const { secondsToDHMS } = require("../lib");
 const git = simpleGit();
 const exec = require("child_process").exec;
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-Amarok - Diegoson
+AMAROK-MD
 */
 
 command(
@@ -31,10 +31,10 @@ command(
   }
 );
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License. 
-Amarok - Diegoson
+you may not use this file except in compliance with the License.
+AMAROK-MD
 */
 
 command(
@@ -62,10 +62,10 @@ command(
   }
 );
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-Amarok - Diegoson
+AMAROK-MD
 */
 
 command(
@@ -105,10 +105,10 @@ Remaning    : ${secondsToDHMS(remaining)}`;
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-X-Asena - X-Electra
+AMAROK-MD
 */
 
 command(
@@ -140,10 +140,10 @@ command(
   }
 );
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-Amarok - Diegoson
+AMAROK-MD
 */
 
 command(
@@ -176,10 +176,10 @@ command(
   }
 );
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-Amarok - Diegoson
+AMAROK-MD
 */
 
 command(
@@ -209,10 +209,10 @@ command(
   }
 );
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-Amarok - Diegoson
+AMAROK-MD
 */
 
 command(
@@ -239,10 +239,10 @@ command(
   }
 );
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-Amarok - Diegoson
+AMAROK-MD
 */
 
 command(
@@ -252,7 +252,7 @@ command(
     type: "heroku",
     desc: "Checks for update.",
   },
-  async (message, match,{prefix}) => {
+  async (message, match) => {
     if (match === "now") {
       await git.fetch();
       var commits = await git.log([
@@ -278,7 +278,7 @@ command(
           "https://api:" + Config.HEROKU_API_KEY + "@"
         );
 
-        try {  
+        try {
           await git.addRemote("heroku", git_url);
         } catch {
           console.log("heroku remote error");
@@ -311,10 +311,10 @@ command(
   }
 );
 
-/* Copyright (C) 2022 Diegoson.
+/* Copyright (C) 2022 AMAROK-MD
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-Amarok - Diegoson
+AMAROK-MD
 */
 
 command(
