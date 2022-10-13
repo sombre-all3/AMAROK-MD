@@ -72,7 +72,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     });
 
     menu += ` ╰━━━━━━━━━━━──⊷\n`
-    menu += `_🔖Send ${prefix}help <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
+    menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
       caption: menu,
@@ -100,7 +100,7 @@ command(
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭───〔 ${tiny(" Secktor command list")} 〕────\n`;
+    let menu = `╭───〔 ${tiny(" amarok command list")} 〕────\n`;
 
     let cmnd = [];
     let cmd, desc;
