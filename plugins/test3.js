@@ -2,7 +2,7 @@ const {
   command,
   isPrivate,
   styletext
-} = require("../config");
+} = require("../lib,");
 
 const { hostname, uptime } = require("os");
 command(
@@ -14,6 +14,6 @@ command(
   },
 async (message,match) => {
 
-await message.sendMessage(`hello undefined friend lm alive today is ${date}`)
+await message.sendMessage(`hello undefined friend lm alive today is ${update}`)
 }
 )
