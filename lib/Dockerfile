@@ -1,5 +1,5 @@
-FROM quay.io/cyber/amarok-bot
-RUN git clone https://github.com/Diegoson/AMAROK-MD /root/Diegoson/
-WORKDIR /root/Diegoson/
-RUN yarn install --network-concurrency 1
-CMD ["node", "index.js"]
+FROM fusuf/whatsasena:latest
+RUN git clone https://github.com/Diegoson/AMAROK-MD /xasena
+WORKDIR /xasena
+RUN npm install
+CMD ["node", "index.js"] 
