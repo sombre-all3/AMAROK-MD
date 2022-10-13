@@ -46,7 +46,7 @@ module.exports = {
   mongodb_url: process.env.MONGODB_URI || "Enter-Mongo-URI-HERE",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
-  OWNER_NAME: process.env.OWNER_NAME || "𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥",
-  BOT_NAME: process.env.BOT_NAME || "𝘈𝘮𝘢𝘳𝘰𝘬 𝘮𝘥",
-  WORK_TYPE: process.env.WORK_TYPE || "private",
+  OWNER_NAME: process.env.OWNER_NAME || "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃",
+  BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐃",
+  WORK_TYPE: process.env.WORK_TYPE || "public",
 };
