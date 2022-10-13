@@ -2,6 +2,7 @@ const events = require("../lib/event");
 const {
   command,
   isPrivate,
+  styletext,
   tiny,
   serif_B,
   clockString,
@@ -10,26 +11,30 @@ const { OWNER_NAME, BOT_NAME } = require("../config");
 const { hostname, uptime } = require("os");
 command(
   {
-    pattern: "menu ?(.*)",
+    pattern: "menu",
     fromMe: isPrivate,
-    desc: "Show All commands",
+    desc: "Shows list of All commands",
     dontAddCommandList: true,
   },
   async (message,match, { prefix }) => {
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
       .split(",");
-   let menu = `╭═════〘  ${BOT_NAME} 〙══════⊷❍
-┃❁│ *OWNER* :  ${OWNER_NAME}
-┃❁│ *PREFIX* : ${prefix}
-┃❁│ *HOST NAME* :${hostname()}
-┃❁│ *DATE* : ${date}
-┃❁│ *TIME* : ${time}
-┃❁│ *COMMANDS* : ${events.commands.length} 
-┃❁│ *UPTIME* : ${clockString(uptime())} 
-╰═════════════════⊷
-╭═════════════════⊷\n╽`
-    let cmnd = [];   
+                
+ let menu = `
+╭━━〘 `+ styletext(OWNER_NAME.split(' ')[0],58) +` 〙━━──⊷` 
+menu+= `
+┃ ⛥  *OWNER* :  ${OWNER_NAME}
+┃ ⛥  *PREFIX* : ${prefix}
+┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
+┃ ⛥  *DATE* : ${date}
+┃ ⛥  *TIME* : ${time}
+┃ ⛥  *COMMANDS* : ${events.commands.length} 
+┃ ⛥  *UPTIME* : ${clockString(uptime())} 
+╰━━━━━━━━━━━──⊷\n
+`
+menu+= `╭───『 `+ styletext('Commands',57)+`』──◆`
+    let cmnd = [];
     let cmd;
     let category = [];
     events.commands.map((command, num) => {
@@ -42,7 +47,7 @@ command(
       if (!command.dontAddCommandList && cmd !== undefined) {
         let type;
         if (!command.type) {
-          type = "misc";
+          type = "extra";
         } else {
           type = command.type.toLowerCase();
         }
@@ -54,47 +59,48 @@ command(
     });
     cmnd.sort();
     category.sort().forEach((cmmd) => {
-      menu += `\n┠─────〔${cmmd}〕\n╿\n╿╭═════════════════⊷`;
-      let comad = cmnd.filter(({ type }) => type == cmmd);
+     menu+=`
+┃ ⿻ ╭─────────────◆
+┃ ⿻ │ ⦿---- ${cmmd} ----⦿
+┃ ⿻ ╰┬────────────◆
+┃ ⿻ ┌┤`
+let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
-        menu += `\n╿┠ ${cmd.trim()}`;
+ menu += `\n┃ ⿻ │ ⛥  ${cmd.trim()}`;
       });
-      menu += `\n╿╰═════════════════⊷\n╿`;
+ menu += `\n┃ ⿻ ╰─────────────◆`;
     });
 
-    menu += `\n╰══════════════════⊷❍`;
+    menu += ` ╰━━━━━━━━━━━──⊷\n`
+    menu += `_🔖Send ${prefix}help <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
-      image: { url: `https://i.imgur.com/w5wr6c1.jpeg`},
-      caption: serif_B(menu.toUpperCase()),
+      image: { url: `https://wallpapercave.com/wp/wp3891779.jpg` },
+      caption: menu,
       footer: tiny(
-        `amarok-md Public Bot\nVersion : ${require("../package.json").version}`
-      ),
+        `Secktor Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
           buttonId: `${prefix}ping`,
-          buttonText: { displayText: serif_B("⫷PING⫸") },
+          buttonText: { displayText: tiny("Alive") },
         },
         {
           buttonId: `${prefix}list`,
-          buttonText: { displayText: serif_B("⫷LIST⫸") },
-        },
-        {
-          buttonId: `${prefix}owner`,
-          buttonText: { displayText: serif_B("⫷SUPPORT GROUP⫸") },
+          buttonText: { displayText: tiny("LIST ") },
         },
       ],
     });
   }
 );
+
 command(
   {
-    pattern: "list ?(.*)",
+    pattern: "list",
     fromMe: isPrivate,
     desc: "Show All commands",
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭───〔 ${tiny("amarok command list")} 〕────\n`;
+    let menu = `╭───〔 ${tiny(" Secktor command list")} 〕────\n`;
 
     let cmnd = [];
     let cmd, desc;
