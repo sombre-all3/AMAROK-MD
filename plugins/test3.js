@@ -1,1 +1,19 @@
-const _0x42b471=_0x33c5;(function(_0x5ad204,_0x4977a2){const _0x5e9553=_0x33c5,_0x1712e9=_0x5ad204();while(!![]){try{const _0x19678b=parseInt(_0x5e9553(0x15b))/0x1*(parseInt(_0x5e9553(0x157))/0x2)+-parseInt(_0x5e9553(0x158))/0x3+parseInt(_0x5e9553(0x156))/0x4+parseInt(_0x5e9553(0x14f))/0x5+-parseInt(_0x5e9553(0x153))/0x6+parseInt(_0x5e9553(0x14d))/0x7*(-parseInt(_0x5e9553(0x151))/0x8)+parseInt(_0x5e9553(0x150))/0x9*(-parseInt(_0x5e9553(0x15a))/0xa);if(_0x19678b===_0x4977a2)break;else _0x1712e9['push'](_0x1712e9['shift']());}catch(_0xf2398e){_0x1712e9['push'](_0x1712e9['shift']());}}}(_0x547d,0x926df));const {command,isPrivate,styletext,tiny,serif_B,clockString}=require(_0x42b471(0x14c)),{OWNER_NAME,BOT_NAME}=require(_0x42b471(0x159)),{hostname,uptime}=require('os');command({'pattern':_0x42b471(0x154),'fromMe':isPrivate,'desc':'Shows\x20list\x20of\x20All\x20commands','dontAddCommandList':!![]},async(_0x371047,_0x192f96,{prefix:_0x1a3377})=>{const _0x1efd35=_0x42b471;return await _0x371047['client'][_0x1efd35(0x152)](_0x371047[_0x1efd35(0x155)],_0x1efd35(0x14e)+uptime);});function _0x33c5(_0x3866a3,_0x441f37){const _0x547dbc=_0x547d();return _0x33c5=function(_0x33c503,_0x5347b3){_0x33c503=_0x33c503-0x14c;let _0x2a0293=_0x547dbc[_0x33c503];return _0x2a0293;},_0x33c5(_0x3866a3,_0x441f37);}function _0x547d(){const _0x47fa7a=['372540sQQBza','10151idKIoT','../lib','1909796ITnvLb','hello\x20i\x27ve\x20been\x20alive\x20for\x20','4846250INsNNL','36IJuhpr','16CLASsF','sendMessage','2928966ITShHV','dead','jid','3354964NfjwHx','218jbpvdJ','3395526bsnhAT','../config'];_0x547d=function(){return _0x47fa7a;};return _0x547d();}
+const {
+  command,
+  isPrivate,
+  styletext
+} = require("../lib");
+
+const { hostname, uptime } = require("os");
+command(
+  {
+    pattern: "dead",
+    fromMe: isPrivate,
+    desc: "dead",
+    dontAddCommandList: true,
+  },
+async (message,match) => {
+
+await message.sendMessage(`hello i've been alive for ${uptime}`)
+}
+)
