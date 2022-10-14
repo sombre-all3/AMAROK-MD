@@ -21,8 +21,8 @@ module.exports = {
       : "^[,]",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
-  PACKNAME: process.env.PACKNAME || "𝘢𝘮𝘢𝘳𝘰𝘬",
-  AUTHOR: process.env.AUTHOR || "𝘋𝘪𝘦𝘨𝘰𝘴𝘰𝘯",
+  PACKNAME: process.env.PACKNAME || "🐺𝐀𝐌𝐀𝐑𝐎𝐊🐺",
+  AUTHOR: process.env.AUTHOR || "🐺𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃🐺",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -48,5 +48,5 @@ module.exports = {
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
   OWNER_NAME: process.env.OWNER_NAME || "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃",
   BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐃",
-  WORK_TYPE: process.env.WORK_TYPE || "private",
+  WORK_TYPE: process.env.WORK_TYPE || "public",
 };
