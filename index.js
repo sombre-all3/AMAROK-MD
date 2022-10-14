@@ -74,7 +74,7 @@ async function Amarok() {
     }
 
     if (connection === "open") {
-      conn.sendMessage(conn.user.id, { text: "connected ✔✔" });
+      conn.sendMessage(conn.user.id, { text: "connected 🐺Amarok md created by cyber  Amrok bot has been conected dont use the bot in here go to another or group famous quote by Amarok✔︎✔︎" });
       console.log("✅ Login Successful!");
       console.log("⬇️ Installing External Plugins...");
 
