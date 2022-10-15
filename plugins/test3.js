@@ -1,6 +1,6 @@
-const {amarok, aliveMessage} = require ('../lib')
+const {bot, aliveMessage} = require ('../lib')
 
-amarok(
+bot(
         {
            pattern: 'alive ?(.*)',
            fromMe: true,
