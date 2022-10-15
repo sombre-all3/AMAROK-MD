@@ -1,6 +1,6 @@
-const {bot} = require ("../lib")
+const command = require ("../lib")
 
-bot(
+command(
         {
            pattern: 'alive ?(.*)',
            fromMe: true,
