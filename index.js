@@ -161,13 +161,13 @@ async function Amarok() {
           });
         });
       } catch (e) {
-        console.log(e + "\n\n\n\n\n" + JSON.stringify(msg));
+        console.log(e.stack + "\n\n\n\n\n" + JSON.stringify(msg));
       }
     }
   });
   process.on("uncaughtException", (err) => {
     let error = err.message;
-    // conn.sendMessage(conn.user.id, { text: error });
+     conn.sendMessage(conn.user.id, { text: error });
     console.log(err);
   });
 }
