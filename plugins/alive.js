@@ -29,6 +29,7 @@ alive+= `
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
 `
+),
  buttons: [
     }
       buttonld: '${prefix}support group',
