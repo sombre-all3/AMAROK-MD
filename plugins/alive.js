@@ -12,7 +12,5 @@ command(
         
 await message.sendMessage(`Hello  ${user} all systems are functional`)
 }
+
 )
-
-
-//Tshephang+Cyber 🐤you change plugin disappeares
