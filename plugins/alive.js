@@ -52,4 +52,3 @@ image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
 })
 }
 )
-,
