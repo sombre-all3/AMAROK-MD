@@ -28,7 +28,7 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
- let buttons= [
+ buttons: [
     }
       buttonld: '${prefix}support group',
       buttonText: {displayText: ("⫷𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗚𝗥𝗢𝗨𝗣⫸") },
