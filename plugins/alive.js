@@ -28,8 +28,6 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
-`
-else {
  let buttons= [
     }
       buttonld: '${prefix}support group',
