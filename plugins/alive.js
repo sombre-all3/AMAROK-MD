@@ -1,1 +1,44 @@
-const _0x2d0789=_0x2413;(function(_0x31a2d7,_0x398aaa){const _0x51d602=_0x2413,_0x3cce7c=_0x31a2d7();while(!![]){try{const _0x23c542=parseInt(_0x51d602(0x1c1))/0x1*(parseInt(_0x51d602(0x1c4))/0x2)+-parseInt(_0x51d602(0x1bb))/0x3+parseInt(_0x51d602(0x1c8))/0x4+-parseInt(_0x51d602(0x1cb))/0x5*(parseInt(_0x51d602(0x1c7))/0x6)+-parseInt(_0x51d602(0x1b9))/0x7+parseInt(_0x51d602(0x1c2))/0x8*(-parseInt(_0x51d602(0x1bf))/0x9)+-parseInt(_0x51d602(0x1c9))/0xa*(-parseInt(_0x51d602(0x1ba))/0xb);if(_0x23c542===_0x398aaa)break;else _0x3cce7c['push'](_0x3cce7c['shift']());}catch(_0x312cff){_0x3cce7c['push'](_0x3cce7c['shift']());}}}(_0x2b32,0x51fd4));function _0x2b32(){const _0x553d13=['3008aAKfZO','https://i.imgur.com/w5wr6c1.jpeg','22oGGLmx','sendMessage','client','168SaITAm','969984PPzHYA','10zVFEcK','../config','48740xfOhOA','\x0a┃\x20⛥\x20\x20*I\x27ve\x20been\x20up\x20for*\x20:\x20','\x0a┃\x20⛥\x20\x20*MY\x20PREFIX*\x20:\x20','toLocaleString','alive.js❤️','\x0a┃\x20⛥\x20\x20*TIME*\x20:\x20','3459141nmpHdx','18384817AbmDBd','1211622mYNDHf','../lib','\x0a┃\x20⛥\x20\x20*CURRENT\x20DATE*\x20:\x20','\x0a╭━━〘\x20\x22Hello\x20all\x20systems\x20are\x20functional\x22\x20〙━━──⊷','9855Pmfnid','split','426erWOaT'];_0x2b32=function(){return _0x553d13;};return _0x2b32();}const {command,isPrivate,tiny,clockString}=require(_0x2d0789(0x1bc)),{OWNER_NAME,BOT_NAME}=require(_0x2d0789(0x1ca)),{hostname,uptime}=require('os');function _0x2413(_0x49c4f2,_0x142830){const _0x2b3250=_0x2b32();return _0x2413=function(_0x24135b,_0x169a8b){_0x24135b=_0x24135b-0x1b7;let _0x1b8d8f=_0x2b3250[_0x24135b];return _0x1b8d8f;},_0x2413(_0x49c4f2,_0x142830);}command({'pattern':'arise','fromMe':isPrivate,'desc':'dead','dontAddCommandList':!![]},async(_0x3eddeb,_0x48a3f3,{prefix:_0x557ad8})=>{const _0x3fdf50=_0x2d0789;let [_0x5c0169,_0x4f4a18]=new Date()[_0x3fdf50(0x1ce)]('en-IN',{'timeZone':'Africa/Johannesburg'})[_0x3fdf50(0x1c0)](','),_0x593b28=_0x3fdf50(0x1be);_0x593b28+='\x0a┃\x20⛥\x20\x20*OWNER*\x20:\x20\x20'+OWNER_NAME+_0x3fdf50(0x1cd)+_0x557ad8+_0x3fdf50(0x1bd)+_0x5c0169+_0x3fdf50(0x1b8)+_0x4f4a18+_0x3fdf50(0x1cc)+clockString(uptime())+'\x20\x0a╰━━━━━━━━━━━──⊷\x0a\x0a',await _0x3eddeb[_0x3fdf50(0x1c6)][_0x3fdf50(0x1c5)](_0x3eddeb['jid'],{'image':{'url':_0x3fdf50(0x1c3)},'caption':_0x593b28,'footer':tiny(_0x3fdf50(0x1b7))});});
+const {
+  command,
+  isPrivate,
+  tiny,
+  clockString,
+} = require("../lib");
+
+const { OWNER_NAME, BOT_NAME } = require("../config");
+const { hostname, uptime } = require("os");
+command(
+  {
+    pattern: "arise",
+    fromMe: isPrivate,
+    desc: "dead",
+    dontAddCommandList: true,
+  },
+async (message,match, { prefix }) => {
+	
+	let [date, time] = new Date()
+      .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
+      .split(",");
+let alive = `
+╭━━〘 "Hello all systems are functional" 〙━━──⊷` 
+alive+= `
+┃ ⛥  *OWNER* :  ${OWNER_NAME}
+┃ ⛥  *MY PREFIX* : ${prefix}
+┃ ⛥  *CURRENT DATE* : ${date}
+┃ ⛥  *TIME* : ${time}
+┃ ⛥  *I've been up for* : ${clockString(uptime())} 
+╰━━━━━━━━━━━──⊷\n
+`
+buttons: [
+}
+buttonld: '${prefix}support group',
+buttonText: 
+
+await message.client.sendMessage(message.jid,{
+image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
+      caption: alive,
+      footer: tiny(`alive.js❤️` ),
+
+})
+}
+)
