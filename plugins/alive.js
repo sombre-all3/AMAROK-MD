@@ -28,10 +28,19 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n,
+const const buttonMessage = {
+    text: "Hi it's button message",
+    footer: 'Alive button',
+    buttons: buttons,
+    headerType: 1
+}
+
+const sendMsg = await sock.sendMessage(id, buttonMessage)
+
+//send a template message!
 const templateButtons = [
-    {index: 1, urlButton: {displayText: '⭐ Star Baileys on GitHub!', url: 'https://github.com/adiwajshing/Baileys'}},
-    {index: 2, callButton: {displayText: 'Call me!', phoneNumber: '+1 (234) 5678-901'}},
-    {index: 3, quickReplyButton: {displayText: 'This is a reply, just like normal buttons!', id: 'id-like-buttons-message'}},
+    {index: 1, urlButton: {displayText: '⭐ Star Baileys on GitHub!', url: 'https://github.com/Diegoson/AMAROK-MD'}},
+    {index: 2, callButton: {displayText: 'Call me!', phoneNumber: '+1 (234) '}},
 ]
      
 await message.client.sendMessage(message.jid,{
