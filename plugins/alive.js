@@ -32,11 +32,11 @@ alive+= `
  buttons: [
     }
       buttonld: '${prefix}support group',
-      buttonText: {displayText: ("⫷𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗚𝗥𝗢𝗨𝗣⫸")},
+      buttonText: {displayText: ("⫷𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗚𝗥𝗢𝗨𝗣⫸") },
     },
     {
       buttonld: '${prefix}github',
-      buttonText: {displayText: ("⫷𝗚𝗜𝗧𝗛𝗨𝗕⫸")},
+      buttonText: {displayText: ("⫷𝗚𝗜𝗧𝗛𝗨𝗕⫸") },
     },
  }
 
