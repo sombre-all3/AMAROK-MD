@@ -1,18 +1,1 @@
-const {
-  command,
-  isPrivate,
-} = require("../lib");
-
-const { hostname, uptime } = require("os");
-command(
-  {
-    pattern: "dead",
-    fromMe: isPrivate,
-    desc: "dead",
-    dontAddCommandList: true,
-  },
-async (message,match) => {
-
-await message.sendMessage(`hello i've been alive for ${uptime} seconds`)
-}
-)
+const _0x59bd70=_0x543d;(function(_0x47f3fa,_0x55e842){const _0x8f698c=_0x543d,_0x5e44b4=_0x47f3fa();while(!![]){try{const _0x55e6a9=parseInt(_0x8f698c(0x19d))/0x1*(parseInt(_0x8f698c(0x1af))/0x2)+-parseInt(_0x8f698c(0x19c))/0x3*(parseInt(_0x8f698c(0x1ab))/0x4)+parseInt(_0x8f698c(0x1a5))/0x5+-parseInt(_0x8f698c(0x198))/0x6*(-parseInt(_0x8f698c(0x1a7))/0x7)+parseInt(_0x8f698c(0x1b0))/0x8*(parseInt(_0x8f698c(0x196))/0x9)+-parseInt(_0x8f698c(0x19a))/0xa+parseInt(_0x8f698c(0x19f))/0xb*(-parseInt(_0x8f698c(0x1a1))/0xc);if(_0x55e6a9===_0x55e842)break;else _0x5e44b4['push'](_0x5e44b4['shift']());}catch(_0x5ed4f2){_0x5e44b4['push'](_0x5e44b4['shift']());}}}(_0x1f1c,0xd0148));function _0x1f1c(){const _0x45a812=['../lib','alive.js❤️','split','1612912DuKdoy','531112eqKYzW','\x0a┃\x20⛥\x20\x20*CURRENT\x20DATE*\x20:\x20','171ikFKdF','\x20\x0a╰━━━━━━━━━━━──⊷\x0a\x0a','11706pfhXHc','\x0a┃\x20⛥\x20\x20*TIME*\x20:\x20','10172860RbOHlp','dead','1854159TzcEAG','2jgndWm','\x0a╭━━〘\x20\x22Hello\x20all\x20systems\x20are\x20functional\x22\x20〙━━──⊷','11dbMVCH','\x0a┃\x20⛥\x20\x20*I\x27ve\x20been\x20up\x20for*\x20:\x20','2892492mECyfl','toLocaleString','client','jid','1259815DyscUx','alive','791XShymn','sendMessage','\x0a┃\x20⛥\x20\x20*OWNER*\x20:\x20\x20','https://i.imgur.com/w5wr6c1.jpeg','8eQveEE'];_0x1f1c=function(){return _0x45a812;};return _0x1f1c();}function _0x543d(_0x1d4351,_0x3fd930){const _0x1f1c8b=_0x1f1c();return _0x543d=function(_0x543d0d,_0x3644bf){_0x543d0d=_0x543d0d-0x196;let _0x4f6413=_0x1f1c8b[_0x543d0d];return _0x4f6413;},_0x543d(_0x1d4351,_0x3fd930);}const {command,isPrivate,tiny,clockString}=require(_0x59bd70(0x1ac)),{hostname,uptime}=require('os');command({'pattern':_0x59bd70(0x1a6),'fromMe':isPrivate,'desc':_0x59bd70(0x19b),'dontAddCommandList':!![]},async(_0x1ec215,_0x4d591a)=>{const _0x5b80d7=_0x59bd70;let [_0x148c91,_0x4ff418]=new Date()[_0x5b80d7(0x1a2)]('en-IN',{'timeZone':'Africa/Johannesburg'})[_0x5b80d7(0x1ae)](','),_0x2d2308=_0x5b80d7(0x19e);_0x2d2308+=_0x5b80d7(0x1a9)+OWNER_NAME+'\x0a┃\x20⛥\x20\x20*MY\x20PREFIX*\x20:\x20'+prefix+_0x5b80d7(0x1b1)+_0x148c91+_0x5b80d7(0x199)+_0x4ff418+_0x5b80d7(0x1a0)+clockString(uptime())+_0x5b80d7(0x197),await _0x1ec215[_0x5b80d7(0x1a3)][_0x5b80d7(0x1a8)](_0x1ec215[_0x5b80d7(0x1a4)],{'image':{'url':_0x5b80d7(0x1aa)},'caption':menu,'footer':tiny(_0x5b80d7(0x1ad))});});
