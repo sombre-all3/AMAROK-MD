@@ -61,8 +61,9 @@ Function(
     let [query, amount] = match.split(",");
     let result = await gimage(query, amount);
     await message.sendMessage(
-      `_Downloading ${amount || 5} images for ${query}_`
+      `📸𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮📸 ${amount || 5} images for ${query}_`
     );
+    await message.reply('📸𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑼𝑷𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝒀𝑶𝑼𝑹 𝑭𝑰𝑽𝑬 𝑷𝑰𝑪𝑻𝑼𝑹𝑬𝑺📸');
     for (let i of result) {
       await message.sendFromUrl(i);
     }
@@ -195,7 +196,8 @@ command(
       });
     }
     search(match + "song").then(async ({ all }) => {
-      await message.reply(`_Downloading ${all[0].title}_`);
+      await message.reply(`🎶𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝒀𝑶𝑼𝑹 𝑺𝑶𝑵𝑮 𝑾𝑨𝑰𝑻🎶 ${all[0].title}_`);
+      await message.reply('🎶𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑼𝑷𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝒀𝑶𝑼𝑹 𝑺𝑶𝑵𝑮🎶');
       yta(all[0].url).then(async ({ dl_link, title, thumb }) => {
         let buff = await AddMp3Meta(dl_link, thumb, {
           title,
@@ -228,7 +230,8 @@ command(
       });
     }
     search(match).then(async ({ all }) => {
-      await message.reply(`_Downloading ${all[0].title}_`);
+      await message.reply(`🎥𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝒀𝑶𝑼𝑹 𝑽𝑰𝑫𝑬𝑶 𝑾𝑨𝑰𝑻🎥 ${all[0].title}_`);
+      await message.reply('🎥𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑼𝑷𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝒀𝑶𝑼𝑹 𝑽𝑰𝑫𝑬𝑶🎥');
       ytv(all[0].url).then(({ dl_link, title }) => {
         message.sendFromUrl(dl_link, { filename: title, quoted: message });
       });
@@ -327,7 +330,8 @@ command(
 
     if (!ytIdRegex.test(match)) return await message.reply("_Invalid Url_");
     ytv(match).then(async ({ dl_link, title }) => {
-      await message.reply(`_Downloading ${title}_`);
+      await message.reply(`🔍𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮🔍 ${title}_`);
+      await message.reply('🔍𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑼𝑷𝑳𝑶𝑨𝑫𝑰𝑵𝑮🔍');
       return await message.sendFromUrl(dl_link, {
         filename: title,
         quoted: message,
@@ -347,7 +351,8 @@ command(
     if (!match) return await message.reply("_Enter a URL_");
     if (!ytIdRegex.test(match)) return await message.reply("_Invalid Url_");
     yta(match).then(async ({ dl_link, title, thumb }) => {
-      await message.reply(`_Downloading ${title}_`);
+      await message.reply(`🔍𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮🔍 ${title}_`);
+      await message.reply('🔍𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑼𝑷𝑳𝑶𝑨𝑫𝑰𝑵𝑮🔍');
       let buff = await AddMp3Meta(dl_link, thumb, {
         title,
       });
