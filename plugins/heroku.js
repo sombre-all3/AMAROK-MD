@@ -113,7 +113,7 @@ AMAROK-MD
 
 command(
   {
-    pattern: "setvar ",
+    pattern: "setvar",
     fromMe: true,
     type: "heroku",
     desc: "Set heroku env",
@@ -148,7 +148,7 @@ AMAROK-MD
 
 command(
   {
-    pattern: "delvar ",
+    pattern: "delvar",
     fromMe: true,
     type: "heroku",
     desc: "Delete Heroku env",
@@ -184,7 +184,7 @@ AMAROK-MD
 
 command(
   {
-    pattern: "getvar ",
+    pattern: "getvar",
     fromMe: true,
     type: "heroku",
     desc: "Show heroku env",
