@@ -28,7 +28,6 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
-,
 const templateButtons = [
     {index: 1, urlButton: {displayText: '⭐ Star Baileys on GitHub!', url: 'https://github.com/adiwajshing/Baileys'}},
     {index: 2, callButton: {displayText: 'Call me!', phoneNumber: '+1 (234) 5678-901'}},
