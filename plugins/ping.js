@@ -15,10 +15,10 @@ command(
   },
   async (message, match) => {
     const start = new Date().getTime();
-    await message.sendMessage("```Ping!```");
+    await message.sendMessage("⫷ 𝘾𝙃𝙀𝘾𝙆𝙄𝙉𝙂 𝙋𝙄𝙉𝙂 ⫸");
     const end = new Date().getTime();
     return await message.sendMessage(
-      "*Pong!*\n ```" + (end - start) + "``` *ms*"
+      "*𝙍𝙀𝙎𝙋𝙊𝙉𝙎𝙀 𝙄𝙉 !*\n ```" + (end - start) + "``` *࿋𝙈𝙎࿋*"
     );
   }
 );
