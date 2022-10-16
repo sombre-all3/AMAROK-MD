@@ -27,7 +27,7 @@ alive+= `
 ┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
-╰━━━━━━━━━━━──⊷\n
+╰━━━━━━━━━━━──⊷\n,
     }
      else {
              buttons: [
