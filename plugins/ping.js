@@ -15,10 +15,11 @@ command(
   },
   async (message, match) => {
     const start = new Date().getTime();
-    await message.sendMessage("⫷ 𝘾𝙃𝙀𝘾𝙆𝙄𝙉𝙂 𝙋𝙄𝙉𝙂 ⫸");
+    await message.sendMessage("⫷ 𝘾𝙃𝙀𝘾𝙆𝙄𝙉𝙂 𝙎𝙋𝙀𝙀𝘿 ⫸");
+    await message.sendMessage("⫷ 𝘼𝙈𝘼𝙍𝙊𝙆 𝙎𝙃𝙊𝙒𝙄𝙉𝙂 𝙎𝙋𝙀𝙀𝘿 𝙏𝙀𝙎𝙏 ⫸");
     const end = new Date().getTime();
     return await message.sendMessage(
-      "*𝙍𝙀𝙎𝙋𝙊𝙉𝙎𝙀 𝙄𝙉 !*\n ```" + (end - start) + "``` *࿋𝙈𝙎࿋*"
+      "*⫷ 𝙍𝙀𝙎𝙋𝙊𝙉𝙎𝙀 𝙄𝙉 ⫸*\n ```" + (end - start) + "``` *࿋𝙈𝙎࿋*"
     );
   }
 );
