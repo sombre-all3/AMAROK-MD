@@ -22,7 +22,7 @@ module.exports = {
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
   PACKNAME: process.env.PACKNAME || "🐺𝐀𝐌𝐀𝐑𝐎𝐊🐺",
-  AUTHOR: process.env.AUTHOR || "🐺𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃🐺",
+  AUTHOR: process.env.AUTHOR || "🐺𝐀𝐌𝐀𝐑𝐎𝐊🐺",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
