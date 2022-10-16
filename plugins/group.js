@@ -4,7 +4,7 @@ const { isAdmin, parsedJid, isUrl } = require("../lib");
 const { cron, saveSchedule } = require("../lib/scheduler");
 command(
   {
-    pattern: "add ",
+    pattern: "add",
     fromMe: isPrivate,
     desc: "Adds a person to group",
     type: "group",
@@ -26,7 +26,7 @@ command(
 
 command(
   {
-    pattern: "kick ",
+    pattern: "kick",
     fromMe: isPrivate,
     desc: "kicks a person from group",
     type: "group",
@@ -48,7 +48,7 @@ command(
 
 command(
   {
-    pattern: "promote ",
+    pattern: "promote",
     fromMe: isPrivate,
     desc: "promote a member",
     type: "group",
@@ -69,7 +69,7 @@ command(
 );
 command(
   {
-    pattern: "demote ",
+    pattern: "demote",
     fromMe: isPrivate,
     desc: "demote a member",
     type: "group",
