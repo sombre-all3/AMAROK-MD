@@ -221,7 +221,7 @@ command(
           }
         } else {
           return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
-      
+        }
       }
   }
 );
