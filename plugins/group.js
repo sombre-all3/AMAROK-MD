@@ -13,9 +13,9 @@ command(
     if (!message.isGroup)
       return await message.reply("_This command is for groups_");
     match = match || message.reply_message.jid;
-    if (!match) return await message.reply("_Mention user to add");
+    if (!match) return await message.reply("⫷𝙈𝙀𝙉𝙏𝙄𝙊𝙉 𝙐𝙎𝙀𝙍 𝙏𝙊 𝘼𝘿𝘿⫸");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
-    if (!isadmin) return await message.reply("_I'm not admin_");
+    if (!isadmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     let jid = parsedJid(match);
     await message.add(jid);
     return await message.reply(`@${jid[0].split("@")[0]} added`, {
@@ -37,7 +37,7 @@ command(
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("_Mention user to kick");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
-    if (!isadmin) return await message.reply("_I'm not admin_");
+    if (!isadmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     let jid = parsedJid(match);
     await message.kick(jid);
     return await message.reply(`@${jid[0].split("@")[0]} kicked`, {
@@ -59,7 +59,7 @@ command(
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("_Mention user to promote_");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
-    if (!isadmin) return await message.reply("_I'm not admin_");
+    if (!isadmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     let jid = parsedJid(match);
     await message.promote(jid);
     return await message.reply(`@${jid[0].split("@")[0]} promoted as admin`, {
@@ -80,7 +80,7 @@ command(
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("_Mention user to demote");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
-    if (!isadmin) return await message.reply("_I'm not admin_");
+    if (!isadmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     let jid = parsedJid(match);
     await message.demote(jid);
     return await message.reply(`@${jid[0].split("@")[0]} demoted from admin`, {
@@ -100,7 +100,7 @@ command(
     if (!message.isGroup)
       return await message.reply("_This command is for groups_");
     if (!isAdmin(message.jid, message.user, message.client))
-      return await message.reply("_I'm not admin_");
+      return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     await message.reply("_Muting_");
     return await client.groupSettingUpdate(message.jid, "announcement");
   }
@@ -108,7 +108,7 @@ command(
 
 command(
   {
-    pattern: "unmute ?(.*)",
+    pattern: "unmute",
     fromMe: true,
     desc: "unmute group",
     type: "group",
@@ -117,14 +117,14 @@ command(
     if (!message.isGroup)
       return await message.reply("_This command is for groups_");
     if (!isAdmin(message.jid, message.user, message.client))
-      return await message.reply("_I'm not admin_");
+      return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     await message.reply("_Unmuting_");
     return await client.groupSettingUpdate(message.jid, "not_announcement");
   }
 );
 command(
   {
-    pattern: "amute ?(.*)",
+    pattern: "amute",
     fromMe: true,
     desc: "auto mutes group",
     type: "group",
@@ -135,7 +135,7 @@ command(
     if (!match) return message.reply("_Enter time to mute_\nEg : amute 20:10");
 
     if (!isAdmin(message.jid, message.user, message.client))
-      return await message.reply("_I'm not admin_");
+      return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     message.reply(`_Group will mute at ${match}_`);
     await saveSchedule(message.jid, match, async () => {
       await message.reply("_Muting_");
@@ -220,8 +220,8 @@ command(
             return await message[config.ANTILINK_ACTION]([message.participant]);
           }
         } else {
-          return await message.reply("_I'm not admin_");
-        }
+          return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
+      
       }
   }
 );
