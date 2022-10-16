@@ -27,7 +27,8 @@ alive+= `
 ┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
-╰━━━━━━━━━━━──⊷\n,
+╰━━━━━━━━━━━──⊷\n
+,
 const const buttonMessage = {
     text: "Hi it's button message",
     footer: 'Alive button',
