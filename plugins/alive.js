@@ -29,16 +29,21 @@ alive+= `
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
 ),
- buttons: [
-   }
-      buttonld: '${prefix}support group',
-      buttonText: {displayText: ("⫷𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗚𝗥𝗢𝗨𝗣⫸") },
-   },
-   {
-      buttonld: '${prefix}github',
-      buttonText: {displayText: ("⫷𝗚𝗜𝗧𝗛𝗨𝗕⫸") },
-   },
-}
+       buttons: [
+         }
+            buttonld: '${prefix}support group',
+            buttonText: {displayText: ("⫷𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗚𝗥𝗢𝗨𝗣⫸") },
+         },
+         {
+            buttonld: '${prefix}github',
+            buttonText: {displayText: ("⫷𝗚𝗜𝗧𝗛𝗨𝗕⫸") },
+         },
+        ],
+      });
+    }
+  }
+);
+
 
 await message.client.sendMessage(message.jid,{
 image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
