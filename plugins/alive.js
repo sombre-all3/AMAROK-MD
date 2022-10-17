@@ -11,7 +11,7 @@ command(
   {
     pattern: "arise",
     fromMe: isPrivate,
-    desc: "dead",
+    desc: "Amarok alive message",
     dontAddCommandList: true,
   },
 async (message,match, { prefix }) => {
