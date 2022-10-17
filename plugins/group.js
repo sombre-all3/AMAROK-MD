@@ -11,7 +11,7 @@ command(
   },
   async (message, match) => {
     if (!message.isGroup)
-      return await message.reply("_This command is for groups_");
+      return await message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("⫷𝙈𝙀𝙉𝙏𝙄𝙊𝙉 𝙐𝙎𝙀𝙍 𝙏𝙊 𝘼𝘿𝘿⫸");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
@@ -33,7 +33,7 @@ command(
   },
   async (message, match) => {
     if (!message.isGroup)
-      return await message.reply("_This command is for groups_");
+      return await message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("⫷𝙈𝙀𝙉𝙏𝙄𝙊𝙉 𝙐𝙎𝙀𝙍 𝙏𝙊 𝙆𝙄𝘾𝙆⫸");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
@@ -55,7 +55,7 @@ command(
   },
   async (message, match) => {
     if (!message.isGroup)
-      return await message.reply("_This command is for groups_");
+      return await message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("⫷𝙈𝙀𝙉𝙏𝙄𝙊𝙉 𝙐𝙎𝙀𝙍 𝙏𝙊 𝙋𝙍𝙊𝙈𝙊𝙏𝙀⫸");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
@@ -76,7 +76,7 @@ command(
   },
   async (message, match) => {
     if (!message.isGroup)
-      return await message.reply("_This command is for groups_");
+      return await message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("⫷𝙈𝙀𝙉𝙏𝙄𝙊𝙉 𝙐𝙎𝙀𝙍 𝙏𝙊 𝘿𝙀𝙈𝙊𝙏𝙀⫸");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
