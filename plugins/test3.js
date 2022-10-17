@@ -1,7 +1,7 @@
 const {command} = require("../lib")
 
 command(
-  }  
+  {  
     pattern: "amarok",          
     fromMe: isPrivate,
     desc: "amarok famous message",
