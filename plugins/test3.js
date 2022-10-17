@@ -2,10 +2,10 @@ const {command} = require("../lib")
 
 command(
   }  
-        pattern: "amarok",          
-        fromMe: isPrivate,
-        desc: "amarok famous message",
-        dontAddCommandList: true,
+    pattern: "amarok",          
+    fromMe: isPrivate,
+    desc: "amarok famous message",
+    dontAddCommandList: true,
   },
 async(message,match) => (
 await message.sendMessage("HELLO USER HAPPY BIRTHDAY ${user}')
