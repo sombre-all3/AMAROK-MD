@@ -126,5 +126,6 @@ command(
     });
     menu += `╰──────────────────────────`;
     return await message.reply(menu);
+    image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
   }
 );
