@@ -127,5 +127,8 @@ command(
     menu += `╰──────────────────────────`;
     return await message.reply(menu);
     image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
+    caption: list,
+    footer: tiny(
+      `Amarok Md\nVersion : ${require("../package.json").version}` ),
   }
 );
