@@ -7,7 +7,7 @@ const {
 const { command, isPrivate, tiny, prefix } = require("../lib");
 const Lang = {
   FILTER_DESC:
-    "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
+    "It adds a filter. If someone writes your filter, it send the answer.",
   NO_FILTER: "*❌ There are no filters in this chat!*",
   FILTERS: tiny("your filters for this chat"),
   NEED_REPLY: "*❌ Please type in reply!*\n*Example:*",
