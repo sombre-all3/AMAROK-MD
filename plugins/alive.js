@@ -1,3 +1,5 @@
+//copyright ©2022 you may not take this file without giving me and Diego credit 
+
 const {
   command,
   isPrivate,
@@ -20,15 +22,15 @@ async (message,match, { prefix }) => {
       .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
       .split(",");
 let alive = `
-╭━━〘 "Hello all systems are functional" 〙━━──⊷` 
+╭━━〘 A⋆L⋆I⋆V⋆E⋆ 〙━━──⊷` 
 alive+= `
-┃ ⛥  *BOTNAME* : ${BOT_NAME}
-┃ ⛥  *OWNER* :  ${OWNER_NAME}
-┃ ⛥  *USER* :  ${message.pushName}
-┃ ⛥  *MY PREFIX* : ${prefix} //yeses leave the code🐤
-┃ ⛥  *CURRENT DATE* : ${date}
-┃ ⛥  *TIME* : ${time}
-┃ ⛥  *I've been up for* : ${clockString(uptime())} 
+┃ ⛥ 𝔹𝕠𝕥-ℕ𝕒𝕞𝕖: ${BOT_NAME}
+┃ ⛥ 𝕆𝕨𝕟𝕖𝕣: ${OWNER_NAME}
+┃ ⛥ 𝕌𝕤𝕖𝕣: ${message.pushName}
+┃ ⛥ ℙ𝕣𝕖𝕗𝕚𝕩: ${prefix} 
+┃ ⛥ 𝔻𝕒𝕥𝕖: ${date}
+┃ ⛥ 𝕋𝕚𝕞𝕖: ${time}
+┃ ⛥ 𝕌𝕡𝕋𝕚𝕞𝕖: ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
 `
 
