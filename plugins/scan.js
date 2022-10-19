@@ -8,11 +8,7 @@ command(
   },
 async (message,match) => {
 await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
-const qrTxtNew = SCAN AMAROK QR CODE WITHIN 8MIN BEFORE IT EXPIRED";
-      const button = [
-        { buttonld: "scan", buttonText: {diplayText: "SCAN QR"}, type: 1, },
-      ]
-
+{caption: "⫷𝑺𝑪𝑨𝑵 𝑨𝑴𝑨𝑹𝑶𝑲 𝑸𝑹 𝑾𝑰𝑻𝑯𝑰𝑵 8𝑴𝑰𝑵 𝑩𝑬𝑭𝑶𝑹𝑬 𝑰𝑻 𝑬𝑿𝑷𝑰𝑹𝑬⫸",});
 }
 )
 
