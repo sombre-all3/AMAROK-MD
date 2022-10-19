@@ -134,53 +134,6 @@ const {
   winter,
 } = require("@neeraj-x0/textpro");
 
-command(
-  {
-    pattern: "sparkling",
-    fromMe: isPublic,
-    dontAddCommandList: false,
-    type: "Textpro",
-  },
-  async (message, match) => {
-    if (match === "")
-      return await message.client.sendMessage(message.jid, NEED_WORD);
-
-    var topText, bottomText;
-    if (match.includes("/")) {
-      var split = match.split("/");
-      bottomText = split[1];
-      topText = split[0];
-    }
-
-    var webimage = await getBuffer(
-      `https://docs-jojo.herokuapp.com/api/sparkling?text1=${topText}&text2=${bottomText}`
-    );
-
-    await message.client.sendMessage(webimage, {}, "image");
-  }
-);
-
-
-command(
-  {
-    pattern: "ninjalogo",
-    fromMe: isPublic,
-    dontAddCommandList: false,
-    type: "Textpro",
-  },
-  async (message, match) => {
-    if (match === "")
-      return await message.client.sendMessage(message.NEED_WORD);
-
-    var webimage = await getBuffer(
-      `https://docs-jojo.herokuapp.com/api/gaming?text=${match}`
-    );
-
-    await message.client.sendMessage(webimage, {}, "image");
-  }
-);
-
-
 Module(
   {
     pattern: "neonlight",
