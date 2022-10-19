@@ -122,6 +122,7 @@ command(
     return await client.groupSettingUpdate(message.jid, "not_announcement");
   }
 );
+
 command(
   {
     pattern: "amute",
@@ -147,6 +148,7 @@ command(
     });
   }
 );
+
 command(
   {
     pattern: "aunmute ?(.*)",
@@ -173,6 +175,7 @@ command(
     });
   }
 );
+
 command(
   {
     pattern: "gjid ?(.*)",
@@ -195,7 +198,48 @@ command(
 );
 /**
  * antilink
- */
+ *
+
+command(
+  {
+    pattern: "tagall ?(.*)",
+    fromMe: true,
+    desc: "mention all users in group",
+    type: "group",
+  },
+  async (message, match) => {
+    if (!message.isGroup) return;
+    const { participants } = await message.client.groupMetadata(message.jid);
+    let teks = "";
+    for (let mem of participants) {
+      teks += ` @${mem.id.split("@")[0]}\n`;
+    }
+    message.sendMessage(teks.trim(), {
+      mentions: participants.map((a) => a.id),
+    });
+  }
+);
+
+command(
+  {
+    pattern: "tagall ?(.*)",
+    fromMe: true,
+    desc: "mention all users in group",
+    type: "group",
+  },
+  async (message, match) => {
+    if (!message.isGroup) return;
+    const { participants } = await message.client.groupMetadata(message.jid);
+    let teks = "";
+    for (let mem of participants) {
+      teks += ` @${mem.id.split("@")[0]}\n`;
+    }
+    message.sendMessage(teks.trim(), {
+      mentions: participants.map((a) => a.id),
+    });
+  }
+);
+
 command(
   {
     on: "text",
