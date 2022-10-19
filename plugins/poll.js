@@ -2,7 +2,7 @@ const {command} = require("../lib")
 
 command(
   {
-      pattern: "poll"'
+      pattern: "poll",
       fromMe: true,
       desc: "send poll",
   },
