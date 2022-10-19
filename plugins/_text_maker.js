@@ -134,7 +134,7 @@ const {
   winter,
 } = require("@neeraj-x0/textpro");
 
-Module(
+command(
   {
     pattern: "sparkling",
     fromMe: isPublic,
@@ -161,7 +161,7 @@ Module(
 );
 
 
-Module(
+command(
   {
     pattern: "ninjalogo",
     fromMe: isPublic,
