@@ -1,11 +1,14 @@
-const { command, isPrivate } = require("../lib/");
+//all errors fixed don't copy and give credits to Diegoson and Alpha
+
+const { Module, isPublic } = require("../lib/");
 const fs = require("fs");
 const ffmpeg = require("fluent-ffmpeg");
 
-command(
+
+Module(
   {
     pattern: "x4mp4",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Reduce video’s quality by 75%.",
     type: "X-Media",
   },
@@ -25,10 +28,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "x2mp4",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Reduce video’s quality by 50%",
     type: "X-Media",
   },
@@ -48,10 +52,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "mp4image",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts photo to 5 sec video.",
     type: "X-Media",
   },
@@ -73,10 +78,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "spectrum",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts the spectrum of sound into video.",
     type: "X-Media",
   },
@@ -102,10 +108,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "waves",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts the wave range of sound to video.",
     type: "X-Media",
   },
@@ -131,10 +138,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "frequency",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts the frequency range of sound to video.",
     type: "X-Media",
   },
@@ -160,10 +168,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "avec",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts the histogram of sound to video.",
     type: "X-Media",
   },
@@ -189,10 +198,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "volumeaudio",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts the decibel value of the sound into video.",
     type: "X-Media",
   },
@@ -218,10 +228,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "cqtaudio",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts the CQT value of audio to video.",
     type: "X-Media",
   },
@@ -247,10 +258,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "mp3eq",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Adjusts the sound to a crystal clear level.",
     type: "X-Media",
   },
@@ -274,10 +286,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "mp3crusher",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Distorts the sound, makes ridiculous.",
     type: "X-Media",
   },
@@ -300,10 +313,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "mp3reverse",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Plays the sound in reverse.",
     type: "X-Media",
   },
@@ -322,10 +336,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "mp4vintage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a nostalgic effect to video.",
     type: "X-Media",
   },
@@ -345,10 +360,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "mp4reverse",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Plays the video in reverse.",
     type: "X-Media",
   },
@@ -369,10 +385,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "mp4bw",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a monochrome effect to video.",
     type: "X-Media",
   },
@@ -392,10 +409,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "bwimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a monochrome effect to image.",
     type: "X-Media",
   },
@@ -414,10 +432,11 @@ command(
   }
 );
 
-command(
+
+Module(
   {
     pattern: "vintageimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a vinatge effect to video.",
     type: "X-Media",
   },
@@ -436,16 +455,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4enhance",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Enhance video’s quality",
     type: "X-Media",
   },
@@ -465,16 +479,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "blurimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Blurs the background of the photo.",
     type: "X-Media",
   },
@@ -497,16 +506,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4blur",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Blurs the background of the video.",
     type: "X-Media",
   },
@@ -529,16 +533,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp3pitch",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Makes the sound thinner and faster.",
     type: "X-Media",
   },
@@ -557,16 +556,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4edge",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a edge effect to the video.",
     type: "X-Media",
   },
@@ -592,16 +586,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp3low",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Makes the sound deep and slower.",
     type: "X-Media",
   },
@@ -620,16 +609,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "x2mp3",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Makes the sound twice as fast.",
     type: "X-Media",
   },
@@ -648,16 +632,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "edgeimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a edge effect to the photo.",
     type: "X-Media",
   },
@@ -676,16 +655,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "enhanceimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Makes the photo clearer.",
     type: "X-Media",
   },
@@ -704,16 +678,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp3volume",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Increase sound level",
     type: "X-Media",
   },
@@ -736,16 +705,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "gif",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts video to gif.",
     type: "X-Media",
   },
@@ -772,16 +736,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "vgif",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Converts video to voiced gif.",
     type: "X-Media",
   },
@@ -807,16 +766,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "grenimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies grain effect to the photo",
     type: "X-Media",
   },
@@ -835,16 +789,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "interp ",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Increases the FPS of the video.",
     type: "X-Media",
   },
@@ -878,16 +827,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "rainbow",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies rainbow effect to the photo",
     type: "X-Media",
   },
@@ -911,16 +855,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4rainbow",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a rainbow effect to video.",
     type: "X-Media",
   },
@@ -945,16 +884,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "negative",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a negative color filter to the photo.",
     type: "X-Media",
   },
@@ -973,16 +907,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4negative",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a negative color filter to the video.",
     type: "X-Media",
   },
@@ -1002,16 +931,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4art",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a art effect to the video.",
     type: "X-Media",
   },
@@ -1035,16 +959,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "artimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Applies a art effect to the photo.",
     type: "X-Media",
   },
@@ -1067,16 +986,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4stab",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Decreases the vibration of the video.",
     type: "X-Media",
   },
@@ -1096,16 +1010,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "vivid",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "Makes the colors of the video more vivid and beautiful.",
     type: "X-Media",
   },
@@ -1129,16 +1038,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "colorimage",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "It makes the colors of the photo more vivid and attractive",
     type: "X-Media",
   },
@@ -1161,16 +1065,11 @@ command(
   }
 );
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
-command(
+Module(
   {
     pattern: "mp4slowmo",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "applies true-slowmo to non-slow motion videos",
     type: "X-Media",
   },
