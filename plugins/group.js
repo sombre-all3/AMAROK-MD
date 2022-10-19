@@ -150,7 +150,6 @@ command(
   }
 );
 
-
 command(
   {
      pattern: 'amute ?(.*)',
