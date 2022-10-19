@@ -195,33 +195,6 @@ Module(
 
 Module(
   {
-    pattern: "pornhub",
-    fromMe: isPublic,
-    dontAddCommandList: false,
-    type: "Textpro",
-  },
-  async (message, match) => {
-    if (match === "")
-      return await message.client.sendMessage(message.jid, NEED_WORD);
-
-    var topText, bottomText;
-    if (match.includes("/")) {
-      var split = match.split("/");
-      bottomText = split[1];
-      topText = split[0];
-    }
-
-    var webimage = await getBuffer(
-      `https://api.xteam.xyz/textpro/ph?text=${topText}&text2=${bottomText}&APIKEY=ab9942f95c09ca89`
-    );
-
-    await message.client.sendMessage(webimage, {}, "image");
-  }
-);
-
-
-Module(
-  {
     pattern: "snow",
     fromMe: isPublic,
     dontAddCommandList: false,
