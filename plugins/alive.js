@@ -27,6 +27,7 @@ alive+= `
 ┃ ⛥ 𝔹𝕠𝕥-ℕ𝕒𝕞𝕖: ${BOT_NAME}
 ┃ ⛥ 𝕆𝕨𝕟𝕖𝕣: ${OWNER_NAME}
 ┃ ⛥ 𝕌𝕤𝕖𝕣: ${message.pushName}
+┃ ⛥ 𝕄𝕠𝕕𝕖: ${MODE}
 ┃ ⛥ ℙ𝕣𝕖𝕗𝕚𝕩: ${prefix} 
 ┃ ⛥ 𝔻𝕒𝕥𝕖: ${date}
 ┃ ⛥ 𝕋𝕚𝕞𝕖: ${time}
