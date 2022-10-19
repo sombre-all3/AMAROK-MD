@@ -150,29 +150,25 @@ command(
   }
 );
 
+
 command(
   {
-    pattern: "aunmute ?(.*)",
-    fromMe: true,
-    desc: "auto unmutes group",
-    type: "group",
+     pattern: 'amute ?(.*)',
+     fromMe: true,
+     desc: 'Group Auto mute',
+     type: 'user'
   },
-  async (message, match, m, client) => {
-    if (!message.isGroup)
-      return await message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
-    if (!match)
-      return message.reply("_Enter time to unmute_\nEg : aunmute 20:10");
-
-    if (!isAdmin(message.jid, message.user, message.client))
-      return await message.reply("_I'm not admin_");
-    message.reply(`_Group will unmute at ${match}_`);
-    await saveSchedule(message.jid, match, async () => {
-      await message.reply("_Auto Unmuting_");
-      return await client.groupSettingUpdate(message.jid, "not_announcement");
-    });
-    return cron(match, async () => {
-      await message.reply("_Auto Unmuting_");
-      return await client.groupSettingUpdate(message.jid, "not_announcement");
+  async (message, match, client) => {
+      
+      if (!match)
+      return message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
+   
+   const isImAdmin = await isAdmin(message, await message.userJid())
+        if (!isImAdmin) return await message.reply(`⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸')
+    message.reply(`_Group will mute at ${match}_`);
+    return setMute(match, async () => {
+      await message.reply("_Muting_");
+      return await client.groupSettingUpdate(message.jid, "announcement");
     });
   }
 );
