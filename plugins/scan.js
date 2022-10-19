@@ -8,7 +8,7 @@ command(
   },
 async (message,match) => {
 await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
-return await message.reply("CURRENTLY YOUR SESSION IS OVER");
+caption: " SCAN WITHIN 8MIN",
 }
 )
 
