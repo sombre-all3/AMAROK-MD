@@ -8,13 +8,13 @@ command(
 
           },
         await (message,match) => {
-           match = isURL || message.reply_message.text)
-           if(!match return await message.send('_Example : fb url_')
-           const results = await facebook(match)
-           if(!video not found await message.send('I can't get the video')
-           return await message.sendMessage('_Enter correct url_');
-         }
-      )
+        match = isURL || message.reply_message.text)
+        if(!match return await message.send('_Example : fb url_')
+        const results = await facebook(match)
+        if(!video not found await message.send('I cant get the video')
+        return await message.sendMessage('_Enter correct url_');
+       }
+ )
 
 
 
