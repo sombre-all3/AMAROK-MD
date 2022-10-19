@@ -29,6 +29,7 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
+,
 
 await message.client.sendMessage(message.jid,{
 image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
