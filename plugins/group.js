@@ -127,32 +127,6 @@ command(
 
 command(
   {
-    pattern: "amute",
-    fromMe: true,
-    desc: "auto mutes group",
-    type: "group",
-  },
-  async (message, match, m, client) => {
-    if (!message.isGroup)
-      return await message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
-    if (!match) return message.reply("_Enter time to mute_\nEg : amute 20:10");
-
-    if (!isAdmin(message.jid, message.user, message.client))
-      return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
-    message.reply(`_Group will mute at ${match}_`);
-    await saveSchedule(message.jid, match, async () => {
-      await message.reply("_Muting_");
-      return await client.groupSettingUpdate(message.jid, "announcement");
-    });
-    return cron(match, async () => {
-      await message.reply("_Muting_");
-      return await client.groupSettingUpdate(message.jid, "announcement");
-    });
-  }
-);
-
-command(
-  {
      pattern: 'amute ?(.*)',
      fromMe: true,
      desc: 'Group Auto mute',
@@ -169,7 +143,6 @@ command(
     return setMute(match, async () => {
       await message.reply("_Muting_");
       return await client.groupSettingUpdate(message.jid, "announcement");
-    });
   }
 );
 
