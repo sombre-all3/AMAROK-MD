@@ -24,6 +24,7 @@ let alive = `
 alive+= `
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
+┃ ⛥  *USER* :  ${message.pushName}
 ┃ ⛥  *MY PREFIX* : ${prefix}
 ┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
