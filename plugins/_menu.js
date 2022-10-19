@@ -129,16 +129,6 @@ command(
       image: { url: `https://i.imgur.com/9Q0gxqJ.jpeg` },
       caption: list,
       footer: tiny(
-      buttons: [
-        {
-          buttonId: `${prefix}ping`,
-          buttonText: { displayText: tiny("⫷ALIVE⫸") },
-        },
-        {
-          buttonId: `${prefix}list`,
-          buttonText: { displayText: tiny("⫷LIST⫸") },
-        },
-      ],
-    });
+   return await message.reply(menu);
   }
 );
