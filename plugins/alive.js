@@ -35,7 +35,7 @@ alive+= `
 `
 
 await message.client.sendMessage(message.jid,{
-image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
+image: { url: `https://telegra.ph/file/6943d8348ffb35eb3e301.jpg` },
       caption: alive,
       footer: tiny(`alive.js❤️` ),
 
