@@ -1,4 +1,4 @@
-conts {command} = require ('../lib')
+conts {command} = require('../lib')
 
 command(
   {
