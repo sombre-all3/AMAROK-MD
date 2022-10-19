@@ -125,10 +125,6 @@ command(
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
     menu += ` ╰━━━━━━━━━━━━━━━━━━━━━━━──⊷`;
-    return await message.reply(menu);
-    return await message.client.sendMessage(message.jid, {
-      image: { url: `https://i.imgur.com/9Q0gxqJ.jpeg` },
-      caption: list,
-      footer: tiny(
+   return await message.reply(menu);
   }
 );
