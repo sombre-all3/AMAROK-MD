@@ -22,7 +22,7 @@ async (message,match, { prefix }) => {
       .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
       .split(",");
 let alive = `
-╭━━〘 A⋆L⋆I⋆V⋆E⋆ 〙━━──⊷` 
+╭━〘 A⋆L⋆I⋆V⋆E⋆ 〙━─⊷` 
 alive+= `
 ┃ ⛥ 𝔹𝕠𝕥-ℕ𝕒𝕞𝕖: ${BOT_NAME}
 ┃ ⛥ 𝕆𝕨𝕟𝕖𝕣: ${OWNER_NAME}
