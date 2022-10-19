@@ -7,13 +7,10 @@ command(
     desc: "Get connected to amarok",
   },
 async (message,match) => {
-await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/",{
-caption: "SCAN QR WITHIN 8min",
-});
-}
+await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
 return await message.reply("CURRENTLY YOUR SESSION IS OVER");
 }
-);
+)
 
 
 
