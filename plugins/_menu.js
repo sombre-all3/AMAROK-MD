@@ -129,6 +129,6 @@ command(
       image: { url: `https://i.imgur.com/9Q0gxqJ.jpeg` },
       caption: list,
       footer: tiny(
-   return await message.reply(menu);
+    return await message.reply(menu);
   }
 );
