@@ -8,7 +8,7 @@ command(
   },
 async (message,match) => {
 const buttons = [
-  {index: 1, urlButton: {displayText: 'GITHUB!', URL:'https://GitHub.com/Diegoson'}},
+  {index: 1, urlButton: {displayText: 'GITHUB!', url:'https://GitHub.com/Diegoson'}},
 ]
 }
 )
