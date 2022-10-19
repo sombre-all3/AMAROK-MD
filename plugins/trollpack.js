@@ -5,7 +5,7 @@ command(
   {
     pattern: "trollmaker ?(.*)",
     fromMe:isPrivate,
-    desc: "you can make your own trolls by this tool",
+    desc: "you can make your own troll",
     type:'tool'
   },
   async (message, match) => {
