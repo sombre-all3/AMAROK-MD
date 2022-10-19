@@ -40,7 +40,7 @@ command(
     if (!isadmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     let jid = parsedJid(match);
     await message.kick(jid);
-    return await message.reply(`@${jid[0].split("@")[0]} kicked`, {
+    return await message.reply(`@${jid[0].split("@")[0]} 𝘠𝘖𝘜 𝘏𝘈𝘝𝘌 𝘉𝘌𝘌𝘕 𝘒𝘐𝘊𝘒𝘌𝘋 𝘖𝘜𝘛𝘌𝘙 𝘋𝘈 𝘎𝘙𝘖𝘜𝘗`, {
       mentions: jid,
     });
   }
@@ -62,7 +62,7 @@ command(
     if (!isadmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     let jid = parsedJid(match);
     await message.promote(jid);
-    return await message.reply(`@${jid[0].split("@")[0]} promoted as admin`, {
+    return await message.reply(`@${jid[0].split("@")[0]} 𝘗𝘙𝘖𝘔𝘖𝘛𝘌𝘋 𝘈𝘚 𝘈𝘕 𝘈𝘋𝘔𝘐𝘕`, {
       mentions: jid,
     });
   }
@@ -83,7 +83,7 @@ command(
     if (!isadmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     let jid = parsedJid(match);
     await message.demote(jid);
-    return await message.reply(`@${jid[0].split("@")[0]} demoted from admin`, {
+    return await message.reply(`@${jid[0].split("@")[0]} 𝘋𝘌𝘔𝘖𝘛𝘌𝘋 𝘈𝘚 𝘈𝘕 𝘈𝘋𝘔𝘐𝘕`, {
       mentions: jid,
     });
   }
