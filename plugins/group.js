@@ -137,7 +137,7 @@ command(
       return message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
    
    const isImAdmin = await isAdmin(message, await message.userJid())
-        if (!isImAdmin) return await message.reply(`⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸')
+        if (!isImAdmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
     message.reply(`_Group will mute at ${match}_`);
     return setMute(match, async () => {
       await message.reply("_Muting_");
