@@ -47,6 +47,6 @@ module.exports = {
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
   OWNER_NAME: process.env.OWNER_NAME || "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃",
-  BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐃",
+  BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   WORK_TYPE: process.env.WORK_TYPE || "public",
 };
