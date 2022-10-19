@@ -197,9 +197,6 @@ command(
     message.reply(str);
   }
 );
-/**
- * antilink
- *
 
 command(
   {
