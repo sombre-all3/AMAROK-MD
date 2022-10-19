@@ -12,7 +12,7 @@ command(
            if(!match return await message.send('_Example : fb url_')
            const results = await facebook(match)
            if(!video not found await message.send('I can't get the video')
-           return message wait message.sendMessage('_Enter correct url_');
+           return await message.sendMessage('_Enter correct url_');
          }
       )
 
