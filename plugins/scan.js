@@ -3,7 +3,7 @@ const {command} = require("../lib")
 command(
   {
     pattern: "scan",
-    fromMe: true,
+    fromMe: isPublic,
     desc: "Get connected to amarok",
   },
 async (message,match) => {
