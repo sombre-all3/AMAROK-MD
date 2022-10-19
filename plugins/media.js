@@ -1,4 +1,4 @@
-constructed {
+const {
   Function,
   command,
   qrcode,
