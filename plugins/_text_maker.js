@@ -133,7 +133,6 @@ const {
   window,
   winter,
 } = require("@neeraj-x0/textpro");
-
 Module(
   {
     pattern: "neonlight",
