@@ -196,7 +196,6 @@ command(
     }
     search(match + "song").then(async ({ all }) => {
       await message.reply(`🎶𝘈𝘔𝘈𝘙𝘖𝘒 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘚𝘖𝘕𝘎🎶 ${all[0].title}_`);
-      return await message.sendMessage('🎶𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘜𝘗𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘚𝘖𝘕𝘎🎶');
       yta(all[0].url).then(async ({ dl_link, title, thumb }) => {
         let buff = await AddMp3Meta(dl_link, thumb, {
           title,
@@ -230,7 +229,6 @@ command(
     }
     search(match).then(async ({ all }) => {
       await message.reply(`🎥𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘝𝘐𝘋𝘌𝘖🎥 ${all[0].title}_`);
-      return await message.sendMessage('🎥𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘜𝘗𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘝𝘐𝘋𝘌𝘖🎥');
       ytv(all[0].url).then(({ dl_link, title }) => {
         message.sendFromUrl(dl_link, { filename: title, quoted: message });
       });
@@ -330,7 +328,6 @@ command(
     if (!ytIdRegex.test(match)) return await message.reply("_Invalid Url_");
     ytv(match).then(async ({ dl_link, title }) => {
       await message.reply(`🔍𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎🔍 ${title}_`);
-      return await message.sendMessage('🔍𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘜𝘗𝘓𝘖𝘈𝘋𝘐𝘕𝘎🔍');
       return await message.sendFromUrl(dl_link, {
         filename: title,
         quoted: message,
@@ -351,7 +348,6 @@ command(
     if (!ytIdRegex.test(match)) return await message.reply("_Invalid Url_");
     yta(match).then(async ({ dl_link, title, thumb }) => {
       await message.reply(`🔍𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎🔍 ${title}_`);
-      return await message.sendMessage('🔍𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘜𝘗𝘓𝘖𝘈𝘋𝘐𝘕𝘎🔍');
       let buff = await AddMp3Meta(dl_link, thumb, {
         title,
       });
