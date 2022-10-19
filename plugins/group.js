@@ -124,7 +124,6 @@ command(
   }
 );
 
-
 command(
   {
      pattern: 'amute ?(.*)',
@@ -143,7 +142,6 @@ command(
     return setMute(match, async () => {
       await message.reply("_Muting_");
       return await client.groupSettingUpdate(message.jid, "announcement");
-    });
   }
 );
 
