@@ -67,6 +67,7 @@ command(
     });
   }
 );
+
 command(
   {
     pattern: "demote",
