@@ -1,5 +1,4 @@
 conts {command} = require('../lib')
-
 command(
   {
      pattern: 'owner',
