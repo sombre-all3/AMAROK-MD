@@ -100,9 +100,9 @@ command(
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭───〔 ${tiny(" amarok command list")} 〕────\n`;
+    let menu = `╭━━〘 ${tiny(" amarok command list")} 〙━━──⊷ \n`;
 
-    let cmnd = [];
+    let cmnd = ┃ ⛥ │ ➛;
     let cmd, desc;
     events.commands.map((command) => {
       if (command.pattern) {
@@ -121,10 +121,10 @@ command(
     });
     cmnd.sort();
     cmnd.forEach(({ cmd, desc }, num) => {
-      menu += `├ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
-      if (desc) menu += `├ ${tiny("use : " + desc)}\n`;
+      menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
+      if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
-    menu += `╰──────────────────────────`;
+    menu += ` ╰━━━━━━━━━━━━━━━━━━━━━━━──⊷`;
     return await message.reply(menu);
   }
 );
