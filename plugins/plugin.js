@@ -5,7 +5,7 @@ const { PluginDB, installPlugin } = require("../lib/database/plugins");
 
 command(
   {
-    pattern: "install ?(.*)",
+    pattern: "plugin ?(.*)",
     fromMe: true,
     desc: "Installs External plugins",
     type:'user'
@@ -55,7 +55,7 @@ command(
 );
 
 command(
-  { pattern: "plugin", fromMe: true, desc: "plugin list" ,type:'user'},
+  { pattern: "pluginlist", fromMe: true, desc: "plugin list" ,type:'user'},
   async (message, match) => {
     var mesaj = "";
     var plugins = await PluginDB.findAll();
