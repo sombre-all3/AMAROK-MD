@@ -1,4 +1,4 @@
-const {
+constructed {
   Function,
   command,
   qrcode,
@@ -196,8 +196,8 @@ command(
       });
     }
     search(match + "song").then(async ({ all }) => {
-      await message.reply(`🎶𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝒀𝑶𝑼𝑹 𝑺𝑶𝑵𝑮 𝑾𝑨𝑰𝑻🎶 ${all[0].title}_`);
-      return await message.sendMessage('🎶𝑾𝑨𝑰𝑻 𝑨𝑴𝑨𝑹𝑶𝑲 𝑰𝑺 𝑵𝑶𝑾 𝑼𝑷𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝒀𝑶𝑼𝑹 𝑺𝑶𝑵𝑮🎶');
+      await message.reply(`🎶𝘈𝘔𝘈𝘙𝘖𝘒 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘚𝘖𝘕𝘎🎶 ${all[0].title}_`);
+      return await message.sendMessage('🎶𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘜𝘗𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘚𝘖𝘕𝘎🎶');
       yta(all[0].url).then(async ({ dl_link, title, thumb }) => {
         let buff = await AddMp3Meta(dl_link, thumb, {
           title,
