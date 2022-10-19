@@ -63,7 +63,6 @@ Function(
     await message.sendMessage(
       `📸𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘐𝘔𝘈𝘎𝘌𝘚📸 ${amount || 5} 𝘐𝘔𝘈𝘎𝘌𝘚 𝘍𝘖𝘙 ${query}_`
     );
-    return await message.sendMessage('📸𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘕𝘖𝘞 𝘜𝘗𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘐𝘔𝘈𝘎𝘌𝘚📸');
     for (let i of result) {
       await message.sendFromUrl(i);
     }
