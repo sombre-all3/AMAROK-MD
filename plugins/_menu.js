@@ -102,7 +102,7 @@ command(
   async (message, match, { prefix }) => {
     let menu = `╭━━〘 ${tiny(" amarok command list")} 〙━━──⊷ \n`;
 
-    let cmnd = ┃ ⛥ │ ➛;
+    let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
       if (command.pattern) {
