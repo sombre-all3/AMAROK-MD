@@ -22,6 +22,7 @@ async (message,match, { prefix }) => {
 let alive = `
 ╭━━〘 "Hello all systems are functional" 〙━━──⊷` 
 alive+= `
+┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *MY PREFIX* : ${prefix}
 ┃ ⛥  *CURRENT DATE* : ${date}
