@@ -29,10 +29,6 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
-const buttons = [
-  {index: 1, urlButton: {displayText: 'GITHUB!',: url: 'https:/github.com/Diegoson'}},
-]
-`
 
 await message.client.sendMessage(message.jid,{
 image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
