@@ -1,5 +1,4 @@
 // Errors fixed
-
 const { getBuffer, Module, isPublic } = require("../lib");
 const NEED_WORD = "*You Must Enter a Word*";
 const {
