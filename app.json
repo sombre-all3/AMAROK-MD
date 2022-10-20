@@ -19,11 +19,6 @@
       "required": false,
       "value": ""
     },
-    "HANDLERS": {
-      "description": "prefix for commands/ using false command work without . ",
-      "required": false,
-      "value": "."
-    },
     "PACKNAME": {
       "description": "Sticker Packname required Example Amarok",
       "required": false
@@ -45,7 +40,7 @@
     "MODE": {
       "description": "Work Type set public or private",
       "required": false,
-      "value": "private"
+      "value": "public"
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
