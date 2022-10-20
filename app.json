@@ -31,12 +31,7 @@
     "RMBG_KEY": {
       "description": "Remove bg api key required get it here(https://www.remove.bg/api)",
       "required": false,
-      "value": ""
-    },
-    "MENU_TYPE": {
-      "description": "Type image for image menu type video for video menu",
-      "required": false,
-      "value": "image"
+      "value": ",
     },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR required Example Diegoson",
@@ -51,9 +46,6 @@
       "description": "Work Type set public or private",
       "required": false,
       "value": "private"
-    },
-    "MONGODB_URI": {
-      "description": "A secret String for Mongodb Connection.(Required)"
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
