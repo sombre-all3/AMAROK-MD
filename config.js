@@ -13,7 +13,6 @@ module.exports = {
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   SESSION_ID:process.env.SESSION_ID || "MWhoSnNSclY=",
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
-  MENU_THUMB: process.env.MENU_THUMB || "https://i.imgur.com/9Q0gxqJ.jpeg",
   MENU_TYPE: process.env.MENU_TYPE || "image", 
   ALIVE: process.env.ALIVE || "https://i.imgur.com/c9CNgT5.jpeg",
   LANG: process.env.LANG || "EN",
