@@ -173,41 +173,17 @@ command(
 
 command(
   {
-    pattern: "song ?(.*)",
-    fromMe: isPrivate,
-    desc: "Downloads Song",
-    type: "downloader",
+        pattern: 'song ?(.*)',
+        fromMe: MODE,
+        desc: 'Download song from YouTube',
+        type: 'download'
   },
   async (message, match) => {
-    if (!(match || message.reply_message.text))
-      return await message.reply("_Enter Song Name_");
-    match = match || message.reply_message.text;
-    if (ytIdRegex.test(match)) {
-      yta(match.trim()).then(async ({ dl_link, title, thumb }) => {
-        let buff = await AddMp3Meta(dl_link, thumb, {
-          title,
-        });
-        message.sendMessage(
-          buff,
-          { mimetype: "audio/mpeg", quoted: message.data },
-          "audio"
-        );
-      });
-    }
-    search(match + "song").then(async ({ all }) => {
-      await message.reply(`🎶𝘈𝘔𝘈𝘙𝘖𝘒 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘚𝘖𝘕𝘎🎶 ${all[0].title}_`);
-      yta(all[0].url).then(async ({ dl_link, title, thumb }) => {
-        let buff = await AddMp3Meta(dl_link, thumb, {
-          title,
-          artist: [all[0].author],
-        });
-        message.sendMessage(
-          buff,
-          { mimetype: "audio/mpeg", quoted: message.data },
-          "audio"
-        );
-      });
-    });
+
+    if (!match)
+    return await message.reply('_Give me a song name or link.._');
+
+    await songYT(match, message)
   }
 );
 
