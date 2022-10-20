@@ -26,6 +26,7 @@ command(
 menu+= `
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *PREFIX* : ${prefix}
+┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥  *DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
