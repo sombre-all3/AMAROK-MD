@@ -126,28 +126,6 @@ command(
 
 command(
   {
-     pattern: 'amute ?(.*)',
-     fromMe: true,
-     desc: 'Group Auto mute',
-     type: 'user'
-  },
-  async (message, match, client) => {
-      
-      if (!match)
-      return message.reply("⫷𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙄𝙎 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋 𝙊𝙉𝙇𝙔⫸");
-   
-   const isImAdmin = await isAdmin(message, await message.userJid())
-        if (!isImAdmin) return await message.reply("⫷𝙄𝙈 𝙉𝙊𝙏 𝘼𝙉 𝘼𝘿𝙈𝙄𝙉⫸");
-    message.reply(`_Group will mute at ${match}_`);
-    return setMute(match, async () => {
-      await message.reply("_Muting_");
-      return await client.groupSettingUpdate(message.jid, "announcement");
-    });
-  }
-);
-
-command(
-  {
     pattern: "gjid ?(.*)",
     fromMe: true,
     desc: "gets jid of all group members",
