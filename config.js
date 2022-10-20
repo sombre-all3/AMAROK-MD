@@ -16,8 +16,11 @@ module.exports = {
   ALIVE: process.env.ALIVE || "https://i.imgur.com/c9CNgT5.jpeg",
   LANG: process.env.LANG || "EN",
   AUDIO_DATA: process.env.AUDIO_DATA || '𝘈𝘮𝘢𝘳𝘰𝘬,   𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥,https://i.imgur.com/c9CNgT5.jpeg',
-   ? "^"
-   : "^[,]",
+  LANG: process.env.LANG || "EN",
+  HANDLERS:
+    process.env.HANDLER === "false" || process.env.HANDLER === "null"
+      ? "^"
+      : "^[,]",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
   PACKNAME: process.env.PACKNAME || "🐺𝔸𝕄𝔸ℝ𝕆𝕂🐺",
