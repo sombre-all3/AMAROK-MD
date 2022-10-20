@@ -33,6 +33,16 @@
       "required": false,
       "value": ""
     },
+    "MENU_THUMB": {
+      "description": "Add link for menu thumb",
+      "required": false,
+      "value": "https://i.imgur.com/9Q0gxqJ.jpeg"
+    },
+    "MENU_TYPE": {
+      "description": "Type image for image menu type video for video menu",
+      "required": false,
+      "value": "image"
+    },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR required Example Diegoson",
       "required": false
