@@ -25,8 +25,8 @@ command(
 ╭━━〘 `+ styletext(OWNER_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
-┃ ⛥  *PREFIX* : ${prefix}
 ┃ ⛥  *USER* : ${message.pushName}
+┃ ⛥  *PREFIX* : ${prefix}
 ┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥  *DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
@@ -76,7 +76,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     menu += ` ╰━━━━━━━━━━━──⊷\n`
     menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
-      ${config.MENU_TYPE}: { url: `${config.MENU_THUMB}` },
+      image: { url: `https://i.imgur.com/9Q0gxqJ.jpeg` },
       caption: menu,
       footer: tiny(
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
