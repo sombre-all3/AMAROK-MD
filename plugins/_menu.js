@@ -34,6 +34,7 @@ menu+= `
 ┃ ⛥  *COMMANDS* : ${events.commands.length} 
 ┃ ⛥  *UPTIME* : ${clockString(uptime())} 
 ┃ ⛥  *VERSION* : ${require("../package.json").version}
+┃ ⛥  *PLUGINS* : ${PLUGINS.count}
 ┃ ⛥  *RAM* : ${getRam()}
 ╰━━━━━━━━━━━──⊷\n
 `
