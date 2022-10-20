@@ -5,7 +5,6 @@ const {
   webp2mp4,
   isUrl,
   isPrivate,
-  MODE
 } = require("../lib/");
 const { yta, ytIdRegex, ytv } = require("../lib/yotube");
 const { search } = require("yt-search");
@@ -169,22 +168,6 @@ command(
     let buff = await m.quoted.download();
     let buffer = await webp2mp4(buff);
     return await message.sendMessage(buffer, {}, "video");
-  }
-);
-
-command(
-  {
-        pattern: 'song ?(.*)',
-        fromMe: MODE,
-        desc: 'Download song from YouTube',
-        type: 'download'
-  },
-  async (message, match) => {
-
-    if (!match)
-    return await message.reply('_Give me a song name or link.._');
-
-    await songYT(match, message)
   }
 );
 
