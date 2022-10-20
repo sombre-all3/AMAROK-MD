@@ -31,6 +31,7 @@ menu+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *COMMANDS* : ${events.commands.length} 
 ┃ ⛥  *UPTIME* : ${clockString(uptime())} 
+┃ ⛥  *VERSION* : ${require("../package.json").version}
 ╰━━━━━━━━━━━──⊷\n
 `
 menu+= `╭───『 `+ styletext('Commands',57)+`』──◆`
