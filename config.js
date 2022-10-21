@@ -17,6 +17,7 @@ module.exports = {
       ? "^"
       : "^[.]",
   RMBG_KEY: process.env.RMBG_KEY || false,
+  BRANCH: "main",
   PACKNAME: process.env.PACKNAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   AUTHOR: process.env.AUTHOR || "𝐀𝐌𝐀𝐑𝐎𝐊",
   DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
@@ -24,7 +25,6 @@ module.exports = {
   SUDO: process.env.SUDO || "27686881509",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
-  IMAGE_URL: process.env.IMAGE_URL || "https://i.imgur.com/c9CNgT5.jpeg",
   OWNER_NAME: process.env.OWNER_NAME || "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃",
   BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   MODE: process.env.MODE || "public",
