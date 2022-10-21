@@ -28,5 +28,5 @@ module.exports = {
   OWNER_NAME: process.env.OWNER_NAME || "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃",
   BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   MODE: process.env.MODE || "public",
-  LANG: process.env.LANG || 'EN',
+  LANG: process.env.LANG || "EN",
 };
