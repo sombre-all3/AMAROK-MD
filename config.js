@@ -13,7 +13,7 @@ module.exports = {
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   LANG: process.env.LANG || "EN",
-  AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? ''𝘈𝘮𝘢𝘳𝘰𝘬,   𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥,https://i.imgur.com/c9CNgT5.jpeg',
+  AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? ''𝘈𝘮𝘢𝘳𝘰𝘬,𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥,https://i.imgur.com/c9CNgT5.jpeg',
   HANDLERS:
     process.env.HANDLER === "false" || process.env.HANDLER === "null"
       ? "^"
