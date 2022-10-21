@@ -5,7 +5,6 @@ if (existsSync('config.env')) require('dotenv').config({ path: './config.env' })
 const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  BRANCH: "main",
   LOGS: toBool(process.env.LOGS) || true,
   IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f","deb80cd12ababea1c9b9a8ad6ce3fab2","78c84c62b32a88e86daf87dd509a657a"],
   ALIVE: process.env.ALIVE || "https://i.imgur.com/c9CNgT5.jpeg",
@@ -29,5 +28,5 @@ module.exports = {
   OWNER_NAME: process.env.OWNER_NAME || "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃",
   BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   MODE: process.env.MODE || "public",
-  LANGUAGE: process.env.LANGUAGE || 'english',
+  LANG: process.env.LANG || 'EN',
 };
