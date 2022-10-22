@@ -28,14 +28,12 @@ menu+= `
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *PREFIX* : ${prefix}
 ┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
-┃ ⛥  *DAY* : ${date.toLocaleString('en', { weekday: 'long' })}
 ┃ ⛥  *DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *COMMANDS* : ${events.commands.length} 
 ┃ ⛥  *UPTIME* : ${clockString(uptime())} 
 ┃ ⛥  *VERSION* : ${require("../package.json").version}
 ┃ ⛥  *PLUGINS* : ${PLUGINS.count}
-┃ ⛥  *RAM* : ${getRam()}
 ╰━━━━━━━━━━━──⊷\n
 `
 menu+= `╭───『 `+ styletext('Commands',57)+`』──◆`
