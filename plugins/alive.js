@@ -1,5 +1,6 @@
 const {
   command,
+  isPublic,
   isPrivate,
   tiny,
   clockString,
@@ -11,7 +12,7 @@ const { hostname, uptime } = require("os");
 command(
   {
     pattern: "arise",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     desc: "dead",
     dontAddCommandList: true,
   },
