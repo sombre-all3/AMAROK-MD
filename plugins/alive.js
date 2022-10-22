@@ -39,9 +39,13 @@ image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
       {
       buttons: [
         {
-        buttonId: ',list', buttonText: {displayText: '𝙇𝙄𝙎𝙏'}},
-      {buttonId: ',ping', buttonText: {displayText: '𝙋𝙄𝙉𝙂'}}
-    ],
+        buttonId: '${prefix}list',
+        buttonText: {displayText: '𝙇𝙄𝙎𝙏'}},
+        {
+        buttonId: '${prefix}ping',
+        buttonText: {displayText: '𝙋𝙄𝙉𝙂'}}
+        },
+      ],
     });
   }
 );
