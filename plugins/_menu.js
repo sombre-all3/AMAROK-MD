@@ -30,9 +30,9 @@ menu+= `
 ┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥  *DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
-┃ ⛥  *COMMANDS* : ${events.commands.length} 
 ┃ ⛥  *UPTIME* : ${clockString(uptime())} 
 ┃ ⛥  *VERSION* : ${require("../package.json").version}
+┃ ⛥  *PLUGINS* : ${events.commands.length} 
 ╰━━━━━━━━━━━──⊷\n
 `
 menu+= `╭───『 `+ styletext('Commands',57)+`』──◆`
