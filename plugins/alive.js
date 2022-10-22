@@ -40,11 +40,11 @@ image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
       footer: tiny(`amarok md` ),
       buttons: [
         {
-        buttonId: '${prefix}owner',
+        buttonId: '${handlers}owner',
         buttonText: {displayText: tiny("⫷OWNER⫸") },
         },
         {
-        buttonId: '${prefix}list',
+        buttonId: '${handlers}list',
         buttonText: {displayText: tiny("⫷ MENU⫸") },
         },
       ],
