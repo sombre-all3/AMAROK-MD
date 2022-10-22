@@ -12,7 +12,7 @@ const { hostname, uptime } = require("os");
 command(
   {
     pattern: "arise",
-    fromMe: isPublic,
+    fromMe: isPrivate,
     desc: "dead",
     dontAddCommandList: true,
   },
