@@ -12,4 +12,5 @@ command({ pattern: ["link","invite"], sucReact: "🔗", category: ["group", "all
         global.catchError = true
         await client.sendErrorMessage( message.from, err, message.key, message );
     };
+    }
   );
