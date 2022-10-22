@@ -7,7 +7,7 @@ command(
     
   },
   async (message,match) => {
-    await message.sendMessage("Https://Diegoson/AMAROK-MD");
+    await message.sendMessage("https://Diegoson/AMAROK-MD");
     return await message.sendMessage("Thanks for choosing Amarok");
   };
  }
