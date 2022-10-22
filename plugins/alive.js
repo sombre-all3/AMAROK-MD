@@ -21,9 +21,10 @@ async (message,match, { prefix }) => {
       .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
       .split(",");
 let alive = `
-╭━━〘 "Hello all systems are functional" 〙━━──⊷` 
+╭━━〘 "A L I V E" 〙━━──⊷` 
 alive+= `
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
+┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *MY PREFIX* : ${prefix}
 ┃ ⛥  *CURRENT DATE* : ${date}
@@ -35,15 +36,15 @@ alive+= `
 await message.client.sendMessage(message.jid,{
 image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
       caption: FancyRandom(alive),
-      footer: tiny(`alive.js❤️` ),
+      footer: tiny(`amarok md` ),
       buttons: [
         {
-        buttonId: '${prefix}list',
-        buttonText: {displayText: tiny("𝙇𝙄𝙎𝙏") },
+        buttonId: '${prefix}owner',
+        buttonText: {displayText: tiny("⫷OWNER⫸") },
         },
         {
-        buttonId: '${prefix}ping',
-        buttonText: {displayText: tiny("𝙋𝙄𝙉𝙂") },
+        buttonId: '${prefix}list',
+        buttonText: {displayText: tiny("⫷ MENU⫸") },
         },
       ],
     });
