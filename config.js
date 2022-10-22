@@ -13,7 +13,7 @@ module.exports = {
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   LANG: process.env.LANG || "EN",
   HANDLERS:
-    process.env.HANDLER === "false" || process.env.HANDLER === ".,",
+    process.env.HANDLER === "false" || process.env.HANDLER === ".",
       ? "^"
       : "^[.]",
   RMBG_KEY: process.env.RMBG_KEY || false,
