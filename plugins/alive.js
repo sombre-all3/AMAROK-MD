@@ -1,11 +1,10 @@
-//copyright ©2022 you may not take this file without giving me and Diego credit 
-
 const {
   command,
   isPrivate,
   tiny,
   clockString,
 } = require("../lib");
+const { FancyRandom } = require('abu-bot');
 
 const { OWNER_NAME, BOT_NAME } = require("../config");
 const { hostname, uptime } = require("os");
@@ -22,23 +21,26 @@ async (message,match, { prefix }) => {
       .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
       .split(",");
 let alive = `
-╭━〘 A⋆L⋆I⋆V⋆E⋆ 〙━─⊷` 
+╭━━〘 "Hello all systems are functional" 〙━━──⊷` 
 alive+= `
-┃ ⛥ 𝔹𝕠𝕥-ℕ𝕒𝕞𝕖: ${BOT_NAME}
-┃ ⛥ 𝕆𝕨𝕟𝕖𝕣: ${OWNER_NAME}
-┃ ⛥ 𝕌𝕤𝕖𝕣: ${message.pushName}
-┃ ⛥ ℙ𝕣𝕖𝕗𝕚𝕩: ${prefix} 
-┃ ⛥ 𝔻𝕒𝕥𝕖: ${date}
-┃ ⛥ 𝕋𝕚𝕞𝕖: ${time}
-┃ ⛥ 𝕌𝕡𝕋𝕚𝕞𝕖: ${clockString(uptime())} 
+┃ ⛥  *BOTNAME* : ${BOT_NAME}
+┃ ⛥  *OWNER* :  ${OWNER_NAME}
+┃ ⛥  *MY PREFIX* : ${prefix}
+┃ ⛥  *CURRENT DATE* : ${date}
+┃ ⛥  *TIME* : ${time}
+┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
 `
 
 await message.client.sendMessage(message.jid,{
-image: { url: `https://i.imgur.com/ijDNvJg.jpeg` },
-      caption: alive,
+image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
+      caption: FancyRandom(alive),
       footer: tiny(`alive.js❤️` ),
-
-})
-}
-)
+      ),
+      buttons: [
+        {buttonId: ',list', buttonText: {displayText: '𝙇𝙄𝙎𝙏'}},
+      {buttonId: ',ping', buttonText: {displayText: '𝙋𝙄𝙉𝙂'}}
+    ],
+    });
+  }
+);
