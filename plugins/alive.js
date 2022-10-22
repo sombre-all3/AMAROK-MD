@@ -43,7 +43,7 @@ image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
         },
         {
         buttonId: '${prefix}ping',
-        buttonText: {displayText: tiny("𝙋𝙄𝙉𝙂") }
+        buttonText: {displayText: tiny("𝙋𝙄𝙉𝙂") },
         },
       ],
     });
