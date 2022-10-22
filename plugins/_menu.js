@@ -102,7 +102,7 @@ command(
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭━━〘 ${tiny(" 𝔸𝕄𝔸ℝ𝕆𝕂 ℂ𝕆𝕄𝕄𝔸ℕ𝔻 𝕃𝕀𝕊𝕋")} 〙━━──⊷ \n`;
+    let menu = `╭━━〘 ${tiny(" 𝚫𝚳𝚫𝚪𝚯𝐊 𝐂𝚯𝚳𝚳𝚫𝚴𝐃 𝐋𝚰𝐒𝚻")} 〙━━──⊷ \n`;
 
     let cmnd = [];
     let cmd, desc;
