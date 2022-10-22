@@ -39,11 +39,11 @@ image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
       buttons: [
         {
         buttonId: '${prefix}list',
-        buttonText: {displayText: tiny("𝙇𝙄𝙎𝙏")},
+        buttonText: {displayText: tiny("𝙇𝙄𝙎𝙏") },
         },
         {
         buttonId: '${prefix}ping',
-        buttonText: {displayText: '𝙋𝙄𝙉𝙂'}}
+        buttonText: {displayText: tiny("𝙋𝙄𝙉𝙂") }
         },
       ],
     });
