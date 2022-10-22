@@ -76,7 +76,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     menu += ` ╰━━━━━━━━━━━──⊷\n`
     menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
-      image: { url: `https://i.imgur.com/9Q0gxqJ.jpeg` },
+      image: { url: `https://i.ibb.co/GtwvJnk/bce2563a25ef.jpg` },
       caption: menu,
       footer: tiny(
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
