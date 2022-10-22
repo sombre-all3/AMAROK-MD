@@ -36,7 +36,7 @@ await message.client.sendMessage(message.jid,{
 image: { url: `https://i.imgur.com/w5wr6c1.jpeg` },
       caption: FancyRandom(alive),
       footer: tiny(`alive.js❤️` ),
-      }
+      )
       buttons: [
         {buttonId: ',list', buttonText: {displayText: '𝙇𝙄𝙎𝙏'}},
       {buttonId: ',ping', buttonText: {displayText: '𝙋𝙄𝙉𝙂'}}
