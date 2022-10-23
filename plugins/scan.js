@@ -7,7 +7,7 @@ command(
     desc: "Get connected to amarok",
   },
 async (message,match) => {
-await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/")};
+await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/"})
 
 
 return
