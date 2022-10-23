@@ -14,6 +14,6 @@ command(
   const [to, from] = match.split(' ')
    const msg = await trt(message.reply_message.text, to || config.LANG, from)
     if (msg) return await message.send(msg, { quoted: message.quoted })
-  };
+  },
  }
 );
