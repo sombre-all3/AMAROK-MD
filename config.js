@@ -7,7 +7,7 @@ module.exports = {
   VERSION: require('./package.json').version,
   LOGS: toBool(process.env.LOGS) || true,
   IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f","deb80cd12ababea1c9b9a8ad6ce3fab2","78c84c62b32a88e86daf87dd509a657a"],
-  ALIVE: process.env.ALIVE || "https://i.imgur.com/c9CNgT5.jpeg",
+  ALIVE_LOGO: process.env.ALIVE_LOGO || "https://i.imgur.com/c9CNgT5.jpeg",
   SESSION_ID:process.env.SESSION_ID || "MWhoSnNSclY=",
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
