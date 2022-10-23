@@ -1,4 +1,176 @@
-//Amarok all errors fixed thanks to you all my friends who helped me
-//Copyright 2022 All rights reserved
-//Amarok by cybxkid
-const _0x35afce=_0x42a9;(function(_0x460577,_0x1ac634){const _0xcc027e=_0x42a9,_0x3d1def=_0x460577();while(!![]){try{const _0x1ad00c=-parseInt(_0xcc027e(0xff))/0x1+parseInt(_0xcc027e(0x118))/0x2+parseInt(_0xcc027e(0x117))/0x3*(parseInt(_0xcc027e(0xee))/0x4)+-parseInt(_0xcc027e(0x121))/0x5*(-parseInt(_0xcc027e(0x134))/0x6)+parseInt(_0xcc027e(0xfb))/0x7*(parseInt(_0xcc027e(0x135))/0x8)+-parseInt(_0xcc027e(0xf2))/0x9*(parseInt(_0xcc027e(0x12a))/0xa)+parseInt(_0xcc027e(0x11d))/0xb*(-parseInt(_0xcc027e(0x133))/0xc);if(_0x1ad00c===_0x1ac634)break;else _0x3d1def['push'](_0x3d1def['shift']());}catch(_0x1c5248){_0x3d1def['push'](_0x3d1def['shift']());}}}(_0x36bd,0x7e072));const {default:makeWASocket,useSingleFileAuthState,Browsers,makeInMemoryStore}=require('@adiwajshing/baileys'),fs=require('fs'),{serialize}=require(_0x35afce(0x11e)),{Message,Image,Sticker}=require(_0x35afce(0x119)),pino=require(_0x35afce(0xe4)),path=require(_0x35afce(0x128)),events=require(_0x35afce(0x114)),got=require('got'),config=require('./config'),{PluginDB}=require(_0x35afce(0xf6)),Greetings=require(_0x35afce(0xe9)),{MakeSession}=require(_0x35afce(0xe5)),store=makeInMemoryStore({'logger':pino()[_0x35afce(0x126)]({'level':_0x35afce(0x10c),'stream':'store'})});require(_0x35afce(0xeb))[_0x35afce(0xe3)][_0x35afce(0x107)]=0x1f4;function _0x42a9(_0x5ab48f,_0x200d17){const _0x36bd3e=_0x36bd();return _0x42a9=function(_0x42a99c,_0x5b8a0e){_0x42a99c=_0x42a99c-0xe0;let _0x5c125a=_0x36bd3e[_0x42a99c];return _0x5c125a;},_0x42a9(_0x5ab48f,_0x200d17);}!fs[_0x35afce(0xf0)](_0x35afce(0x10a))&&MakeSession(config[_0x35afce(0x12e)],_0x35afce(0x10a))['then'](console['log'](_0x35afce(0x125)+require('./package.json')['version']));fs[_0x35afce(0xe1)]('./lib/database/')[_0x35afce(0xfa)](_0x1f5349=>{const _0x9eddbf=_0x35afce;path[_0x9eddbf(0x108)](_0x1f5349)['toLowerCase']()==_0x9eddbf(0xe0)&&require(_0x9eddbf(0x127)+_0x1f5349);});async function Amarok(){const _0x42d5d5=_0x35afce;console[_0x42d5d5(0xf7)](_0x42d5d5(0xf4)),await config[_0x42d5d5(0xf3)][_0x42d5d5(0x131)]();const {state:_0x2f7317,saveState:_0xe2ebb3}=useSingleFileAuthState('./media/session.json',pino({'level':_0x42d5d5(0x10c)}));let _0x2c1217=makeWASocket({'logger':pino({'level':_0x42d5d5(0x10c)}),'auth':_0x2f7317,'printQRInTerminal':![],'browser':Browsers[_0x42d5d5(0x100)]('Desktop'),'downloadHistory':![],'syncFullHistory':![]});store['bind'](_0x2c1217['ev']),setInterval(()=>{const _0xee984=_0x42d5d5;store[_0xee984(0x105)](_0xee984(0x109)),console[_0xee984(0xf7)](_0xee984(0xfd));},0x1e*0x3c*0x3e8),_0x2c1217['ev']['on'](_0x42d5d5(0x106),async _0x2f04bd=>{const _0x2f936d=_0x42d5d5,{connection:_0x22d7ab,lastDisconnect:_0x109846}=_0x2f04bd;_0x22d7ab===_0x2f936d(0xea)&&(console[_0x2f936d(0xf7)](_0x2f936d(0x124)),console[_0x2f936d(0xf7)]('ℹ️\x20Connecting\x20to\x20WhatsApp...\x20Please\x20Wait.'));_0x22d7ab===_0x2f936d(0xe8)&&_0x109846&&_0x109846[_0x2f936d(0x104)]&&_0x109846[_0x2f936d(0x104)][_0x2f936d(0x10f)][_0x2f936d(0x10d)]!=0x191&&(console[_0x2f936d(0xf7)](_0x109846[_0x2f936d(0x104)][_0x2f936d(0x10f)][_0x2f936d(0xf8)]),Amarok());if(_0x22d7ab==='open'){_0x2c1217[_0x2f936d(0x130)](_0x2c1217[_0x2f936d(0x11a)]['id'],{'text':_0x2f936d(0xf9)}),console[_0x2f936d(0xf7)](_0x2f936d(0x116)),console[_0x2f936d(0xf7)](_0x2f936d(0x101));let _0x44e6db=await PluginDB[_0x2f936d(0x103)]();_0x44e6db['map'](async _0x241ee1=>{const _0x4d34ff=_0x2f936d;if(!fs[_0x4d34ff(0xf0)](_0x4d34ff(0x12c)+_0x241ee1['dataValues'][_0x4d34ff(0x12f)]+_0x4d34ff(0xe0))){console[_0x4d34ff(0xf7)](_0x241ee1['dataValues'][_0x4d34ff(0x12f)]);var _0x50fb3c=await got(_0x241ee1['dataValues'][_0x4d34ff(0xe2)]);_0x50fb3c[_0x4d34ff(0x10d)]==0xc8&&(fs['writeFileSync'](_0x4d34ff(0x12c)+_0x241ee1[_0x4d34ff(0xed)][_0x4d34ff(0x12f)]+'.js',_0x50fb3c[_0x4d34ff(0x10b)]),require(_0x4d34ff(0x12c)+_0x241ee1[_0x4d34ff(0xed)][_0x4d34ff(0x12f)]+'.js'));}}),console[_0x2f936d(0xf7)](_0x2f936d(0x112)),fs[_0x2f936d(0xe1)](_0x2f936d(0x120))[_0x2f936d(0xfa)](_0x2dd060=>{const _0xd093e7=_0x2f936d;path[_0xd093e7(0x108)](_0x2dd060)[_0xd093e7(0x136)]()==_0xd093e7(0xe0)&&require(_0xd093e7(0x12c)+_0x2dd060);}),console[_0x2f936d(0xf7)]('✅\x20Plugins\x20Installed!');try{_0x2c1217['ev']['on'](_0x2f936d(0x11c),_0xe2ebb3),_0x2c1217['ev']['on']('group-participants.update',async _0x5e18d1=>{Greetings(_0x5e18d1,_0x2c1217);}),_0x2c1217['ev']['on'](_0x2f936d(0x138),async _0x1ceb2b=>{const _0x330f6d=_0x2f936d;if(_0x1ceb2b[_0x330f6d(0xf1)]!==_0x330f6d(0x115))return;let _0x32fc7a=_0x1ceb2b[_0x330f6d(0x111)][0x0],_0x17395b=await serialize(JSON[_0x330f6d(0xec)](JSON[_0x330f6d(0x137)](_0x32fc7a)),_0x2c1217);if(!_0x17395b[_0x330f6d(0x129)])return;let _0x209bfe=_0x17395b[_0x330f6d(0x10b)];if(_0x209bfe)console[_0x330f6d(0xf7)](_0x209bfe);events['commands'][_0x330f6d(0x102)](async _0x39f7a2=>{const _0x4f626b=_0x330f6d;if(_0x39f7a2['fromMe']&&!config[_0x4f626b(0xef)][_0x4f626b(0x11b)](',')[_0x4f626b(0xe6)](_0x17395b[_0x4f626b(0xf5)]['split']('@')[0x0]||!_0x17395b[_0x4f626b(0xfe)]))return;let _0x109799;try{_0x109799=_0x209bfe[_0x4f626b(0x11b)]('\x20')[0x0];}catch{_0x109799=_0x209bfe;}if(_0x209bfe){if(_0x39f7a2[_0x4f626b(0x10e)]&&_0x39f7a2['pattern'][_0x4f626b(0x123)](_0x109799[_0x4f626b(0x136)]())){var _0x378ee1=_0x209bfe['trim']()[_0x4f626b(0x11b)](/ +/)[_0x4f626b(0x113)](0x1)[_0x4f626b(0x122)]('\x20');whats=new Message(_0x2c1217,_0x17395b,_0x32fc7a),_0x39f7a2[_0x4f626b(0x12b)](whats,_0x378ee1,_0x17395b,_0x2c1217);}else{if(_0x209bfe&&_0x39f7a2['on']===_0x4f626b(0xe7))_0x17395b['prefix']=',',whats=new Message(_0x2c1217,_0x17395b,_0x32fc7a),_0x39f7a2[_0x4f626b(0x12b)](whats,_0x209bfe,_0x17395b,_0x2c1217,_0x1ceb2b);else{if((_0x39f7a2['on']===_0x4f626b(0x132)||_0x39f7a2['on']===_0x4f626b(0xfc))&&_0x17395b[_0x4f626b(0xf1)]===_0x4f626b(0x12d))whats=new Image(_0x2c1217,_0x17395b,_0x32fc7a),_0x39f7a2[_0x4f626b(0x12b)](whats,_0x209bfe,_0x17395b,_0x2c1217,_0x1ceb2b,_0x32fc7a);else _0x39f7a2['on']==='sticker'&&_0x17395b[_0x4f626b(0xf1)]==='stickerMessage'&&(whats=new Sticker(_0x2c1217,_0x17395b,_0x32fc7a),_0x39f7a2[_0x4f626b(0x12b)](whats,_0x17395b,_0x2c1217,_0x1ceb2b,_0x32fc7a));}}}});});}catch(_0x16c2d9){console['log'](_0x16c2d9[_0x2f936d(0x110)]+_0x2f936d(0x11f)+JSON[_0x2f936d(0x137)](msg));}}}),process['on']('uncaughtException',_0x48b11d=>{const _0x268d2b=_0x42d5d5;let _0x22b3cf=_0x48b11d[_0x268d2b(0x129)];_0x2c1217[_0x268d2b(0x130)](_0x2c1217[_0x268d2b(0x11a)]['id'],{'text':_0x22b3cf}),console[_0x268d2b(0xf7)](_0x48b11d);});}function _0x36bd(){const _0x4a1cd7=['payload','connected\x20🐺Amarok\x20md\x20created\x20by\x20cyber\x20\x20Amrok\x20bot\x20has\x20been\x20conected\x20dont\x20use\x20the\x20bot\x20in\x20here\x20go\x20to\x20another\x20or\x20group\x20famous\x20quote\x20by\x20Amarok✔︎✔︎','forEach','343dgvUbM','photo','saved\x20store','isSelf','295868zyGogY','macOS','⬇️\x20Installing\x20External\x20Plugins...','map','findAll','error','writeToFile','connection.update','defaultMaxListeners','extname','./database/store.json','./media/session.json','body','silent','statusCode','pattern','output','stack','messages','⬇️\x20\x20Installing\x20Plugins...','slice','./lib/event','notify','✅\x20Login\x20Successful!','3uUTqDm','234730XxqAET','./lib/Base','user','split','creds.update','8894798RHUaBO','./lib/serialize','\x0a\x0a\x0a\x0a\x0a','./plugins','20dNsFYO','join','test','Amarok','Vesrion\x20:\x20','child','./lib/database/','path','message','40Sohrnz','function','./plugins/','imageMessage','SESSION_ID','name','sendMessage','sync','image','12trsJxl','1245756jTbvOJ','148688lZsnaM','toLowerCase','stringify','messages.upsert','.js','readdirSync','url','EventEmitter','pino','./lib/session','includes','text','close','./lib/Greetings','connecting','events','parse','dataValues','697028ADrTrY','SUDO','existsSync','type','927324cPQugx','DATABASE','Syncing\x20Database','sender','./lib/database/plugins','log'];_0x36bd=function(){return _0x4a1cd7;};return _0x36bd();}setTimeout(()=>{Amarok();},0xbb8);
+const {
+  default: makeWASocket,
+  useSingleFileAuthState,
+  Browsers,
+  makeInMemoryStore,
+} = require("@adiwajshing/baileys");
+const fs = require("fs");
+const { serialize } = require("./lib/serialize");
+const { Message, Image, Sticker } = require("./lib/Base");
+const pino = require("pino");
+const path = require("path");
+const events = require("./lib/event");
+const got = require("got");
+const config = require("./config");
+const { PluginDB } = require("./lib/database/plugins");
+const Greetings = require("./lib/Greetings");
+const { MakeSession } = require("./lib/session");
+const store = makeInMemoryStore({
+  logger: pino().child({ level: "silent", stream: "store" }),
+});
+
+require("events").EventEmitter.defaultMaxListeners = 500;
+
+if (!fs.existsSync("./media/session.json")) {
+  MakeSession(config.SESSION_ID, "./media/session.json").then(
+    console.log("Vesrion : " + require("./package.json").version)
+  );
+}
+fs.readdirSync("./lib/database/").forEach((plugin) => {
+  if (path.extname(plugin).toLowerCase() == ".js") {
+    require("./lib/database/" + plugin);
+  }
+});
+
+async function Amarok() {
+  console.log("Syncing Database");
+  await config.DATABASE.sync();
+
+  const { state, saveState } = useSingleFileAuthState(
+    "./media/session.json",
+    pino({ level: "silent" })
+  );
+  let conn = makeWASocket({
+    logger: pino({ level: "silent" }),
+    auth: state,
+    printQRInTerminal: false,
+
+    browser: Browsers.macOS("Desktop"),
+    downloadHistory: false,
+    syncFullHistory: false,
+  });
+  store.bind(conn.ev);
+  //store.readFromFile("./database/store.json");
+  setInterval(() => {
+    store.writeToFile("./database/store.json");
+    console.log("saved store");
+  }, 30 * 60 * 1000);
+
+  conn.ev.on("connection.update", async (s) => {
+    const { connection, lastDisconnect } = s;
+    if (connection === "connecting") {
+      console.log("Amarok");
+      console.log("ℹ️ Connecting to WhatsApp... Please Wait.");
+    }
+
+    if (
+      connection === "close" &&
+      lastDisconnect &&
+      lastDisconnect.error &&
+      lastDisconnect.error.output.statusCode != 401
+    ) {
+      console.log(lastDisconnect.error.output.payload);
+      Amarok();
+    }
+
+    if (connection === "open") {
+      conn.sendMessage(conn.user.id, { text: "connected 🐺Amarok md created by cyber  Amrok bot has been conected dont use the bot in here go to another or group famous quote by Amarok✔︎✔︎" });
+      console.log("✅ Login Successful!");
+      console.log("⬇️ Installing External Plugins...");
+
+      let plugins = await PluginDB.findAll();
+      plugins.map(async (plugin) => {
+        if (!fs.existsSync("./plugins/" + plugin.dataValues.name + ".js")) {
+          console.log(plugin.dataValues.name);
+          var response = await got(plugin.dataValues.url);
+          if (response.statusCode == 200) {
+            fs.writeFileSync(
+              "./plugins/" + plugin.dataValues.name + ".js",
+              response.body
+            );
+            require("./plugins/" + plugin.dataValues.name + ".js");
+          }
+        }
+      });
+
+      console.log("⬇️  Installing Plugins...");
+
+      fs.readdirSync("./plugins").forEach((plugin) => {
+        if (path.extname(plugin).toLowerCase() == ".js") {
+          require("./plugins/" + plugin);
+        }
+      });
+      console.log("✅ Plugins Installed!");
+
+      try {
+        conn.ev.on("creds.update", saveState);
+
+        conn.ev.on("group-participants.update", async (data) => {
+          Greetings(data, conn);
+        });
+        conn.ev.on("messages.upsert", async (m) => {
+          if (m.type !== "notify") return;
+          let ms = m.messages[0];
+          let msg = await serialize(JSON.parse(JSON.stringify(ms)), conn);
+          if (!msg.message) return;
+          let text_msg = msg.body;
+          if (text_msg) console.log(text_msg);
+
+          events.commands.map(async (command) => {
+            if (
+              command.fromMe &&
+              !config.SUDO.split(",").includes(
+                msg.sender.split("@")[0] || !msg.isSelf
+              )
+            )
+              return;
+            let comman;
+
+            try {
+              comman = text_msg.split(" ")[0];
+            } catch {
+              comman = text_msg;
+            }
+            if (text_msg)
+              if (
+                command.pattern &&
+                command.pattern.test(comman.toLowerCase())
+              ) {
+                var match = text_msg.trim().split(/ +/).slice(1).join(" ");
+                whats = new Message(conn, msg, ms);
+
+                command.function(whats, match, msg, conn);
+              } else if (text_msg && command.on === "text") {
+               
+                msg.prefix = ','
+                whats = new Message(conn, msg, ms);
+                command.function(whats, text_msg, msg, conn, m);
+              } else if (
+                (command.on === "image" || command.on === "photo") &&
+                msg.type === "imageMessage"
+              ) {
+                whats = new Image(conn, msg, ms);
+                command.function(whats, text_msg, msg, conn, m, ms);
+              } else if (
+                command.on === "sticker" &&
+                msg.type === "stickerMessage"
+              ) {
+                whats = new Sticker(conn, msg, ms);
+                command.function(whats, msg, conn, m, ms);
+              }
+          });
+        });
+      } catch (e) {
+        console.log(e.stack + "\n\n\n\n\n" + JSON.stringify(msg));
+      }
+    }
+  });
+  process.on("uncaughtException", (err) => {
+    let error = err.message;
+     conn.sendMessage(conn.user.id, { text: error });
+    console.log(err);
+  });
+}
+setTimeout(() => {
+  Amarok();
+}, 3000);
