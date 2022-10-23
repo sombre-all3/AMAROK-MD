@@ -28,10 +28,10 @@ alive+= `
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
-┃ ⛥  *MY PREFIX* : ${prefix}
-┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *BRANCH* : ${Config.BRANCH}
 ┃ ⛥  *EDITION* : PUBLIC
+┃ ⛥  *MY PREFIX* : ${prefix}
+┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
