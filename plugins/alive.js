@@ -7,9 +7,11 @@ const {
 } = require("../lib");
 var config = require("../config");
 const { FancyRandom } = require('abu-bot');
-
 const { OWNER_NAME, BOT_NAME } = require("../config");
 const { hostname, uptime } = require("os");
+
+var handler = Config.HANDLERS !== 'false'?Config.HANDLERS.split("")[0]:"";
+
 command(
   {
     pattern: "arise",
@@ -41,7 +43,7 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
       footer: tiny(`amarok md` ),
       buttons: [
         {
-        buttonId: '${config.HANDLERS}owner',
+        buttonId: handler+'owner',
         buttonText: {displayText: tiny("⫷OWNER⫸") },
         },
         {
