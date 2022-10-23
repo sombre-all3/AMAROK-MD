@@ -38,7 +38,7 @@ alive+= `
 *Powered by ${OWNER_NAME}*;
 
 await message.client.sendMessage(message.jid,{
-image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
+image: { url: 'https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg' },
       caption: FancyRandom(alive),
       footer: tiny(`amarok md` ),
       buttons: [
