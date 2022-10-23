@@ -9,6 +9,5 @@ command(
   async (message,match) => {
     await message.sendMessage("_https://github.com/Diegoson/AMAROK-MD_");
     return await message.sendMessage("Thanks for choosing Amarok");
-  };
- }
-);
+}
+)
