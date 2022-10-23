@@ -5,7 +5,7 @@ const {
   tiny,
   clockString,
 } = require("../lib");
-const config = require("../config");
+var config = require("../config");
 const { FancyRandom } = require('abu-bot');
 
 const { OWNER_NAME, BOT_NAME } = require("../config");
@@ -41,7 +41,7 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
       footer: tiny(`amarok md` ),
       buttons: [
         {
-        buttonId: '${prefix}owner',
+        buttonId: '${config.HANDLERS}owner',
         buttonText: {displayText: tiny("⫷OWNER⫸") },
         },
         {
