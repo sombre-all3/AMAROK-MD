@@ -13,6 +13,9 @@ let generationbutton = [{
                            buttonText: {
                            displayText: 'Generate New'},
                             type: 1,
+ };
+ }
+);
                            
 
 
