@@ -8,7 +8,9 @@ command(
   },
 async (message,match) => {
 await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/",
-return {
+
+return
+  }
 let generationbutton = [{
                            buttonld: '${prefix}scan', 
                            buttonText: {
