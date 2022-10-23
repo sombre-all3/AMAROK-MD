@@ -30,6 +30,8 @@ alive+= `
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *MY PREFIX* : ${prefix}
 ┃ ⛥  *CURRENT DATE* : ${date}
+┃ ⛥  *BRANCH* : ${Config.BRANCH}
+┃ ⛥  *EDITION* : PUBLIC
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
