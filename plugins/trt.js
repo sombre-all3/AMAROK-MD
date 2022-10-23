@@ -1,5 +1,5 @@
 const config = require('../config')
-const { command, trt} = require('../lib')
+const { command, trt } = require('../lib')
 
 command(
   {
