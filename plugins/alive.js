@@ -36,7 +36,7 @@ alive+= `
 `
 
 await message.client.sendMessage(message.jid,{
-image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
+image: { url: `config.ALIVE_LOGO` },
       caption: FancyRandom(alive),
       footer: tiny(`amarok md` ),
       buttons: [
