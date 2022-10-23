@@ -63,7 +63,7 @@ command(
     }  catch (err) {
         global.catchError = true
         await client.sendErrorMessage( message.from, err, message.key, message );
-    });
+    };
     }
   );
 
