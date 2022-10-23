@@ -5,6 +5,7 @@ const {
   tiny,
   clockString,
 } = require("../lib");
+const config = require("../config");
 const { FancyRandom } = require('abu-bot');
 
 const { OWNER_NAME, BOT_NAME } = require("../config");
