@@ -83,11 +83,11 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
-          buttonId: prefix + ".arise",
+          buttonId: prefix + '.arise',
           buttonText: { displayText: tiny("⫷ALIVE⫸") },
         },
         {
-          buttonId: prefix + ".list",
+          buttonId: prefix + '.list',
           buttonText: { displayText: tiny("⫷LIST⫸") },
         },
       ],
