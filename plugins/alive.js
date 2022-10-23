@@ -35,7 +35,7 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
-*Powered by ${Config.ownername}*;
+*Powered by ${OWNER_NAME}*;
 
 await message.client.sendMessage(message.jid,{
 image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
