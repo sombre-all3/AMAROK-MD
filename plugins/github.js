@@ -3,11 +3,11 @@ command(
   {
     pattern: "git",
     fromMe: isPublic,
-    desc: "to check the bot status",
+    desc: "Source code of bot",
     
   },
   async (message,match) => {
-    await message.sendMessage("https://Diegoson/AMAROK-MD");
+    await message.sendMessage("_https://github.com/Diegoson/AMAROK-MD_");
     return await message.sendMessage("Thanks for choosing Amarok");
   };
  }
