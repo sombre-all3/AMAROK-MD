@@ -10,7 +10,7 @@ const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME } = require("../config");
 const { hostname, uptime } = require("os");
 
-var handler = Config.HANDLERS !== 'false'?Config.HANDLERS.split("")[0]:"";
+var handler = config.HANDLERS !== 'false'?config.HANDLERS.split("")[0]:"";
 
 command(
   {
