@@ -11,7 +11,7 @@ module.exports = {
   SESSION_ID:process.env.SESSION_ID || "MWhoSnNSclY=",
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
-  LANG: process.env.LANG ||  'en').toLowerCase(),
+  LANG: process.env.LANG ||  'EN',
   HANDLERS:
     process.env.HANDLER === "false" || process.env.HANDLER === "null"
       ? "^"
