@@ -29,7 +29,6 @@ alive+= `
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *BRANCH* : ${Config.BRANCH}
-┃ ⛥  *EDITION* : PUBLIC
 ┃ ⛥  *MY PREFIX* : ${prefix}
 ┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
