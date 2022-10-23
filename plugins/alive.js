@@ -35,7 +35,7 @@ alive+= `
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━──⊷\n
-*Powered by ${Config.owner name}
+*Powered by ${Config.ownername}
 '
 
 await message.client.sendMessage(message.jid,{
