@@ -5,7 +5,7 @@ const {
   makeInMemoryStore,
 } = require("@adiwajshing/baileys");
 const fs = require("fs");
-const { serialize } = require('../lib/serialize.js');
+const { serialize } = require("./lib/serialize");
 const { Message, Image, Sticker } = require("./lib/Base");
 const pino = require("pino");
 const path = require("path");
