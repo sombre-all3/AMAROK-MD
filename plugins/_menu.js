@@ -7,6 +7,7 @@ const {
   serif_B,
   clockString,
 } = require("../lib");
+const config = require("../config.js");
 const { OWNER_NAME, BOT_NAME } = require("../config");
 const { hostname, uptime } = require("os");
 command(
@@ -82,7 +83,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
-          buttonId: `${prefix}arise`,
+          buttonId: `${config.HANDLERS}arise`,
           buttonText: { displayText: tiny("⫷ALIVE⫸") },
         },
         {
