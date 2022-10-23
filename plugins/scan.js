@@ -8,9 +8,13 @@ command(
   },
 async (message,match) => {
 await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/",
-{caption: "⫷𝑺𝑪𝑨𝑵 𝑨𝑴𝑨𝑹𝑶𝑲 𝑸𝑹 𝑻𝑶 𝑪𝑶𝑵𝑵𝑬𝑪𝑻⫸",});
-}
-)
+let generationbutton = [{
+                           buttonld: '${prefix}scan', 
+                           buttonText: {
+                           displayText: 'Generate New'},
+                            type: 1,
+                           
+
 
 
 
