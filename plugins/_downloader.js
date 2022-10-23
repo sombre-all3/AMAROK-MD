@@ -1,6 +1,6 @@
-*/Copyrights (©)2022 AMAROK MD.
+/*Copyrights (©)2022 AMAROK MD.
 By TOXIC KICHU.
-/*
+*/
 
 const { command, isPublic, isPrivate } = require("../lib");
 const { yta, ytIdRegex, ytv } = require("../lib/yotube");
