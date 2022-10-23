@@ -3,6 +3,7 @@ By TOXIC KICHU.
 */
 
 const { command, isPublic, isPrivate } = require("../lib");
+const { search } = require("yt-search");
 const { yta, ytIdRegex, ytv } = require("../lib/yotube");
 
 command(
