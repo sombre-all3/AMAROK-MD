@@ -83,7 +83,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
-          buttonId: `${config.HANDLERS}arise`,
+          buttonId: `config.HANDLERSarise`,
           buttonText: { displayText: tiny("⫷ALIVE⫸") },
         },
         {
