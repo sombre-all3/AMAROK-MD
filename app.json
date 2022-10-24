@@ -23,6 +23,7 @@
       "description": "Prefix",
       "required": false,
       "value": "."
+    },
     "PACKNAME": {
       "description": "Sticker Packname required Example Amarok",
       "required": false
