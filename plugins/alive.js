@@ -7,7 +7,7 @@ const {
 } = require("../lib");
 var config = require("../config");
 const { FancyRandom } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME } = require("../config");
+const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
 command(
@@ -42,7 +42,7 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
       footer: tiny(`amarok md` ),
       buttons: [
         {
-        buttonId: '.owner',
+        buttonId: '${HANDLERS}owner',
         buttonText: {displayText: tiny("⫷OWNER⫸") },
         },
         {
