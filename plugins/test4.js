@@ -2,7 +2,7 @@ const {command, isPublic} = require("../lib")
 
   command(
     {
-         pattern: "song ?(.*)",
+         pattern: "audio ?(.*)",
          fromMe: isPublic,
          desc: "Downloads Song",
          type: "download",
