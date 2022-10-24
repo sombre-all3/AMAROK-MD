@@ -26,7 +26,8 @@
     },
     "PACKNAME": {
       "description": "Sticker Packname required Example Amarok",
-      "required": false
+      "required": false,
+      "value": "𝐀𝐌𝐀𝐑𝐎𝐊"
     },
     "RMBG_KEY": {
       "description": "Remove bg api key required get it here(https://www.remove.bg/api)",
@@ -45,7 +46,8 @@
     },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR required Example Diegoson",
-      "required": false
+      "required": false,
+      "value": "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃"
     },
     "ALIVE_LOGO": {
       "description": "Add your logo link to alive message",
