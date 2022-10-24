@@ -42,7 +42,7 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
       footer: tiny(`amarok md` ),
       buttons: [
         {
-        buttonId: ${HANDLERS} + "owner",
+        buttonId: '.owner',
         buttonText: {displayText: tiny("⫷OWNER⫸") },
         },
         {
