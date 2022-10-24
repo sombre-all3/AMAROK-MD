@@ -58,7 +58,7 @@ Module(
 Module(
   {
     pattern: "dyno",
-    fromMe: true,
+    fromMe: false,
     desc: "Show Quota info",
     type: "heroku",
   },
