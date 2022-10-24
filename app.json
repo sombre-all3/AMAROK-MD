@@ -33,6 +33,16 @@
       "required": false,
       "value": ""
     },
+    "OWNER_NAME": {
+      "description": "Add owner name",
+      "required": false,
+      "value": "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃"
+    },
+    "BOT_NAME": {
+      "description": "Add bot name",
+      "required": false,
+      "value": "𝐀𝐌𝐀𝐑𝐎𝐊"
+    },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR required Example Diegoson",
       "required": false
