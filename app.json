@@ -66,6 +66,11 @@
     "HEROKU_API_KEY": {
       "description": "Heroku account api key, https://dashboard.heroku.com/account",
       "required": true
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Show bot number last see as online",
+      "required": false,
+      "value": "false"
     }
 
 },
