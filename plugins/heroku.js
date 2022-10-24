@@ -58,7 +58,7 @@ Module(
 Module(
   {
     pattern: "dyno",
-    fromMe: false,
+    fromMe: true,
     desc: "Show Quota info",
     type: "heroku",
   },
@@ -73,7 +73,7 @@ Module(
             Authorization: "Bearer " + Config.HEROKU_API_KEY,
             Accept: "application/vnd.heroku+json; version=3.account-quotas",
           };
-          const res = await got(url, { headers: headers });
+          const res = await got(url, { headers });
           const resp = JSON.parse(res.body);
           const total_quota = Math.floor(resp.account_quota);
           const quota_used = Math.floor(resp.quota_used);
