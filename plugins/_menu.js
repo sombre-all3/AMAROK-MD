@@ -23,7 +23,7 @@ command(
       .split(",");
                 
  let menu = `
-╭━━〘 `+ styletext(OWNER_NAME.split(' ')[0],58) +` 〙━━──⊷` 
+╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
