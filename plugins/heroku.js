@@ -80,10 +80,10 @@ Module(
           const total_quota = Math.floor(resp.account_quota);
           const quota_used = Math.floor(resp.quota_used);
           const remaining = total_quota - quota_used;
-          const quota = `Total Quota : ${secondsToDHMS(total_quota)}
-Used  Quota : ${secondsToDHMS(quota_used)}
-Remaning    : ${secondsToDHMS(remaining)}`;
-          await message.sendMessage("```" + quota + "```");
+                await message.sendMessage(
+                    "_Total: *{}*_\n".format(secondsToDhms(total_quota)) +
+                    "_Used: *{}*_\n".format(secondsToDhms(quota_used)) +
+                    "_Remaining: *{}*_\n".format(secondsToDhms(remaining)));
           })
         })
         .catch(async (error) => {
