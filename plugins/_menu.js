@@ -104,7 +104,17 @@ command(
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭━━〘 ${tiny(" 𝚫𝚳𝚫𝚪𝚯𝐊 𝐂𝚯𝚳𝚳𝚫𝚴𝐃 𝐋𝚰𝐒𝚻")} 〙━━──⊷ \n`;
+    let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷`      
+menu += `
+┃ ⛥╭──────────────      
+┃ ⛥│ *USER* : ${message.pushName}
+┃ ⛥│ *PREFIX* : ${HANDLERS}
+┃ ⛥│ *OWNER* : ${OWNER_NAME}
+┃ ⛥│ *PLUGINS* : ${events.command.length}
+┃ ⛥│ *DATE* : ${date}
+┃ ⛥│ *MODE* : ${WORK_TYPE}
+┃ ⛥╰───────────
+╰━━━━━━━━━━━──⊷\n'
 
     let cmnd = [];
     let cmd, desc;
