@@ -6,30 +6,10 @@ const Config = require("../config");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
 const simpleGit = require("simple-git");
+const { secondsToDHMS } = require("../lib");
 const git = simpleGit();
 const exec = require("child_process").exec;
 const { SUDO } = require("../config");
-
-//Test I'm not sure
-
-function secondsToDhms(metsotso) {
-        metsotso = Number(metsotso);
-        var d = Math.floor(metsotso / (3600*24));
-        var h = Math.floor(metsotso % (3600*24) / 3600);
-        var m = Math.floor(metsotso % 3600 / 60);
-        var s = Math.floor(metsotso % 60);
-        
-        
-        var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-        var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-        var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-        return  hDisplay + mDisplay + sDisplay;
-        }
-        
-        
-
-
-
 
 
 Module(
@@ -78,7 +58,7 @@ Module(
 Module(
   {
     pattern: "dyno",
-    fromMe: isPrivate,
+    fromMe: true,
     desc: "Show Quota info",
     type: "heroku",
   },
@@ -224,5 +204,4 @@ Module(
       });
   }
 );
-
 
