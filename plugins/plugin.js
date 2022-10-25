@@ -3,9 +3,11 @@ const got = require("got");
 const fs = require("fs");
 const { PluginDB, installPlugin } = require("../lib/database/plugins");
 
+
+
 command(
   {
-    pattern: "plugin ?(.*)",
+    pattern: "install",
     fromMe: true,
     desc: "Installs External plugins",
     type:'user'
@@ -40,7 +42,7 @@ command(
         try {
           require("./" + plugin_name);
         } catch (e) {
-          fs.unlinkSync("/amarok/plugins/" + plugin_name + ".js");
+          fs.unlinkSync("./plugins/" + plugin_name + ".js");
           return await message.sendMessage("Invalid Plugin\n ```" + e + "```");
         }
 
@@ -54,8 +56,10 @@ command(
   }
 );
 
+
+
 command(
-  { pattern: "pluginlist", fromMe: true, desc: "plugin list" ,type:'user'},
+  { pattern: "plugin", fromMe: true, desc: "plugin list" ,type:'user'},
   async (message, match) => {
     var mesaj = "";
     var plugins = await PluginDB.findAll();
@@ -74,6 +78,8 @@ command(
     }
   }
 );
+
+
 
 command(
   {
