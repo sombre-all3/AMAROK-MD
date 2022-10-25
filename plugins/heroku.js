@@ -1,4 +1,3 @@
-//Errors fixed by cybxkid give credits bro
 const got = require("got");
 const Heroku = require("heroku-client");
 const { Module, isPrivate, tiny } = require("../lib/");
@@ -6,23 +5,9 @@ const Config = require("../config");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
 const simpleGit = require("simple-git");
+const { secondsToDHMS } = require("../lib");
 const git = simpleGit();
 const exec = require("child_process").exec;
-const { SUDO } = require("../config");
-
-function secondsToDhms(seconds) {
-        seconds = Number(seconds);
-        var h = Math.floor(seconds % (3600*24) / 3600);
-        var m = Math.floor(seconds % 3600 / 60);
-        var s = Math.floor(seconds % 60);
-        
-      
-        var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-        var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-        var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-        return  hDisplay + mDisplay + sDisplay;
-        }
-
 
 
 Module(
@@ -71,7 +56,7 @@ Module(
 Module(
   {
     pattern: "dyno",
-    fromMe: true,
+    fromMe: isPrivate,
     desc: "Show Quota info",
     type: "heroku",
   },
@@ -115,10 +100,11 @@ Module(
     type: "heroku",
   },
   async (message, match) => {
-     if (!match) return await message.sendMessage(`_Example: delvar sudo_`);
-      const [key, value] = match.split(":");
+    if (!match)
+      return await message.sendMessage(`_Example: .setvar SUDO:918113921898_`);
+    const [key, value] = match.split(":");
     if (!key || !value)
-      return await message.sendMessage(`_Example: .setvar SUDO:917025994178`);
+      return await message.sendMessage(`_Example: .setvar SUDO:918113921898_`);
     heroku
       .patch(baseURI + "/config-vars", {
         body: {
@@ -218,3 +204,139 @@ Module(
   }
 );
 
+
+Module(
+  {
+    pattern: "update",
+    fromMe: true,
+    type: "heroku",
+    desc: "Checks for update.",
+  },
+  async (message, match,) => {
+    let {prefix} = message
+    if (match === "now") {
+      await git.fetch();
+      var commits = await git.log([
+        Config.BRANCH + "..origin/" + Config.BRANCH,
+      ]);
+      if (commits.total === 0) {
+        return await message.sendMessage("_Already on latest version_");
+      } else {
+        await message.reply("_Updating_");
+
+        try {
+          var app = await heroku.get("/apps/" + Config.HEROKU_APP_NAME);
+        } catch {
+          await message.sendMessage("_Invalid Heroku Details_");
+          await new Promise((r) => setTimeout(r, 1000));
+        }
+
+        git.fetch("upstream", Config.BRANCH);
+        git.reset("hard", ["FETCH_HEAD"]);
+
+        var git_url = app.git_url.replace(
+          "https://",
+          "https://api:" + Config.HEROKU_API_KEY + "@"
+        );
+
+        try {  
+          await git.addRemote("heroku", git_url);
+        } catch {
+          console.log("heroku remote error");
+        }
+        await git.push("heroku", Config.BRANCH);
+
+        await message.sendMessage("UPDATED");
+      }
+    }
+    await git.fetch();
+    var commits = await git.log([Config.BRANCH + "..origin/" + Config.BRANCH]);
+    if (commits.total === 0) {
+      await message.sendMessage("_Already on latest version_");
+    } else {
+      var availupdate = "*ᴜᴘᴅᴀᴛᴇs ᴀᴠᴀɪʟᴀʙʟᴇ* \n\n";
+      commits["all"].map((commit, num) => {
+        availupdate += num + 1 + " ●  " + tiny(commit.message) + "\n";
+      });
+      return await message.client.sendMessage(message.jid, {
+        text: availupdate,
+        footer: tiny("click here to update"),
+        buttons: [
+          {
+            buttonId: `${prefix}update now`,
+            buttonText: { displayText: tiny("update now") },
+          },
+        ],
+      });
+    }
+  }
+);
+
+
+Module(
+  {
+    pattern: "update now",
+    fromMe: true,
+    type: "heroku",
+    desc: "Updates the Bot",
+  },
+  async (message) => {}
+);
+
+//Credits Mask-ser
+//created by mask ser for HERMIT_MD
+const { SUDO } = require("../config");
+const { Function } = require("../lib/");
+Function(
+  { pattern: "setsudo ?(.*)", fromMe: true, desc: "set sudo", type: "user" },
+  async (m, mm) => {
+    var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
+      "@"
+    )[0];
+    if (!newSudo)
+      return await m.sendMessage("*reply to a number*", { quoted: m });
+    var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
+    setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
+    await m.sendMessage("```new sudo numbers are: ```" + setSudo, {
+      quoted: m,
+    });
+    await m.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
+    await heroku
+      .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
+      .then(async (app) => {});
+  }
+);
+Function(
+  {
+    pattern: "delsudo ?(.*)",
+    fromMe: true,
+    desc: "delete sudo sudo",
+    type: "user",
+  },
+  async (m, mm) => {
+    var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
+      "@"
+    )[0];
+    if (!newSudo) return await m.sendMessage("*Need reply/mention/number*");
+    var setSudo = SUDO.replace(newSudo, "").replace(/,,/g, ",");
+    setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
+    await m.sendMessage("```NEW SUDO NUMBERS ARE: ```" + setSudo, {
+      quoted: m,
+    });
+    await m.sendMessage("_IT TAKES 30 SECONDS TO MAKE EFFECT_", { quoted: m });
+    await heroku
+      .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
+      .then(async (app) => {});
+  }
+);
+Function(
+  { pattern: "getsudo ?(.*)", fromMe: true, desc: "shows sudo", type: "user" },
+  async (m) => {
+    const vars = await heroku
+      .get(baseURI + "/config-vars")
+      .catch(async (error) => {
+        return await m.send("HEROKU : " + error.body.message);
+      });
+    await m.send("```" + `SUDO Numbers are : ${vars.SUDO}` + "```");
+  }
+);
