@@ -27,17 +27,11 @@ command(
       } else {
         url = url.toString();
       }
-      var plugin_name;
+      
       var response = await got(url);
       if (response.statusCode == 200) {
-        var commands = response.body
-          .match(/(?<=pattern:)(.*)(?=\?(.*))/g)
-          .map((a) => a.trim().replace(/"|'|`/, ""));
-        plugin_name =
-          commands[0] ||
-          plugin_name[1] ||
-          "__" + Math.random().toString(36).substring(8);
-
+        let plugin_name = /(?<=pattern:)(.*)(?=\?(.*))/g.exec(response.body)
+					plugin_name = plugin_name[1].split(' ')[0]
         fs.writeFileSync("./plugins/" + plugin_name + ".js", response.body);
         try {
           require("./" + plugin_name);
