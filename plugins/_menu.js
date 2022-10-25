@@ -27,7 +27,7 @@ command(
 menu+= `
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
-┃ ⛥  *MODE* : ${require ("../config.js").mode}
+┃ ⛥  *MODE* : ${WORK_TYPE}
 ┃ ⛥  *PREFIX* : ${HANDLERS}
 ┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥  *DATE* : ${date}
