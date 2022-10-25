@@ -115,7 +115,8 @@ menu += `
 ┃ ⛥│ *DATE* : ${date}
 ┃ ⛥│ *MODE* : ${WORK_TYPE}
 ┃ ⛥╰───────────
-╰━━━━━━━━━━━──⊷\n';
+╰━━━━━━━━━━━──⊷\n
+'
 
     let cmnd = [];
     let cmd, desc;
