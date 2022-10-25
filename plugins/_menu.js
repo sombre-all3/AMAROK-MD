@@ -116,7 +116,7 @@ menu += `
 ┃ ⛥│ *MODE* : ${WORK_TYPE}
 ┃ ⛥╰───────────
 ╰━━━━━━━━━━━──⊷\n
-'
+`
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
