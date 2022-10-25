@@ -8,7 +8,7 @@ const {
   clockString,
 } = require("../lib");
 const config = require("../config.js");
-const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
+const { OWNER_NAME, BOT_NAME, HANDLERS , WORK_TYPE} = require("../config");
 const { hostname, uptime } = require("os");
 command(
   {
