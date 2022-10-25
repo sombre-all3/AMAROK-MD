@@ -104,7 +104,8 @@ command(
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷`      
+    let menu = `
+╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷`      
 menu += `
 ┃ ⛥╭──────────────      
 ┃ ⛥│ *USER* : ${message.pushName}
