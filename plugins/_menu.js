@@ -121,7 +121,7 @@ menu+= `
 ┃ ⛥  *PLUGINS* : ${events.commands.length} 
 ╰━━━━━━━━━━━──⊷\n
 `
-menu += `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎   
+menu+= `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎`  
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
