@@ -104,17 +104,20 @@ command(
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷`      
-menu += `
-┃ ⛥╭──────────────      
-┃ ⛥│ *USER* : ${message.pushName}
-┃ ⛥│ *PREFIX* : ${HANDLERS}
-┃ ⛥│ *OWNER* : ${OWNER_NAME}
-┃ ⛥│ *PLUGINS* : ${events.command.length}
-┃ ⛥│ *DATE* : ${date}
-┃ ⛥│ *MODE* : ${WORK_TYPE}
-┃ ⛥╰───────────
+    let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
+menu+= `
+┃ ⛥  *OWNER* :  ${OWNER_NAME}
+┃ ⛥  *USER* : ${message.pushName}
+┃ ⛥  *MODE* : ${WORK_TYPE}
+┃ ⛥  *PREFIX* : ${HANDLERS}
+┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
+┃ ⛥  *DATE* : ${date}
+┃ ⛥  *TIME* : ${time}
+┃ ⛥  *UPTIME* : ${clockString(uptime())} 
+┃ ⛥  *VERSION* : ${require("../package.json").version}
+┃ ⛥  *PLUGINS* : ${events.commands.length} 
 ╰━━━━━━━━━━━──⊷\n`;
+
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
