@@ -37,7 +37,7 @@ menu+= `
 ┃ ⛥  *PLUGINS* : ${events.commands.length} 
 ╰━━━━━━━━━━━──⊷\n
 `
-menu+= `╭───『 `+ styletext('Commands',57)+`』──◆`
+menu+= `╭───『 `+ styletext('command',57)+`』──◆`
     let cmnd = [];
     let cmd;
     let category = [];
