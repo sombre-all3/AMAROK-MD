@@ -139,7 +139,7 @@ menu+= `
     cmnd.forEach(({ cmd, desc }, num) => {
       menu += `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎
 menu += `┃ ⛥ ╭────────────────────❣︎
-menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
+┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
     menu += `╰━━━━━━━━━━━━━━━━━━━━━━━──❤︎`;
