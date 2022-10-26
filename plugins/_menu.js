@@ -121,7 +121,7 @@ menu+= `
 ┃ ⛥  *PLUGINS* : ${events.commands.length} 
 ╰━━━━━━━━━━━──⊷\n
 `
-menu+= `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎`  
+menu+= `╭━━━━━━━━━━━━━━──❤︎`  
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
@@ -144,7 +144,7 @@ menu+= `╭━━━━━━━━━━━━━━━━━━━━━━━
       menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
-    menu += ` ╰━━━━━━━━━━━━━━━━━━━━━━━──⊷`;
+    menu += ` ╰━━━━━━━━━━━━━━━━──⊷`;
    return await message.reply(menu);
   }
 );
