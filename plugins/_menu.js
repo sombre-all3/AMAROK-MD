@@ -137,7 +137,7 @@ menu+= `
     });
     cmnd.sort();
     cmnd.forEach(({ cmd, desc }, num) => {
-      menu += `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎\n`
+      menu += `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎
 ┃ ⛥ ╭────────────────────❣︎
 ┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
