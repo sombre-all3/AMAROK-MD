@@ -116,8 +116,8 @@ menu+= `
 ┃ ⛥  *UPTIME* : ${clockString(uptime())} 
 ┃ ⛥  *VERSION* : ${require("../package.json").version}
 ┃ ⛥  *PLUGINS* : ${events.commands.length} 
-╰━━━━━━━━━━━──⊷\n`;
-
+╰━━━━━━━━━━━──⊷\n
+`
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
