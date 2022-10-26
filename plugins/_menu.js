@@ -115,9 +115,13 @@ menu+= `
 ┃ ⛥  *PREFIX* : ${HANDLERS}
 ┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥  *DATE* : ${date}
-┃ ⛥
+┃ ⛥  *TIME* : ${time}
+┃ ⛥  *UPTIME* : ${clockString(uptime())} 
+┃ ⛥  *VERSION* : ${require("../package.json").version}
+┃ ⛥  *PLUGINS* : ${events.commands.length} 
 ╰━━━━━━━━━━━──⊷\n
 `
+menu += `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎   
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
@@ -137,12 +141,10 @@ menu+= `
     });
     cmnd.sort();
     cmnd.forEach(({ cmd, desc }, num) => {
-      menu += `╭━━━━━━━━━━━━━━━━━━━━━━━──❤︎\n`;
-menu += `┃ ⛥ ╭────────────────────❣︎\n`;
-menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
+      menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
-    menu += `╰━━━━━━━━━━━━━━━━━━━━━━━──❤︎`;
+    menu += ` ╰━━━━━━━━━━━━━━━━━━━━━━━──⊷`;
    return await message.reply(menu);
   }
 );
