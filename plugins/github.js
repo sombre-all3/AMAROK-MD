@@ -3,7 +3,7 @@ command(
   {
     pattern: "git",
     fromMe: isPublic,
-    desc: "Source code of bot",
+    type: "group",
     
   },
   async (message,match) => {
