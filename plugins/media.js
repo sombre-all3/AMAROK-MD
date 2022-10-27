@@ -26,7 +26,6 @@ command(
   {
     pattern: "qr ?(.*)",
     fromMe: isPrivate,
-    desc: "Read/Write Qr.",
     type: "Tool",
   },
   async (message, match) => {
@@ -53,7 +52,6 @@ Function(
   {
     pattern: "img ?(.*)",
     fromMe: isPrivate,
-    desc: "Google Image search",
     type: "downloader",
   },
   async (message, match) => {
@@ -89,7 +87,6 @@ command(
   {
     pattern: "vv ?(.*)",
     fromMe: isPrivate,
-    desc: "Forwards The View once messsage",
     type: "tool",
   },
   async (message, match, m) => {
@@ -140,7 +137,6 @@ command(
   {
     pattern: "photo ?(.*)",
     fromMe: isPrivate,
-    desc: "Changes sticker to Photo",
     type: "converter",
   },
   async (message, match, m) => {
@@ -157,7 +153,6 @@ command(
   {
     pattern: "mp4 ?(.*)",
     fromMe: isPrivate,
-    desc: "Changes sticker to Video",
     type: "converter",
   },
   async (message, match, m) => {
@@ -175,7 +170,6 @@ command(
   {
     pattern: "video ?(.*)",
     fromMe: isPrivate,
-    desc: "Downloads video",
     type: "downloader",
   },
   async (message, match) => {
@@ -200,7 +194,6 @@ command(
   {
     pattern: "mp3 ?(.*)",
     fromMe: isPrivate,
-    desc: "converts video/voice to mp3",
     type: "downloader",
   },
   async (message, match, m) => {
@@ -214,7 +207,6 @@ command(
   {
     pattern: "fetch ?(.*)",
     fromMe: isPrivate,
-    desc: "Downloads from a direct link",
     type: "downloader",
   },
   async (message, match) => {
@@ -243,7 +235,6 @@ command(
   {
     pattern: "yts ?(.*)",
     fromMe: isPrivate,
-    desc: "Search Youtube",
     type: "Search",
   },
   async (message, match) => {
