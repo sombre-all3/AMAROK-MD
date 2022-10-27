@@ -15,8 +15,6 @@ Module(
     pattern: "restart",
     fromMe: true,
     type: "heroku",
-    desc: "Restart Dyno",
-    type: "heroku",
   },
   async (message) => {
     await message.sendMessage(`_Restarting_`);
@@ -31,8 +29,6 @@ Module(
   {
     pattern: "shutdown",
     fromMe: true,
-    type: "heroku",
-    desc: "Dyno off",
     type: "heroku",
   },
   async (message) => {
@@ -57,7 +53,6 @@ Module(
   {
     pattern: "dyno",
     fromMe: isPrivate,
-    desc: "Show Quota info",
     type: "heroku",
   },
   async (message) => {
@@ -96,8 +91,6 @@ Module(
     pattern: "setvar ",
     fromMe: true,
     type: "heroku",
-    desc: "Set heroku env",
-    type: "heroku",
   },
   async (message, match) => {
     if (!match)
@@ -125,8 +118,6 @@ Module(
   {
     pattern: "delvar ",
     fromMe: true,
-    type: "heroku",
-    desc: "Delete Heroku env",
     type: "heroku",
   },
   async (message, match) => {
@@ -157,8 +148,6 @@ Module(
     pattern: "getvar ",
     fromMe: true,
     type: "heroku",
-    desc: "Show heroku env",
-    type: "heroku",
   },
   async (message, match) => {
     if (!match) return await message.sendMessage(`_Example: getvar sudo_`);
@@ -185,8 +174,6 @@ Module(
     pattern: "allvar",
     fromMe: true,
     type: "heroku",
-    desc: "Heroku all env",
-    type: "heroku",
   },
   async (message) => {
     let msg = "```Here your all Heroku vars\n\n\n";
@@ -207,10 +194,9 @@ Module(
 
 Module(
   {
-    pattern: "update",
+    pattern: "update ?(.*)",
     fromMe: true,
     type: "heroku",
-    desc: "Checks for update.",
   },
   async (message, match,) => {
     let {prefix} = message
@@ -275,20 +261,19 @@ Module(
 
 Module(
   {
-    pattern: "update now",
+    pattern: "update now ?(.*)",
     fromMe: true,
     type: "heroku",
-    desc: "Updates the Bot",
   },
   async (message) => {}
 );
 
-//Credits Mask-ser
-//created by mask ser for HERMIT_MD
+//Credits Diegoson
+//created by mask ser for AMAROK_MD
 const { SUDO } = require("../config");
 const { Function } = require("../lib/");
 Function(
-  { pattern: "setsudo ?(.*)", fromMe: true, desc: "set sudo", type: "user" },
+  { pattern: "setsudo ?(.*)", fromMe: true, type: "user" },
   async (m, mm) => {
     var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
       "@"
@@ -310,7 +295,6 @@ Function(
   {
     pattern: "delsudo ?(.*)",
     fromMe: true,
-    desc: "delete sudo sudo",
     type: "user",
   },
   async (m, mm) => {
@@ -330,7 +314,7 @@ Function(
   }
 );
 Function(
-  { pattern: "getsudo ?(.*)", fromMe: true, desc: "shows sudo", type: "user" },
+  { pattern: "getsudo ?(.*)", fromMe: true, desc: type: "user" },
   async (m) => {
     const vars = await heroku
       .get(baseURI + "/config-vars")
