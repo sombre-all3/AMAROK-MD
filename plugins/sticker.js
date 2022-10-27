@@ -25,7 +25,6 @@ command(
   {
     pattern: "tgs ?(.*)",
     fromMe: isPrivate,
-    desc: "Download Sticker From Telegram",
     type: "Tool",
   },
   async (message, match) => {
@@ -64,7 +63,6 @@ command(
   {
     pattern: "take ?(.*)",
     fromMe: isPrivate,
-    desc: "Changes Exif data of stickers",
     type: "tool",
   },
   async (message, match, m) => {
@@ -87,7 +85,6 @@ command(
   {
     pattern: "getexif ?(.*)",
     fromMe: true,
-    desc: "description",
     type: "type",
   },
   async (message, match, m) => {
