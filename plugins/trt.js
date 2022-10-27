@@ -3,9 +3,9 @@ const { command, trt, isPublic } = require('../lib')
 
 command(
   {
-       pattern: 'trt ?(.*)',
+       pattern: "trt ?(.*)",
        fromMe: isPublic,
-       desc: 'Google transalte',
+       type: "trt",
   },
   async (message, match) => {
     if (!message.reply_message.text)
