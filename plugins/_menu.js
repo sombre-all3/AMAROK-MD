@@ -141,7 +141,6 @@ menu+= `╭━━━━━━━━━━━━━━──❤︎`
     });
     cmnd.sort();
     cmnd.forEach(({ cmd, desc }, num) => {
-      menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`;
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
     menu += ` ╰━━━━━━━━━━━━━━━━──⊷`;
