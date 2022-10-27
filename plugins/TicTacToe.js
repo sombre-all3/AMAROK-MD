@@ -76,7 +76,6 @@ command(
   {
     on: "text",
     fromMe: isPrivate,
-    desc: "description",
     type: "type",
   },
   async (message, match, m) => {
