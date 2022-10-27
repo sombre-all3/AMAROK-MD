@@ -6,7 +6,6 @@ command(
   {
     pattern: "sticker ?(.*)",
     fromMe: isPrivate,
-    desc: "_Converts Photo or video to sticker_",
     type: "converter",
   },
   async (message, match, m) => {
