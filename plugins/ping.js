@@ -10,7 +10,6 @@ command(
   {
     pattern: "ping",
     fromMe: isPrivate,
-    desc: "To check ping",
     type: "user",
   },
   async (message, match) => {
