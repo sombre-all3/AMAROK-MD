@@ -3,7 +3,6 @@ command(
   {
     pattern: "ttt ?(.*)",
     fromMe: isPrivate,
-    desc: "Play TicTacToe",
     type: "game",
   },
   async (message, match, m) => {
