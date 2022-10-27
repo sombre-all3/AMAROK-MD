@@ -4,7 +4,6 @@ command(
   {
     pattern: "setpp",
     fromMe: true,
-    desc: "Set profile picture",
     type: "user",
   },
   async (message, match, m) => {
@@ -20,7 +19,6 @@ command(
   {
     pattern: "setname ?(.*)",
     fromMe: true,
-    desc: "Set User name",
     type: "user",
   },
   async (message, match) => {
@@ -34,7 +32,6 @@ command(
   {
     pattern: "block ?(.*)",
     fromMe: true,
-    desc: "Block a person",
     type: "user",
   },
   async (message, match) => {
@@ -56,7 +53,6 @@ command(
   {
     pattern: "unblock ?(.*)",
     fromMe: true,
-    desc: "Unblock a person",
     type: "user",
   },
   async (message, match) => {
@@ -78,7 +74,6 @@ command(
   {
     pattern: "jid ?(.*)",
     fromMe: true,
-    desc: "Give jid of chat/user",
     type: "user",
   },
   async (message, match) => {
@@ -92,7 +87,6 @@ command(
   {
     pattern: "dlt ?(.*)",
     fromMe: true,
-    desc: "deletes a message",
     type: "user",
   },
   async (message, match,m,client) => {
