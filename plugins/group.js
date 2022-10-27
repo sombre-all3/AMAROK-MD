@@ -70,7 +70,6 @@ command(
   {
     pattern: "promote",
     fromMe: isPrivate,
-    desc: "promote a member",
     type: "group",
   },
   async (message, match) => {
