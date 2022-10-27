@@ -12,5 +12,4 @@ await message.sendFromUrl("www.xnxx.com");
 await message.sendMessage("Downloading");
 return message await("Enter a name of porn video");
 },
-}
 )
