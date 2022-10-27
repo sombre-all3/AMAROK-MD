@@ -3,7 +3,6 @@ command(
   {
     pattern: "fancy ?(.*)",
     fromMe: isPrivate,
-    desc: "converts text to fancy text",
     type: "converter",
   },
   async (message, match) => {
