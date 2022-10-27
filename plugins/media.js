@@ -101,7 +101,7 @@ command(
   {
     pattern: "removebg ?(.*)",
     fromMe: isPrivate,
-    desc: "removes background of an image",
+    type: "group",
   },
   async (message, match) => {
     if (!message.reply_message || !message.reply_message.image)
