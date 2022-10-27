@@ -12,7 +12,6 @@ command(
   {
     pattern: "news ?(.*)",
     fromMe: isPrivate,
-    desc: "Get News",
     type: "Search",
   },
   async (message, match, { prefix }, client) => {
@@ -185,7 +184,6 @@ command(
   {
     pattern: "movie ?(.*)",
     fromMe: true,
-    desc: "Movie info",
     type: "search",
   },
   async (message, match) => {
@@ -209,7 +207,6 @@ command(
   {
     pattern: "spdf ?(.*)",
     fromMe: isPrivate,
-    desc: "Converts Site to PDF.",
     type: "tool",
   },
   async (message, match) => {
