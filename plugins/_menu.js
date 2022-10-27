@@ -63,13 +63,13 @@ menu+= `╭───『 `+ styletext('command',57)+`』──◆`
     });
     cmnd.sort();
     category.sort().forEach((cmmd) => {
-     menu+=`
-┃ ⿻ ╭─────────────◆
-┃ ⿻ │ ⦿---- ${cmmd} ----⦿
-┃ ⿻ ╰┬───┤
-┃ ⿻  │       ╰────────◆
-┃ ⿻  │    
-┃ ⿻ ┌┤`
+     menu+=`     
+┃ ❐╭─────────────◆
+┃ ❐│ ⦿---- ${cmmd} ----⦿
+┃ ❐╰┬───┤
+┃ ❐ │          ╰────────◆
+┃ ❐ │    
+┃ ❐ ┌┤`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
  menu += `\n┃ ⿻ │ ⛥  ${cmd.trim()}`;
