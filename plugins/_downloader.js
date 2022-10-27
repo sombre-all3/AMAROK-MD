@@ -10,7 +10,6 @@ command(
   {
     pattern: "song",
     fromMe: isPrivate,
-    desc: "Downloads Song",
     type: "downloader",
   },
   async (message, match) => {
