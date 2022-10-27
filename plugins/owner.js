@@ -4,7 +4,7 @@ command(
   {
      pattern: 'owner',
      fromMe: true,
-     desc: 'Amarok owner',
+     type: "Amarok owner",
   },
 async (message,metch) => {
 await message.sendMessage('Hello this is my owner +27686882509');
