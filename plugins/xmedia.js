@@ -9,7 +9,6 @@ Module(
   {
     pattern: "x4mp4",
     fromMe: isPublic,
-    desc: "Reduce video’s quality by 75%.",
     type: "X-Media",
   },
   async (message) => {
@@ -33,7 +32,6 @@ Module(
   {
     pattern: "x2mp4",
     fromMe: isPublic,
-    desc: "Reduce video’s quality by 50%",
     type: "X-Media",
   },
   async (message) => {
@@ -57,7 +55,6 @@ Module(
   {
     pattern: "mp4image",
     fromMe: isPublic,
-    desc: "Converts photo to 5 sec video.",
     type: "X-Media",
   },
   async (message) => {
@@ -83,8 +80,7 @@ Module(
   {
     pattern: "spectrum",
     fromMe: isPublic,
-    desc: "Converts the spectrum of sound into video.",
-    type: "X-Media",
+    type: "X-Media", 
   },
   async (message) => {
     if (!message.reply_message)
@@ -113,7 +109,6 @@ Module(
   {
     pattern: "waves",
     fromMe: isPublic,
-    desc: "Converts the wave range of sound to video.",
     type: "X-Media",
   },
   async (message) => {
@@ -142,8 +137,7 @@ Module(
 Module(
   {
     pattern: "frequency",
-    fromMe: isPublic,
-    desc: "Converts the frequency range of sound to video.",
+    fromMe: isPublic, 
     type: "X-Media",
   },
   async (message) => {
@@ -173,7 +167,6 @@ Module(
   {
     pattern: "avec",
     fromMe: isPublic,
-    desc: "Converts the histogram of sound to video.",
     type: "X-Media",
   },
   async (message) => {
@@ -203,7 +196,6 @@ Module(
   {
     pattern: "volumeaudio",
     fromMe: isPublic,
-    desc: "Converts the decibel value of the sound into video.",
     type: "X-Media",
   },
   async (message) => {
@@ -233,7 +225,6 @@ Module(
   {
     pattern: "cqtaudio",
     fromMe: isPublic,
-    desc: "Converts the CQT value of audio to video.",
     type: "X-Media",
   },
   async (message) => {
@@ -263,7 +254,6 @@ Module(
   {
     pattern: "mp3eq",
     fromMe: isPublic,
-    desc: "Adjusts the sound to a crystal clear level.",
     type: "X-Media",
   },
   async (message) => {
@@ -291,7 +281,6 @@ Module(
   {
     pattern: "mp3crusher",
     fromMe: isPublic,
-    desc: "Distorts the sound, makes ridiculous.",
     type: "X-Media",
   },
   async (message) => {
@@ -318,7 +307,6 @@ Module(
   {
     pattern: "mp3reverse",
     fromMe: isPublic,
-    desc: "Plays the sound in reverse.",
     type: "X-Media",
   },
   async (message) => {
@@ -341,7 +329,6 @@ Module(
   {
     pattern: "mp4vintage",
     fromMe: isPublic,
-    desc: "Applies a nostalgic effect to video.",
     type: "X-Media",
   },
   async (message) => {
@@ -365,7 +352,6 @@ Module(
   {
     pattern: "mp4reverse",
     fromMe: isPublic,
-    desc: "Plays the video in reverse.",
     type: "X-Media",
   },
   async (message) => {
@@ -390,7 +376,6 @@ Module(
   {
     pattern: "mp4bw",
     fromMe: isPublic,
-    desc: "Applies a monochrome effect to video.",
     type: "X-Media",
   },
   async (message) => {
@@ -414,7 +399,6 @@ Module(
   {
     pattern: "bwimage",
     fromMe: isPublic,
-    desc: "Applies a monochrome effect to image.",
     type: "X-Media",
   },
   async (message) => {
@@ -437,7 +421,6 @@ Module(
   {
     pattern: "vintageimage",
     fromMe: isPublic,
-    desc: "Applies a vinatge effect to video.",
     type: "X-Media",
   },
   async (message) => {
@@ -460,7 +443,6 @@ Module(
   {
     pattern: "mp4enhance",
     fromMe: isPublic,
-    desc: "Enhance video’s quality",
     type: "X-Media",
   },
   async (message) => {
@@ -484,7 +466,6 @@ Module(
   {
     pattern: "blurimage",
     fromMe: isPublic,
-    desc: "Blurs the background of the photo.",
     type: "X-Media",
   },
   async (message) => {
@@ -511,7 +492,6 @@ Module(
   {
     pattern: "mp4blur",
     fromMe: isPublic,
-    desc: "Blurs the background of the video.",
     type: "X-Media",
   },
   async (message) => {
@@ -538,7 +518,6 @@ Module(
   {
     pattern: "mp3pitch",
     fromMe: isPublic,
-    desc: "Makes the sound thinner and faster.",
     type: "X-Media",
   },
   async (message) => {
@@ -561,7 +540,6 @@ Module(
   {
     pattern: "mp4edge",
     fromMe: isPublic,
-    desc: "Applies a edge effect to the video.",
     type: "X-Media",
   },
   async (message) => {
@@ -591,7 +569,6 @@ Module(
   {
     pattern: "mp3low",
     fromMe: isPublic,
-    desc: "Makes the sound deep and slower.",
     type: "X-Media",
   },
   async (message) => {
@@ -614,7 +591,6 @@ Module(
   {
     pattern: "x2mp3",
     fromMe: isPublic,
-    desc: "Makes the sound twice as fast.",
     type: "X-Media",
   },
   async (message) => {
@@ -637,7 +613,6 @@ Module(
   {
     pattern: "edgeimage",
     fromMe: isPublic,
-    desc: "Applies a edge effect to the photo.",
     type: "X-Media",
   },
   async (message) => {
@@ -660,7 +635,6 @@ Module(
   {
     pattern: "enhanceimage",
     fromMe: isPublic,
-    desc: "Makes the photo clearer.",
     type: "X-Media",
   },
   async (message) => {
@@ -683,7 +657,6 @@ Module(
   {
     pattern: "mp3volume",
     fromMe: isPublic,
-    desc: "Increase sound level",
     type: "X-Media",
   },
   async (message, match) => {
@@ -710,7 +683,6 @@ Module(
   {
     pattern: "gif",
     fromMe: isPublic,
-    desc: "Converts video to gif.",
     type: "X-Media",
   },
   async (message) => {
@@ -741,7 +713,6 @@ Module(
   {
     pattern: "vgif",
     fromMe: isPublic,
-    desc: "Converts video to voiced gif.",
     type: "X-Media",
   },
   async (message) => {
@@ -771,7 +742,6 @@ Module(
   {
     pattern: "grenimage",
     fromMe: isPublic,
-    desc: "Applies grain effect to the photo",
     type: "X-Media",
   },
   async (message) => {
@@ -794,7 +764,6 @@ Module(
   {
     pattern: "interp ",
     fromMe: isPublic,
-    desc: "Increases the FPS of the video.",
     type: "X-Media",
   },
   async (message, match) => {
@@ -832,7 +801,6 @@ Module(
   {
     pattern: "rainbow",
     fromMe: isPublic,
-    desc: "Applies rainbow effect to the photo",
     type: "X-Media",
   },
   async (message) => {
@@ -860,7 +828,6 @@ Module(
   {
     pattern: "mp4rainbow",
     fromMe: isPublic,
-    desc: "Applies a rainbow effect to video.",
     type: "X-Media",
   },
   async (message) => {
@@ -889,7 +856,6 @@ Module(
   {
     pattern: "negative",
     fromMe: isPublic,
-    desc: "Applies a negative color filter to the photo.",
     type: "X-Media",
   },
   async (message) => {
@@ -912,7 +878,6 @@ Module(
   {
     pattern: "mp4negative",
     fromMe: isPublic,
-    desc: "Applies a negative color filter to the video.",
     type: "X-Media",
   },
   async (message) => {
@@ -936,7 +901,6 @@ Module(
   {
     pattern: "mp4art",
     fromMe: isPublic,
-    desc: "Applies a art effect to the video.",
     type: "X-Media",
   },
   async (message) => {
@@ -964,7 +928,6 @@ Module(
   {
     pattern: "artimage",
     fromMe: isPublic,
-    desc: "Applies a art effect to the photo.",
     type: "X-Media",
   },
   async (message) => {
@@ -991,7 +954,6 @@ Module(
   {
     pattern: "mp4stab",
     fromMe: isPublic,
-    desc: "Decreases the vibration of the video.",
     type: "X-Media",
   },
   async (message) => {
@@ -1015,7 +977,6 @@ Module(
   {
     pattern: "vivid",
     fromMe: isPublic,
-    desc: "Makes the colors of the video more vivid and beautiful.",
     type: "X-Media",
   },
   async (message) => {
@@ -1043,7 +1004,6 @@ Module(
   {
     pattern: "colorimage",
     fromMe: isPublic,
-    desc: "It makes the colors of the photo more vivid and attractive",
     type: "X-Media",
   },
   async (message) => {
@@ -1070,7 +1030,6 @@ Module(
   {
     pattern: "mp4slowmo",
     fromMe: isPublic,
-    desc: "applies true-slowmo to non-slow motion videos",
     type: "X-Media",
   },
   async (message) => {
