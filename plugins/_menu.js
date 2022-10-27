@@ -121,6 +121,7 @@ menu+= `
 ┃ ⛥ ╰━━━━━━━━━━━──⊷
 ╰━━━━━━━━━━━──⊷\n
 ` 
+menu+= `╭━━━━━━━━━━━──⊷`
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
