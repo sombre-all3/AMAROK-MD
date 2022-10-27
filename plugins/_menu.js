@@ -14,7 +14,6 @@ command(
   {
     pattern: "menu",
     fromMe: isPrivate,
-    desc: "Shows list of All commands",
     dontAddCommandList: true,
   },
   async (message,match, { prefix }) => {
@@ -100,7 +99,6 @@ command(
   {
     pattern: "list",
     fromMe: isPrivate,
-    desc: "Show All commands",
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
