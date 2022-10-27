@@ -6,7 +6,6 @@ command(
   {
     pattern: "add",
     fromMe: isPrivate,
-    desc: "Adds a person to group",
     type: "group",
   },
   async (message, match) => {
@@ -28,7 +27,6 @@ command(
   {
     pattern: "kick",
     fromMe: isPrivate,
-    desc: "kicks a person from group",
     type: "group",
   },
   async (message, match) => {
@@ -50,7 +48,8 @@ command(
   { 
     pattern: "invite", 
     fromMe: isPrivate, 
-    desc: "Get group invite link",
+
+
     type: "group",
   },
   async (message, client) => {
@@ -93,7 +92,6 @@ command(
   {
     pattern: "demote",
     fromMe: isPrivate,
-    desc: "demote a member",
     type: "group",
   },
   async (message, match) => {
@@ -115,7 +113,6 @@ command(
   {
     pattern: "mute",
     fromMe: true,
-    desc: "nute group",
     type: "group",
   },
   async (message, match, m, client) => {
@@ -132,7 +129,6 @@ command(
   {
     pattern: "unmute",
     fromMe: true,
-    desc: "unmute group",
     type: "group",
   },
   async (message, match, m, client) => {
@@ -149,7 +145,6 @@ command(
   {
     pattern: "gjid ?(.*)",
     fromMe: true,
-    desc: "gets jid of all group members",
     type: "group",
   },
   async (message, match, m, client) => {
@@ -170,7 +165,6 @@ command(
   {
     pattern: "tagall ?(.*)",
     fromMe: true,
-    desc: "mention all users in group",
     type: "group",
   },
   async (message, match) => {
@@ -190,7 +184,6 @@ command(
   {
     pattern: "tagall ?(.*)",
     fromMe: true,
-    desc: "mention all users in group",
     type: "group",
   },
   async (message, match) => {
