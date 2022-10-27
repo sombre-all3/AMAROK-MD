@@ -107,16 +107,16 @@ command(
         .split(",");
     let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
-┃ ⛥  *OWNER* :  ${OWNER_NAME}
-┃ ⛥  *USER* : ${message.pushName}
-┃ ⛥  *MODE* : ${WORK_TYPE}
-┃ ⛥  *PREFIX* : ${HANDLERS}
-┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
-┃ ⛥  *DATE* : ${date}
-┃ ⛥  *TIME* : ${time}
-┃ ⛥  *UPTIME* : ${clockString(uptime())} 
-┃ ⛥  *VERSION* : ${require("../package.json").version}
-┃ ⛥  *PLUGINS* : ${events.commands.length} 
+┃ ⛥ │  *OWNER* :  ${OWNER_NAME}
+┃ ⛥ │ *USER* : ${message.pushName}
+┃ ⛥ │ *MODE* : ${WORK_TYPE}
+┃ ⛥ │ *PREFIX* : ${HANDLERS}
+┃ ⛥ │ *HOST NAME* :${hostname().split("-")[0]}
+┃ ⛥ │ *DATE* : ${date}
+┃ ⛥ │  *TIME* : ${time}
+┃ ⛥ │ *UPTIME* : ${clockString(uptime())} 
+┃ ⛥ │ *VERSION* : ${require("../package.json").version}
+┃ ⛥ │ *PLUGINS* : ${events.commands.length} 
 ╰━━━━━━━━━━━──⊷\n
 ` 
     let cmnd = [];
@@ -141,7 +141,7 @@ menu+= `
       menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`; 
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
-    menu += ` ╰━━━━━━━━━━━━━━━━──⊷`;
+    menu += `╰━━━━━━━━━━━━━━━━──⊷`;
    return await message.reply(menu);
   }
 );
