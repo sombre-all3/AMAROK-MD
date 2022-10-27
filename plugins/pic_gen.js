@@ -4,7 +4,6 @@ command(
   {
     pattern: "picgen ?(.*)",
     fromMe: isPrivate,
-    desc: "description",
     type: "type",
   },
   async (message, match) => {
