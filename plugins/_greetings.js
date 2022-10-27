@@ -10,7 +10,6 @@ command(
   {
     pattern: "welcome ?(.*)",
     fromMe: true,
-    desc: "description",
     type: "group",
   },
   async (message, match) => {
@@ -68,7 +67,6 @@ command(
   {
     pattern: "goodbye ?(.*)",
     fromMe: true,
-    desc: "description",
     type: "group",
   },
   async (message, match) => {
