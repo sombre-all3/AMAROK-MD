@@ -9,7 +9,6 @@ command(
   {
     pattern: "install",
     fromMe: true,
-    desc: "Installs External plugins",
     type:'user'
   },
   async (message, match) => {
@@ -79,7 +78,6 @@ command(
   {
     pattern: "remove(?: |$)(.*)",
     fromMe: true,
-    desc: "Remove external plugins",
     type:'user'
   },
   async (message, match) => {
