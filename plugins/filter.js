@@ -22,7 +22,6 @@ command(
   {
     pattern: "filter ?(.*)",
     fromMe: true,
-    desc: Lang.FILTER_DESC,
     usage: ".filter keyword:message",
   },
   async (message, match) => {
@@ -55,7 +54,6 @@ command(
   {
     pattern: "test21 ?(.*)",
     fromMe: true,
-    desc: "description",
     type: "type",
   },
   async (message, match) => {
@@ -67,7 +65,6 @@ command(
   {
     pattern: "stop ?(.*)",
     fromMe: true,
-    desc: Lang.STOP_DESC,
     usage: '.stop "hello"',
   },
   async (message, match) => {
