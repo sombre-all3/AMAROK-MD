@@ -39,6 +39,11 @@
       "required": false,
       "value": "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃"
     },
+    "BOT_INFO": {
+     "description": "Add all name to your name",
+     "required": false,
+     "value":
+    },
     "BOT_NAME": {
       "description": "Add bot name",
       "required": false,
