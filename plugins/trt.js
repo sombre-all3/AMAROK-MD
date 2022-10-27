@@ -1,10 +1,10 @@
 const config = require('../config')
-const { command, trt } = require('../lib')
+const { command, trt, isPublic } = require('../lib')
 
 command(
   {
        pattern: 'trt ?(.*)',
-       fromMe: true,
+       fromMe: isPublic,
        desc: 'Google transalte',
   },
   async (message, match) => {
