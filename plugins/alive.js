@@ -14,7 +14,6 @@ command(
   {
     pattern: "arise",
     fromMe: isPrivate,
-    desc: "dead",
     dontAddCommandList: true,
   },
 async (message,match, { prefix }) => {
@@ -23,7 +22,7 @@ async (message,match, { prefix }) => {
       .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
       .split(",");
 let alive = `
-╭━━〘 "A L I V E" 〙━━──⊷` 
+╭━━〘 "A ✰ L ✰ I ✰ V ✰ E" 〙━━──⊷` 
 alive+= `
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
