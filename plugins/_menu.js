@@ -107,13 +107,13 @@ command(
         .split(",");
     let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
-┃ ⛥ │  *OWNER* :  ${OWNER_NAME}
+┃ ⛥ │ *OWNER* :  ${OWNER_NAME}
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE* : ${WORK_TYPE}
 ┃ ⛥ │ *PREFIX* : ${HANDLERS}
 ┃ ⛥ │ *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥ │ *DATE* : ${date}
-┃ ⛥ │  *TIME* : ${time}
+┃ ⛥ │ *TIME* : ${time}
 ┃ ⛥ │ *UPTIME* : ${clockString(uptime())} 
 ┃ ⛥ │ *VERSION* : ${require("../package.json").version}
 ┃ ⛥ │ *PLUGINS* : ${events.commands.length} 
