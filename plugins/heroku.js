@@ -314,7 +314,7 @@ Function(
   }
 );
 Function(
-  { pattern: "getsudo ?(.*)", fromMe: true, desc: type: "user" },
+  { pattern: "getsudo ?(.*)", fromMe: true, type: "user" },
   async (m) => {
     const vars = await heroku
       .get(baseURI + "/config-vars")
