@@ -107,6 +107,7 @@ command(
         .split(",");
     let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
+┃ ⛥ ╭━━━━━━━━━━━──⊷ 
 ┃ ⛥ │ *OWNER* :  ${OWNER_NAME}
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE* : ${WORK_TYPE}
@@ -117,6 +118,7 @@ menu+= `
 ┃ ⛥ │ *UPTIME* : ${clockString(uptime())} 
 ┃ ⛥ │ *VERSION* : ${require("../package.json").version}
 ┃ ⛥ │ *PLUGINS* : ${events.commands.length} 
+┃ ⛥ ╰━━━━━━━━━━━──⊷
 ╰━━━━━━━━━━━──⊷\n
 ` 
     let cmnd = [];
