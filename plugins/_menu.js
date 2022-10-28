@@ -148,7 +148,7 @@ menu+= `
     menu += `╰━━━━━━━━━━━━━━━━──⊷`;
    return await message.reply(menu);
      image: {url: `https://i.ibb.co/GtwvJnk/bce2563a25ef.jpg` },
-     caption: list,
+     caption: "list",
      footer: "tiny",
   }
 );
