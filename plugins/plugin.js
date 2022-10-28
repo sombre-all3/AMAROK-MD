@@ -17,7 +17,7 @@ command(
     try {
         var url = new URL(match[1]);
     } catch {
-        return await message.client.sendMessage(message.jid,Lang.INVALID_URL,txt);
+        return await message.sendMessage("invalid");
     }
       
       if (url.host === "gist.github.com") {
