@@ -147,6 +147,7 @@ menu+= `
     });
     menu += `╰━━━━━━━━━━━━━━━━──⊷`;
    return await message.reply(menu);
+   return await message.client.sendMessage(message.jid, {
      image: {url: `https://i.ibb.co/GtwvJnk/bce2563a25ef.jpg` },
      caption: "list",
      footer: "tiny",
