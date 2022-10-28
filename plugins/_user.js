@@ -101,10 +101,10 @@ command(
       return await m.sendMessage("*reply to a number*", { quoted: m });
     var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
     setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
-    await m.sendMessage("_new sudo numbers are:_" + setSudo, {
+    await message.sendMessage("_new sudo numbers are:_" + setSudo, {
       quoted: m,
     });
-    await m.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
+    await message.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
     await heroku
       .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
       .then(async (app) => {});
@@ -124,10 +124,10 @@ command(
     if (!newSudo) return await m.sendMessage("*Need reply/mention/number*");
     var setSudo = SUDO.replace(newSudo, "").replace(/,,/g, ",");
     setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
-    await m.sendMessage("```NEW SUDO NUMBERS ARE: ```" + setSudo, {
+    await message.sendMessage("```NEW SUDO NUMBERS ARE: ```" + setSudo, {
       quoted: m,
     });
-    await m.sendMessage("_IT TAKES 30 SECONDS TO MAKE EFFECT_", { quoted: m });
+    await message.sendMessage("_IT TAKES 30 SECONDS TO MAKE EFFECT_", { quoted: m });
     await heroku
       .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
       .then(async (app) => {});
@@ -144,7 +144,7 @@ command(
       .catch(async (error) => {
         return await m.send("HEROKU : " + error.body.message);
       });
-    await m.send("```" + `SUDO Numbers are : ${vars.SUDO}` + "```");
+    await message.sendMessage("```" + `SUDO Numbers are : ${vars.SUDO}` + "```");
   }
 );
 
