@@ -14,6 +14,7 @@ command(
   {
     pattern: "help",
     fromMe: isPrivate,
+    type: "Amarok help",
     dontAddCommandList: true,
   },
   async (message,match, { prefix }) => {
@@ -83,12 +84,12 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
-          buttonId: '.arise',
-          buttonText: { displayText: tiny("⫷ALIVE⫸") },
+          buttonId: '.ping',
+          buttonText: { displayText: tiny("⫷SPEED⫸") },
         },
         {
-          buttonId: '.list',
-          buttonText: { displayText: tiny("⫷LIST⫸") },
+          buttonId: '.arise',
+          buttonText: { displayText: tiny("⫷ARISE⫸") },
         },
       ],
     });
