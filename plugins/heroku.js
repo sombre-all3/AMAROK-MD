@@ -1,6 +1,6 @@
 const got = require("got");
 const Heroku = require("heroku-client");
-const { Module, isPrivate, tiny } = require("../lib/");
+const { command, isPrivate, tiny } = require("../lib/");
 const Config = require("../config");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
@@ -11,7 +11,7 @@ const exec = require("child_process").exec;
 const { SUDO } = require("../config");
 
 
-Module(
+command(
   {
     pattern: "restart",
     fromMe: true,
@@ -26,8 +26,7 @@ Module(
   }
 );
 
-
-Module(
+command(
   {
     pattern: "shutdown",
     fromMe: true,
@@ -52,7 +51,7 @@ Module(
 );
 
 
-Module(
+command(
   {
     pattern: "dyno",
     fromMe: true,
@@ -89,7 +88,7 @@ Remaning    : ${secondsToDHMS(remaining)}`;
 );
 
 
-Module(
+command(
   {
     pattern: "setvar ",
     fromMe: true,
@@ -100,7 +99,7 @@ Module(
      if (!match) return await message.sendMessage(`_Example: delvar sudo_`);
       const [key, value] = match.split(":");
     if (!key || !value)
-      return await message.sendMessage(`_Example: .setvar SUDO:917025994178`);
+      return await message.sendMessage(`_Example: .setvar SUDO:27686881509`);
     heroku
       .patch(baseURI + "/config-vars", {
         body: {
@@ -117,7 +116,7 @@ Module(
 );
 
 
-Module(
+command(
   {
     pattern: "delvar ",
     fromMe: true,
@@ -147,7 +146,7 @@ Module(
 );
 
 
-Module(
+command(
   {
     pattern: "getvar ",
     fromMe: true,
@@ -174,7 +173,7 @@ Module(
 );
 
 
-Module(
+command(
   {
     pattern: "allvar",
     fromMe: true,
