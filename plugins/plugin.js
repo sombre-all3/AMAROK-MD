@@ -1,1 +1,96 @@
-var _0x37743b=_0x4412;function _0x3ab9(){var _0x51cc10=['311045OWbgEe','23592ULcfbF','url','findAll','substring','3bCeWNz','.js','invalid','1012588iZzsUn','2334144zvYpCD','_Need\x20a\x20plugin\x20name_','gist.github.com','_Plugin\x20not\x20found_','16633gCxcxx','dataValues','1537305oKrUXi','install','remove(?:\x20|$)(.*)','197770MNeZJX','../lib','plugin\x20list','join','statusCode','exec','unlinkSync','random','Plugin\x20','map','got','```','writeFileSync','cache','substr','/raw','resolve','./plugins/','toString','name','host','body','https://gist.github.com/','user','sendMessage','1566IzxDlj','Invalid\x20Plugin\x0a\x20```','_No\x20external\x20plugins\x20installed_','length'];_0x3ab9=function(){return _0x51cc10;};return _0x3ab9();}function _0x4412(_0x21ee8e,_0x3be776){var _0x3ab949=_0x3ab9();return _0x4412=function(_0x441299,_0x411469){_0x441299=_0x441299-0x110;var _0x22893d=_0x3ab949[_0x441299];return _0x22893d;},_0x4412(_0x21ee8e,_0x3be776);}(function(_0x33cd84,_0x2153b9){var _0x1515c3=_0x4412,_0x476894=_0x33cd84();while(!![]){try{var _0x51ede1=parseInt(_0x1515c3(0x13e))/0x1+parseInt(_0x1515c3(0x114))/0x2+parseInt(_0x1515c3(0x136))/0x3*(parseInt(_0x1515c3(0x139))/0x4)+-parseInt(_0x1515c3(0x131))/0x5+-parseInt(_0x1515c3(0x13a))/0x6+-parseInt(_0x1515c3(0x111))/0x7+-parseInt(_0x1515c3(0x132))/0x8*(-parseInt(_0x1515c3(0x12d))/0x9);if(_0x51ede1===_0x2153b9)break;else _0x476894['push'](_0x476894['shift']());}catch(_0x153e15){_0x476894['push'](_0x476894['shift']());}}}(_0x3ab9,0x337ff));const {command,getUrl}=require(_0x37743b(0x115)),got=require(_0x37743b(0x11e)),fs=require('fs'),{PluginDB,installPlugin}=require('../lib/database/plugins');command({'pattern':_0x37743b(0x112),'fromMe':!![],'type':_0x37743b(0x12b)},async(_0x4a00fe,_0x7aec06)=>{var _0x57cc11=_0x37743b;if(!_0x7aec06)return await _0x4a00fe[_0x57cc11(0x12c)]('_Send\x20a\x20plugin\x20url_');try{var _0xe7dcc3=new URL(_0x7aec06);}catch{return await _0x4a00fe[_0x57cc11(0x12c)](_0x57cc11(0x138));}_0xe7dcc3[_0x57cc11(0x128)]===_0x57cc11(0x13c)||_0x57cc11(0x12a)?(_0xe7dcc3[_0x57cc11(0x128)]='gist.githubusercontent.com'+_0xe7dcc3[_0x57cc11(0x126)]()[_0x57cc11(0x122)](0x17),_0xe7dcc3=_0xe7dcc3[_0x57cc11(0x126)]()+_0x57cc11(0x123)):_0xe7dcc3=_0xe7dcc3[_0x57cc11(0x126)]();var _0x53f644=await got(_0xe7dcc3);if(_0x53f644[_0x57cc11(0x118)]==0xc8){let _0x258653=/(?<=pattern:)(.*)(?=\?(.*))/g[_0x57cc11(0x119)](_0x53f644[_0x57cc11(0x129)]);_0x258653[_0x57cc11(0x130)]>=0x1?_0x258653='__'+_0x258653[0x1]:_0x258653='__'+Math[_0x57cc11(0x11b)]()['toString'](0x24)[_0x57cc11(0x135)](0x8);fs[_0x57cc11(0x120)](_0x57cc11(0x125)+_0x258653+_0x57cc11(0x137),_0x53f644[_0x57cc11(0x129)]);try{require('./'+_0x258653);}catch(_0x464bcb){return fs[_0x57cc11(0x11a)]('./plugins/'+_0x258653+'.js'),await _0x4a00fe['sendMessage'](_0x57cc11(0x12e)+_0x464bcb+_0x57cc11(0x11f));}await installPlugin(_0xe7dcc3,_0x258653),await _0x4a00fe[_0x57cc11(0x12c)]('_New\x20plugin\x20installed\x20:\x20'+commands[_0x57cc11(0x117)](',')+'_');}}),command({'pattern':'plugin','fromMe':!![],'desc':_0x37743b(0x116),'type':_0x37743b(0x12b)},async(_0x160887,_0x148bbf)=>{var _0x1437e2=_0x37743b,_0x1a657b='',_0x18374f=await PluginDB[_0x1437e2(0x134)]();return _0x18374f[_0x1437e2(0x130)]<0x1?await _0x160887[_0x1437e2(0x12c)](_0x1437e2(0x12f)):(_0x18374f[_0x1437e2(0x11d)](_0x290cef=>{var _0x5adec3=_0x1437e2;_0x1a657b+=_0x5adec3(0x11f)+_0x290cef['dataValues'][_0x5adec3(0x127)]+'```:\x20'+_0x290cef[_0x5adec3(0x110)][_0x5adec3(0x133)]+'\x0a';}),await _0x160887['sendMessage'](_0x1a657b));}),command({'pattern':_0x37743b(0x113),'fromMe':!![],'type':'user'},async(_0x4dfdb4,_0x3be395)=>{var _0xa4f8f9=_0x37743b;if(!_0x3be395)return await _0x4dfdb4['sendMessage'](_0xa4f8f9(0x13b));var _0x4e3b3b=await PluginDB[_0xa4f8f9(0x134)]({'where':{'name':_0x3be395}});if(_0x4e3b3b[_0xa4f8f9(0x130)]<0x1)return await _0x4dfdb4[_0xa4f8f9(0x12c)](_0xa4f8f9(0x13d));else await _0x4e3b3b[0x0]['destroy'](),delete require[_0xa4f8f9(0x121)][require[_0xa4f8f9(0x124)]('./'+_0x3be395+_0xa4f8f9(0x137))],fs['unlinkSync'](_0xa4f8f9(0x125)+_0x3be395+_0xa4f8f9(0x137)),await _0x4dfdb4['sendMessage'](_0xa4f8f9(0x11c)+_0x3be395+'\x20deleted');});
+const { command, getUrl } = require("../lib");
+const got = require("got");
+const fs = require("fs");
+const { PluginDB, installPlugin } = require("../lib/database/plugins");
+
+
+
+command(
+  {
+    pattern: "install",
+    fromMe: true,
+    type:'user'
+  },
+  async (message, match) => {
+    if (!match) return await message.sendMessage("_Send a plugin url_");
+    
+    try {
+        var url = new URL(match);
+    } catch {
+        return await message.sendMessage("invalid");
+    }
+      
+      if (url.host === "gist.github.com" || "https://gist.github.com/") {
+        url.host = "gist.githubusercontent.com"+url.toString().substr(23)
+        url = url.toString() + "/raw";
+      } else {
+        url = url.toString();
+      }
+      
+      var response = await got(url);
+      if (response.statusCode == 200) {
+        let plugin_name = /(?<=pattern:)(.*)(?=\?(.*))/g.exec(response.body)
+					plugin_name = plugin_name[1].split(" ")[0]
+        fs.writeFileSync("./plugins/" + plugin_name + ".js", response.body);
+        try {
+          require("./" + plugin_name);
+        } catch (e) {
+          fs.unlinkSync("./plugins/" + plugin_name + ".js");
+          return await message.sendMessage("Invalid Plugin\n ```" + e + "```");
+        }
+
+        await installPlugin(url, plugin_name);
+
+        await message.sendMessage(
+          `_New plugin installed : ${commands.join(",")}_`
+        );
+      }
+    }
+);
+
+
+
+command(
+  { pattern: "plugin", fromMe: true, desc: "plugin list" ,type:'user'},
+  async (message, match) => {
+    var mesaj = "";
+    var plugins = await PluginDB.findAll();
+    if (plugins.length < 1) {
+      return await message.sendMessage("_No external plugins installed_");
+    } else {
+      plugins.map((plugin) => {
+        mesaj +=
+          "```" +
+          plugin.dataValues.name +
+          "```: " +
+          plugin.dataValues.url +
+          "\n";
+      });
+      return await message.sendMessage(mesaj);
+    }
+  }
+);
+
+
+
+command(
+  {
+    pattern: "remove(?: |$)(.*)",
+    fromMe: true,
+    type:'user'
+  },
+  async (message, match) => {
+    if (!match) return await message.sendMessage("_Need a plugin name_");
+
+    var plugin = await PluginDB.findAll({ where: { name: match } });
+
+    if (plugin.length < 1) {
+      return await message.sendMessage("_Plugin not found_");
+    } else {
+      await plugin[0].destroy();
+      delete require.cache[require.resolve("./" + match + ".js")];
+      fs.unlinkSync("./plugins/" + match + ".js");
+      await message.sendMessage(`Plugin ${match} deleted`);
+    }
+  }
+);
