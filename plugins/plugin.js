@@ -16,7 +16,7 @@ command(
     
     try {
         var url = new URL(match[1]);
-         console.log(match[1])
+        await message.sendMessage(match[1])
     } catch {
         return await message.sendMessage("invalid");
     }
