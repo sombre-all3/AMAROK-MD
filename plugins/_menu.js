@@ -69,7 +69,7 @@ menu+= `╭───『 `+ styletext('command',57)+`』──◆`
 ┃ ❐ ┌┤`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `\n┃ ❐ │ 1  ${cmd.trim()}`;
+ menu += `\n┃ ❐ │ ⬤  ${cmd.trim()}`;
       });
  menu += `\n┃ ❐ ╰─────────────⬤`;
     });
