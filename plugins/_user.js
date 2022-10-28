@@ -1,3 +1,7 @@
+/*plugin fixed By Tshephang && Kichu 🫂🤍
+Take with credit*/
+
+
 const { command } = require("../lib");
 const Config = require("../config");
 const { SUDO } = require("../config");
