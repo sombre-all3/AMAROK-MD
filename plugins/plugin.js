@@ -12,13 +12,12 @@ command(
     type:'user'
   },
   async (message, match) => {
-    if (!match) return await message.sendMessage("_Send a plugin url_");
-    for (let Url of getUrl(match)) {
-      try {
-        var url = new URL(Url);
-      } catch {
-        return await message.sendMessage("_Invalid Url_");
-      }
+    if (match[1] === '') return await message.sendMessage('reply to plugin')
+    try {
+        var url = new URL(match[1]);
+    } catch {
+        return await message.sendMessage("invalid");
+    }
 
       if (url.host === "gist.github.com") {
         url.host = "gist.githubusercontent.com";
@@ -30,7 +29,11 @@ command(
       var response = await got(url);
       if (response.statusCode == 200) {
         let plugin_name = /(?<=pattern:)(.*)(?=\?(.*))/g.exec(response.body)
-					plugin_name = plugin_name[1].split(' ')[0]
+					if (plugin_name.length >= 1) {
+            plugin_name = "__" + plugin_name[1];
+        } else {
+            plugin_name = "__" + Math.random().toString(36).substring(8);
+        }
         fs.writeFileSync("./plugins/" + plugin_name + ".js", response.body);
         try {
           require("./" + plugin_name);
