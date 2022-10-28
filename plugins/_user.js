@@ -138,11 +138,11 @@ command(
     fromMe: true, 
     desc: "shows sudo", 
     type: "Human tool" },
-  async (m) => {
+  async (message) => {
     const vars = await heroku
       .get(baseURI + "/config-vars")
       .catch(async (error) => {
-        return await m.send("HEROKU : " + error.body.message);
+        return await message.send("HEROKU : " + error.body.message);
       });
     await message.sendMessage("```" + `SUDO Numbers are : ${vars.SUDO}` + "```");
   }
