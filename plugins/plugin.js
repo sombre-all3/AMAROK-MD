@@ -20,7 +20,7 @@ command(
         return await message.sendMessage("invalid");
     }
       
-      if (url.host === "gist.github.com") {
+      if (url.host == "gist.github.com") {
         url.host = "gist.githubusercontent.com";
         url = url.toString() + "/raw";
       } else {
