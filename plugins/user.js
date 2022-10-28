@@ -1,5 +1,8 @@
 const { command } = require("../lib");
 const { SUDO } = require("../config");
+const Heroku = require("heroku-client");
+const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
+const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
 
 command(
   {
