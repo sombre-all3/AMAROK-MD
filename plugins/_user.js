@@ -98,7 +98,7 @@ command(
     desc: "set sudo", 
     type: "user" },
   async (message,match, m) => {
-    var newSudo = message.mention[0] || message.reply_message.jid;
+    var newSudo = message.mention[0] || (message.reply_message.jid).split("@")[0]
     if (!newSudo)
       return await m.sendMessage("*reply to a number*", { quoted: m });
     var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
