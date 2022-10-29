@@ -97,16 +97,14 @@ command(
     fromMe: true, 
     desc: "set sudo", 
     type: "user" },
-  async (message, mm, match) => {
-    var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
-      "@"
-    )[0];
+  async (message,match) => {
+    var newSudo = message.mention[0] || message.reply_message.jid;
     if (!newSudo)
       return await m.sendMessage("*reply to a number*", { quoted: m });
     var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
     setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
     await message.sendMessage("_new sudo numbers are:_" + setSudo, {
-      quoted: m,
+      quoted: message,
     });
     await message.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
     await heroku
