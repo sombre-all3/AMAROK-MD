@@ -103,8 +103,9 @@ command(
       return await m.sendMessage("*reply to a number*", { quoted: m });
     var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
     setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
+    let mf = message.split("@")[0]
     await message.sendMessage("_new sudo numbers are:_" + setSudo, {
-      quoted: message,
+      quoted: mf,
     });
     await message.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
     await heroku
