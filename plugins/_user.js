@@ -121,7 +121,7 @@ command(
     desc: "delete sudo sudo",
     type: "user",
   },
-  async (m, mm) => {
+  async (message,m, mm) => {
     var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
       "@"
     )[0];
