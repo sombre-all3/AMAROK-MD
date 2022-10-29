@@ -1,7 +1,7 @@
 {
-  "name": "amarok",
+  "name": "amarok-md",
   "version": "2.0.0",
-  "description": "WhatsAsena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
+  "description": "Amarok-md powered by cyberxkid.",
   "main": "./index.js",
   "scripts": {
     "start": "supervisor -s ./index.js"
@@ -24,21 +24,23 @@
     "whatsapp api",
     "WhatsAsena"
   ],
-  "author": "Diego",
-  "developer": "Amarok / Diego",
+  "author": "Cyberxkid",
+  "developer": "Cyberxkid",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/Diegoson/AMAROK-MD/issues"
   },
   "homepage": "https://github.com/Diegoson/AMAROK-MD#readme",
   "dependencies": {
-    "@adiwajshing/baileys": "github:adiwajshing/baileys",
+    "@adiwajshing/baileys": "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@neeraj-x0/textpro": "^1.0.3",
     "bitly": "^7.1.2",
     "browser-id3-writer": "^4.4.0",
     "crypto-js": "^4.1.1",
     "file-type": "^16.5.3",
+    "aes256": "^1.1.0",
+    "atob": "^2.1.2",
     "fluent-ffmpeg": "^2.1.2",
     "g-i-s": "^2.1.6",
     "got": "^11.8.2",
