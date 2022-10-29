@@ -2,7 +2,7 @@
   "name": "amarok-md",
   "description": "amarok md powered by cyberxkid",
   "logo": "https://i.imgur.com/vwNY4lg.jpeg",
-  "repository": "https://github.com/Diegoson/AMAROK-MD",
+  "repository": "https://github.com/Diegoson/AMAROK-MD.git",
   "keywords": ["Amarok","Bot","Amarok-Md"],
   "env": {
    "SESSION_ID": {
