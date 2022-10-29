@@ -1,6 +1,6 @@
 {
   "name": "amarok-md",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Amarok-md powered by cyberxkid.",
   "main": "./index.js",
   "scripts": {
@@ -34,6 +34,7 @@
   "dependencies": {
     "@adiwajshing/baileys": "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",
+    "axios": "^0.27.2",
     "@neeraj-x0/textpro": "^1.0.3",
     "abu-bot": "^2.4.0",
     "bitly": "^7.1.2",
@@ -44,7 +45,7 @@
     "atob": "^2.1.2",
     "fluent-ffmpeg": "^2.1.2",
     "g-i-s": "^2.1.6",
-    "got": "^11.8.2",
+    "got": "11.8.3",
     "heroku-client": "^3.1.0",
     "jimp": "^0.16.1",
     "jsdom": "^20.0.0",
