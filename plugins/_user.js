@@ -97,7 +97,7 @@ command(
     fromMe: true, 
     desc: "set sudo", 
     type: "user" },
-  async (m, mm) => {
+  async (message, mm, match) => {
     var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
       "@"
     )[0];
@@ -121,7 +121,7 @@ command(
     desc: "delete sudo sudo",
     type: "user",
   },
-  async (message,m, mm) => {
+  async (message,m, mm, match) => {
     var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
       "@"
     )[0];
@@ -142,7 +142,7 @@ command(
     fromMe: true, 
     desc: "shows sudo", 
     type: "Human tool" },
-  async (message) => {
+  async (message, match) => {
     const vars = await heroku
       .get(baseURI + "/config-vars")
       .catch(async (error) => {
