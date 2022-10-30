@@ -1,31 +1,29 @@
-const { command, isPrivate } = require("../lib")
+const { command, isPublic, tiny } = require("../lib")
 
 command(
-  {      pattern: "git",
-         fromMe: isPrivate,
-         type: "amarok github",
+  {      pattern: "git ?(.*)",
+         fromMe: isPublic,
+         type: "amarok GitHub",
   },
   async(message,match) => {
 
-     const buttons = [
-       {
-         buttonld: '.menu',
-         buttonText: {diplayText: tiny("MENU") },
-       },
+let git = `Hi ${message.pushName}` 
+git+= ` *This is Amarok MD repo\n\n*Repo*: _https://github.com/Diegoson/AMAROK-MD_ `;
 
-     ]
-const buttonMessage = {
-      image: { url: `https://i.ibb.co/PGr0KHx/89cdfb2b6adf.jpg` },
-      caption: `Hi ${message.pushName}\n*This is Amarok MD repo\n\n*Repo*: https://github.com/Diegoson/AMAROK-MD`,
-      footer: "by amarok",
-      buttons: buttons,
-      headerType: 1
-    }
-await message.client.sendMessage(message.jid, buttonMessage)
-})
-
-  
-
-
-
-
+await message.client.sendMessage(message.jid,{
+video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
+      caption: tiny(git),
+      footer: tiny(`amarok md` ),
+      buttons: [
+        {
+        buttonId: '.owner',
+        buttonText: {displayText: tiny("OWNER") },
+        },
+        {
+        buttonId: '.menu',
+        buttonText: {displayText: tiny("MENU") },
+        },
+      ],
+    });
+  }
+);
