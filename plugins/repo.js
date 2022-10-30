@@ -25,7 +25,8 @@ command(
          buttonld: '.help',
          buttonText: {displayText: tiny("HELP") },
        },
-    ],
+     ],
+   });
   }
 );
   
