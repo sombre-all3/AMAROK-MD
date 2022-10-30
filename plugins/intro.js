@@ -10,6 +10,7 @@ command({
 let menu = `
 ╭━━〘 MY INTRO 〙━━──⊷`
 menu+= `
+┃ ❐ ╭────────────── 
 ┃ ❐ │ 
 ┃ ❐ │ *BOTNAME* :* AMAROK
 ┃ ❐ │ *OWNER* :* CYBERXKID
@@ -23,6 +24,7 @@ menu+= `
 ┃ ❐ │ *ATTITUDE* :* BAD WOLF
 ┃ ❐ │ *IG ID* :* TOXIC CYBER
 ┃ ❐ │
+┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
 const buttons = [
