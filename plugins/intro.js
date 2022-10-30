@@ -1,6 +1,6 @@
 const { command,
  isPublic,
- tiny 
+ tiny,
  styletext } = require("../lib/");
 const { WORK_TYPE,
      BOT_NAME } = require("../config.js");
