@@ -26,7 +26,7 @@ command(
          buttonText: {displayText: tiny("HELP") },
        },
      ],
-   });
-  }
-);
-  
+
+await message.client.sendMessage(message.jid, buttonMessage)
+
+})
