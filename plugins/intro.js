@@ -26,7 +26,7 @@ intro+= `
 ┃ ❐ │ *ANIMAL : WOLF*
 ┃ ❐ │ *ATTITUDE : BAD WOLF*
 ┃ ❐ │ *IG ID : TOXIC CYBER*
-┃ ❐ │ *ACCESS : tiny('${WORK_TYPE}')*
+┃ ❐ │ *ACCESS : `tiny('${WORK_TYPE}')`*
 ┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
