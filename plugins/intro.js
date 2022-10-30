@@ -9,11 +9,9 @@ command({
 
 let menu = `╭━━━━━━━━━━━──⊷ 
 ┃ ❐ │         *「 MY INTRO 」*
-┃ ❐ │ *BOTNAME* : ${BOT_NAME}
-┃ ❐ │ *OWNER* :${OWNER_NAME}
+┃ ❐ │ *BOTNAME* :* AMAROK
+┃ ❐ │ *OWNER* :* CYBERXKID
 ┃ ❐ │ *PLACE* :* MADADENI
-┃ ❐ │ *DATE* : ${date}
-┃ ❐ │ *TIME* :${time}
 ┃ ❐ │ *GENDER* :* MALE
 ┃ ❐ │ *AGE* :* 17
 ┃ ❐ │ *NUMBER TYPE* :* MOBILE
