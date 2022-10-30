@@ -1,4 +1,4 @@
-const { command, isPublic, OWNER_NAME  } = require("../lib/");
+const { command, isPublic } = require("../lib/");
 
 command({
 	pattern: 'intro ?(.*)',
