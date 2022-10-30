@@ -1,4 +1,6 @@
-const { command, isPublic } = require("../lib/");
+const { command,
+ isPublic,
+ tiny } = require("../lib/");
 const { WORK_TYPE } = require("../config.js");
 
 command({
@@ -24,7 +26,7 @@ intro+= `
 ┃ ❐ │ *ANIMAL : WOLF*
 ┃ ❐ │ *ATTITUDE : BAD WOLF*
 ┃ ❐ │ *IG ID : TOXIC CYBER*
-┃ ❐ │ *ACCESS : ${WORK_TYPE}*
+┃ ❐ │ *ACCESS : tiny${WORK_TYPE}*
 ┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
