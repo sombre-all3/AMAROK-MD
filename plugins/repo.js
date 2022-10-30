@@ -10,7 +10,7 @@ command(
      const buttons = [
        {
          buttonld: '.menu',
-         buttonText: {diplayText: tiny("MENU")},
+         buttonText: {diplayText: tiny("MENU") },
        },
 
      ]
