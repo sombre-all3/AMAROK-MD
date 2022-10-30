@@ -7,8 +7,10 @@ command({
 }, async (message, match) => {
 
 
-let menu = `╭━━━━━━━━━━━──⊷ 
-┃ ❐ │         *「 MY INTRO 」*
+let menu = `
+╭━━〘 MY INTRO 〙━━──⊷`
+menu+= `
+┃ ❐ │ 
 ┃ ❐ │ *BOTNAME* :* AMAROK
 ┃ ❐ │ *OWNER* :* CYBERXKID
 ┃ ❐ │ *PLACE* :* MADADENI
