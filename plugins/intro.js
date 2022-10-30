@@ -1,4 +1,5 @@
 const { command, isPublic } = require("../lib/");
+const { WORK_TYPE } = require("../config.js");
 
 command({
 	pattern: 'intro ?(.*)',
@@ -7,23 +8,23 @@ command({
 }, async (message, match) => {
 
 
-let menu = `
+let intro = `
 ╭━━〘 MY INTRO 〙━━──⊷`
-menu+= `
+intro+= `
 ┃ ❐ ╭────────────── 
-┃ ❐ │ *BOTNAME* :* AMAROK
-┃ ❐ │ *OWNER*   :* CYBERXKID
-┃ ❐ │ *COUNTRY* :*SOUTH AFRICA
-┃ ❐ │ *PLACE*   :* MADADENI
-┃ ❐ │ *GENDER*  :* MALE
-┃ ❐ │ *AGE*     :* 17
-┃ ❐ │ *NUMBER*  :* MOBILE
-┃ ❐ │ *SIMCARD* :* MTN
-┃ ❐ │ *REGION*  :* ANIMAL
-┃ ❐ │ *ANIMAL*  :* WOLF
-┃ ❐ │ *ATTITUDE* :* BAD WOLF
-┃ ❐ │ *IG ID*   :* TOXIC CYBER
-┃ ❐ │ *ACCESS*  :* PUBLIC
+┃ ❐ │ *BOTNAME : AMAROK*
+┃ ❐ │ *OWNER : CYBERXKID*
+┃ ❐ │ *COUNTRY : SOUTH AFRICA*
+┃ ❐ │ *PLACE : MADADENI*
+┃ ❐ │ *GENDER : MALE*
+┃ ❐ │ *AGE : 17*
+┃ ❐ │ *NUMBER : MOBILE*
+┃ ❐ │ *SIMCARD : MTN*
+┃ ❐ │ *REGION : ANIMAL*
+┃ ❐ │ *ANIMAL : WOLF*
+┃ ❐ │ *ATTITUDE : BAD WOLF*
+┃ ❐ │ *IG ID : TOXIC CYBER*
+┃ ❐ │ *ACCESS : ${WORK_TYPE}*
 ┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
@@ -33,7 +34,7 @@ const buttons = [
 
 const buttonMessage = {
     image: {url: 'https://i.ibb.co/N2rw4k6/2a8b22d25410.jpg'},
-    caption: menu,
+    caption: intro,
     footer: 'AMAROK',
     buttons: buttons,
     headerType: 1
