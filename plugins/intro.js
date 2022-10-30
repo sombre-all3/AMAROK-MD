@@ -1,7 +1,9 @@
 const { command,
  isPublic,
- tiny } = require("../lib/");
-const { WORK_TYPE } = require("../config.js");
+ tiny 
+ styletext} = require("../lib/");
+const { WORK_TYPE,
+     BOT_NAME } = require("../config.js");
 
 command({
 	pattern: 'intro ?(.*)',
@@ -26,7 +28,7 @@ intro+= `
 ┃ ❐ │ *ANIMAL : WOLF*
 ┃ ❐ │ *ATTITUDE : BAD WOLF*
 ┃ ❐ │ *IG ID : TOXIC CYBER*
-┃ ❐ │ *ACCESS : *${WORK_TYPE}*
+┃ ❐ │ *ACCESS : ${WORK_TYPE}*
 ┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
@@ -37,7 +39,7 @@ const buttons = [
 const buttonMessage = {
     image: {url: 'https://i.ibb.co/N2rw4k6/2a8b22d25410.jpg'},
     caption: intro,
-    footer: 'AMAROK',
+    footer: styletext('${BOT_NAME}'),
     buttons: buttons,
     headerType: 1
 }
