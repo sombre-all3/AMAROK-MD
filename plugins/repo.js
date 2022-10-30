@@ -26,7 +26,6 @@ command(
          buttonText: {displayText: tiny("HELP") },
        },
     ],
-  });
   }
 );
   
