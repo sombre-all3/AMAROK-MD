@@ -23,7 +23,7 @@ menu+= `
 ┃ ❐ │ *ANIMAL* :* WOLF
 ┃ ❐ │ *ATTITUDE* :* BAD WOLF
 ┃ ❐ │ *IG ID* :* TOXIC CYBER
-┃ ❐ │
+┃ ❐ │ *COUNTRY* :*SOUTH AFRICA
 ┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
