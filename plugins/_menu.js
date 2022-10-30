@@ -8,6 +8,7 @@ const {
   clockString,
 } = require("../lib");
 const config = require("../config.js");
+const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, HANDLERS , WORK_TYPE} = require("../config");
 const { hostname, uptime } = require("os");
 command(
@@ -38,7 +39,7 @@ menu+= `
 ┃ ⛥ ╰──────────────
 ╰━━━━━━━━━━━──⊷\n
 `
-menu+= `╭───『 `+ styletext('command',57)+`』──◆`
+menu+= `╭───『 `+ FancyRandom('command',57)+`』──◆`
     let cmnd = [];
     let cmd;
     let category = [];
@@ -80,7 +81,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.ibb.co/GtwvJnk/bce2563a25ef.jpg` },
-      caption: menu,
+      caption: FancyRandom(menu),
       footer: tiny(
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
