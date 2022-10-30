@@ -14,19 +14,19 @@ command(
    footer: 'by amarok',
    buttons: buttons,
    headerType: 1
- }
+          }
 
- const buttons = [
-  {
-    buttonld: '.arise',
-    buttonText: {displayText: tiny("ALIVE") },
-  },
-  {
-    buttonld: '.help',
-    buttonText: {displayText: tiny("HELP") },
-  },
- ],
-});
-}
+  const buttons = [
+         {
+         buttonld: '.arise',
+         buttonText: {displayText: tiny("ALIVE") },
+         },
+         {
+         buttonld: '.help',
+         buttonText: {displayText: tiny("HELP") },
+       },
+    ],
+  });
+  }
 );
   
