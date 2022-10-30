@@ -1,16 +1,15 @@
-const { command, isPublic } = require("../lib")
+const { command, isPrivate } = require("../lib")
 
 command(
   {      pattern: "git",
-         fromMe: isPublic,
-         type: "amarok GitHub",
+         fromMe: isPrivate,
+         type: "amarok github",
   },
   async(message,match) => {
 
      const buttons = [
        {buttonld: "git", buttonText: {displayText: "GITHUB",},type: 1, },
      ]
-
 const buttonMessage = {
       image: { url: `https://i.ibb.co/PGr0KHx/89cdfb2b6adf.jpg` },
       caption: `Hi ${message.pushName}\n*This is Amarok MD repo\n\n*Repo*: https://github.com/Diegoson/AMAROK-MD`,
