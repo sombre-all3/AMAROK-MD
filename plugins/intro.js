@@ -12,18 +12,18 @@ let menu = `
 menu+= `
 ┃ ❐ ╭────────────── 
 ┃ ❐ │ *BOTNAME* :* AMAROK
-┃ ❐ │ *OWNER* :* CYBERXKID
+┃ ❐ │ *OWNER*   :* CYBERXKID
 ┃ ❐ │ *COUNTRY* :*SOUTH AFRICA
-┃ ❐ │ *PLACE* :* MADADENI
-┃ ❐ │ *GENDER* :* MALE
-┃ ❐ │ *AGE* :* 17
-┃ ❐ │ *NUMBER TYPE* :* MOBILE
+┃ ❐ │ *PLACE*   :* MADADENI
+┃ ❐ │ *GENDER*  :* MALE
+┃ ❐ │ *AGE*     :* 17
+┃ ❐ │ *NUMBER*  :* MOBILE
 ┃ ❐ │ *SIMCARD* :* MTN
-┃ ❐ │ *REGION* :* ANIMAL
-┃ ❐ │ *ANIMAL* :* WOLF
+┃ ❐ │ *REGION*  :* ANIMAL
+┃ ❐ │ *ANIMAL*  :* WOLF
 ┃ ❐ │ *ATTITUDE* :* BAD WOLF
-┃ ❐ │ *IG ID* :* TOXIC CYBER
-┃ ❐ │ *ACCESS* :* PUBLIC
+┃ ❐ │ *IG ID*   :* TOXIC CYBER
+┃ ❐ │ *ACCESS*  :* PUBLIC
 ┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
