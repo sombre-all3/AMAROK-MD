@@ -11,12 +11,12 @@ let menu = `╭━━━━━━━━━━━──⊷
 ┃ ❐ │         *「 MY INTRO 」*
 ┃ ❐ │ *BOTNAME* : ${BOT_NAME}
 ┃ ❐ │ *OWNER* :${OWNER_NAME}
-┃ ❐ │ *PLACE* : *MADADENI
+┃ ❐ │ *PLACE* :* MADADENI
 ┃ ❐ │ *DATE* : ${date}
 ┃ ❐ │ *TIME* :${time}
-┃ ❐ │ *GENDER* : *MALE
-┃ ❐ │ *AGE* : *17
-┃ ❐ │ *NUMBER TYPE* :*MOBILE
+┃ ❐ │ *GENDER* :* MALE
+┃ ❐ │ *AGE* :* 17
+┃ ❐ │ *NUMBER TYPE* :* MOBILE
 ┃ ❐ │ *IG ID* :* TOXIC CYBER
 ┃ ❐ │
 ╰━━━━━━━━━━━──⊷`;
