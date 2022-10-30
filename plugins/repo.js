@@ -1,7 +1,7 @@
 const { command, isPublic } = require("../lib")
 
 command(
-  {      pattern: "git ?(.*)",
+  {      pattern: "git",
          fromMe: isPublic,
          type: "amarok GitHub",
   },
@@ -12,7 +12,7 @@ command(
      ]
 
 const buttonMessage = {
-      image: { url: `https://i.imgur.com/0LTXiDF.mp4` },
+      image: { url: `https://i.ibb.co/PGr0KHx/89cdfb2b6adf.jpg` },
       caption: `Hi ${message.pushName}\n*This is Amarok MD repo\n\n*Repo*: https://github.com/Diegoson/AMAROK-MD`,
       footer: "by amarok",
       buttons: buttons,
