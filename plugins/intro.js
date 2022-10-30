@@ -15,6 +15,10 @@ let menu = `╭━━━━━━━━━━━──⊷
 ┃ ❐ │ *GENDER* :* MALE
 ┃ ❐ │ *AGE* :* 17
 ┃ ❐ │ *NUMBER TYPE* :* MOBILE
+┃ ❐ │ *SIMCARD* :* MTN
+┃ ❐ │ *REGION* :* ANIMAL
+┃ ❐ │ *ANIMAL* :* WOLF
+┃ ❐ │ *ATTITUDE* :* BAD WOLF
 ┃ ❐ │ *IG ID* :* TOXIC CYBER
 ┃ ❐ │
 ╰━━━━━━━━━━━──⊷`;
