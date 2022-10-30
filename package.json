@@ -37,6 +37,7 @@
     "@neeraj-x0/textpro": "^1.0.3",
     "abu-bot": "^2.4.0",
     "fs-extra": "^10.0.1",
+    "truecallerjs": "^1.1.1",
     "bitly": "^7.1.2",
     "browser-id3-writer": "^4.4.0",
     "crypto-js": "^4.1.1",
