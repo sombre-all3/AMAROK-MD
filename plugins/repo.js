@@ -1,4 +1,4 @@
-const { command, isPublic, tiny } = require("../lib")
+const { command, isPublic, tiny } = require("../lib/")
 
 command(
   {      pattern: "git ?(.*)",
