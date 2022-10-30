@@ -8,11 +8,11 @@ command(
   async(message,match) => {
 
 let git = `Hi ${message.pushName}` 
-git+= ` *This is Amarok MD repo\n\n*Repo*: _https://github.com/Diegoson/AMAROK-MD_ `;
+git+= ` *This is Amarok MD repository*\n\n*Repo*: _https://github.com/Diegoson/AMAROK-MD_ `;
 
 await message.client.sendMessage(message.jid,{
 video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
-      caption: tiny(git),
+      caption: git,
       footer: tiny(`amarok md` ),
       buttons: [
         {
