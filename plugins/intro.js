@@ -11,9 +11,9 @@ let menu = `
 ╭━━〘 MY INTRO 〙━━──⊷`
 menu+= `
 ┃ ❐ ╭────────────── 
-┃ ❐ │ 
 ┃ ❐ │ *BOTNAME* :* AMAROK
 ┃ ❐ │ *OWNER* :* CYBERXKID
+┃ ❐ │ *COUNTRY* :*SOUTH AFRICA
 ┃ ❐ │ *PLACE* :* MADADENI
 ┃ ❐ │ *GENDER* :* MALE
 ┃ ❐ │ *AGE* :* 17
@@ -23,7 +23,7 @@ menu+= `
 ┃ ❐ │ *ANIMAL* :* WOLF
 ┃ ❐ │ *ATTITUDE* :* BAD WOLF
 ┃ ❐ │ *IG ID* :* TOXIC CYBER
-┃ ❐ │ *COUNTRY* :*SOUTH AFRICA
+┃ ❐ │ *ACCESS* :* PUBLIC
 ┃ ❐ ╰────────────
 ╰━━━━━━━━━━━──⊷`;
 
