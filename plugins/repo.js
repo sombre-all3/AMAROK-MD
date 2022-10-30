@@ -8,7 +8,11 @@ command(
   async(message,match) => {
 
      const buttons = [
-       {buttonld: "git", buttonText: {displayText: "GITHUB",},type: 1, },
+       {
+         buttonld: '.menu',
+         buttonText: {diplayText: tiny("MENU")},
+       },
+
      ]
 const buttonMessage = {
       image: { url: `https://i.ibb.co/PGr0KHx/89cdfb2b6adf.jpg` },
