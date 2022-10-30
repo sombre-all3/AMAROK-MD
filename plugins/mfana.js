@@ -14,7 +14,6 @@ command(
     pattern: "update",
     fromMe: true,
     type: "heroku",
-    desc: "Checks for update.",
   },
   async (message, match,) => {
     let {prefix} = message
