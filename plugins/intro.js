@@ -1,7 +1,7 @@
 const { command,
  isPublic,
  tiny 
- styletext} = require("../lib/");
+ styletext } = require("../lib/");
 const { WORK_TYPE,
      BOT_NAME } = require("../config.js");
 
@@ -39,7 +39,7 @@ const buttons = [
 const buttonMessage = {
     image: {url: 'https://i.ibb.co/N2rw4k6/2a8b22d25410.jpg'},
     caption: intro,
-    footer: styletext(`${BOT_NAME}`),
+    footer: styletext('${BOT_NAME}'),
     buttons: buttons,
     headerType: 1
 }
