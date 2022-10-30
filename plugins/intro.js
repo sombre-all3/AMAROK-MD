@@ -38,7 +38,7 @@ const buttons = [
 
 const buttonMessage = {
     image: {url: 'https://i.ibb.co/N2rw4k6/2a8b22d25410.jpg'},
-    caption: tiny(`intro` ),
+    caption: tiny(intro),
     footer: tiny(`${BOT_NAME}`),
     buttons: buttons,
     headerType: 1
