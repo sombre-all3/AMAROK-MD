@@ -8,8 +8,9 @@ const {
   clockString,
 } = require("../lib");
 const config = require("../config.js");
+const prefix = 
 const { FancyRandom } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME, HANDLERS , WORK_TYPE} = require("../config");
+const { OWNER_NAME, BOT_NAME, PREFIX , WORK_TYPE} = require("../config");
 const { hostname, uptime } = require("os");
 command(
   {
@@ -29,7 +30,7 @@ menu+= `
 ┃ ⛥ │ *OWNER* :  ${OWNER_NAME}
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE* : ${WORK_TYPE}
-┃ ⛥ │ *PREFIX* : ${HANDLERS}
+┃ ⛥ │ *PREFIX* : ${PREFIX}
 ┃ ⛥ │ *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥ │ *DATE* : ${date}
 ┃ ⛥ │ *TIME* : ${time}
