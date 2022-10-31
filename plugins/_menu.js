@@ -8,7 +8,7 @@ const {
   clockString,
 } = require("../lib");
 const config = require("../config.js");
-const prefix = 
+const prefix =  config.PREFIX
 const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, PREFIX , WORK_TYPE} = require("../config");
 const { hostname, uptime } = require("os");
@@ -87,7 +87,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
-          buttonId: '.arise',
+          buttonId: '${prefix}arise',
           buttonText: { displayText: tiny("⫷ALIVE⫸") },
         },
         {
@@ -115,7 +115,7 @@ menu+= `
 ┃ ⛥ │ *OWNER* :  ${OWNER_NAME}
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE* : ${WORK_TYPE}
-┃ ⛥ │ *PREFIX* : ${HANDLERS}
+┃ ⛥ │ *PREFIX* : ${PREFIX}
 ┃ ⛥ │ *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥ │ *DATE* : ${date}
 ┃ ⛥ │ *TIME* : ${time}
