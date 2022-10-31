@@ -1,10 +1,18 @@
-/*Copyrights (©)2022 AMAROK MD.
-By TOXIC KICHU.
-*/
-
 const { command, isPublic, isPrivate } = require("../lib");
-const { search } = require("yt-search");
-const { yta, ytIdRegex, ytv } = require("../lib/yotube");
+const fs = require("fs");
+const { yts } = require("yt-search");
+const ytdl = require('ytdl-core');
+
+const getRandom = (text) => {
+    return `${Math.floor(Math.random() * 10000)}${text}`
+}
+const mYtId = (query) => {
+const ytIdRegex =
+	/(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
+let yturlm = query.match(ytIdRegex)
+  return yturlm
+}
+
 
 command(
   {
@@ -13,34 +21,34 @@ command(
     type: "downloader",
   },
   async (message, match) => {
-    if (!(match || message.reply_message.text))
-      return await message.reply("_Enter Song Name_");
     match = match || message.reply_message.text;
-    if (ytIdRegex.test(match)) {
-      yta(match.trim()).then(async ({ dl_link, title, thumb }) => {
-        let buff = await AddMp3Meta(dl_link, thumb, {
-          title,
-        });
-        message.sendMessage(
-          buff,
+    if (!match) return await message.reply("_Enter Song Name_");
+    //fn
+    const dMp3 = async (Link ) => {
+    	try{
+    		await ytdl.getInfo(Link);
+    		let mp3File = getRandom('.mp3') 
+    		ytdl(Link, {filter: 'audioonly'})
+    		.pipe(fs.createWriteStream(mp3File))
+    		.on("finish", async () => {  
+    			await message.sendMessage(
+          fs.readFileSync(mp3File),
           { mimetype: "audio/mpeg", quoted: message.data },
           "audio"
         );
-      });
-    }
-    search(match + "song").then(async ({ videos }) => {
-      await message.reply(`_Downloading ${videos[0].title}_`);
-      yta(videos[0].url).then(async ({ dl_link, title, thumb }) => {
-        let buff = await AddMp3Meta(dl_link, thumb, {
-          title,
-          artist: [videos[0].author],
-        });
-        message.sendMessage(
-          buff,
-          { mimetype: "audio/mpeg", quoted: message.data },
-          "audio"
-        );
-      });
-    });
-  }
+        fs.unlinkSync(mp3File)
+        })       
+        } catch (err){
+//console.log(err)
+}
+}
+var videoId = await mYtId(match)
+if (videoId !== null){
+	let Link = 'https://youtu.be/' + videoId[1]
+	dMp3(Link)
+	} else {
+		let search = await yts(match)  
+		dMp3(search.all[0].url)
+	}
+}
 );
