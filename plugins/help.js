@@ -28,7 +28,7 @@ menu+= `
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *MODE* : ${WORK_TYPE}
-┃ ⛥  *PREFIX* : ${HANDLERS}
+┃ ⛥  *PREFIX* : ${prefix}
 ┃ ⛥  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥  *DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
