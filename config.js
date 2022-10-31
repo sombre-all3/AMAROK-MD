@@ -13,7 +13,7 @@ module.exports = {
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   LANG: process.env.LANG ||  'EN',
-  PREFIX: process.env.PREFIX || ['.'],
+  HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "main",
   PACKNAME: process.env.PACKNAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
