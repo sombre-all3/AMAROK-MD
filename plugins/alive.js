@@ -7,7 +7,7 @@ const {
 } = require("../lib");
 var config = require("../config");
 const { FancyRandom } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
+const { OWNER_NAME, BOT_NAME, PREFIX } = require("../config");
 const { hostname, uptime } = require("os");
 
 command(
@@ -27,7 +27,7 @@ alive+= `
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
-┃ ⛥  *MY PREFIX* : ${prefix}
+┃ ⛥  *MY PREFIX* : ${PREFIX}
 ┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
