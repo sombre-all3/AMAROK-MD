@@ -1,6 +1,6 @@
 const { command, isPublic, isPrivate } = require("../lib");
 const fs = require("fs");
-const { yts } = require("yt-search");
+const yts  = require("yt-search");
 const ytdl = require('ytdl-core');
 
 const getRandom = (text) => {
