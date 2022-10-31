@@ -91,7 +91,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
           buttonText: { displayText: tiny("⫷ALIVE⫸") },
         },
         {
-          buttonId: '.list',
+          buttonId: '${prefix}list',
           buttonText: { displayText: tiny("⫷LIST⫸") },
         },
       ],
