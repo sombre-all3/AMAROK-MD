@@ -27,7 +27,7 @@ alive+= `
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
-┃ ⛥  *MY PREFIX* : ${PREFIX}
+┃ ⛥  *MY PREFIX* : ${prefix}
 ┃ ⛥  *CURRENT DATE* : ${date}
 ┃ ⛥  *TIME* : ${time}
 ┃ ⛥  *I've been up for* : ${clockString(uptime())} 
