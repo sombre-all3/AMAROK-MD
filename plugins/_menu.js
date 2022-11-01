@@ -9,10 +9,10 @@ const {
 } = require("../lib");
 const speed = require('performance-now');
 const os = require('os');
-const { config, PREFIX } = require("../config.js");
+const config = require("../config.js");
 const prefix =  config.PREFIX
 const { FancyRandom } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME, WORK_TYPE } = require("../config");
+const { OWNER_NAME, BOT_NAME, WORK_TYPE, PREFIX } = require("../config");
 const { hostname, uptime } = require("os");
 command(
   {
