@@ -48,7 +48,7 @@ command(
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
         return await message.client.sendMessage(
-            message.jid,("_Already on latest version_");
+            message.jid,('_Already on latest version_');
             } else {
         var guncelleme = await message.reply("_Updating!_);
         if (Config.HEROKU.HEROKU) {
