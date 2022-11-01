@@ -37,7 +37,7 @@ command(
             degisiklikler + '```', MessageType.text
         ); 
     }
-}));
+});
 
 command(
   {
@@ -94,4 +94,4 @@ command(
             await guncelleme.delete();
         }
     }
-}));
+});
