@@ -92,3 +92,4 @@ await message.sendMessage("_Updating!_");
             }));
             await guncelleme.delete();
         }
+ );
