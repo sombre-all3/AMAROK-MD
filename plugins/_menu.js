@@ -8,7 +8,8 @@ const {
   clockString,
 } = require("../lib");
 const speed = require('performance-now');
-const config = require("../config.js");
+const os = require('os');
+const { config, PREFIX } = require("../config.js");
 const prefix =  config.PREFIX
 const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, PREFIX , WORK_TYPE} = require("../config");
@@ -28,16 +29,17 @@ command(
 ╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
 ┃ ⛥ ╭──────────────
-┃ ⛥ │ *OWNER* :  ${OWNER_NAME}
+┃ ⛥ │ *OWNER :  ${OWNER_NAME}*
 ┃ ⛥ │ *USER* : ${message.pushName}
-┃ ⛥ │ *MODE* : ${WORK_TYPE}
-┃ ⛥ │ *PREFIX* : ${prefix}
-┃ ⛥ │ *HOST NAME* :${hostname().split("-")[0]}
-┃ ⛥ │ *DATE* : ${date}
-┃ ⛥ │ *TIME* : ${time}
-┃ ⛥ │ *UPTIME* : ${clockString(uptime())} 
-┃ ⛥ │ *VERSION* : ${require("../package.json").version}
-┃ ⛥ │ *PLUGINS* : ${events.commands.length} 
+┃ ⛥ │ *MODE : ${WORK_TYPE}*
+┃ ⛥ │ *PREFIX : ${PREFIX}*
+┃ ⛥ │ *RUNTIME : ${runtime(process.uptime())}*
+┃ ⛥ │ *HOST NAME :${hostname().split("-")[0]}*
+┃ ⛥ │ *DATE : ${date}*
+┃ ⛥ │ *TIME : ${time}*
+┃ ⛥ │ *UPTIME : ${clockString(uptime())}*
+┃ ⛥ │ *VERSION : ${require("../package.json").version}*
+┃ ⛥ │ *PLUGINS : ${events.commands.length}*
 ┃ ⛥ ╰──────────────
 ╰━━━━━━━━━━━──⊷\n
 `
