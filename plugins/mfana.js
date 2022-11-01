@@ -37,7 +37,6 @@ command(
             degisiklikler + '```', MessageType.text
         ); 
     }
-});
 
 command(
   {
