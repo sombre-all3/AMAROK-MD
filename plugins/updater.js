@@ -50,7 +50,7 @@ command(
         return await message.client.sendMessage(
             message.jid,('_Already on latest version_'), MessageType.text);
             } else {
-        var guncelleme = ("_Updating!_);
+await message.client.sendMessage("_Updating!_);
         if (Config.HEROKU.HEROKU) {
             try {
                 var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
