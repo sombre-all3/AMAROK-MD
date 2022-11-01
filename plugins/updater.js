@@ -90,6 +90,3 @@ await message.sendMessage("_Updating!_");
                         message.jid,'*❌ Update failed!*\n*Error:* ```' + err + '```', MessageType.text);
                 }
             }));
-            await guncelleme.delete();
-        }
- );
