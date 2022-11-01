@@ -33,7 +33,6 @@ menu+= `
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE : ${WORK_TYPE}*
 ┃ ⛥ │ *PREFIX : ${PREFIX}*
-┃ ⛥ │ *RUNTIME : ${runtime(process.uptime())}*
 ┃ ⛥ │ *HOST NAME :${hostname().split("-")[0]}*
 ┃ ⛥ │ *DATE : ${date}*
 ┃ ⛥ │ *TIME : ${time}*
