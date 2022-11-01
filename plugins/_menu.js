@@ -7,6 +7,7 @@ const {
   serif_B,
   clockString,
 } = require("../lib");
+const speed = require('performance-now');
 const config = require("../config.js");
 const prefix =  config.PREFIX
 const { FancyRandom } = require('abu-bot');
