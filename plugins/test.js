@@ -28,4 +28,5 @@ await message.client.sendMessage(
     }
   }
 );
-
+}
+)
