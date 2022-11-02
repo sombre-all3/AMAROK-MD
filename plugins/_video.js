@@ -18,7 +18,6 @@ command(
       await message.reply(`🎥𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘝𝘐𝘋𝘌𝘖🎥 ${all[0].title}_`);
       ytdl(all[0].url).then(({ dl_link, title }) => {
         message.sendFromUrl(dl_link, { filename: title, quoted: message });
-      });
-    });
-  }
-);
+      }
+     }
+    );
