@@ -19,5 +19,5 @@ command(
       ytdl(all[0].url).then(({ dl_link, title }) => {
         message.sendFromUrl(dl_link, { filename: title, quoted: message });
       });
-    }
+    });
  )
