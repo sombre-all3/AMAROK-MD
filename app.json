@@ -19,8 +19,8 @@
       "required": false,
       "value": ""
     },
-    "PREFIX": {
-      "description": "Prefix",
+    "HANDLERS": {
+      "description": "Prefix of the bot used to run it",
       "required": false,
       "value": "."
     },
