@@ -1,4 +1,4 @@
-const { command, ytdl , isUrl } = require("../lib")
+const { command, ytdl , isUrl, isPrivate } = require("../lib")
 
 command(
   {
