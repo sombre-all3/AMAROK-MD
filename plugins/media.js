@@ -175,7 +175,7 @@ command(
   async (message, match) => {
     if (!match) return await message.reply("_Send video link_");
     match = match || message.reply_message.text;
-    if (ytIdRegex.test(match)) {
+    if (ytdlRegex.test(match)) {
       ytdl(match.trim()).then(({ dl_link, title }) => {
         message.sendFromUrl(dl_link, { filename: title });
       });
