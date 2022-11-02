@@ -25,6 +25,5 @@ await message.client.sendMessage(
         contacts: { 
             displayName: 'CYBER X KID', 
             contacts: [{ vcard }] 
-        }
-    }
+  }
 );
