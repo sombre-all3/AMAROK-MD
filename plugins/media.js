@@ -173,8 +173,7 @@ command(
     type: "downloader",
   },
   async (message, match) => {
-    if (!match || !message.reply_message.text)
-      return await message.reply("_Enter Video Name_");
+    if (!match) return await message.reply("_Send video link_");
     match = match || message.reply_message.text;
     if (ytIdRegex.test(match)) {
       ytv(match.trim()).then(({ dl_link, title }) => {
