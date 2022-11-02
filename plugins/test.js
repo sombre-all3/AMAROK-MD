@@ -27,4 +27,4 @@ await message.client.sendMessage(
             contacts: [{ vcard }] 
         }
     }
-)
+);
