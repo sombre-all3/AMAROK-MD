@@ -1,4 +1,4 @@
-FROM fusuf/whatsasena:latest
+FROM tshephang01/tshephang:latest
 RUN git clone https://github.com/Diegoson/AMAROK-MD /Amarok
 WORKDIR /Amarok
 RUN npm install
