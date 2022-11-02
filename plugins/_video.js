@@ -20,5 +20,4 @@ command(
         message.sendFromUrl(dl_link, { filename: title, quoted: message });
       });
     }
-   }
- );
+ )
