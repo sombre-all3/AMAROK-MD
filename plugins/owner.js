@@ -1,4 +1,4 @@
-const {command} = require('../lib');
+const {command, isPublic} = require('../lib');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
@@ -6,7 +6,7 @@ const fs = require('fs');
 const Config = require('../config')
 command(  {
     pattern: "owner ?(.*)",
-    fromMe: true,
+    fromMe: isPublic,
     desc: "owner number",
     type: "bot creator",
   },
