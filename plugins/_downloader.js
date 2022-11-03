@@ -96,7 +96,7 @@ command(
 .on("finish", async () => {    
 await message.sendMessage(
           fs.readFileSync(mp4File),
-          { mimetype: "video/mp4", quoted: message.data },
+          { quoted: message.data},
           "video"
         );
 fs.unlinkSync(`./${mp4File}`)
