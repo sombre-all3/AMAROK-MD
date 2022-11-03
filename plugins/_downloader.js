@@ -42,9 +42,9 @@ command(
 //console.log(err)
 }
 }
-var videoId = await mYtId(match)
-if (videoId !== null){
-	let Link = 'https://youtu.be/' + videoId[1]
+var songId = await mYtId(match)
+if (songId !== null){
+	let Link = 'https://youtu.be/' + songId[1]
 	dMp3(Link)
 	} else {
 		let search = await yts(match)  
@@ -54,7 +54,7 @@ if (videoId !== null){
 );
 
 
-command(
+/*command(
   {
     pattern: "video ?(.*)",
     fromMe: isPrivate,
@@ -75,4 +75,43 @@ command(
       });
     });
    }
- );
+ );*/
+
+command(
+  {
+    pattern: "video",
+    fromMe: isPrivate,
+    type: "downloader",
+  },
+  async (message, match) => {
+    match = match || message.reply_message.text;
+    if (!match) return await message.reply("_Enter Video Name_");
+    //fn
+    const dMp4 = async (Link ) => {
+    	try{
+    		await ytdl.getInfo(Link);
+    		let mp4File = getRandom('.mp4') 
+    		let nana = ytdl(Link)
+.pipe(fs.createWriteStream(mp4File))
+.on("finish", async () => {    
+await message.sendMessage(
+          fs.readFileSync(mp4File),
+          { mimetype: "video/mp4", quoted: message.data },
+          "video"
+        );
+fs.unlinkSync(`./${mp4File}`)
+        })       
+        } catch (err){
+//console.log(err)
+}
+}
+var videoId = await mYtId(match)
+if (videoId !== null){
+	let Link = 'https://youtu.be/' + videoId[1]
+	dMp4(Link)
+	} else {
+		let search = await yts(match)  
+		dMp4(search.all[0].url)
+	}
+}
+);
