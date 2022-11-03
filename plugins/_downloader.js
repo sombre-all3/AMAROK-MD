@@ -53,6 +53,17 @@ if (videoId !== null){
 }
 );
 
+const getRandom = (text) => {
+    return `${Math.floor(Math.random() * 10000)}${text}`
+}
+const mYtId = (query) => {
+const ytIdRegex =
+	/(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
+let yturlm = query.match(ytIdRegex)
+  return yturlm
+}
+
+
 command(
   {
     pattern: "video ?(.*)",
