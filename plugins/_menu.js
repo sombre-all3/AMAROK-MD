@@ -69,18 +69,18 @@ menu+= `*╭───『 `+ tiny('command',57)+`』──◆*`
     cmnd.sort();
     category.sort().forEach((cmmd) => {
      menu+=`
-*┃ ❐ ╭─────────────⬤
-┃ ❐ │ ⦿---- ${cmmd} ----⦿
-┃ ❐ ╰┬────────────⬤
-┃ ❐ ┌┤*`
+*┃ ❐ ╭─────────────⬤*
+*┃ ❐ │ ⦿---- ${cmmd} ----⦿*
+*┃ ❐ ╰┬────────────⬤*
+*┃ ❐ ┌┤*`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `*\n┃ ❐ │ ⬤  ${cmd.trim()}*`;
+ menu += `\n*┃ ❐ │ ⬤  ${cmd.trim()}*`;
       });
- menu += `*\n┃ ❐ ╰─────────────⬤*`;
+ menu += `\n*┃ ❐ ╰─────────────⬤*`;
     });
 
-    menu += `*╰━━━━━━━━━━━──⊷\n*`
+    menu += `*╰━━━━━━━━━━━──⊷*\n`
     menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.ibb.co/GtwvJnk/bce2563a25ef.jpg` },
