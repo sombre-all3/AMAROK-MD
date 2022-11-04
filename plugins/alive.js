@@ -6,6 +6,7 @@ const {
   clockString,
 } = require("../lib");
 var config = require("../config");
+const prefix = require ("../lib");
 const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, PREFIX } = require("../config");
 const { hostname, uptime } = require("os");
