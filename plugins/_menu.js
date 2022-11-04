@@ -2,17 +2,19 @@ const events = require("../lib/event");
 const {
   command,
   isPrivate,
-  styletext,
   tiny,
   serif_B,
   clockString,
 } = require("../lib");
+const {
+      styletext,
+      prefix,
+} = require("../module");
 const speed = require('performance-now');
 const os = require('os');
 const config = require("../config.js");
-const prefix = config.PREFIX
 const { FancyRandom } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME, WORK_TYPE, PREFIX } = require("../config");
+const { OWNER_NAME, BOT_NAME, WORK_TYPE } = require("../config");
 const { hostname, uptime } = require("os");
 command(
   {
@@ -32,7 +34,7 @@ menu+= `
 ┃ ⛥ │ *OWNER :  ${OWNER_NAME}*
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE : ${WORK_TYPE}*
-┃ ⛥ │ *PREFIX : ${PREFIX}*
+┃ ⛥ │ *PREFIX : ${prefix}*
 ┃ ⛥ │ *HOST NAME :${hostname().split("-")[0]}*
 ┃ ⛥ │ *DATE : ${date}*
 ┃ ⛥ │ *TIME : ${time}*
@@ -90,11 +92,11 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       buttons: [
         {
           buttonId: '${prefix}arise',
-          buttonText: { displayText: FancyRandom("ALIVE") },
+          buttonText: { displayText: styletext("ALIVE") },
         },
         {
           buttonId: '${prefix}list',
-          buttonText: { displayText: FancyRandom("LIST") },
+          buttonText: { displayText: styletext("LIST") },
         },
       ],
     });
