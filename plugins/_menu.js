@@ -20,7 +20,7 @@ command(
     fromMe: isPrivate,
     dontAddCommandList: true,
   },
-  async (message,match) => {
+  async (message,match, { prefix }) => {
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
       .split(",");
