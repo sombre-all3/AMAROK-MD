@@ -89,11 +89,11 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       buttons: [
         {
           buttonId: '${prefix}arise',
-          buttonText: { displayText: styletext("ALIVE") },
+          buttonText: { displayText: ("ᴀʟɪᴠᴇ") },
         },
         {
           buttonId: '${prefix}list',
-          buttonText: { displayText: styletext("LIST") },
+          buttonText: { displayText: ("ʟɪꜱᴛ") },
         },
       ],
     });
