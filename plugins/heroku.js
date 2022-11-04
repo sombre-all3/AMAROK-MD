@@ -68,20 +68,16 @@ command(
             Authorization: "Bearer " + Config.HEROKU_API_KEY,
             Accept: "application/vnd.heroku+json; version=3.account-quotas",
           };
-          await got(url, {
-			headers: headers
-		}).then(async (res) => {
-			const resp = JSON.parse(res.body);
-			total_quota = Math.floor(resp.account_quota);
-			quota_used = Math.floor(resp.quota_used);
-			percentage = Math.round((quota_used / total_quota) * 100);
-			remaining = total_quota - quota_used;
-			await message.sendMessage(
-				DYNO_TOTAL + ": ```{}```\n\n".format(secondsToHms(total_quota)) +
-				DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +
-				PERCENTAGE + ": ```{}```\n\n".format(percentage) +
-				DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining))
-			})
+          const res = await got(url, { headers });
+          const resp = JSON.parse(res.body);
+          const total_quota = Math.floor(resp.account_quota);
+          const quota_used = Math.floor(resp.quota_used);
+          const remaining = total_quota - quota_used;
+          const quota = `Total Quota : ${secondsToDHMS(total_quota)}
+Used  Quota : ${secondsToDHMS(quota_used)}
+Remaning    : ${secondsToDHMS(remaining)}`;
+          await message.sendMessage("```" + quota + "```");
+        })
         .catch(async (error) => {
           return await message.sendMessage(`HEROKU : ${error.body.message}`);
         });
