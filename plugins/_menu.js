@@ -3,6 +3,7 @@ const {
   command,
   isPrivate,
   tiny,
+  styletext,
   serif_B,
   clockString,
 } = require("../lib");
