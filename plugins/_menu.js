@@ -12,7 +12,7 @@ const os = require('os');
 const config = require("../config.js");
 const prefix = config.PREFIX
 const { FancyRandom } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME, WORK_TYPE } = require("../config");
+const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 command(
   {
@@ -32,7 +32,7 @@ menu+= `
 ┃ ⛥ │ *OWNER :  ${OWNER_NAME}*
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE : ${WORK_TYPE}*
-┃ ⛥ │ *PREFIX : ${prefix}*
+┃ ⛥ │ *PREFIX : ${HANDLERS}*
 ┃ ⛥ │ *HOST NAME :${hostname().split("-")[0]}*
 ┃ ⛥ │ *DATE : ${date}*
 ┃ ⛥ │ *TIME : ${time}*
@@ -89,11 +89,11 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
-          buttonId: '.arise',
+          buttonId: '${prefix}arise',
           buttonText: { displayText: ("◄ᴀʟɪᴠᴇ►") },
         },
         {
-          buttonId: '.list',
+          buttonId: '${prefix}list',
           buttonText: { displayText: ("◄ʟɪꜱᴛ►") },
         },
       ],
