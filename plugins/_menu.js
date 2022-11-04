@@ -126,6 +126,7 @@ menu+= `
 ┃ ⛥ │ *PLUGINS* : ${events.commands.length} 
 ┃ ⛥ ╰━━━━━━━━━━━──⊷
 ╰━━━━━━━━━━━──⊷\n
+╭━━━━━━━━━━━──⊷ 
 ` 
     let cmnd = [];
     let cmd, desc;
