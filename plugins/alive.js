@@ -17,7 +17,7 @@ command(
     fromMe: isPrivate,
     dontAddCommandList: true,
   },
-async (message,match, { prefix }) => {
+async (message,match) => {
 	
 	let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
