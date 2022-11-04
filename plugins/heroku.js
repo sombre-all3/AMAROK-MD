@@ -77,10 +77,10 @@ command(
 			percentage = Math.round((quota_used / total_quota) * 100);
 			remaining = total_quota - quota_used;
 			await message.sendMessage(
-				Lang.DYNO_TOTAL + ": ```{}```\n\n".format(secondsToHms(total_quota)) +
-				Lang.DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +
-				Lang.PERCENTAGE + ": ```{}```\n\n".format(percentage) +
-				Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining))
+				DYNO_TOTAL + ": ```{}```\n\n".format(secondsToHms(total_quota)) +
+				DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +
+				PERCENTAGE + ": ```{}```\n\n".format(percentage) +
+				DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining))
 			})
         .catch(async (error) => {
           return await message.sendMessage(`HEROKU : ${error.body.message}`);
