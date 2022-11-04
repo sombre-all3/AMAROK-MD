@@ -6,10 +6,7 @@ const {
   serif_B,
   clockString,
 } = require("../lib");
-const {
-      styletext,
-      prefix,
-} = require("../module");
+const { styletext, prefix } = require("../module");
 const speed = require('performance-now');
 const os = require('os');
 const config = require("../config.js");
