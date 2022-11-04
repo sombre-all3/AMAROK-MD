@@ -26,23 +26,23 @@ command(
       .split(",");
                 
  let menu = `
-╭━━〘 `+ tiny(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
+*╭━━〘 `+ tiny(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷*` 
 menu+= `
-┃ ⛥ ╭──────────────
-┃ ⛥ │ *OWNER :  ${OWNER_NAME}*
-┃ ⛥ │ *USER* : ${message.pushName}
-┃ ⛥ │ *MODE : ${WORK_TYPE}*
-┃ ⛥ │ *PREFIX : ${HANDLERS}*
-┃ ⛥ │ *HOST NAME :${hostname().split("-")[0]}*
-┃ ⛥ │ *DATE : ${date}*
-┃ ⛥ │ *TIME : ${time}*
-┃ ⛥ │ *UPTIME : ${clockString(uptime())}*
-┃ ⛥ │ *VERSION : ${require("../package.json").version}*
-┃ ⛥ │ *PLUGINS : ${events.commands.length}*
-┃ ⛥ ╰──────────────
-╰━━━━━━━━━━━──⊷\n
+*┃ ⛥ ╭──────────────*
+*┃ ⛥ │* *owner :  ${OWNER_NAME}*
+*┃ ⛥ │* *user* : ${message.pushName}
+*┃ ⛥ │* *mode : ${WORK_TYPE}*
+*┃ ⛥ │* *prefix : ${HANDLERS}*
+*┃ ⛥ │* *host name :${hostname().split("-")[0]}*
+*┃ ⛥ │* *date : ${date}*
+*┃ ⛥ │* *time: ${time}*
+*┃ ⛥ │* *uptime : ${clockString(uptime())}*
+*┃ ⛥ │* *version : ${require("../package.json").version}*
+*┃ ⛥ │* *plugins : ${events.commands.length}*
+*┃ ⛥ ╰──────────────*
+*╰━━━━━━━━━━━──⊷*\n
 `
-menu+= `╭───『 `+ FancyRandom('command',57)+`』──◆`
+menu+= `╭───『 `+ tiny('command',57)+`』──◆`
     let cmnd = [];
     let cmd;
     let category = [];
@@ -69,18 +69,18 @@ menu+= `╭───『 `+ FancyRandom('command',57)+`』──◆`
     cmnd.sort();
     category.sort().forEach((cmmd) => {
      menu+=`
-┃ ❐ ╭─────────────⬤
-┃ ❐ │ ⦿---- ${cmmd} ----⦿
-┃ ❐ ╰┬────────────⬤
-┃ ❐ ┌┤`
+*┃ ❐ ╭─────────────⬤*
+*┃ ❐ │ ⦿---- ${cmmd} ----⦿*
+*┃ ❐ ╰┬────────────⬤*
+*┃ ❐ ┌┤*`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `\n┃ ❐ │ ⬤  ${cmd.trim()}`;
+ menu += `*\n┃ ❐ │ ⬤  ${cmd.trim()}*`;
       });
- menu += `\n┃ ❐ ╰─────────────⬤`;
+ menu += `*\n┃ ❐ ╰─────────────⬤*`;
     });
 
-    menu += ` ╰━━━━━━━━━━━──⊷\n`
+    menu += `*╰━━━━━━━━━━━──⊷\n*`
     menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.ibb.co/GtwvJnk/bce2563a25ef.jpg` },
