@@ -6,10 +6,10 @@ const {
   serif_B,
   clockString,
 } = require("../lib");
-const { styletext, prefix } = require("../amarok");
 const speed = require('performance-now');
 const os = require('os');
 const config = require("../config.js");
+const prefix = Config.PREFIX
 const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE } = require("../config");
 const { hostname, uptime } = require("os");
