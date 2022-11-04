@@ -57,7 +57,7 @@
     "google-tts-api": "^2.0.2",
     "human-readable": "^0.2.1",
     "heroku-client": "^3.1.0",
-    "hermit-md": "^1.2.1"
+    "hermit-md": "^1.2.1",
     "imgbb-uploader": "^1.4.0",
     "jimp": "^0.16.1",
     "jsdom": "^20.0.0",
