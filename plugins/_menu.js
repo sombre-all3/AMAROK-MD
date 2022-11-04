@@ -10,6 +10,7 @@ const {
 const speed = require('performance-now');
 const os = require('os');
 const config = require("../config.js");
+const prefix = config.PREFIX
 const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE, PREFIX } = require("../config");
 const { hostname, uptime } = require("os");
@@ -80,7 +81,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     });
 
     menu += ` ╰━━━━━━━━━━━──⊷\n`
-    menu += `_🐺Send ${PREFIX}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
+    menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.ibb.co/GtwvJnk/bce2563a25ef.jpg` },
       caption: FancyRandom(menu),
@@ -88,12 +89,12 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         `Amarok Md\nVersion : ${require("../package.json").version}` ),
       buttons: [
         {
-          buttonId: '${PREFIX}arise',
-          buttonText: { displayText: tiny("⫷ALIVE⫸") },
+          buttonId: '${prefix}arise',
+          buttonText: { displayText: FancyRandom("ALIVE") },
         },
         {
-          buttonId: '${PREFIX}list',
-          buttonText: { displayText: tiny("⫷LIST⫸") },
+          buttonId: '${prefix}list',
+          buttonText: { displayText: FancyRandom("LIST") },
         },
       ],
     });
