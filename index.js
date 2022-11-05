@@ -1,5 +1,5 @@
-const { Client } = require('../lib/client.js')
-const { DATABASE, VERSION } = require('../config.js')
+const { Client } = require('../lib/client.js');
+const { DATABASE, VERSION } = require('../config.js');
 const start = async () => {
 	try {
 		const bot = new Client()
