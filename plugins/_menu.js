@@ -118,12 +118,9 @@ menu+= `
 ┃ ⛥ │ *USER* : ${message.pushName}
 ┃ ⛥ │ *MODE* : ${WORK_TYPE}
 ┃ ⛥ │ *PREFIX* : ${HANDLERS}
-┃ ⛥ │ *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⛥ │ *DATE* : ${date}
 ┃ ⛥ │ *TIME* : ${time}
-┃ ⛥ │ *UPTIME* : ${clockString(uptime())} 
 ┃ ⛥ │ *VERSION* : ${require("../package.json").version}
-┃ ⛥ │ *PLUGINS* : ${events.commands.length} 
 ┃ ⛥ ╰━━━━━━━━━━━──⊷
 ╰━━━━━━━━━━━──⊷\n
 ╭━━━━━━━━━━━──⊷ 
