@@ -88,7 +88,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
           buttonText: { displayText: tiny("⫷SPEED⫸") },
         },
         {
-          buttonId: '.arise',
+          buttonId: '.alive',
           buttonText: { displayText: tiny("⫷ARISE⫸") },
         },
       ],
