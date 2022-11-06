@@ -5,7 +5,7 @@ const Config = require("../config");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
 const simpleGit = require("simple-git");
-const { secondsToHmS } = require("../lib/");
+const { secondsToDHMS } = require("../lib/");
 const git = simpleGit();
 const exec = require("child_process").exec;
 const { SUDO } = require("../config");
@@ -73,9 +73,9 @@ command(
 						const total_quota = Math.floor(resp.account_quota)
 						const quota_used = Math.floor(resp.quota_used)
 						const remaining = total_quota - quota_used
-						const quota = `Total Quota : ${secondsToHms(total_quota)}
-Used  Quota : ${secondsToHms(quota_used)}
-Remaning    : ${secondsToHms(remaining)}`
+						const quota = `Total Quota : ${secondsToDHMS(total_quota)}
+Used  Quota : ${secondsToDHMS(quota_used)}
+Remaning    : ${secondsToDHMS(remaining)}`
 						await message.send('```' + quota + '```');
 					})
         .catch(async (error) => {
