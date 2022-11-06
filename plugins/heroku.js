@@ -79,7 +79,7 @@ Remaning    : ${secondsToHms(remaining)}`
 						await message.send('```' + quota + '```');
 					})
         .catch(async (error) => {
-          return await message.sendMessage(`HEROKU : ${error.body.message}`);
+           await message.sendMessage(`HEROKU : ${error.body.message}`);
         });
     } catch (error) {
       await message.sendMessage(error);
