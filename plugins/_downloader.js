@@ -1,1 +1,118 @@
-const _0x1db9f9=_0x4837;(function(_0x376cb8,_0x358c29){const _0x7257f0=_0x4837,_0x447005=_0x376cb8();while(!![]){try{const _0x106e1e=-parseInt(_0x7257f0(0x16c))/0x1+-parseInt(_0x7257f0(0x175))/0x2+parseInt(_0x7257f0(0x168))/0x3*(-parseInt(_0x7257f0(0x180))/0x4)+parseInt(_0x7257f0(0x189))/0x5*(parseInt(_0x7257f0(0x183))/0x6)+parseInt(_0x7257f0(0x17e))/0x7+parseInt(_0x7257f0(0x187))/0x8*(-parseInt(_0x7257f0(0x177))/0x9)+parseInt(_0x7257f0(0x18b))/0xa*(parseInt(_0x7257f0(0x17b))/0xb);if(_0x106e1e===_0x358c29)break;else _0x447005['push'](_0x447005['shift']());}catch(_0x4531e4){_0x447005['push'](_0x447005['shift']());}}}(_0x44cb,0x6a3f7));const {command,isPublic,isPrivate}=require(_0x1db9f9(0x16b)),fs=require('fs'),yts=require('yt-search'),ytdl=require(_0x1db9f9(0x169)),getRandom=_0x1b7213=>{const _0x30e561=_0x1db9f9;return''+Math[_0x30e561(0x18c)](Math[_0x30e561(0x17f)]()*0x2710)+_0x1b7213;},mYtId=_0x21708c=>{const _0x3bb1cf=/(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/;let _0x454786=_0x21708c['match'](_0x3bb1cf);return _0x454786;};function _0x44cb(){const _0x3d7ce0=['video','69470XrrIVJ','floor','242142EfykgF','ytdl-core','lowestvideo','../lib','224126BuOFfb','.mp4','_Enter\x20Video\x20Name_','audioonly','getInfo','reply','text','audio/mp4','downloader','93310DEXLWE','https://youtu.be/','3987OUCoqH','audio','readFileSync','_Enter\x20Song\x20Name_','671AQkrRo','sendMessage','finish','2278458bUgpak','random','12nQITjR','pipe','all','3594sOdPvm','url','song','createWriteStream','7648dXYMrq','reply_message','5195kjxrqZ'];_0x44cb=function(){return _0x3d7ce0;};return _0x44cb();}function _0x4837(_0x23aeed,_0x194841){const _0x44cbf1=_0x44cb();return _0x4837=function(_0x483787,_0xc5b6b7){_0x483787=_0x483787-0x168;let _0x55e652=_0x44cbf1[_0x483787];return _0x55e652;},_0x4837(_0x23aeed,_0x194841);}command({'pattern':_0x1db9f9(0x185),'fromMe':isPrivate,'type':_0x1db9f9(0x174)},async(_0x25b37c,_0x474182)=>{const _0x54b3a1=_0x1db9f9;_0x474182=_0x474182||_0x25b37c[_0x54b3a1(0x188)][_0x54b3a1(0x172)];if(!_0x474182)return await _0x25b37c[_0x54b3a1(0x171)](_0x54b3a1(0x17a));const _0x14bb0e=async _0x5c0b0c=>{const _0x414916=_0x54b3a1;try{await ytdl[_0x414916(0x170)](_0x5c0b0c);let _0x2ab245=getRandom('.mp3');ytdl(_0x5c0b0c,{'filter':_0x414916(0x16f)})[_0x414916(0x181)](fs[_0x414916(0x186)](_0x2ab245))['on'](_0x414916(0x17d),async()=>{const _0xd90844=_0x414916;await _0x25b37c[_0xd90844(0x17c)](fs[_0xd90844(0x179)](_0x2ab245),{'mimetype':_0xd90844(0x173),'quoted':_0x25b37c},_0xd90844(0x178)),fs['unlinkSync'](_0x2ab245);});}catch(_0x47686b){}};var _0x245e18=await mYtId(_0x474182);if(_0x245e18!==null){let _0x13941a=_0x54b3a1(0x176)+_0x245e18[0x1];_0x14bb0e(_0x13941a);}else{let _0x4506e1=await yts(_0x474182);_0x14bb0e(_0x4506e1[_0x54b3a1(0x182)][0x0][_0x54b3a1(0x184)]);}}),command({'pattern':_0x1db9f9(0x18a),'fromMe':isPrivate,'type':'downloader'},async(_0x4b15da,_0x4025f2)=>{const _0x107603=_0x1db9f9;_0x4025f2=_0x4025f2||_0x4b15da[_0x107603(0x188)][_0x107603(0x172)];if(!_0x4025f2)return await _0x4b15da[_0x107603(0x171)](_0x107603(0x16e));const _0x343b7b=async _0x1f79a1=>{const _0x3b172e=_0x107603;try{await ytdl[_0x3b172e(0x170)](_0x1f79a1);let _0x5bb131=getRandom(_0x3b172e(0x16d));ytdl(_0x1f79a1,{'filter':'audioandvideo','quality':_0x3b172e(0x16a)})[_0x3b172e(0x181)](fs[_0x3b172e(0x186)](_0x5bb131))['on'](_0x3b172e(0x17d),async()=>{const _0x3669be=_0x3b172e;await _0x4b15da[_0x3669be(0x17c)](fs[_0x3669be(0x179)](_0x5bb131),{'quoted':_0x4b15da},_0x3669be(0x18a)),fs['unlinkSync']('./'+_0x5bb131);});}catch(_0x51c538){}};var _0x55e4f8=await mYtId(_0x4025f2);if(_0x55e4f8!==null){let _0x4c4170=_0x107603(0x176)+_0x55e4f8[0x1];_0x343b7b(_0x4c4170);}else{let _0xa37a3e=await yts(_0x4025f2);_0x343b7b(_0xa37a3e[_0x107603(0x182)][0x0][_0x107603(0x184)]);}});
+const { command, isPublic, isPrivate } = require("../lib");
+const fs = require("fs");
+const yts  = require("yt-search");
+const ytdl = require('ytdl-core');
+
+const getRandom = (text) => {
+    return `${Math.floor(Math.random() * 10000)}${text}`
+}
+const mYtId = (query) => {
+const ytIdRegex =
+	/(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
+let yturlm = query.match(ytIdRegex)
+  return yturlm
+}
+
+
+command(
+  {
+    pattern: "song",
+    fromMe: isPrivate,
+    type: "downloader",
+  },
+  async (message, match) => {
+    await message.reply("_Song downloading wait...!_");
+    match = match || message.reply_message.text;
+    if (!match) return await message.reply("_Enter Song Name_");
+    //fn
+    const dMp3 = async (Link ) => {
+    	try{
+    		await ytdl.getInfo(Link);
+    		let mp3File = getRandom('.mp3') 
+    		ytdl(Link, {filter: 'audioonly'})
+    		.pipe(fs.createWriteStream(mp3File))
+    		.on("finish", async () => {  
+    			await message.sendMessage(
+          fs.readFileSync(mp3File),
+          { mimetype: "audio/mpeg", quoted: message.data },
+          "audio"
+        );
+        fs.unlinkSync(mp3File)
+        })       
+        } catch (err){
+//console.log(err)
+}
+}
+var songId = await mYtId(match)
+if (songId !== null){
+	let Link = 'https://youtu.be/' + songId[1]
+	dMp3(Link)
+	} else {
+		let search = await yts(match)  
+		dMp3(search.all[0].url)
+	}
+}
+);
+
+
+/*command(
+  {
+    pattern: "video ?(.*)",
+    fromMe: isPrivate,
+    type: "downloader",
+  },
+  async (message, match) => {
+    if (!match) return await message.reply("_Send video link_");
+    match = match || message.reply_message.text;
+    if (ytldRegex.test(match)) {
+      ytdl(match.trim()).then(({ dl_link, title }) => {
+        message.sendFromUrl(dl_link, { filename: title });
+      });
+    }
+    search(match).then(async ({ all }) => {
+      await message.reply(`🎥𝘈𝘔𝘈𝘙𝘖𝘒 𝘐𝘚 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘐𝘕𝘎 𝘠𝘖𝘜𝘙 𝘝𝘐𝘋𝘌𝘖🎥 ${all[0].title}_`);
+      ytdl(all[0].url).then(({ dl_link, title }) => {
+        message.sendFromUrl(dl_link, { filename: title, quoted: message });
+      });
+    });
+   }
+ );*/
+
+command(
+  {
+    pattern: "video",
+    fromMe: isPrivate,
+    type: "downloader",
+  },
+  async (message, match) => {
+    match = match || message.reply_message.text;
+    if (!match) return await message.reply("_Enter Video Name_");
+    //fn
+    const dMp4 = async (Link ) => {
+    	try{
+    		await ytdl.getInfo(Link);
+    		let mp4File = getRandom('.mp4') 
+    		let nana = ytdl(Link)
+.pipe(fs.createWriteStream(mp4File))
+.on("finish", async () => {    
+await message.sendMessage(
+          fs.readFileSync(mp4File),
+          { quoted: message.data},
+          "video"
+        );
+fs.unlinkSync(`./${mp4File}`)
+        })       
+        } catch (err){
+//console.log(err)
+}
+}
+var videoId = await mYtId(match)
+if (videoId !== null){
+	let Link = 'https://youtu.be/' + videoId[1]
+	dMp4(Link)
+	} else {
+		let search = await yts(match)  
+		dMp4(search.all[0].url)
+	}
+}
+);
