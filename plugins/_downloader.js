@@ -2,6 +2,7 @@ const { command, isPublic, isPrivate } = require("../lib");
 const fs = require("fs");
 const yts  = require("yt-search");
 const ytdl = require('ytdl-core');
+const { SONG_DWNLD } = require('../config.js);
 
 const getRandom = (text) => {
     return `${Math.floor(Math.random() * 10000)}${text}`
@@ -21,7 +22,7 @@ command(
     type: "downloader",
   },
   async (message, match) => {
-    await message.reply("_Song downloading wait...!_");
+    await message.reply("*_ ${SONG_DWNLD} _*");
     match = match || message.reply_message.text;
     if (!match) return await message.reply("_Enter Song Name_");
     //fn
