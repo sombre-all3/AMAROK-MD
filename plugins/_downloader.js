@@ -2,7 +2,7 @@ const { command, isPublic, isPrivate } = require("../lib");
 const fs = require("fs");
 const yts  = require("yt-search");
 const ytdl = require('ytdl-core');
-const { SONGDWNLD } = require('../config.js);
+const config = require('../config.js);
 
 const getRandom = (text) => {
     return `${Math.floor(Math.random() * 10000)}${text}`
@@ -22,7 +22,7 @@ command(
     type: "downloader",
   },
   async (message, match) => {
-    await message.reply("*_ ${SONGDWNLD} _*");
+    await message.reply("*_ config.SONGDWNLD _*");
     match = match || message.reply_message.text;
     if (!match) return await message.reply("_Enter Song Name_");
     //fn
