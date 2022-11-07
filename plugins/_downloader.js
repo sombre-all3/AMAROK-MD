@@ -2,7 +2,7 @@ const { command, isPublic, isPrivate } = require("../lib");
 const fs = require("fs");
 const yts  = require("yt-search");
 const ytdl = require('ytdl-core');
-const config = require('../config.js);
+const { SONGDWNLD } = require('../config.js');
 
 const getRandom = (text) => {
     return `${Math.floor(Math.random() * 10000)}${text}`
