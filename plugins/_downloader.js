@@ -86,6 +86,7 @@ command(
     type: "downloader",
   },
   async (message, match) => {
+    await message.reply("...ᴠɪᴅᴇᴏ ɪɴ ᴘʀᴇᴄᴇss ᴡᴀɪᴛ");
     match = match || message.reply_message.text;
     if (!match) return await message.reply("_Enter Video Name_");
     //fn
