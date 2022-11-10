@@ -118,7 +118,6 @@ if (videoId !== null){
 };
 let stats = fs.statSync(`./${randomName}`);
             let fileSize = stats.size;
-            let fileSize = fileSize / (1034 * 1034);
             if (fileSize <= 150) {
                 let buttonMessage = {
             video:fs.readFileSync(`./${randomName}`),
