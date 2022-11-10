@@ -6,7 +6,7 @@ command(
          type: "amarok GitHub",
   },
   async(message,match) => {
-let {data} = await axios.get('https://api.github.com/repos/Diegoson/AMAROK-MD')
+let { data } = await axios.get('https://api.github.com/repos/Diegoson/AMAROK-MD')
 let git = `Hi ${message.pushName}` 
 git+= ` *This is Amarok MD repository*\n\n*Total Stars*: ${dat.stargazers_count} stars\n\n*Forks* ${data.forks_count} forks\n\n*Repo*: _https://github.com/Diegoson/AMAROK-MD_\n\n*Whatsapp group*: _https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md_\n\n*Owner*: _http://wa.me/27686881509_`,
 
