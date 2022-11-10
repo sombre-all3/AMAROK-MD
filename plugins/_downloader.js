@@ -127,5 +127,8 @@ let stats = fs.statSync(`./${randomName}`);
             caption: `🎥Title: ${titleYt}\n 🎥File Size: ${filesize} MB`,
             headerType: 2,
 	}
+      }
+    }
+    Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
 }
 );
