@@ -1,4 +1,5 @@
 const { command, isPublic, tiny } = require("../lib/")
+const axios = require('axios');
 
 command(
   {      pattern: "git ?(.*)",
