@@ -10,7 +10,7 @@ command(
 
 let { data } = await axios.get('https://api.github.com/repos/Diegoson/AMAROK-MD')
 let git = `Hi ${message.pushName}` 
-git+= ` *This is Amarok MD repository*\n\n*🌟Total Stars*: ${data.stargazers_count} stars\n\n*🍽️orks* ${data.forks_count} forks\n\n*🌲Repo*: _https://github.com/Diegoson/AMAROK-MD_\n\n*🌲Whatsapp group*: _https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md_\n\n*🌲Owner*: _http://wa.me/27686881509_`,
+git+= ` *This is Amarok MD repository*\n\n*🌟Total Stars*: ${data.stargazers_count} stars\n\n*🍽️Forks* ${data.forks_count} forks\n\n*🌲Repo*: _https://github.com/Diegoson/AMAROK-MD_\n\n*🌲Whatsapp group*: _https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md_\n\n*🌲Owner*: _http://wa.me/27686881509_`,
 
 await message.client.sendMessage(message.jid,{
 video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
