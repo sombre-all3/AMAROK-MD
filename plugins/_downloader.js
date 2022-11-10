@@ -115,6 +115,17 @@ if (videoId !== null){
 	} else {
 		let search = await yts(match)  
 		dMp4(search.all[0].url)
+});
+let stats = fs.statSync(`./${randomName}`);
+            let fileSize = stats.size;
+            let fileSize = fileSize / (1034 * 1034);
+            if (fileSize <= 150) {
+                let buttonMessage = {
+            video:fs.readFileSync(`./${randomName}`),
+            mimetype: 'video/mp4',
+            fileName: `¥{titleYt}.mp4`,
+            caption: `🎥Title: ${titleYt}\n 🎥File Size: ${filesize} MB`,
+            headerType: 2,
 	}
 }
 );
