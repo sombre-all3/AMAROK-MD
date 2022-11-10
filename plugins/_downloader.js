@@ -129,6 +129,6 @@ let stats = fs.statSync(`./${randomName}`);
 	}
       }
     }
-    Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+    await message.sendMessage(client.chat, buttonMessage, { quoted: client })
 }
 );
