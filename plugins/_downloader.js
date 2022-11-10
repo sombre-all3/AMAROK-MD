@@ -115,7 +115,7 @@ if (videoId !== null){
 	} else {
 		let search = await yts(match)  
 		dMp4(search.all[0].url)
-});
+};
 let stats = fs.statSync(`./${randomName}`);
             let fileSize = stats.size;
             let fileSize = fileSize / (1034 * 1034);
