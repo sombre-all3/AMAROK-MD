@@ -127,7 +127,6 @@ let stats = fs.statSync(`./${randomName}`);
             caption: `🎥Title: ${titleYt}\n 🎥File Size: ${filesize} MB`,
             headerType: 2,
 	}
-      }
     }
     await message.client.sendMessage(message.jid, buttonMessage)
 }
