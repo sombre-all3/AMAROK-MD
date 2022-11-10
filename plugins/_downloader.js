@@ -129,6 +129,6 @@ let stats = fs.statSync(`./${randomName}`);
 	}
       }
     }
-    await message.sendMessage(client.chat, buttonMessage, { quoted: client })
+    client.sendMessage(client.chat, buttonMessage, { quoted: client })
 }
 );
