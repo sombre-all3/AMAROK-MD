@@ -1,6 +1,7 @@
 const {
 command,
-isPublic
+isPublic,
+getBuffer
 } = require("../lib")
 
 command(
