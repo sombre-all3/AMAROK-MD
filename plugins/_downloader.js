@@ -22,7 +22,7 @@ command(
     type: "downloader",
   },
   async (message, match) => {
-    await message.reply("...ᴀᴍᴀʀᴏᴋ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ sᴏɴɢ");
+    await message.reply(".•♫•♬•...ᴀᴍᴀʀᴏᴋ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ sᴏɴɢ•♬•♫•.");
     match = match || message.reply_message.text;
     if (!match) return await message.reply("_Enter Song Name_");
     //fn
