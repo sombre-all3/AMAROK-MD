@@ -1,6 +1,6 @@
 const { command, getBuffer, isPublic } = require("../lib")
 const eco = require('discord-mongoose-economy')
-const ty = eco.connect(mongodb);
+const mongodb = require(mongodb);
 
 command(
   {
