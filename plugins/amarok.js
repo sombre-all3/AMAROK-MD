@@ -13,7 +13,7 @@ command(
   async(message,match) => {
 
 const buttonMessage = {
-    text: `Datebayo my friend ${message.pushName}\n\nYou claimed: ${daily.amount}\n\nCurrentl Time: ${time}`,
+    text: `Datebayo my friend ${message.pushName}\n\nYou claimed: ${daily_amount}\n\nCurrentl Time: ${time}`,
     caption: "Amarok copyright",
     footer: "amarok MD",
     buttons: buttons,
