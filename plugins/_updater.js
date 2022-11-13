@@ -7,6 +7,7 @@ const exec = require('child_process').exec;
 const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY })
+
 command({
     pattern: 'update',
     fromMe: true,
@@ -38,7 +39,7 @@ command({
     return await message.client.sendMessage(message.jid, buttonMessage)   
 }));
   
-command({pattern: 'updute',type: 'owner', fromMe: true,dontAddCommandList: true, desc: "Updates bot"}, (async (message, match) => {
+command({pattern: 'updut',type: 'owner', fromMe: true,dontAddCommandList: true, desc: "Updates bot"}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log(['main' + '..origin/' + 'main']);
     if (commits.total === 0) {
