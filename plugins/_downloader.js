@@ -112,7 +112,7 @@ var videoId = await mYtId(match)
 if (videoId !== null){
 	let Link = 'https://youtu.be/' + videoId[1]
 	dMp4(Link)
-        let capt = `*Title*: ${title}\n\n*Publish*: $publishTime}\n\n*Description*: ${description}`,
+        let capt = `*Title*: ${title}\n\n*Publish*: ${publishTime}\n\n*Description*: ${description}`,
 	} else {
 		let search = await yts(match)  
 		dMp4(search.all[0].url)
