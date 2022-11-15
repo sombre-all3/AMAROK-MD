@@ -10,10 +10,10 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY })
 command({
-    pattern: 'update',
+    pattern: "update",
     fromMe: true,
     desc: "Updates bot",
-    type: 'owner'
+    type: "owner",
 }, (async (message, match) => {
      await git.fetch();
     var commits = await git.log(['main' + '..origin/' + 'main']);
@@ -40,7 +40,7 @@ command({
     return await message.client.sendMessage(message.jid, buttonMessage)   
 }));
   
-command({pattern: 'updut',type: 'owner', fromMe: true,dontAddCommandList: true, desc: "Updates bot"}, (async (message, match) => {
+command({pattern: "updut",type: "owner", fromMe: true,dontAddCommandList: true, desc: "Updates bot"}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log(['main' + '..origin/' + 'main']);
     if (commits.total === 0) {
