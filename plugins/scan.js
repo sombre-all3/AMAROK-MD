@@ -9,8 +9,8 @@ command(
   async(message,match) => {
   await sleep (19* 1000),
  await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
- await message.sendMessage(m.chat, { image: message })
-return
+ await message..client.sendMessage(message.jid { image: message })
+ return
 
 }
 const buttons = [
@@ -28,7 +28,8 @@ const buttonMessage = {
           footer: "Amarok Public",
           buttons: buttons,
           headerType: 2
-  }
+  },
+},
 
   await message.client.sendMessage(message.jid);
  }
