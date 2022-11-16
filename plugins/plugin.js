@@ -3,7 +3,7 @@ const {
   setPlugin,
   getPlugin,
   delPlugin,
-} = require("../lib/database/plugin");//😇 please leave it 
+} = require("../lib/database/plugins");//😇 please leave it 
 const {
   command,
 } = require("../lib/");
