@@ -11,6 +11,7 @@ const fs = require("fs");
 const got = require("got");
 const axios = require("axios");
 const { format } = require("util");
+const Config = require("config");
 
 command(
   {
