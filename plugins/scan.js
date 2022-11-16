@@ -9,7 +9,10 @@ command(
   async(message,match) => {
   await sleep (19* 1000),
  await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
+ await message.sendMessage(m.chat, { image: message })
+return
 
+}
 const buttons = [
       {
       buttonld: ".scan",
@@ -18,7 +21,7 @@ const buttons = [
      },
      type: 1
      
- }]
+}]
 
 const buttonMessage = {
           caption: "Scan amarok qr within 8min",
