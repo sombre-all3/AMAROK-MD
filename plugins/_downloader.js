@@ -102,7 +102,7 @@ command(
 await message.sendMessage(
           fs.readFileSync(mp4File),
           { quoted: message,
-           caption: `Datebayo ${message.pushName} here is your video\n\n🎥Title: ${vids.all[0].title}\n\n👥Author: ${vids.all[0].author.name}\n\n⏲️ Publish: ${vids.all[0].publishTime}`,
+           caption: `Datebayo ${message.pushName} here is your video\n\n🎥Title: ${vids.all[0].title}\n\n👥Author: ${vids.all[0].author.name}\n\n⏲️Publish: ${vids.all[0].publishTime}`,
            },
           "video"
         );
