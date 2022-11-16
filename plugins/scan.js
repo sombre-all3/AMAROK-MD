@@ -25,8 +25,8 @@ const buttonMessage = {
           footer: "Amarok Public",
           buttons: buttons,
           headerType: 2
- }
+  }
 
-await message.client.sendMessage(message.jid);
-}
-},
+  await message.client.sendMessage(message.jid);
+ }
+};
