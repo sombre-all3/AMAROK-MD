@@ -1,7 +1,4 @@
-const {
-command,
-isPublic
-}
+const { command, isPublic } = require("../lib")
 
 command(
   {
