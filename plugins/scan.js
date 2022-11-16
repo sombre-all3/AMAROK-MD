@@ -12,6 +12,7 @@ command(
  await message.sendMessage(message.jid, { image: message })
  return
 
+}
 const buttons = [
       {
       buttonld: ".scan",
