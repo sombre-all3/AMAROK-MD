@@ -9,7 +9,7 @@ command(
   async(message,match) => {
   await sleep (19* 1000),
  await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
- await message..client.sendMessage(message.jid { image: message })
+ await message.client.sendMessage(message.jid { image: message })
  return
 
 }
