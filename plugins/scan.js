@@ -27,6 +27,6 @@ const buttonMessage = {
           headerType: 2
  }
 
-await message.client.sendMessage(message.jid
-
-})
+await message.client.sendMessage(message.jid);
+}
+},
