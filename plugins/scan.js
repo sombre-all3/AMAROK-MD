@@ -17,8 +17,8 @@ const buttons = [
            displayText: "Scan again"
      },
      type: 1
-     },
-  ]
+     
+ }]
 
 const buttonMessage = {
           caption: "Scan amarok qr within 8min",
