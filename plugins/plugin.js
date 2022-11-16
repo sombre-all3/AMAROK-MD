@@ -4,10 +4,10 @@ const {
   getPlugin,
   delPlugin,
 } = require("../lib/plugin");
-const Config = require("../config");
 const {
   command,
 } = require("../lib/");
+const config = require("../config.js");
 const fs = require("fs");
 const got = require("got");
 const axios = require("axios");
