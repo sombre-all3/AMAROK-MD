@@ -4,7 +4,7 @@ const {
   getPlugin,
   delPlugin,
 } = require("../lib/plugin");
-const Config = require(../config");
+const Config = require("../config");
 const {
   command,
 } = require("../lib/");
