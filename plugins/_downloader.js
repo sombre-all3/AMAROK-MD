@@ -86,6 +86,7 @@ command(
     type: "downloader",
   },
   async (message, match) => {
+       let vids = await yts(match)
     await message.reply("...ᴠɪᴅᴇᴏ ɪɴ ᴘʀᴏᴄᴇss ᴡᴀɪᴛ");
     match = match || message.reply_message.text;
     if (!match) return await message.reply("_Enter Video Name_");
@@ -99,7 +100,9 @@ command(
 .on("finish", async () => {    
 await message.sendMessage(
           fs.readFileSync(mp4File),
-          { quoted: message.data},
+          { quoted: message,
+           caption: `🎥Title: ${vids.all[0].title}`
+           },
           "video"
         );
 fs.unlinkSync(`./${mp4File}`)
