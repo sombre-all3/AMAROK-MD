@@ -35,7 +35,7 @@ command(
     		.on("finish", async () => {  
     			await message.sendMessage(
           fs.readFileSync(mp3File),
-          { mimetype: "audio/mpeg", quoted: message.data },
+          { mimetype: "audio/mpeg", quoted: message },
           "audio"
         );
         fs.unlinkSync(mp3File)
