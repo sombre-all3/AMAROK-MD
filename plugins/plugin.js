@@ -3,7 +3,7 @@ const {
   setPlugin,
   getPlugin,
   delPlugin,
-} = require("../lib/config/plugin");
+} = require("../lib/config.js/plugin");
 const {
   command,
 } = require("../lib/");
