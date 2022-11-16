@@ -8,7 +8,6 @@ command(
   },
   async(message,match) => {
   await sleep (19* 1000),
- return message.reply("Your session has expired");
  await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
 
 const buttons = [
