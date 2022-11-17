@@ -1,5 +1,5 @@
 
-const DB = require('../lib/scraper')
+const DB = require('../lib/scrapers')
 const { execSync } = require('child_process')
 const { tlang, Config, prefix, command } = require('../lib')
     //---------------------------------------------------------------------------
