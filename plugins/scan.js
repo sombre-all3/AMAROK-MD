@@ -9,23 +9,19 @@ command(
   async(message,match) => {
   await sleep (19* 1000),
  await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
-
-const buttons = [
-      {
-      buttonld: ".scan",
-      buttonText: {
-           displayText: "Scan again"
-     },
-     type: 1
-     },
-]
-
-const buttonMessage = {
+ await message.client.sendMessage(message.jid, {
           caption: "Scan amarok qr within 8min",
           footer: "Amarok Public",
-          buttons: buttons,
-          headerType: 2
-  }
-  await message.client.sendMessage(message.buttonMessage);
+          buttons: [{
+            buttonld: ".scan",
+            buttonText: {
+                 displayText: "Generate new"
+            },
+             type: 1
+            }]
+           },
+         },
+        await sleep (19* 1000),
+  await message.reply("Your session has expired");
  }
 );
