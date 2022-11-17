@@ -48,5 +48,4 @@ let buttonMessaged = {
 			await message.client(message.jid, buttonMessaged, {
 				quoted: message,
 			});
-    }
-);
+
