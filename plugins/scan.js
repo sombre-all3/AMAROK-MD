@@ -1,4 +1,4 @@
-const { command, isPublic, sleep, isUrl, Bitly } = require("../lib")
+const { command, isPublic, sleep, isUrl, Bitly, tiny  } = require("../lib")
 
 command(
   {
@@ -14,7 +14,7 @@ command(
           buttons: [{
             buttonld: ".scan",
             buttonText: {
-                 displayText: "Generate new"
+                 displayText: tiny("Generate new")
             },
              type: 1
             }]
