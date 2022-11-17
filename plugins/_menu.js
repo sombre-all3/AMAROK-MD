@@ -149,7 +149,7 @@ menu+= `
     });
     menu += `╰━━━━━━━━━━━━━━━━──⊷`;
    return await message.reply(menu);
-     image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
+     image: { url: `https://i.imgur.com/pOkBPvV.jpeg` };
      caption: tiny(son goku),
   }
 );
