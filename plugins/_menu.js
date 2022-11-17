@@ -125,8 +125,7 @@ menu+= `
 ╰━━━━━━━━━━━──⊷\n
 ╭━━━━━━━━━━━──⊷ 
 ` 
-    image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
-    caption: tiny(menu),
+  
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
