@@ -150,6 +150,6 @@ menu+= `
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
     menu += `╰━━━━━━━━━━━━━━━━──⊷`;
-   return await message.reply(menu), {
+   return await message.reply(menu)
   }
-});
+);
