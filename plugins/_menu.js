@@ -152,4 +152,4 @@ menu+= `
      image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
      caption: tiny(menu),
   }
-);
+});
