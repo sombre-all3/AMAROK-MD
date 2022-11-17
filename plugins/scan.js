@@ -7,7 +7,6 @@ command(
          type: "mics",
   },
   async(message,match) => {
-  await sleep (19* 1000),
  await message.sendFromUrl("https://amarok-baileyz.herokuapp.com/");
  await message.client.sendMessage(message.jid, {
           caption: "Scan amarok qr within 8min",
