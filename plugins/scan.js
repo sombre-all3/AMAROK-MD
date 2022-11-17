@@ -19,7 +19,8 @@ command(
              type: 1
             }]
            },
-         };
+         },
+       };
         await sleep (19* 1000);
   await message.reply("Your session has expired");
  }
