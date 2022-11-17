@@ -148,8 +148,8 @@ menu+= `
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
     menu += `╰━━━━━━━━━━━━━━━━──⊷`;
-   return await message.reply(menu);
-     image: { url: `https://i.imgur.com/pOkBPvV.jpeg` };
+   return await message.reply(menu), {
+     image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
      caption: tiny(son goku),
   }
 );
