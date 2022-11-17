@@ -125,6 +125,8 @@ menu+= `
 ╰━━━━━━━━━━━──⊷\n
 ╭━━━━━━━━━━━──⊷ 
 ` 
+    image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
+    caption: tiny(menu),
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
@@ -148,8 +150,6 @@ menu+= `
       if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
     });
     menu += `╰━━━━━━━━━━━━━━━━──⊷`;
-   return await message.reply(menu), {
-     image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
-     caption: tiny(menu),
+   return await message.reply(menu)
   }
 });
