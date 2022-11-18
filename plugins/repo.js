@@ -24,8 +24,5 @@ video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
         {
         buttonId: '.menu',
         buttonText: {displayText: tiny("⫷MENU⫸") },
-        },
-      ],
-    });
-  }
-);
+ { contextlnfo:{ forwarding Score: 9999, isForwarded: true}})
+        
