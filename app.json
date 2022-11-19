@@ -71,7 +71,7 @@
     },
     "THEME": {
       "description": "Put the name of theme you want theme available SUPERMAN",
-      "required": true,
+      "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, same as above entered",
