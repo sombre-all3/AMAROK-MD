@@ -33,13 +33,13 @@ let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok 
           image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
           caption: "amarok md",
           footer: "amarok",
-          headerType: 2,
+          headerType: 4,
           contextlnfo: {
                 externalAdReply: {
                 title: "amarok",
                 body: "amarok md",
                 thumbnail: log0,
-                mediaType: 1,
+                mediaType: 4,
                 mediaUrl: "https://github.com/Diegoson/AMAROK-MD",
                 sourceUrl: "https://github.com/Diegoson/AMAROK-MD",
           },
