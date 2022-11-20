@@ -2,6 +2,7 @@
       command,
       isPrivate
       } = require("../lib")
+      global.log0 = fs.readFileSync(path)
    
     command(
       {
