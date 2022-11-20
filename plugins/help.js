@@ -16,6 +16,7 @@ command(
     fromMe: isPrivate,
     type: "Amarok help",
     dontAddCommandList: true,
+    react: "❤️"
   },
   async (message,match, { prefix }) => {
     let [date, time] = new Date()
