@@ -17,7 +17,9 @@
                      displayText: "Github",
                },
                type: 1,
-               {
+             },
+               
+             {
                    buttonld: `${prefix}alive`,
                    buttonText: {
                        displayText: "Alive",
