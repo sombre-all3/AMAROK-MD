@@ -21,7 +21,7 @@ video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
                 externalAdReply: {
                     title: "AMAROK-MD",
                     body: "Easy to Use",
-                    thumbnail: logO,
+                    thumbnail: log0,
                     mediaType: 4,
                     mediaUrl: 'https://github.com/Diegoson/AMAROK-MD',
                     sourceUrl: `https://github.com/Diegoson/AMAROK-MD`,
