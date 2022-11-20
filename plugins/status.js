@@ -38,7 +38,7 @@ let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok 
                 externalAdReply: {
                 title: "amarok",
                 body: "amarok md",
-                thumbnail: logO,
+                thumbnail: log0,
                 mediaType: 1,
                 mediaUrl: "https://github.com/Diegoson/AMAROK-MD",
                 sourceUrl: "https://github.com/Diegoson/AMAROK-MD",
