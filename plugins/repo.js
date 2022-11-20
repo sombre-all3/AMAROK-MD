@@ -1,5 +1,6 @@
 const { command, isPublic, tiny } = require("../lib/")
 const axios = require("axios");
+let log0 = fs.readFileSync(path)
 
 command(
   {      pattern: "git ?(.*)",
