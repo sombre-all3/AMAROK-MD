@@ -1,5 +1,6 @@
     const { command,isPrivate } = require("../lib")
     const fs = require("fs")
+    const path = require("path")
     global.log0 = fs.readFileSync(path)
    
     command(
