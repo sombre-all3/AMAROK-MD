@@ -16,6 +16,15 @@ await message.client.sendMessage(message.jid,{
 video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
       caption: git,
       footer: tiny(`amarok md` ),
+            headerType: 4,
+            contextInfo: {
+                externalAdReply: {
+                    title: "AMAROK-MD",
+                    body: "Easy to Use",
+                    thumbnail: https://i.imgur.com/M7FXzlY.jpeg,
+                    mediaType: 4,
+                    mediaUrl: 'https://github.com/Diegoson/AMAROK-MD',
+                    sourceUrl: `https://github.com/Diegoson/AMAROK-MD`,
       buttons: [
         {
         buttonId: '.owner',
