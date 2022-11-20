@@ -1,7 +1,7 @@
     const { command,isPrivate } = require("../lib")
     const fs = require("fs")
     const path = require("path")
-    let log0 = fs.readFileSync(path)
+    let log0 = fs.readFileSync("temp/deploy.png")
    
     command(
       {
