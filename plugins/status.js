@@ -27,7 +27,7 @@
             },
          ];
 
-let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok a whatsapp userbot powered by cybxkid.\n\n*🧭Uptime*: ${time}\n\n*Powered by: ${message.pushName}`;
+let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok a whatsapp userbot powered by cybxkid.\n\n*🧭Owner*: ${OWNER_NAME}\n\n*Powered by: ${message.pushName}`;
 
     const buttonMessage = {
           image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
