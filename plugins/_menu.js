@@ -18,6 +18,7 @@ command(
   {
     pattern: "menu",
     fromMe: isPrivate,
+    react: "❤️",
     dontAddCommandList: true,
   },
   async (message,match) => {
