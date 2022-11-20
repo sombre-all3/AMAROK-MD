@@ -48,7 +48,7 @@ let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok 
     };
    return await message.client.sendMessage(message.client,jid, buttonMessage, { quoted: message,
   });
-);
+)
 
 
                 
