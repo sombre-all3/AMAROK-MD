@@ -1,6 +1,6 @@
     const { command,isPrivate } = require("../lib")
-    global.log0 = fs.readFileSync(path)
     const fs = require("fs")
+    global.log0 = fs.readFileSync(path)
    
     command(
       {
@@ -55,4 +55,5 @@ let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok 
           
  
    
+
 
