@@ -27,7 +27,6 @@ video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
                     sourceUrl: `https://github.com/Diegoson/AMAROK-MD`,
                },
              },
-            };
       buttons: [
         {
         buttonId: '.owner',
