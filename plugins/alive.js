@@ -3,7 +3,6 @@ const {
   isPublic,
   isPrivate,
   tiny,
-  tlang,
   clockString,
 } = require("../lib");
 var config = require("../config");
@@ -26,7 +25,6 @@ async (message,match) => {
 let alive = `
 ╭━━〘 "A ✰ L ✰ I ✰ V ✰ E" 〙━━──⊷` 
 alive+= `
-┃ ⛥  *NAME* : ${tlang().title}
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
