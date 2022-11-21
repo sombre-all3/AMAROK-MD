@@ -58,7 +58,7 @@ command(
     var mesaj = "";
     var plugins = await PluginDB.findAll();
     if (plugins.length < 1) {
-      return await message.sendMessage("Example\nplugin list\nplugin url");
+      return await message.sendMessage("Plugin not installed");
     } else {
       plugins.map((plugin) => {
         mesaj +=
