@@ -35,7 +35,7 @@ let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok 
                 externalAdReply: {
                 title: "amarok",
                 body: "amarok md",
-                thumbnail: await(await fetch( https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg )).buffer(),
+                thumbnail: await(await fetch(`https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg`)).buffer(),
                 mediaType: 4,
                 mediaUrl: "https://github.com/Diegoson",
                 sourceUrl: "https://github.com/Diegoson",
