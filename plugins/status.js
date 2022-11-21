@@ -1,7 +1,4 @@
     const { command,isPrivate } = require("../lib")
-    const fs = require("fs")
-    const path = require("path")
-    let log0 = fs.readFileSync("temp/deploy.png")
    
     command(
       {
@@ -39,7 +36,7 @@ let menu = `*👥User*: ${message.pushName}\n\n*👩‍💻Description*: Amarok 
                 externalAdReply: {
                 title: "amarok",
                 body: "amarok md",
-                thumbnail: log0,
+                thumbnail: `await (await fetch(URL OF IMAGE)). buffer(),
                 mediaType: 4,
                 mediaUrl: "https://github.com/Diegoson/AMAROK-MD",
                 sourceUrl: "https://github.com/Diegoson/AMAROK-MD",
