@@ -3,6 +3,7 @@ const {
   isPublic,
   isPrivate,
   tiny,
+  tlang,
   clockString,
 } = require("../lib");
 var config = require("../config");
