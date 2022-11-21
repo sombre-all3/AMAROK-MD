@@ -8,7 +8,7 @@ const { PluginDB, installPlugin } = require("../lib/database/plugins");
 command(
   {
     pattern: "install",
-    fromMe: true,A
+    fromMe: true,
     type: "user",
   },
   async (message, match) => {
