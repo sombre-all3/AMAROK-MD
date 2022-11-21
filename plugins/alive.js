@@ -26,7 +26,7 @@ async (message,match) => {
 let alive = `
 ╭━━〘 "A ✰ L ✰ I ✰ V ✰ E" 〙━━──⊷` 
 alive+= `
-┃ ⛥  *${tlang().title}*
+┃ ⛥  *NAME* : ${tlang().title}
 ┃ ⛥  *BOTNAME* : ${BOT_NAME}
 ┃ ⛥  *USER* : ${message.pushName}
 ┃ ⛥  *OWNER* :  ${OWNER_NAME}
