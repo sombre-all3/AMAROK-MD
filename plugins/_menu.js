@@ -3,7 +3,6 @@ const {
   command,
   isPrivate,
   tiny,
-  tlang,
   styletext,
   serif_B,
   clockString,
@@ -32,7 +31,6 @@ command(
 menu+= `
 *┃ ⛥ ╭──────────────*
 *┃ ⛥ │* *owner :  ${OWNER_NAME}*
-*┃ ⛥ │* *Theme : ${tlang().title}*
 *┃ ⛥ │* *user* : ${message.pushName}
 *┃ ⛥ │* *mode : ${WORK_TYPE}*
 *┃ ⛥ │* *prefix : ${HANDLERS}*
