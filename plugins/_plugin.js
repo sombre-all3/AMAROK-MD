@@ -12,7 +12,7 @@ command(
     type: "user",
   },
   async (message, match) => {
-    if (!match) return await message.sendMessage("Example\nplugin url\nplugin list");
+    if (!match) return await message.sendMessage("Example:\n\nplugin url\n\nplugin list");
 
     try {
       var url = new URL(match);
