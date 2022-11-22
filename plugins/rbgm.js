@@ -1,6 +1,7 @@
    const {
    command,
    remove,
+   unscreen,
    isPublic
   } = require("../lib")
   let gis = require("g-i-s")
