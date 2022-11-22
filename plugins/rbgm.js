@@ -19,4 +19,6 @@
        // let rmbg = await fs.writeFile('./media/rmbg/isexit.jpg', rmbgimg)
        await client.sendMessage( message.from, { image : rmbgimg, caption : Config.CAPTION }, { quoted: message })
        await fs.unlinkSync(img);//return await fs.unlinkSync(rmbg);
-   });
+   },
+  }
+);
