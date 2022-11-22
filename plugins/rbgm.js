@@ -2,6 +2,7 @@
    command,
    remove,
    unscreen,
+   config,
    isPublic
   } = require("../lib")
   let gis = require("g-i-s")
