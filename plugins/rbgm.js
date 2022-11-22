@@ -3,6 +3,7 @@
    remove,
    isPublic
   } = require("../lib")
+  let gis = require("g-i-s")
   const fs = require("fs")
   const Config = require("../config")
 
