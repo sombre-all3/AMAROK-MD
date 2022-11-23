@@ -29,18 +29,13 @@ command(
  let menu = `
 *╭━━〘 `+ tiny(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷*` 
 menu+= `
-*┃ ⛥ ╭──────────────*
-*┃ ⛥ │* *owner :  ${OWNER_NAME}*
-*┃ ⛥ │* *user* : ${message.pushName}
-*┃ ⛥ │* *mode : ${WORK_TYPE}*
-*┃ ⛥ │* *prefix : ${HANDLERS}*
-*┃ ⛥ │* *host name :${hostname().split("-")[0]}*
-*┃ ⛥ │* *date : ${date}*
-*┃ ⛥ │* *time: ${time}*
-*┃ ⛥ │* *uptime : ${clockString(uptime())}*
-*┃ ⛥ │* *version : ${require("../package.json").version}*
-*┃ ⛥ │* *plugins : ${events.commands.length}*
-*┃ ⛥ ╰──────────────*
+*┃ ▷ *Oᴡɴᴇʀ :  ${OWNER_NAME}*
+*┃ ▷ *Usᴇʀ* : ${message.pushName}
+*┃ ▷ *Mᴏᴅᴇ : ${WORK_TYPE}*
+*┃ ▷ *Pʀᴇғɪx : ${HANDLERS}*
+*┃ ▷ *Hᴏsᴛ Nᴀᴍᴇ :${hostname().split("-")[0]}*
+*┃ ▷ *Tɪᴍᴇ: ${time}*
+*┃ ▷ *Uᴘᴛɪᴍᴇ : ${clockString(uptime())}*
 *╰━━━━━━━━━━━──⊷*\n
 `
 menu+= `*╭───『 `+ tiny('command',57)+`』──◆*`
