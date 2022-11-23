@@ -24,6 +24,7 @@ video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
                     mediaType: 4,
                     sourceUrl: `https://github.com/Diegoson`,
                     thumbnail: await (await fetch('https://i.imgur.com/M7FXzlY.jpeg')).buffer()}}
+                })
    
                },
              },
