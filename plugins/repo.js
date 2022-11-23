@@ -21,9 +21,10 @@ video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
                 externalAdReply: {
                     title: "AMAROK-MD",
                     body: "Easy to Use",
-                    thumbnail: await (await fetch('https://i.imgur.com/M7FXzlY.jpeg')).buffer()}}
                     mediaType: 4,
                     sourceUrl: `https://github.com/Diegoson`,
+                    thumbnail: await (await fetch('https://i.imgur.com/M7FXzlY.jpeg')).buffer()}}
+   
                },
              },
       buttons: [
