@@ -77,7 +77,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
       caption: tiny(menu),
-      footer: tiny(
+      footer: tiny(`amarok md` ),
       buttons: [
         {
           buttonId: '${prefix}alive',
