@@ -23,7 +23,7 @@ video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
                     body: "Easy to Use",
                     mediaType: 4,
                     sourceUrl: `https://github.com/Diegoson`,
-                    thumbnail: `https://i.imgur.com/M7FXzlY.jpeg',
+                    thumbnail: `https://i.imgur.com/M7FXzlY.jpeg`,
    
                },
              },
