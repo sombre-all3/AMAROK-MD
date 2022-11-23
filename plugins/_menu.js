@@ -82,11 +82,11 @@ amarok md` ),
       buttons: [
         {
           buttonId: '${prefix}alive',
-          buttonText: { displayText: ("◄𝘈𝘭𝘪𝘷𝘦►") },
+          buttonText: { displayText: ("◄𝖠𝖫𝖨𝖵𝖤►") },
         },
         {
           buttonId: '${prefix}list',
-          buttonText: { displayText: ("𝘓𝘐𝘴𝘵") },
+          buttonText: { displayText: ("◄𝖠𝖫𝖨𝖵𝖤►") },
         },
       ],
     });
