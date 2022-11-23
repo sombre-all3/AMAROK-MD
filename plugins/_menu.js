@@ -78,7 +78,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
       caption: tiny(menu),
       footer: tiny(`
-amarok md` )
+amarok md` ),
       buttons: [
         {
           buttonId: '${prefix}alive',
