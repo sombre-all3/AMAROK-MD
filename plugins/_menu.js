@@ -65,16 +65,15 @@ menu+= `*╭───『 `+ tiny('command',57)+`』──◆*`
     cmnd.sort();
     category.sort().forEach((cmmd) => {
      menu+=`
-*⚔ ${cmmd} ✗*`
+*⛌ ${cmmd}\n\n ✗*`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `\n*⚔ ${cmd.trim()}*`;
+ menu += `\n*⛌ ${cmd.trim()}*`;
       });
- menu += `\n*⚔*`;
+ menu += `\n*⛌*`;
     });
 
-    menu += `*⚔\n`
-    menu += `_🐺Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}help anime_`;
+    menu += `*⛌\n`
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
       caption: tiny(menu),
