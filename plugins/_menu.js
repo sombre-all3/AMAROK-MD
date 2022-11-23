@@ -87,9 +87,7 @@ amarok md` ),
                mediaUrl: 'https://github.com/Diegoson',
                sourceUrl: 'https://github.com/Diegoson/AMAROK-MD',
                showAdAttribution: true
-              }
-             }
-           },
+              },
       buttons: [
         {
           buttonId: '${prefix}alive',
