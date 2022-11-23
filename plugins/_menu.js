@@ -38,7 +38,7 @@ menu+= `
 *┃ ▷ *Uᴘᴛɪᴍᴇ : ${clockString(uptime())}*
 *╰━━━━━━━━━━━──⊷*\n
 `
-menu+= `*╭───『 `+ tiny('command',57)+`』──◆*`
+menu+= `*`+ tiny('github')+`*`
     let cmnd = [];
     let cmd;
     let category = [];
