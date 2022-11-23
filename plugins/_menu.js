@@ -79,16 +79,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
       caption: tiny(menu),
       footer: tiny(`
-amarok md` ),
-      externalAdReply:{
-               title: "Amarok MD",
-               body: "male wolf bot",
-               mediaType: 1,
-               thumbnail: image3,
-               mediaUrl: 'https://github.com/Diegoson',
-               sourceUrl: 'https://github.com/Diegoson/AMAROK-MD',
-               showAdAttribution: true
-              },
+amarok md` )
       buttons: [
         {
           buttonId: '${prefix}alive',
