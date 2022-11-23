@@ -71,7 +71,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
  menu += `\n*⛌ ${cmd.trim()}*`;
       });
 
-    menu += `*⛌\n`
+    menu += `*⛌\n`;
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
       caption: tiny(menu),
