@@ -3,7 +3,6 @@ const {
   command,
   isPrivate,
   tiny,
-  getBuffer,
   styletext,
   serif_B,
   clockString,
