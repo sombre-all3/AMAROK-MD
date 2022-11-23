@@ -80,7 +80,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       caption: tiny(menu),
       footer: tiny(`
 amarok md` ),
-      externalAdReply: {
+      externalAdReply:{
                title: "Amarok MD",
                body: "male wolf bot",
                mediaType: 1,
