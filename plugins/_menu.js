@@ -100,7 +100,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
 					title: "||◁ㅤ❚❚ㅤ▷||",
 					body: "😻𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐄𝐍𝐔😻",
 					mediaType: 2,
-					thumbnail: diego,
+					thumbnail: jsl,
 					mediaUrl: 'https://www.instagram.com/reel/安装它',
 					sourceUrl: 'https://wa.me/27686881509?text=_😻៚ʜᴇʟʟᴏ+ᴀᴍᴀʀᴏᴋ+ᴏᴡɴᴇʀ+ʙɪɢ+ғᴀɴ+ᴠʀᴏ+🪄_',
 					showAdAttribution: true
