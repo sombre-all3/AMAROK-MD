@@ -72,10 +72,10 @@ menu+= `*`+ tiny('github乂')+`*`
     cmnd.sort();
     category.sort().forEach((cmmd) => {
      menu+=`
-*「${cmmd}」乂*`
+FancyRandom(*「${cmmd}」乂*)`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `\n*⛌ ${cmd.trim()}*`;
+ menu += `tiny(\n*⛌ ${cmd.trim()}*)`;
       });
  menu += `\n*⛌*`;
       });
@@ -83,7 +83,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     menu += `*⛌\n`
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
-      caption: FancyRandom(menu),
+      caption: menu,
       footer: tiny(`amarok md` ),
       buttons: [
         {
