@@ -34,7 +34,7 @@
              footer: tiny(`menu`),
              headerType: 4,
           }
-     return await message.client.sendMessage(message.jid, {
+     return await message.client.sendMessage(message.jid, buttonMessage)
     })
          
 
