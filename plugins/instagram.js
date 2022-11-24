@@ -16,6 +16,5 @@ command(
       `https://x-asena-api.up.railway.app/ig?q=${match}`
     );
     message.sendFromUrl(response.result[0].url);
-  },
- },
+  }
 );
