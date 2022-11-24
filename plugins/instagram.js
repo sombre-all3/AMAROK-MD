@@ -9,7 +9,6 @@ command(
   },
   async (message, match) => {
     match = match || message.reply_message.text;
-    return await message.reply("𝖠𝖬𝖠𝖱𝖮𝖪 𝖴𝖯𝖫𝖮𝖠𝖣𝖨𝖭𝖦 𝖸𝖮𝖴𝖱 𝖵𝖨𝖣𝖤𝖮");
     if (!match) return await message.reply("_Enter link_");
     if (!match.includes("instagram.com"))
       return await message.reply("_Invalid URL_");
@@ -18,5 +17,5 @@ command(
     );
     message.sendFromUrl(response.result[0].url);
   },
- }
+ },
 );
