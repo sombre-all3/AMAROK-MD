@@ -12,7 +12,7 @@ const speed = require('performance-now');
 const os = require('os');
 const config = require("../config.js");
 const prefix = config.PREFIX
-const { FancyRandom, jslbuffer } = require('abu-bot');
+const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
@@ -27,7 +27,7 @@ command(
   },
   async (message,match) => {
   
-  const jsl = await jslbuffer(image)
+  const diego = await diegobuffer(image)
   
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
@@ -100,7 +100,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
 					title: "||◁ㅤ❚❚ㅤ▷||",
 					body: "😻𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐄𝐍𝐔😻",
 					mediaType: 2,
-					thumbnail: jsl,
+					thumbnail: diego,
 					mediaUrl: 'https://www.instagram.com/reel/安装它',
 					sourceUrl: 'https://wa.me/27686881509?text=_😻៚ʜᴇʟʟᴏ+ᴀᴍᴀʀᴏᴋ+ᴏᴡɴᴇʀ+ʙɪɢ+ғᴀɴ+ᴠʀᴏ+🪄_',
 					showAdAttribution: true
