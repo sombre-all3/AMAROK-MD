@@ -3,7 +3,6 @@ const {
   command,
   isPrivate,
   tiny,
-  manga,
   getBuffer,
   styletext,
   serif_B,
@@ -46,7 +45,7 @@ menu+= `
 *┃ ▷ *Uᴘᴛɪᴍᴇ : ${clockString(uptime())}*
 *╰━━━━━━━━━━━──⊷*\n
 `
-menu+= `*`+manga ('github乂')+`*`
+menu+= `*`+tiny ('github乂')+`*`
     let cmnd = [];
     let cmd;
     let category = [];
