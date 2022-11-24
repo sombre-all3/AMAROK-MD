@@ -3,6 +3,7 @@ const {
   command,
   isPrivate,
   tiny,
+  getBuffer,
   styletext,
   serif_B,
   clockString,
@@ -11,9 +12,12 @@ const speed = require('performance-now');
 const os = require('os');
 const config = require("../config.js");
 const prefix = config.PREFIX
-const { FancyRandom } = require('abu-bot');
+const { FancyRandom, jslbuffer } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
+
+const image = "https://i.imgur.com/pOkBPvV.jpeg";
+
 command(
   {
     pattern: "menu",
@@ -22,6 +26,9 @@ command(
     dontAddCommandList: true,
   },
   async (message,match) => {
+  
+  const jsl = await jslbuffer(image)
+  
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
       .split(",");
@@ -76,9 +83,8 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     menu += `*⛌\n`
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
-      caption: tiny(menu),
-      footer: tiny(`
-amarok md` ),
+      caption: FancyRandom(menu),
+      footer: tiny(`amarok md` ),
       buttons: [
         {
           buttonId: '${prefix}alive',
@@ -89,8 +95,20 @@ amarok md` ),
           buttonText: { displayText: ("◄𝖠𝖫𝖨𝖵𝖤►") },
         },
       ],
-    });
-  }
+     contextInfo: {
+				externalAdReply: {
+					title: "||◁ㅤ❚❚ㅤ▷||",
+					body: "😻𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐄𝐍𝐔😻",
+					mediaType: 2,
+					thumbnail: jsl,
+					mediaUrl: 'https://www.instagram.com/reel/安装它',
+					sourceUrl: 'https://wa.me/27686881509?text=_😻៚ʜᴇʟʟᴏ+ᴀᴍᴀʀᴏᴋ+ᴏᴡɴᴇʀ+ʙɪɢ+ғᴀɴ+ᴠʀᴏ+🪄_',
+					showAdAttribution: true
+					}
+				}
+			}, { quoted: message }
+		)	
+	}
 );
 
 command(
