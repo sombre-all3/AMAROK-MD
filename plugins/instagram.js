@@ -18,4 +18,5 @@ command(
     );
     message.sendFromUrl(response.result[0].url);
   }
+ }
 );
