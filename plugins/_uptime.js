@@ -25,7 +25,7 @@ command({
              buttonText: { 
              displayText: "RUNTIME",
            },
-        ],
+        ];
 }));
 
 
