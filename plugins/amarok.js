@@ -17,10 +17,14 @@
              buttonText: {
                     displayText: "Menu List",
             },
+            type: 1
+            },
             {
              buttonld: ".ping",
              buttonText: {
                     displayText: "Speed Test",
+            },
+            type: 1
             },
           ];
 
