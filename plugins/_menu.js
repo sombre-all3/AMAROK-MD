@@ -16,7 +16,7 @@ const { FancyRandom, jslbuffer } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
-const image = "https://i.imgur.com/pOkBPvV.jpeg";
+const image = "https://i.imgur.com/wZX1785.jpeg";
 
 command(
   {
@@ -92,7 +92,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         },
         {
           buttonId: '${prefix}list',
-          buttonText: { displayText: ("◄𝖠𝖫𝖨𝖵𝖤►") },
+          buttonText: { displayText: ("◄𝖫𝖨𝖲𝖳►") },
         },
       ],
      contextInfo: {
