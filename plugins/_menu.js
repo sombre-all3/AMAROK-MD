@@ -16,7 +16,7 @@ const { FancyRandom, jslbuffer } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
-const image = "https://i.imgur.com/wZX1785.jpeg";
+const image = "https://imgur.io/YNu7sEi?r.jpg";
 
 command(
   {
