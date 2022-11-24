@@ -45,7 +45,7 @@ menu+= `
 *┃ ▷ *Uᴘᴛɪᴍᴇ : ${clockString(uptime())}*
 *╰━━━━━━━━━━━──⊷*\n
 `
-menu+= `*`+ ('github乂')+`*`
+menu+= `*`+manga ('github乂')+`*`
     let cmnd = [];
     let cmd;
     let category = [];
@@ -72,10 +72,10 @@ menu+= `*`+ ('github乂')+`*`
     cmnd.sort();
     category.sort().forEach((cmmd) => {
      menu+=`
-FancyRandom(*「${cmmd}」乂*)`
+*「${cmmd}」乂*
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `tiny(\n*⛌ ${cmd.trim()}*)`;
+ menu += `\n*⛌ ${cmd.trim()}*`;
       });
  menu += `\n*⛌*`;
       });
