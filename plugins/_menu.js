@@ -3,6 +3,7 @@ const {
   command,
   isPrivate,
   tiny,
+  manga,
   getBuffer,
   styletext,
   serif_B,
