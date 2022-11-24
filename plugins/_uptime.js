@@ -24,9 +24,7 @@ command({
              buttonld: ".runtime",
              buttonText: { 
              displayText: "RUNTIME",
-           },
-        ],
-   });
+           ]},
  
 }));
 
