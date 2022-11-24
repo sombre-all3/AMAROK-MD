@@ -12,7 +12,7 @@ const speed = require('performance-now');
 const os = require('os');
 const config = require("../config.js");
 const prefix = config.PREFIX
-const { FancyRandom, jslbuffer } = require('abu-bot');
+const { FancyRandom } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
