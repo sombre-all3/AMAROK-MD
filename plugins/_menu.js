@@ -82,7 +82,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
 
     menu += `*⛌\n`
     return await message.client.sendMessage(message.jid, {
-      image: { url: `https://i.imgur.com/pOkBPvV.jpeg` },
+      image: { url: `https://i.ibb.co/dmn1drG/f51569f1668d.jpg` },
       caption: menu,
       footer: tiny(`amarok md` ),
       buttons: [
@@ -92,15 +92,15 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
         },
         {
           buttonId: '${prefix}list',
-          buttonText: { displayText: ("◄𝖠𝖫𝖨𝖵𝖤►") },
+          buttonText: { displayText: ("◄𝖫𝖨𝖲𝖳►") },
         },
       ],
      contextInfo: {
 				externalAdReply: {
                                 forwardingScore: 9999,
                                 isForwarded: false,
-					title: "||◁ㅤ❚❚ㅤ▷||",
-					body: "😻𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐄𝐍𝐔😻",
+					title: "┗AMAROK MD┓",
+					body: "AMAROK MD MENU",
 					mediaType: 2,
 					thumbnail: diego,
 					mediaUrl: 'https://www.instagram.com/reel/安装它',
