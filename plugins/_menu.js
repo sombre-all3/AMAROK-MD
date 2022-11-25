@@ -16,7 +16,7 @@ const { FancyRandom, jslbuffer } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
-const image = "https://i.ibb.co/HpwY58b/afa809a9756c.jpg";
+const image = "https://i.ibb.co/SRTw2Cf/eabf28eb3e2e.jpg";
 
 command(
   {
@@ -125,17 +125,10 @@ command(
         .split(",");
     let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
-┃ ⛥ ╭━━━━━━━━━━━──⊷ 
-┃ ⛥ │ *OWNER* :  ${OWNER_NAME}
-┃ ⛥ │ *USER* : ${message.pushName}
-┃ ⛥ │ *MODE* : ${WORK_TYPE}
-┃ ⛥ │ *PREFIX* : ${HANDLERS}
-┃ ⛥ │ *DATE* : ${date}
-┃ ⛥ │ *TIME* : ${time}
-┃ ⛥ │ *VERSION* : ${require("../package.json").version}
-┃ ⛥ ╰━━━━━━━━━━━──⊷
-╰━━━━━━━━━━━──⊷\n
-╭━━━━━━━━━━━──⊷ 
+┋‥‥ *OWNER* :  ${OWNER_NAME}
+┋‥‥ *USER* : ${message.pushName}
+┋‥‥ *MODE* : ${WORK_TYPE
+┋‥‥ *DATE* : ${date}
 ` 
   
     let cmnd = [];
@@ -157,8 +150,8 @@ menu+= `
     });
     cmnd.sort();
     cmnd.forEach(({ cmd, desc }, num) => {
-      menu += `┃ ⛥ │ ➛ ${(num += 1)} *${tiny(cmd.trim())}*\n`; 
-      if (desc) menu += `┃ ⛥ │ ➛ ${tiny("use : " + desc)}\n`;
+      menu += `┣ ${(num += 1)} *${tiny(cmd.trim())}*\n`; 
+      if (desc) menu += `┣ ${tiny("use : " + desc)}\n`;
     });
     menu += `╰━━━━━━━━━━━━━━━━──⊷`;
    return await message.reply(menu)
