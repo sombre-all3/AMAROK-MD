@@ -12,7 +12,7 @@
     },
     async(message,match) => {
  
-          return await message.client.sendMessage(message.jid, buttonMessage)
+          return await message.client.sendMessage(message.jid, buttonMessage, {
              image: { url: `https://i.ibb.co/HpwY58b/afa809a9756c.jpg` },
              caption: "Testing Amarok",
              footer: tiny(`menu`),
