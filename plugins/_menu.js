@@ -127,9 +127,9 @@ command(
 menu+= `
 ┋‥‥ *OWNER* :  ${OWNER_NAME}
 ┋‥‥ *USER* : ${message.pushName}
-┋‥‥ *MODE* : ${WORK_TYPE
+┋‥‥ *MODE* : ${WORK_TYPE}
 ┋‥‥ *DATE* : ${date}
-
+`
   
     let cmnd = [];
     let cmd, desc;
