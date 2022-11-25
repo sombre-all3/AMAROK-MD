@@ -97,6 +97,8 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       ],
      contextInfo: {
 				externalAdReply: {
+                                forwardingScore: 9999,
+                                isForwarded: false,
 					title: "||◁ㅤ❚❚ㅤ▷||",
 					body: "😻𝐀𝐌𝐀𝐑𝐎𝐊 𝐌𝐄𝐍𝐔😻",
 					mediaType: 2,
