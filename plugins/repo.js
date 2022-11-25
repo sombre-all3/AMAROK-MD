@@ -1,7 +1,7 @@
 const { command, isPublic, tiny } = require("../lib/")
 const axios = require("axios");
 
-const image = "https://i.ibb.co/dmn1drG/f51569f1668d.jpg",
+const image = "https://i.ibb.co/dmn1drG/f51569f1668d.jpg";
 
 command(
   {      pattern: "git ?(.*)",
