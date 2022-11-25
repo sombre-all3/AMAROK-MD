@@ -31,7 +31,7 @@ video: { url: `https://i.imgur.com/0LTXiDF.mp4` },
                     thumbnail: dego,
    
                },
-             }, { quoted: message}
+             }, 
       buttons: [
         {
         buttonId: '.owner',
