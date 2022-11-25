@@ -1,5 +1,6 @@
 const { command, isPublic, tiny } = require("../lib/")
 const axios = require("axios");
+const jslbuffer = require("abu-bot")
 
 const image = "https://i.ibb.co/dmn1drG/f51569f1668d.jpg";
 
