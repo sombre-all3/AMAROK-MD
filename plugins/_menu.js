@@ -126,7 +126,7 @@ command(
     let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
 menu+= `
 ┋‥‥ *OWNER* :  ${OWNER_NAME}
-┋‥‥ *USER* : ${message.pushName}
+┋‥‥ *TIME* : ${time}
 ┋‥‥ *MODE* : ${WORK_TYPE}
 ┋‥‥ *DATE* : ${date}
 ╰᠁᠁᠁᠁〘 $message.pushName} 〙᠁᠁᠁᠁
