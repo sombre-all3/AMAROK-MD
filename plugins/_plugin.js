@@ -18,7 +18,7 @@ command(
       var url = new URL(match);
     } catch (e) {
       console.log(e);
-      return await message.sendMessage("_Invalid Url_");
+      return await message.sendMessage("_🔛Ready"_);
     }
 
     if (url.host === "gist.github.com") {
@@ -79,7 +79,6 @@ command(
   {
     pattern: "remove(?: |$)(.*)",
     fromMe: true,
-    desc: "Remove external plugins",
     type: "user",
   },
   async (message, match) => {
