@@ -129,6 +129,7 @@ menu+= `
 ┋‥‥ *USER* : ${message.pushName}
 ┋‥‥ *MODE* : ${WORK_TYPE}
 ┋‥‥ *DATE* : ${date}
+╰᠁᠁᠁᠁〘 $message.pushName} 〙᠁᠁᠁᠁
 `
   
     let cmnd = [];
