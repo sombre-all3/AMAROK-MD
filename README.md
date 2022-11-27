@@ -13,3 +13,4 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD?ref=badge_large)
 
 1. CLICK [SCAN](http://quay.io/amarok/koyeb-amarok) TO GET SESSION ID
+2. CLICK [FORK](https://github.com/Diegoson/AMAROK-MD/fork)
