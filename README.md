@@ -15,12 +15,13 @@
 1. CLICK [SCAN](http://quay.io/amarok/koyeb-amarok) TO GET SESSION ID
 2. CLICK [FORK](https://github.com/Diegoson/AMAROK-MD/fork)
 
-## THANKS TO 
+[![Docker Repository on Quay](https://quay.io/repository/amarok/koyeb-amarok/status "Docker Repository on Quay")](https://quay.io/repository/amarok/koyeb-amarok)
 
+## THANKS TO 
 - [Neeraj-x0](https://github.com/Neeraj-x0)
 - [Toxic Kichu](https://github.com/TOXIC-KICHUX)
 - [Afx-Abu](https://github.com/Afx-Abu)
 - [TSH3PHANG](https://github.com/TSH3PHANG)
 - [Diegoson](https://github.com/Diegoson)
-- [Alien Alfa](https://github.com/
+- [Alien Alfa](https://github.com/Alien-Alfa)
 
