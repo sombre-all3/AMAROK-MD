@@ -127,7 +127,7 @@ command(
 menu+= `
 ┋‥‥ *OWNER* :  ${OWNER_NAME}
 ┋‥‥ *TIME* : ${time}
-┋‥‥ *MODE* : ${WORK_TYPE}
+┋‥‥ *MODE* : ${MODE}
 ┋‥‥ *DATE* : ${date}
 ╰᠁〘 ${message.pushName} 〙᠁᠁
 `
