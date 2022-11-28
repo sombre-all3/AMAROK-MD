@@ -18,7 +18,7 @@ module.exports = {
   BRANCH: "main",
   PACKNAME: process.env.PACKNAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   AUTHOR: process.env.AUTHOR || "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃",
-  DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
+  DATABASE_URL: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
   BOT_INFO: process.env.BOT_INFO || '𝘈𝘮𝘢𝘳𝘰𝘬;𝘊𝘺𝘣𝘦𝘳𝘹𝘬𝘪𝘥;0;https://i.imgur.com/w5wr6c1.jpeg;https://chat.whatsapp.com/I3aOiLY2Ydc258VkV7p0Md',
   SUDO: process.env.SUDO || "27686881509",
   SONG_DWNLD: process.env.SONGDWNLD || "Song Is Downloading Wait...!",
@@ -28,7 +28,4 @@ module.exports = {
   BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   MODE: process.env.WORK_TYPE || "public",
   CAPTION : process.env.CAPTION || "_created by amarok_",
-  DATABASE_URL: DATABASE_URL,
-       DATABASE:
-       DATABASE_URL === './database.db' ? new Sequelize({dialect: 'sqlite', storage: DATABASE_URL, logging: false,}) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: {native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false,}),
-};
+ };
