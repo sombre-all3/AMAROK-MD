@@ -87,11 +87,11 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       footer: tiny(`amarok md` ),
       buttons: [
         {
-          buttonId: '${prefix}alive',
+          buttonId: ".alive",
           buttonText: { displayText: ("◄𝖠𝖫𝖨𝖵𝖤►") },
         },
         {
-          buttonId: '${prefix}list',
+          buttonId: ".list",
           buttonText: { displayText: ("◄𝖫𝖨𝖲𝖳►") },
         },
       ],
