@@ -13,7 +13,7 @@ const os = require('os');
 const config = require("../config.js");
 const prefix = config.PREFIX
 const { FancyRandom, jslbuffer } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME, WORK_TYPE, HANDLERS } = require("../config");
+const { OWNER_NAME, BOT_NAME, MODE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
 const image = "https://i.ibb.co/SRTw2Cf/eabf28eb3e2e.jpg";
@@ -38,7 +38,7 @@ command(
 menu+= `
 *┃ ▷ *Oᴡɴᴇʀ :  ${OWNER_NAME}*
 *┃ ▷ *Usᴇʀ* : ${message.pushName}
-*┃ ▷ *Mᴏᴅᴇ : ${WORK_TYPE}*
+*┃ ▷ *Mᴏᴅᴇ : ${MODE}*
 *┃ ▷ *Pʀᴇғɪx : ${HANDLERS}*
 *┃ ▷ *Hᴏsᴛ Nᴀᴍᴇ :${hostname().split("-")[0]}*
 *┃ ▷ *Tɪᴍᴇ: ${time}*
