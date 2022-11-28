@@ -1,4 +1,4 @@
-> const events = require("../lib/utils");
+const events = require("../lib/utils");
 const {
   command,
   isPublic,
@@ -11,8 +11,8 @@ const { BOT_INFO } = require("../config");
 const { hostname, uptime } = require("os");
 
 
-const image = "https://i.imgur.com/KPmyzbK.jpeg";
-const image_1 = "https://i.imgur.com/KPmyzbK.jpeg";
+const image = "https://i.ibb.co/dmn1drG/f51569f1668d.jpg";
+const image_1 = "https://i.ibb.co/dmn1drG/f51569f1668d.jpg";
 const audios = "https://i.imgur.com/NzevpfJ.jpeg";
 
 command
