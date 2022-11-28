@@ -1,5 +1,5 @@
 const config = require("../config");
-const { command, isPrivate, errorMessage } = require("../lib/");
+const { command, isPrivate, isPublic, errorMessage } = require("../lib/");
 const { isAdmin, parsedJid, isUrl } = require("../lib");
 const { cron, saveSchedule } = require("../lib/scheduler");
 command(
