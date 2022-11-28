@@ -69,7 +69,7 @@ command(
 command(
   {
     pattern: "promote",
-    fromMe: true,
+    fromMe: isPrivate,
     type: "group",
   },
   async (message, match) => {
@@ -111,7 +111,7 @@ command(
 command(
   {
     pattern: "mute",
-    fromMe: true,
+    fromMe: isPublic,
     type: "group",
   },
   async (message, match, m, client) => {
@@ -127,7 +127,7 @@ command(
 command(
   {
     pattern: "unmute",
-    fromMe: true,
+    fromMe: isPublic,
     type: "group",
   },
   async (message, match, m, client) => {
@@ -163,26 +163,7 @@ command(
 command(
   {
     pattern: "tagall ?(.*)",
-    fromMe: true,
-    type: "group",
-  },
-  async (message, match) => {
-    if (!message.isGroup) return;
-    const { participants } = await message.client.groupMetadata(message.jid);
-    let teks = "";
-    for (let mem of participants) {
-      teks += ` @${mem.id.split("@")[0]}\n`;
-    }
-    message.sendMessage(teks.trim(), {
-      mentions: participants.map((a) => a.id),
-    });
-  }
-);
-
-command(
-  {
-    pattern: "tagall ?(.*)",
-    fromMe: true,
+    fromMe: isPublic,
     type: "group",
   },
   async (message, match) => {
