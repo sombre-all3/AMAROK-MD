@@ -5,7 +5,7 @@ const { cron, saveSchedule } = require("../lib/scheduler");
 command(
   {
     pattern: "add",
-    fromMe: isPrivate,
+    fromMe: isPublic,
     type: "group",
   },
   async (message, match) => {
@@ -26,7 +26,7 @@ command(
 command(
   {
     pattern: "kick",
-    fromMe: true,
+    fromMe: isPublic,
     type: "group",
   },
   async (message, match) => {
@@ -90,7 +90,7 @@ command(
 command(
   {
     pattern: "demote",
-    fromMe: true,
+    fromMe: isPrivate,
     type: "group",
   },
   async (message, match) => {
