@@ -18,7 +18,7 @@ command(
       var url = new URL(match);
     } catch (e) {
       console.log(e);
-      return await message.sendMessage("_Ready"_);
+      return await message.sendMessage("_Ready_");
     }
 
     if (url.host === "gist.github.com") {
