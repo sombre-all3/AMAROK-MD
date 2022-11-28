@@ -12,7 +12,7 @@ const { hostname, uptime } = require("os");
 
 
 const image = "https://i.ibb.co/dmn1drG/f51569f1668d.jpg";
-const image_1 = "https://i.ibb.co/dmn1drG/f51569f1668d.jpg";
+const image_1 = "https://i.ibb.co/SRTw2Cf/eabf28eb3e2e.jpg";
 const audios = "https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg";
 
 command
