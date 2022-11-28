@@ -28,4 +28,7 @@ module.exports = {
   BOT_NAME: process.env.BOT_NAME || "𝐀𝐌𝐀𝐑𝐎𝐊",
   MODE: process.env.WORK_TYPE || "public",
   CAPTION : process.env.CAPTION || "_created by amarok_",
+  DATABASE_URL: DATABASE_URL,
+       DATABASE:
+       DATABASE_URL === './database.db' ? new Sequelize({dialect: 'sqlite', storage: DATABASE_URL, logging: false,}) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: {native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false,}),
 };
