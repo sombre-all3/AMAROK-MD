@@ -42,11 +42,11 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
       footer: tiny(`amarok md` ),
       buttons: [
         {
-        buttonId: '${prefix}owner',
+        buttonId: ".owner",
         buttonText: {displayText: tiny("⫷OWNER⫸") },
         },
         {
-        buttonId: '${prefix}menu',
+        buttonId: ".menu",
         buttonText: {displayText: tiny("⫷ MENU⫸") },
         },
       ],
