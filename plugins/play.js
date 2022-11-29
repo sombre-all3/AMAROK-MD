@@ -24,7 +24,7 @@ type : "music",
 const buttons = [
   {buttonId: `.song ${videos.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1},
   {buttonld: `.vidoe ${videos.all[0].url}`, buttonText: {displayText: 'VIDEO'}, type: 1},
-]
+];
 
 const buttonMessage = {
     image : {url: `${videos.all[0].image}`},
