@@ -16,7 +16,7 @@ let capCtiOn = `╭───────〔 𝒖𝒔𝒆𝒓 𝒍𝒆𝒇𝒕 �
 ╰─────────────────────╯`
 await message.reply(capCtiOn)
 //Mr Amarok if you need thets as a image with bottun
-we give an example
+//we give an example
 /*
 await message.client.sendMessage(message.jid,{
 image: { url: ppuser },
