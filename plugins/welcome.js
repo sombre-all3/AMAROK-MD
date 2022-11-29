@@ -8,11 +8,11 @@ command({ on: "text", fromMe: isPrivate }, async (message, match) => {
                     	
 if (message.action == 'remove') {
 //if(Config.EXIT_MSG == "true" ) {
-let capCtiOn = `╭───────〔 𝒖𝒔𝒆𝒓 𝒍𝒆𝒇𝒕 〕──────╮
+let capCtiOn = `╭───────〔 USER LEFT 〕──────╮
 │
-│➳ 𝑢𝑠𝑒𝑟 〘${num.split("@")[0]}〙
-│➳ 𝑙𝑒𝑓𝑡/𝑘𝑖𝑐𝑘 𝑓𝑟𝑜𝑚〘${subject}〙
-│➳ 𝒕𝒐𝒕𝒆𝒍 𝒎𝒆𝒎𝒃𝒆𝒓𝒔  ┈➤ ${(participants.length + 0).toString()}
+│➳ USER 〘${num.split("@")[0]}〙
+│➳ LEFT/KICK FROM〘${subject}〙
+│➳ TOTAL NUMBER  ┈➤ ${(participants.length + 0).toString()}
 ╰─────────────────────╯`
 await message.reply(capCtiOn)
         }
