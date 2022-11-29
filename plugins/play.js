@@ -15,14 +15,14 @@ type : "music",
     let  text = `
 ╭━━〘  𝗔𝗠𝗔𝗥𝗢𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥  〙━━──⊷
 ┃ 
-┠ 🎶Title : ${videos.all[0].title}
-┠ 🧭Publish date: ${videos.all[0].ago}
-┠ 🎥Channel : ${videos.all[0].author.name}
+┠ 𖠢Title : ${videos.all[0].title}
+┠ 𖠢Publish : ${videos.all[0].ago}
+┠ 𖠢Channel : ${videos.all[0].author.name}
 ┃ 
 ╰━━━━━━━━━━━──⊷`
 
 const buttons = [
-  {buttonId: `.song ${videos.all[0].url}`, buttonText: {displayText: 'play me'}, type: 1},
+  {buttonId: `.song ${videos.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1},
 ]
 
 const buttonMessage = {
