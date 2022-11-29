@@ -19,11 +19,12 @@ type : "music",
 ┠ 𖠢Publish : ${videos.all[0].ago}
 ┠ 𖠢Channel : ${videos.all[0].author.name}
 ┃ 𖠢FileSize: ${videos.all[0].filesize}
-┃‥ ❮ Powered by ${message.pushName}
+┃
+┃ ❮ Powered by ${message.pushName}
 ╰━━━━━━━━━━━──⊷`
 
 const buttons = [
-  {buttonId: `.song ${videos.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1},
+  {buttonId: `.song ${videos┃.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1},
 ]
 
 const buttonMessage = {
