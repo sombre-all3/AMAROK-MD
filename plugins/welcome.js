@@ -15,6 +15,9 @@ let capCtiOn = `╭───────〔 𝒖𝒔𝒆𝒓 𝒍𝒆𝒇𝒕 �
 │➳ 𝒕𝒐𝒕𝒆𝒍 𝒎𝒆𝒎𝒃𝒆𝒓𝒔  ┈➤ ${(participants.length + 0).toString()}
 ╰─────────────────────╯`
 await message.reply(capCtiOn)
+        }
+    }
+})
 //Mr Amarok if you need thets as a image with bottun
 //we give an example
 /*
