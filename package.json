@@ -4,7 +4,7 @@
   "description": "Amarok-md powered by cyberxkid.",
   "main": "./index.js",
   "scripts": {
-    "start": "supervisor -s ./index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
