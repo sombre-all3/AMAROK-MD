@@ -18,13 +18,12 @@ type : "music",
 ┠ 𖠢Title : ${videos.all[0].title}
 ┠ 𖠢Publish : ${videos.all[0].ago}
 ┠ 𖠢Channel : ${videos.all[0].author.name}
-┃ 𖠢FileSize: ${videos.all[0].filesize}
-┃
-┃ ❮ Powered by ${message.pushName}
+┃ 𖠢Viwes : ${videos.all[0].viwes}
 ╰━━━━━━━━━━━──⊷`
 
 const buttons = [
-  {buttonId: `.song ${videos┃.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1},
+  {buttonId: `.song ${videos.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1},
+  {buttonld: `.vidoe ${videos.all[0].url`, buttonText: {displayText: 'VIDEO'} type: 1}
 ]
 
 const buttonMessage = {
