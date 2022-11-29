@@ -18,7 +18,7 @@ type : "music",
 ┠ 𖠢Title : ${videos.all[0].title}
 ┠ 𖠢Publish : ${videos.all[0].ago}
 ┠ 𖠢Channel : ${videos.all[0].author.name}
-┃ 
+┃ ❲*Powered by ${message.pushName}
 ╰━━━━━━━━━━━──⊷`
 
 const buttons = [
