@@ -71,7 +71,7 @@ menu+= `*`+tiny ('github乂')+`*`
     });
     cmnd.sort();
     category.sort().forEach((cmmd) => {
-     menu+=`
+     menu+=` \n\n
 *「${cmmd}」乂*`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
