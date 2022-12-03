@@ -27,7 +27,7 @@
     "PACKNAME": {
       "description": "Sticker Packname required Example Amarok",
       "required": false,
-      "value": "𝐀𝐌𝐀𝐑𝐎𝐊"
+      "value": "Amarok❤️"
     },
     "RMBG_KEY": {
       "description": "Remove bg api key required get it here(https://www.remove.bg/api)",
@@ -37,7 +37,7 @@
     "OWNER_NAME": {
       "description": "Add owner name",
       "required": false,
-      "value": "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃"
+      "value": "TOXIC CYBER"
     },
     "BOT_INFO": {
      "description": "Add all name to your name",
@@ -47,12 +47,12 @@
     "BOT_NAME": {
       "description": "Add bot name",
       "required": false,
-      "value": "𝐀𝐌𝐀𝐑𝐎𝐊"
+      "value": "AMAROK"
     },
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR required Example Diegoson",
       "required": false,
-      "value": "𝐂𝐘𝐁𝐄𝐑𝐗𝐊𝐈𝐃"
+      "value": "TOXIC CYBER"
     },
     "MODE": {
       "description": "Work Type set public or private",
