@@ -4,6 +4,7 @@ const {
   isPrivate,
   tiny,
   getBuffer,
+  AmarokBuffer,
   styletext,
   serif_B,
   clockString,
