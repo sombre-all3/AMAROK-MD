@@ -27,7 +27,7 @@ command(
   },
   async (message,match) => {
   
-  const diego = await jslbuffer(image)
+  const diego = await AmarokBuffer(image)
   
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
