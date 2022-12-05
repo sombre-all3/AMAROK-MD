@@ -24,7 +24,7 @@ module.exports = {
   MODE: process.env.MODE || "public",
  };
 
-*/
+/*
      AMAROK MD BOT KOYEB DEPLOYMENT SOON BE DONE
 
      AMAROK MD BOT POWERED BY DIEGOSON
