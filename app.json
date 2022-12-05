@@ -58,14 +58,6 @@
       "description": "Work Type set public or private",
       "required": false,
       "value": "public"
-    },
-    "HEROKU_APP_NAME": {
-      "description": "Heroku app name, same as above entered",
-      "required": true
-    },
-    "HEROKU_API_KEY": {
-      "description": "Heroku account api key, https://dashboard.heroku.com/account",
-      "required": true
     }
 
 },
