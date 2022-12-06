@@ -56,7 +56,7 @@ async function Amarok() {
   let conn = makeWASocket({
     logger: pino({ level: "silent" }),
     auth: state,
-    printQRInTerminal: true,
+    printQRInTerminal: false,
     generateHighQualityLinkPreview: true,
     browser: Browsers.macOS("Desktop"),
     fireInitQueries: false,
