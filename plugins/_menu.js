@@ -45,9 +45,8 @@ menu+= `
 *┃ *Hᴏsᴛ Nᴀᴍᴇ :${hostname().split("-")[0]}*
 *┃ *Tɪᴍᴇ: ${time}*
 *┃ *Uᴘᴛɪᴍᴇ : ${clockString(uptime())}*
-*╰━━━━━━━━━━━━━━━━━━⦿*\n
-`
-menu+= `*+┏━━━━━━━━━❰'*github*'❱━━━━━⦿*`
+*╰━━━━━━━━━━━━━━━━━━⦿*
+┏━━━━━━━━━━━━━━⦿\n`;
     let cmnd = [];
     let cmd;
     let category = [];
