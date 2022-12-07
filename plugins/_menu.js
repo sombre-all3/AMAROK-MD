@@ -80,12 +80,12 @@ menu+= `*+┏━━━━━━━━━❰'*github*'❱━━━━━━━━
   ┃⬤`;
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `\n*⛌ ${cmd.trim()}*`;
+ menu += `\n┃⬤  ${cmd.trim()}*`;
       });
- menu += `\n*⛌*`;
+ menu += `\n┃⬤ `;
       });
 
-    menu += `*⛌\n`
+    menu += `┗━━━━━━━━━━━━━⦿\n`
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.ibb.co/dmn1drG/f51569f1668d.jpg` },
       caption: menu,
