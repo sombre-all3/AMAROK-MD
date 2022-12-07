@@ -1,6 +1,6 @@
 <h1 align="center">☯︎ᴀᴍᴀʀᴏᴋ ᴍᴅ ʙᴏᴛ☯︎<br></h1>
 <p align="center">
-<img src="https://i.ibb.co/TTytLYJ/c1d13a0be07f.jpg" width="400" height="300"></p>
+<img src="https://i.ibb.co/TTytLYJ/c1d13a0be07f.jpg" width="400" height="200"></p>
 
 ## AMAROK IS UNDEPLOYBLE YET 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD?ref=badge_shield)
