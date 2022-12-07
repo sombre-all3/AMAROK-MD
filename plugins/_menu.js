@@ -72,8 +72,12 @@ menu+= `*`+tiny ('github乂')+`*`
     });
     cmnd.sort();
     category.sort().forEach((cmmd) => {
-     menu+=` \n\n
-*「${cmmd}」乂*`
+     menu+=`
+  ┃⬤
+  ┃⬤  ${cmmd}`
+  ┃⬤ 
+  ┃⬤
+${cmmd}*`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
  menu += `\n*⛌ ${cmd.trim()}*`;
@@ -85,7 +89,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
     return await message.client.sendMessage(message.jid, {
       image: { url: `https://i.ibb.co/dmn1drG/f51569f1668d.jpg` },
       caption: menu,
-      footer: tiny(`amarok md` ),
+     footer: tiny(`amarok md` ),
       buttons: [
         {
           buttonId: ".alive",
