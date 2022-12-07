@@ -75,9 +75,9 @@ menu+= `*`+tiny ('github乂')+`*`
     category.sort().forEach((cmmd) => {
      menu+=`
   ┃⬤
-  ┃⬤  ${cmmd}`
+  ┃⬤  ${cmmd}
   ┃⬤ 
-  ┃⬤
+  ┃⬤`;
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
  menu += `\n*⛌ ${cmd.trim()}*`;
