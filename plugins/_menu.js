@@ -36,16 +36,16 @@ command(
       .split(",");
                 
  let menu = `
-*╭━━〘 `+ tiny(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷*` 
+*╭━━〘 `+ tiny(BOT_NAME.split(' ')[0],58) +` 〙━━━━━━━⦿*` 
 menu+= `
-*┃  *Oᴡɴᴇʀ :  ${OWNER_NAME}*
+*┃  *Oᴡɴᴇʀ :  ${OWNER_NAME}*             
 *┃ *Usᴇʀ* : ${message.pushName}
 *┃ *Mᴏᴅᴇ : ${MODE}*
 *┃ *Pʀᴇғɪx : ${HANDLERS}*
 *┃ *Hᴏsᴛ Nᴀᴍᴇ :${hostname().split("-")[0]}*
 *┃ *Tɪᴍᴇ: ${time}*
-*┃ * : ${clockString(uptime())}*
-*╰━━━━━━━━━━━──⊷*\n
+*┃ *Uᴘᴛɪᴍᴇ : ${clockString(uptime())}*
+*╰━━━━━━━━━━━━━━━━━━⦿*\n
 `
 menu+= `*+tiny┏━━━━━━━━━❰'*github*'❱━━━━━━━━⦿*`
     let cmnd = [];
