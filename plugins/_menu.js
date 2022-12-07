@@ -1,3 +1,4 @@
+
 const events = require("../lib/event");
 const {
   command,
@@ -77,7 +78,6 @@ menu+= `*`+tiny ('github乂')+`*`
   ┃⬤  ${cmmd}`
   ┃⬤ 
   ┃⬤
-${cmmd}*`
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
  menu += `\n*⛌ ${cmd.trim()}*`;
