@@ -1,15 +1,10 @@
 <h1 align="center">☯︎ᴀᴍᴀʀᴏᴋ ᴍᴅ ʙᴏᴛ☯︎<br></h1>
 <p align="center">
-<img src="https://i.ibb.co/TTytLYJ/c1d13a0be07f.jpg"
-## AMAROK IS UNAVAILABLE YET
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD?ref=badge_shield)
+<img src="https://i.ibb.co/TTytLYJ/c1d13a0be07f.jpg"/>
 
 
-## KOYEB DEPLOYMENT COMING 
-
-
-## License
+## AMAROK DEPLOYMENT SOON BE DONE
+## LICENSE
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FDiegoson%2FAMAROK-MD?ref=badge_large)
 
 1. CLICK [SCAN](https://amarok-koyeb.vercel.app/) TO GET SESSION ID
