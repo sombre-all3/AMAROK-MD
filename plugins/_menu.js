@@ -127,15 +127,11 @@ command(
     let [date, time] = new Date()
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
-    let menu = `╭━━〘 `+ styletext(BOT_NAME.split(' ')[0],58) +` 〙━━──⊷` 
-menu+= `
-┋‥‥ *OWNER* :  ${OWNER_NAME}
-┋‥‥ *TIME* : ${time}
-┋‥‥ *MODE* : ${MODE}
-┋‥‥ *DATE* : ${date}
-╰᠁〘 ${message.pushName} 〙᠁᠁
-`
-  
+    let menu = `┏━━━━━━━━━━━━━━━━━━━┓
+┆                ${BOT_NAME}
+┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛
+
+ ┏┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╼\n`; 
     let cmnd = [];
     let cmd, desc;
     events.commands.map((command) => {
@@ -155,9 +151,9 @@ menu+= `
     });
     cmnd.sort();
     cmnd.forEach(({ cmd, desc }, num) => {
-      menu += `┣ ${(num += 1)} *${tiny(cmd.trim())}*\n`; 
+      menu += `┃▷ ${(num += 1)} *${tiny(cmd.trim())}*\n`; 
     });
-    menu += `╰┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉`;
+    menu += `┖━━━━━━━━━━━━━━━━━━━`;
    return await message.reply(menu)
   }
 );
