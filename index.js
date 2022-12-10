@@ -10,6 +10,7 @@
  THANKS FOR USING AMAROK
 
 */
+//process.on('uncaughtException', console.error) //Safe Log Error
 const {
   default: makeWASocket,
   Browsers,
@@ -21,6 +22,9 @@ const fs = require("fs");
 const { serialize } = require("./lib/serialize");
 const { Message, Image, Sticker } = require("./lib/Base");
 const pino = require("pino");
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 8000;
 const path = require("path");
 const events = require("./lib/event");
 const got = require("got");
@@ -209,7 +213,10 @@ async function Amarok() {
     console.log(err);
   });
 }
-
+app.get("/", (req, res) => {
+  res.send("Amarok Working successfully!");
+});
+app.listen(port, () => console.log(`Inrl Server listening on port http://localhost:${port}`));
 setTimeout(() => {
   Amarok().catch((err) => console.log(err));
 }, 3000);
