@@ -18,5 +18,5 @@
 - [Diegoson](https://github.com/Diegoson)
 - [Alien Alfa](https://github.com/Alien-Alfa)
 - [Pep Ser](https://github.com/pepesir)
-- [Inrl See](https://github.com/inrl-official)
+- [Inrl Ser](https://github.com/inrl-official)
 
