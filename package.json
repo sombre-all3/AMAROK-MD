@@ -95,6 +95,7 @@
     "yargs": "^17.2.1",
     "youtubei.js": "^1.4.2-d.5",
     "yt-search": "^2.10.3",
-    "ytdl-core": "^4.11.2"
+    "ytdl-core": "^4.11.2",
+    "express": "latest"
   }
 }
