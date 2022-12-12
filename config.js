@@ -13,7 +13,7 @@ module.exports = {
   VERSION: require('./package.json').version,
   LOGS: toBool(process.env.LOGS) || true,
   IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f","deb80cd12ababea1c9b9a8ad6ce3fab2","78c84c62b32a88e86daf87dd509a657a"],
-  SESSION_ID:process.env.SESSION_ID || "QlZxcDNOeTI=",
+  SESSION_ID:process.env.SESSION_ID || "cFdUUlh_AMAROK_DZU0=",
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   LANG: process.env.LANG ||  'EN',
