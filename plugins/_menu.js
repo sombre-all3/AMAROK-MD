@@ -71,12 +71,12 @@ menu+= `
      menu+=`
   
 ╭─────────────────❊
-│*  *╭────⟪ ${cmmd} ⟫──       
-│*  *│
-│*  *│`;           
+│✯  ✯╭────⟪ ${cmmd} ⟫──       
+│✯  ✯│
+│✯  ✯│`;           
 let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
- menu += `\n│*  *│ ${cmd.trim()}*`;
+ menu += `\n│✯  ✯│ ${cmd.trim()}*`;
 });
  menu += `\n│  ╰─────────────────❊`;
 });
@@ -112,8 +112,8 @@ command(
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
     let menu = `┏━━━━━━━━━━━━━━━━━━━┓
-                ${BOT_NAME}
-┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛
+                  ${BOT_NAME}
+  ┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛
 
  ┏┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╼\n`; 
     let cmnd = [];
