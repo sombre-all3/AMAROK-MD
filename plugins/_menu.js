@@ -41,8 +41,8 @@ menu+= `
 *┃ *Hᴏsᴛ Nᴀᴍᴇ :${hostname().split("-")[0]}*
 *┃ *Tɪᴍᴇ: ${time}*
 *┃ *Uᴘᴛɪᴍᴇ : ${clockString(uptime())}*
-*╰━━━━━━━━━━━━━━⦿*\n`;
-
+*╰━━━━━━━━━━━━━━⦿*
+╭─────────────────❊\n`;
     let cmnd = [];
     let cmd;
     let category = [];
@@ -69,7 +69,7 @@ menu+= `
     cmnd.sort();
     category.sort().forEach((cmmd) => {
      menu+=`
-╭─────────────────❊
+
 │✯  ✯╭────⟪ ${cmmd} ⟫──       
 │✯  ✯│
 │✯  ✯│`;           
@@ -77,7 +77,7 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       comad.forEach(({ cmd }, num) => {
  menu += `\n│✯  ✯│ ${cmd.trim()}*`;
 });
- menu += `\n│✯  ✯│`;
+ menu += `\n│  ╰─────────────────❊`;
 });
 
     menu += ` ╰─────────────────❊\n`;
