@@ -27,8 +27,7 @@ command(
   },
   async (message,match) => {
   
-  
-    let [date, time] = new Date()
+      let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
       .split(",");
                 
