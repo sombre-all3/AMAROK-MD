@@ -71,7 +71,7 @@ menu+= `
      menu+=`
   
 ╭─────────────────❊
-│*  *╭────⟪${cmmd}⟫──       
+│*  *╭────⟪ ${cmmd} ⟫──       
 │*  *│
 │*  *│`;           
 let comad = cmnd.filter(({ type }) => type == cmmd);
