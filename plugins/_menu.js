@@ -98,7 +98,6 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
       ],
    });
    }
-  }
 );
 
 command(
