@@ -115,7 +115,7 @@ command(
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
     let menu = `┏━━━━━━━━━━━━━━━━━━━┓
-┆                ${BOT_NAME}
+                ${BOT_NAME}
 ┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛
 
  ┏┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╼\n`; 
