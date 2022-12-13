@@ -13,84 +13,82 @@
 //process.on('uncaughtException', console.error) //Safe Log Error
 const {
   default: makeWASocket,
+  useSingleFileAuthState,
   Browsers,
   makeInMemoryStore,
-  useMultiFileAuthState,
 } = require("@adiwajshing/baileys");
-const singleToMulti = require("./lib/singleToMulti");
-const fs = require("fs");
+const fs = require("fs-extra");
 const { serialize } = require("./lib/serialize");
 const { Message, Image, Sticker } = require("./lib/Base");
 const pino = require("pino");
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 8000;
 const path = require("path");
 const events = require("./lib/event");
 const got = require("got");
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 8000;
 const config = require("./config");
 const { PluginDB } = require("./lib/database/plugins");
 const Greetings = require("./lib/Greetings");
 const { MakeSession } = require("./lib/session");
-const { async } = require("q");
-const { decodeJid } = require("./lib");
 const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
 });
-async function Singmulti() {
-  if (!fs.existsSync(__dirname + "/session.json"))
-    await MakeSession(config.SESSION_ID, __dirname + "/session.json");
-  const { state } = await useMultiFileAuthState(__dirname + "/session");
-  await singleToMulti("session.json", __dirname + "/session", state);
-}
-//Singmulti()
-require("events").EventEmitter.defaultMaxListeners = 0;
 
-fs.readdirSync(__dirname + "/lib/database/").forEach((plugin) => {
+require("events").EventEmitter.defaultMaxListeners = 500;
+
+if (!fs.existsSync("./media/session.json")) {
+  MakeSession(config.SESSION_ID, "./media/session.json").then(
+    console.log("Vesrion : " + require("./package.json").version)
+  );
+}
+fs.readdirSync("./lib/database/").forEach((plugin) => {
   if (path.extname(plugin).toLowerCase() == ".js") {
-    require(__dirname + "/lib/database/" + plugin);
+    require("./lib/database/" + plugin);
   }
 });
+
 async function Amarok() {
-  const { state, saveCreds } = await useMultiFileAuthState(
-    __dirname + "/session"
-  );
   console.log("Syncing Database");
   await config.DATABASE.sync();
+
+  const { state, saveState } = useSingleFileAuthState(
+    "./media/session.json",
+    pino({ level: "silent" })
+  );
   let conn = makeWASocket({
     logger: pino({ level: "silent" }),
     auth: state,
-    printQRInTerminal: true,
-    generateHighQualityLinkPreview: true,
+    printQRInTerminal: false,
+
     browser: Browsers.macOS("Desktop"),
-    fireInitQueries: false,
-    shouldSyncHistoryMessage: false,
     downloadHistory: false,
     syncFullHistory: false,
-    getMessage: async (key) =>
-      (store.loadMessage(key.id) || {}).message || {
-        conversation: null,
-      },
   });
   store.bind(conn.ev);
+  //store.readFromFile("./database/store.json");
   setInterval(() => {
     store.writeToFile("./database/store.json");
-  }, 30 * 1000);
+    console.log("saved store");
+  }, 30 * 60 * 1000);
 
-  conn.ev.on("creds.update", saveCreds);
-  conn.ev.on("contacts.update", (update) => {
-    for (let contact of update) {
-      let id = decodeJid(contact.id);
-      if (store && store.contacts)
-        store.contacts[id] = { id, name: contact.notify };
-    }
-  });
   conn.ev.on("connection.update", async (s) => {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
       console.log("Amarok");
       console.log("ℹ️ Connecting to WhatsApp... Please Wait.");
     }
+
+    if (
+      connection === "close" &&
+      lastDisconnect &&
+      lastDisconnect.error &&
+      lastDisconnect.error.output.statusCode != 401
+    ) {
+      console.log(lastDisconnect.error.output.payload);
+      Amarok();
+    }
+
     if (connection === "open") {
       console.log("✅ Login Successful!");
       console.log("⬇️ Installing External Plugins...");
@@ -105,47 +103,33 @@ async function Amarok() {
               "./plugins/" + plugin.dataValues.name + ".js",
               response.body
             );
-            require(__dirname + "/plugins/" + plugin.dataValues.name + ".js");
+            require("./plugins/" + plugin.dataValues.name + ".js");
           }
         }
       });
 
       console.log("⬇️  Installing Plugins...");
-
-      fs.readdirSync(__dirname + "/plugins").forEach((plugin) => {
+      fs.readdirSync("./plugins").forEach((plugin) => {
         if (path.extname(plugin).toLowerCase() == ".js") {
-          require(__dirname + "/plugins/" + plugin);
+          require("./plugins/" + plugin);
         }
       });
       console.log("✅ Plugins Installed!");
-      let str = `\`\`\`Amarok connected  \nversion : ${
-        require(__dirname + "/package.json").version
-      }\nTotal Plugins : ${events.commands.length}\nMode: ${
-        config.MODE
-      }\`\`\``;
-      conn.sendMessage(conn.user.id, { text: str });
+      await conn.sendMessage(conn.user.id, { text: "Amarok Is Working ✅" });
 
       try {
+        conn.ev.on("creds.update", saveState);
+
         conn.ev.on("group-participants.update", async (data) => {
           Greetings(data, conn);
         });
         conn.ev.on("messages.upsert", async (m) => {
           if (m.type !== "notify") return;
-          const ms = m.messages[0];
-          let msg = await serialize(JSON.parse(JSON.stringify(ms)), conn,store);
+          let ms = m.messages[0];
+          let msg = await serialize(JSON.parse(JSON.stringify(ms)), conn);
           if (!msg.message) return;
-          if (msg.body[1] && msg.body[1] == " ")
-            msg.body = msg.body[0] + msg.body.slice(2);
           let text_msg = msg.body;
-          msg.store = store;
-          if (text_msg && config.LOGS)
-            console.log(
-              `At : ${
-                msg.from.endsWith("@g.us")
-                  ? (await conn.groupMetadata(msg.from)).subject
-                  : msg.from
-              }\nFrom : ${msg.sender}\nMessage:${text_msg}`
-            );
+          if (text_msg) console.log(text_msg);
 
           events.commands.map(async (command) => {
             if (
@@ -156,67 +140,56 @@ async function Amarok() {
             )
               return;
             let comman;
-            if (text_msg) {
-              comman = text_msg
-                ? text_msg[0] +
-                  text_msg.slice(1).trim().split(" ")[0].toLowerCase()
-                : "";
-              msg.prefix = new RegExp(config.HANDLERS).test(text_msg)
-                ? text_msg.split("").shift()
-                : ",";
+
+            try {
+              comman = text_msg.split(" ")[0];
+            } catch {
+              comman = text_msg;
             }
-            if (command.pattern && command.pattern.test(comman)) {
-              var match;
-              try {
-                match = text_msg.replace(new RegExp(comman, "i"), "").trim();
-              } catch {
-                match = false;
+            if (text_msg)
+              if (
+                command.pattern &&
+                command.pattern.test(comman.toLowerCase())
+              ) {
+                var match = text_msg.trim().split(/ +/).slice(1).join(" ");
+                whats = new Message(conn, msg, ms);
+
+                command.function(whats, match, msg, conn);
+              } else if (text_msg && command.on === "text") {
+               
+                msg.prefix = ','
+                whats = new Message(conn, msg, ms);
+                command.function(whats, text_msg, msg, conn, m);
+              } else if (
+                (command.on === "image" || command.on === "photo") &&
+                msg.type === "imageMessage"
+              ) {
+                whats = new Image(conn, msg, ms);
+                command.function(whats, text_msg, msg, conn, m, ms);
+              } else if (
+                command.on === "sticker" &&
+                msg.type === "stickerMessage"
+              ) {
+                whats = new Sticker(conn, msg, ms);
+                command.function(whats, msg, conn, m, ms);
               }
-              whats = new Message(conn, msg, ms);
-              command.function(whats, match, msg, conn);
-            } else if (text_msg && command.on === "text") {
-              whats = new Message(conn, msg, ms);
-              command.function(whats, text_msg, msg, conn, m);
-            } else if (
-              (command.on === "image" || command.on === "photo") &&
-              msg.type === "imageMessage"
-            ) {
-              whats = new Image(conn, msg, ms);
-              command.function(whats, text_msg, msg, conn, m, ms);
-            } else if (
-              command.on === "sticker" &&
-              msg.type === "stickerMessage"
-            ) {
-              whats = new Sticker(conn, msg, ms);
-              command.function(whats, msg, conn, m, ms);
-            }
           });
         });
       } catch (e) {
         console.log(e + "\n\n\n\n\n" + JSON.stringify(msg));
       }
     }
-    if (connection === "close") {
-      console.log(s);
-      console.log(
-        "Connection closed with bot. Please put New Session ID again."
-      );
-      Amarok().catch((err) => console.log(err));
-    } else {
-      /*
-       */
-    }
   });
-  process.on("uncaughtException", async (err) => {
+  process.on("uncaughtException", (err) => {
     let error = err.message;
-    await conn.sendMessage(conn.user.id, { text: error });
+    // conn.sendMessage(conn.user.id, { text: error });
     console.log(err);
   });
 }
 app.get("/", (req, res) => {
-  res.send("Amarok Working successfully!");
+  res.send("hello world");
 });
-app.listen(port, () => console.log(`Inrl Server listening on port http://localhost:${port}`));
+app.listen(port, () => console.log(`app listening on port http://localhost:${port}`));
 setTimeout(() => {
-  Amarok().catch((err) => console.log(err));
+  Amarok();
 }, 3000);
