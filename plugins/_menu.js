@@ -99,22 +99,9 @@ let comad = cmnd.filter(({ type }) => type == cmmd);
           buttonText: { displayText: ("◄𝖫𝖨𝖲𝖳►") },
         },
       ],
-     contextInfo: {
-				externalAdReply: {
-                                forwardingScore: 9999,
-                                isForwarded: false,
-					title: "┗AMAROK MD┓",
-					body: "AMAROK MD MENU",
-					mediaType: 2,
-					thumbnail: diego,
-					mediaUrl: 'https://www.instagram.com/reel/安装它',
-					sourceUrl: 'https://wa.me/27686881509?text=_😻៚ʜᴇʟʟᴏ+ᴀᴍᴀʀᴏᴋ+ᴏᴡɴᴇʀ+ʙɪɢ+ғᴀɴ+ᴠʀᴏ+🪄_',
-					showAdAttribution: true
-					}
-				}
-			}, { quoted: message }
-		)	
-	}
+   });
+   }
+  }
 );
 
 command(
