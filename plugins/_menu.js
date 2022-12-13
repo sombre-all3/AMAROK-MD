@@ -70,7 +70,6 @@ menu+= `
     category.sort().forEach((cmmd) => {
      menu+=`
   
-╭─────────────────❊
 │✯  ✯╭────⟪ ${cmmd} ⟫──       
 │✯  ✯│
 │✯  ✯│`;           
