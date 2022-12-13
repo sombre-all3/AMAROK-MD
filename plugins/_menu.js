@@ -70,7 +70,7 @@ menu+= `
     category.sort().forEach((cmmd) => {
      menu+=`
 
-│✯  ✯╭────⟪ ${cmmd} ⟫──       
+│✯  ✯╭──⟪ ${cmmd} ⟫──       
 │✯  ✯│
 │✯  ✯│`;           
 let comad = cmnd.filter(({ type }) => type == cmmd);
