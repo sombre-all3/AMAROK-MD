@@ -18,8 +18,6 @@ const { FancyRandom, jslbuffer } = require('abu-bot');
 const { OWNER_NAME, BOT_NAME, MODE, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 
-const image = "https://i.ibb.co/SRTw2Cf/eabf28eb3e2e.jpg";
-
 command(
   {
     pattern: "menu",
@@ -29,7 +27,6 @@ command(
   },
   async (message,match) => {
   
-  const diego = await AmarokBuffer(image)
   
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
