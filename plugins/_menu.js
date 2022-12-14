@@ -23,14 +23,15 @@ Description : ${i.desc}\`\`\``
       let [date, time] = new Date()
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
-      let menu = `╭━━━━━⟪ ${BOT_NAME} ⟫━━━
+      let menu = `╭━━━━━⟪ ${BOT_NAME} ⟫━━━⦿
 ┃ ⎆  *OWNER* :  ${OWNER_NAME}
 ┃ ⎆  *PREFIX* : ${HANDLERS}
+┃ ⎆  *USER* : ${message.pushName}
 ┃ ⎆  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⎆  *DATE* : ${date}
 ┃ ⎆  *TIME* : ${time}
-╰━━━━━━━━━━━━━━━
-╭╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n╽`;
+╰━━━━━━━━━━━━━━━⦿
+╭╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼❊\n╽`;
       let cmnd = [];
       let cmd;
       let category = [];
