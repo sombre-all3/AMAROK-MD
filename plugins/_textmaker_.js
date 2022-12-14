@@ -133,7 +133,6 @@ const {
   window,
   winter,
   pubg,
-  PUBG,
 } = require("@neeraj-x0/textpro");
 Module(
   {
