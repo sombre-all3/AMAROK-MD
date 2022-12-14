@@ -66,7 +66,7 @@ Description : ${i.desc}\`\`\``
         comad.forEach(({ cmd }, num) => {
           menu += `\n│✯  ✯│   ${cmd.trim()}`;
         });
-        menu += `\n┃  ╰─────────────❊`;
+        menu += `\n╰─────────────❊`;
       });             
 
       menu += ` ╰──────────────❊\n`;
