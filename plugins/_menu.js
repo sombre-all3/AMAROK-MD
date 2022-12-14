@@ -1,6 +1,6 @@
 const events = require("../lib/event");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
-const { OWNER_NAME, BOT_NAME } = require("../config");
+const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
 const { hostname, uptime } = require("os");
 command(
   {
