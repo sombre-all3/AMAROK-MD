@@ -26,7 +26,7 @@ command(
 command(
   {
     pattern: "kick",
-    fromMe: isPublic,
+    fromMe: true,
     type: "group",
   },
   async (message, match) => {
