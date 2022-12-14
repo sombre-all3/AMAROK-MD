@@ -23,7 +23,7 @@ Description : ${i.desc}\`\`\``
       let [date, time] = new Date()
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
-      let menu = `╭━━━━━ᆫ ${BOT_NAME} ᄀ━━━
+      let menu = `╭━━━━━⟪ ${BOT_NAME} ⟫━━━
 ┃ ⎆  *OWNER* :  ${OWNER_NAME}
 ┃ ⎆  *PREFIX* : ${HANDLERS}
 ┃ ⎆  *HOST NAME* :${hostname().split("-")[0]}
@@ -69,7 +69,7 @@ Description : ${i.desc}\`\`\``
 
       menu += ` ╰──────────────❊\n`;
       return await message.client.sendMessage(message.jid, {
-        image: { url: `https://wallpapercave.com/wp/wp3891779.jpg` },
+        image: { url: `https://i.imgur.com/ASVTMAg.jpeg` },
         caption: menu,
         footer: tiny(
           `amarok`),
