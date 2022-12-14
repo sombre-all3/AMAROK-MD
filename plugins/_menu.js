@@ -32,7 +32,7 @@ command(
       .split(",");
                 
  let menu = `
-*╭━━〘 `+ tiny(BOT_NAME.split(' ')[0],58) +` 〙━━━━━━━⦿*` 
+*╭━━〘 `${BOT_NAME}` 〙━━━━━━━⦿*` 
 menu+= `
 *┃ *Oᴡɴᴇʀ :  ${OWNER_NAME}*             
 *┃ *Usᴇʀ* : ${message.pushName}
