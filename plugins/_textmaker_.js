@@ -133,10 +133,11 @@ const {
   window,
   winter,
   pubg,
+  PUBG,
 } = require("@neeraj-x0/textpro");
 Module(
   {
-    pattern: "pugb",
+    pattern: "pubg",
     fromMe: isPublic,
     dontAddCommandList: false,
     type: "Textpro",
