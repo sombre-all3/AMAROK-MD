@@ -25,12 +25,10 @@ Description : ${i.desc}\`\`\``
         .split(",");
       let menu = `╭━━━━━ᆫ ${BOT_NAME} ᄀ━━━
 ┃ ⎆  *OWNER* :  ${OWNER_NAME}
-┃ ⎆  *PREFIX* : ${prefix}
+┃ ⎆  *PREFIX* : ${HANDLERS}
 ┃ ⎆  *HOST NAME* :${hostname().split("-")[0]}
 ┃ ⎆  *DATE* : ${date}
 ┃ ⎆  *TIME* : ${time}
-┃ ⎆  *COMMANDS* : ${events.commands.length} 
-┃ ⎆  *UPTIME* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━━━━━
 ╭╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n╽`;
       let cmnd = [];
@@ -60,7 +58,7 @@ Description : ${i.desc}\`\`\``
       category.sort().forEach((cmmd) => {
        menu += `        
 │     
-│✯╭──⟪ ${cmmd} ⟫──
+│✯╭──⟪ ${cmmd} ⟫──⦿
 │✯│`;    
         let comad = cmnd.filter(({ type }) => type == cmmd);
         comad.forEach(({ cmd }, num) => {
@@ -77,12 +75,12 @@ Description : ${i.desc}\`\`\``
           `amarok`),
         buttons: [
           {
-            buttonId: `${prefix}ping`,
-            buttonText: { displayText: serif_B("PING 🎈") },
+            buttonId: `.ping`,
+            buttonText: { displayText: serif_B("PING ") },
           },
           {
-            buttonId: `${prefix}list`,
-            buttonText: { displayText: serif_B("LIST 🎈 ") },
+            buttonId: `.list`,
+            buttonText: { displayText: serif_B("LIST  ") },
           },
         ],
       });
