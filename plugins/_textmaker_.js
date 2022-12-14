@@ -132,10 +132,11 @@ const {
   wicker,
   window,
   winter,
+  pubg,
 } = require("@neeraj-x0/textpro");
 Module(
   {
-    pattern: "neonlight",
+    pattern: "pugb",
     fromMe: isPublic,
     dontAddCommandList: false,
     type: "Textpro",
@@ -145,7 +146,7 @@ Module(
       return await message.client.sendMessage(message.jid, NEED_WORD);
 
     var webimage = await getBuffer(
-      `https://docs-jojo.herokuapp.com/api/neon_light?text=${match}`
+      `https://api.ibengtools.my.id/api/maker/pubglogo?text=${match}`
     );
 
     await message.client.sendMessage(webimage, {}, "image");
