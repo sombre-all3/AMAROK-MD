@@ -74,7 +74,7 @@ Description : ${i.desc}\`\`\``
         image: { url: `https://wallpapercave.com/wp/wp3891779.jpg` },
         caption: menu,
         footer: tiny(
-          `amarok`);
+          `amarok`),
         buttons: [
           {
             buttonId: `${prefix}ping`,
