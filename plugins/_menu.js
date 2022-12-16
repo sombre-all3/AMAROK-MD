@@ -1,8 +1,7 @@
 const events = require("../lib/event");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
 const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
-const config = require("../config.js);
-const prefix = config.PREFIX
+const config = require("../config.js");
 const { hostname, uptime } = require("os");
 command(
   {
@@ -16,7 +15,7 @@ command(
       for (let i of events.commands) {
         if (i.pattern.test(message.prefix + match))
           message.reply(
-            `\`\`\`Command : ${message.prefix}${match.trim()}
+            `\`\`\`Command : ${mssage.prefix}${match.trim()}
 Description : ${i.desc}\`\`\``
           );
       }
@@ -78,11 +77,11 @@ Description : ${i.desc}\`\`\``
           `amarok`),
         buttons: [
           {
-            buttonId: `{prefix}ping`,
+            buttonId: `.ping`,
             buttonText: { displayText: serif_B("PING ") },
           },
           {
-            buttonId: `{prefix}list`,
+            buttonId: `.list`,
             buttonText: { displayText: serif_B("LIST  ") },
           },
         ],
