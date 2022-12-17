@@ -2,6 +2,7 @@ const events = require("../lib/event");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
 const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
 const config = require("../config.js");
+const prefix = config.PREFIX
 const { hostname, uptime } = require("os");
 command(
   {
@@ -64,7 +65,7 @@ Description : ${i.desc}\`\`\``
 │✯│`;    
         let comad = cmnd.filter(({ type }) => type == cmmd);
         comad.forEach(({ cmd }, num) => {
-          menu += `\n│✯│   ${cmd.trim()}`;
+          menu += `\n│✯│ ${(num += 1)} ${cmd.trim()}`;
         });
         menu += `\n│✯╰─────────────❊`;
       });             
@@ -77,11 +78,11 @@ Description : ${i.desc}\`\`\``
           `amarok`),
         buttons: [
           {
-            buttonId: `.ping`,
+            buttonId: `${prefix}ping`,
             buttonText: { displayText: serif_B("PING ") },
           },
           {
-            buttonId: `.list`,
+            buttonId: `${prefix}list`,
             buttonText: { displayText: serif_B("LIST  ") },
           },
         ],
