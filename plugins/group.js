@@ -2,17 +2,16 @@ const config = require("../config");
 const { command, isPrivate, errorMessage } = require("../lib/");
 const { isAdmin, parsedJid, isUrl, isPublic } = require("../lib");
 const { cron, saveSchedule } = require("../lib/scheduler");
-
 command(
   {
-    pattern: "add",
+    pattern: "add ?(.*)",
     fromMe: isPrivate,
     desc: "Adds a person to group",
     type: "group",
   },
   async (message, match) => {
     if (!message.isGroup)
-      return await message.reply("```_This command is for groups only_```");
+      return await message.reply("_This command is for groups_");
     match = match || message.reply_message.jid;
     if (!match) return await message.reply("_Mention user to add");
     let isadmin = await isAdmin(message.jid, message.user, message.client);
@@ -20,10 +19,10 @@ command(
     let jid = parsedJid(match);
     await message.add(jid);
     return await message.reply(`@${jid[0].split("@")[0]} added`, {
-      mentions: jid
+      mentions: jid,
     });
   }
-);
+)
 
 command(
   {
