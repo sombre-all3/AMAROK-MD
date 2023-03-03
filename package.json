@@ -34,6 +34,8 @@
   "dependencies": {
     "@adiwajshing/baileys": "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",
+    "api-dylux":"^1.2.8",
+    "@bochilteam/scraper":"^4.0.22-alpha.0",
     "@neeraj-x0/textpro": "^1.0.3",
     "abu-bot": "^2.4.0",
     "bitly": "^7.1.2",
@@ -63,6 +65,7 @@
     "simple-git": "^3.14.1",
     "sqlite3": "^5.1.1",
     "supervisor": "^0.12.0",
+    "@vitalets/google-translate-api": "^9.1.0",
     "ytdl": "^1.4.1",
     "yt-search": "^2.10.3"
   }

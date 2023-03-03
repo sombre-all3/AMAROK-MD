@@ -31,7 +31,7 @@ require("events").EventEmitter.defaultMaxListeners = 500;
 
 let str = `\`\`\`AMAROK-MD STARTED \nversion : ${
         require("./package.json").version
-      }\nTotal Plugins : ${events.commands.length}\nWorktype: ${
+      }\nTOTAL PLUGINS : ${events.commands.length}\nWORKTYPE: ${
         config.WORK_TYPE
       }\`\`\``;
 
@@ -88,7 +88,6 @@ async function Amarok() {
     }
 
     if (connection === "open") {
-      conn.sendMessage(conn.user.id, { text: str });
       console.log("✅ Login Successful!");
       console.log("⬇️ Installing External Plugins...");
 
@@ -115,7 +114,7 @@ async function Amarok() {
         }
       });
       console.log("✅ Plugins Installed!");
-
+      conn.sendMessage(conn.user.id, { text: str });
       try {
         conn.ev.on("creds.update", saveState);
 
