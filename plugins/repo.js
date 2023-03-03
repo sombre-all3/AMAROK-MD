@@ -1,9 +1,9 @@
-const { command, isPrivate, tiny } = require("../lib/")
+const { command, isPublic, tiny } = require("../lib/")
 const axios = require("axios");
 
 command(
   {      pattern: "git ?(.*)",
-         fromMe: isPrivate,
+         fromMe: isPublic,
          type: "amarok GitHub",
   },
   async(message,match) => {

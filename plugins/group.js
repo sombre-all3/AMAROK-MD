@@ -170,10 +170,13 @@ command(
   async (message, match) => {
     if (!message.isGroup) return;
     const { participants } = await message.client.groupMetadata(message.jid);
-    let teks = "";
+    let teks = 
+`╭─────────────⊷❍`;
+    let count= `│🪀:`;
     for (let mem of participants) {
-      teks += ` @${mem.id.split("@")[0]}\n`;
+      teks += ` ${count} @${mem.id.split("@")[0]}\n`;
     }
+       teks += `╰─────────────⊷❍`;
     message.sendMessage(teks.trim(), {
       mentions: participants.map((a) => a.id),
     });

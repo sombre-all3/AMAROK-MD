@@ -1,9 +1,11 @@
 const events = require("../lib/event");
+const { FancyRandom, jslbuffer } = require ("abu-bot");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
 const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
 const config = require("../config.js");
-const prefix = config.HANDLERS
+const prefix = config.PREFIX
 const { hostname, uptime } = require("os");
+const thumb = "https://telegra.ph/file/e1fa1db5368bc7eb40c95.png";
 command(
   {
     pattern: "menu",
@@ -21,19 +23,20 @@ Description : ${i.desc}\`\`\``
           );
       }
     } else {
+    let logo = await jslbuffer(thumb)
       let { prefix } = message;
       let [date, time] = new Date()
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
       let menu = `┏━━━━━⟪ ${BOT_NAME} ⟫━━━⦿
 ┃ ✗ *OWNER* :  ${OWNER_NAME}
-┃ ✗  *PREFIX* : ${HANDLERS}
-┃ ✗  *USER* : ${message.pushName}
-┃ ✗  *HOST NAME* : ${hostname().split("-")[0]}
-┃ ✗  *DATE* : ${date}
-┃ ✗  *TIME* : ${time}
+┃ ✗ *PREFIX* : ${HANDLERS}
+┃ ✗ *USER* : ${message.pushName}
+┃ ✗ *HOST NAME* : ${hostname().split("-")[0]}
+┃ ✗ *DATE* : ${date}
+┃ ✗ *TIME* : ${time}
 ┗━━━━━━━━━━━━━━━⦿
-╭───『 *UPDATED*』──❖`;
+┏━━━『 *UPDATED* 』━━━❖\n╽`;
       let cmnd = [];
       let cmd;
       let category = [];
@@ -59,40 +62,45 @@ Description : ${i.desc}\`\`\``
       });
       cmnd.sort();
       category.sort().forEach((cmmd) => {
-       menu += `        
-╽ 
+       menu += ` 
 ┃┏━━━━━━━━━━━━━◆
-┣┫ *❃----- ${cmmd} -----✯*
-┃┗┯━━━━━━━━━━━━◆
-┠┬┤
-┃│ ❒✗ _`;    
+┣┃ *❃- ${cmmd} -✯*
+┃┗━━━━━━━━━━━━━◆
+┃\n┃┏━━━━━━━━━━━ᐧᐧᐧᐧ⦿`;    
         let comad = cmnd.filter(({ type }) => type == cmmd);
         comad.forEach(({ cmd }, num) => {
-          menu += `\n┃│ ❒✗ _  ${(num += 1)} ${cmd.trim()}`;
+          menu += `\n┃┃❒✗ ${(num += 1)} ${cmd.trim()}`;
         });
-        menu += `\n│  ╰────────────ᐧᐧᐧᐧ⦿`;
+        menu += `\n┃┗━━━━━━━━━━━━ᐧᐧᐧᐧ⦿\n┃`;
       });             
 
-      menu += `┗┷━━━━━━━━━━━━╾ᐧᐧᐧᐧ⦿ \n\n`;
+
+      menu += `\n┗━━━━━━━━━━━╾ᐧᐧᐧᐧ⦿`;
       return await message.client.sendMessage(message.jid, {
-        image: { url: `https://telegra.ph/file/c467aff3a8d0683e3703a.png` },
-        caption: tiny(menu),
-        footer: tiny(
-          `amarok`),
-        buttons: [
-          {
-            buttonId: `${prefix}ping`,
-            buttonText: { displayText: serif_B("PING ") },
-          },
-          {
-            buttonId: `${prefix}list`,
-            buttonText: { displayText: serif_B("LIST  ") },
-          },
-        ],
-      });
-    }
-  }
-);
+      image: { url: 'https://telegra.ph/file/6086f101a36f7fc14bff6.png', },
+      caption: tiny(menu),
+      footer: tiny(
+             `amarok-md`),
+      buttons: [
+        {buttonId: '${prefix}list', buttonText: {displayText: 'List Command'}},
+      {buttonId: '${prefix}ping', buttonText: {displayText: 'Speed Test'}}
+    ],
+    
+    contextInfo: {
+				externalAdReply: {
+					title:  "AMAROK-MD",
+					body: "TREME-TITANS",
+					mediaType: 2,
+					thumbnail: logo,
+					mediaUrl: 'https://amarok-deploy.vercel.app',
+					sourceUrl: 'https://amarok-deploy.vercel.app',
+					showAdAttribution: true
+					}
+				}
+			}, {quoted: message})
+			}
+})
+//Thanks to Abu 👍🏼❤️
 
 command(
   {
@@ -104,7 +112,7 @@ command(
   async (message, match, { prefix }) => {
     let menu = `┏━━━━━━━━━━━━━━━━━━━┓
                   ${BOT_NAME}
-┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┛\n`;
+┗━━━━━━━━━━━━━━━━━━━┛\n`;
 
     let cmnd = [];
     let cmd, desc;
@@ -113,7 +121,7 @@ command(
         cmd = command.pattern
           .toString()
           .match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2];
-      }
+      } 
       if (command.desc) {
         desc = command.desc;
       } else {
@@ -127,7 +135,7 @@ command(
     cmnd.forEach(({ cmd, desc }, num) => {
       menu += `┃▷ ${(num += 1)} *${cmd.trim()}*\n`;
     });
-    menu += `┖━━━━━━━━━━━━━━━━━━━`;
+    menu += `┗━━━━━━━━━━━━━━━━━━━`;
     return await message.reply(menu);
   }
 );
