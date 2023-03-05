@@ -155,7 +155,7 @@ async function Amarok() {
                 command.function(whats, match, msg, conn);
               } else if (text_msg && command.on === "text") {
                
-                msg.prefix = ','
+              msg.prefix = new RegExp(config.HANDLERS).test(text_msg) ? text_msg.split("").shift() : "^";
                 whats = new Message(conn, msg, ms);
                 command.function(whats, text_msg, msg, conn, m);
               } else if (
