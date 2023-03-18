@@ -1,4 +1,4 @@
-const {command , getJson} = require("../lin")
+const {command , getJson} = require("../lib");
 
 command({
   pattern: 'ai ?(.*)',	
@@ -7,8 +7,8 @@ command({
 }, 
 async (message, match) => {
 
-var api = await getJson(`https://mfarels.my.id/api/openai?text=${match}`)
+var api = await getJson(`https://mfarels.my.id/api/openai?text=${match}`)!
 
-await message.reply(api.result)
+await message.reply(api.result);
 
 });
