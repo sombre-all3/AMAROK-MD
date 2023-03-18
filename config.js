@@ -20,7 +20,10 @@ module.exports = {
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   SESSION_ID:process.env.SESSION_ID || "ZUJBSGh_XASENA_kNGI=",
   LANG: process.env.LANG || "EN",
-  HANDLERS: process.env.PREFIX === undefined ? "." : process.env.PREFIX,
+  HANDLERS:
+    process.env.HANDLER === "false" || process.env.HANDLER === "null"
+      ? "^"
+      : "^",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "main",
   PACKNAME: process.env.PACKNAME || "AMAROK-MD",
