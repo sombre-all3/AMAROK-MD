@@ -3,7 +3,7 @@ const { FancyRandom, jslbuffer } = require ("abu-bot");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
 const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
 const config = require("../config.js");
-const prefix = config.PREFIX
+const prefix = config.HANDLERS
 const { hostname, uptime } = require("os");
 const thumb = "https://telegra.ph/file/e1fa1db5368bc7eb40c95.png";
 command(
