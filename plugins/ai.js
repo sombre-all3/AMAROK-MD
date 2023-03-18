@@ -1,6 +1,6 @@
 /*
  OPEN AI ARTIFICIAL INTELLIGENCE SOFTWARE BY AMAROK
-*/
+
 const { command, isPrivate } = require("../lib")
 
 command({
@@ -26,3 +26,4 @@ async (message, match, m) => {
 
 
 });
+*/
