@@ -5,7 +5,7 @@ const {command , getJson} = require("../lib");
 
 command({
   pattern: 'ai ?(.*)',	
-  fromMe: isPublic,
+  fromMe: isPrivate,
   type: 'misc',
 }, 
 async (message, match) => {
