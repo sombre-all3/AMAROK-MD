@@ -3,7 +3,7 @@
 <img src="https://i.ibb.co/TTytLYJ/c1d13a0be07f.jpg"/>
 
 
-## DEPLOYMENT COMING
+## DEPLOYMENT BELOW
 ## LICENSE
 
 ### [DEPLOY ON HEROKU](https://amarok-deploy.vercel.app/)
