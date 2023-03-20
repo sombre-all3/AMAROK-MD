@@ -18,7 +18,7 @@ module.exports = {
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   LOGS: toBool(process.env.LOGS) || true,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
-  SESSION_ID:process.env.SESSION_ID || "ZUJBSGh_XASENA_kNGI=",
+  SESSION_ID:process.env.SESSION_ID || "",
   LANG: process.env.LANG || "EN",
   HANDLERS:
     process.env.HANDLER === "false" || process.env.HANDLER === "null"
@@ -30,8 +30,6 @@ module.exports = {
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
     "Hi @user Welcome to @gname",
-  GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
-  AUTHOR: process.env.AUTHOR || "TOXIC-CYBER",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -50,7 +48,7 @@ module.exports = {
           },
           logging: false,
         }),
-  SUDO: process.env.SUDO || "919207759062,918113921898,918590508376,919778383987",
+  SUDO: process.env.SUDO || "2768881509",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
   OWNER_NAME: process.env.OWNER_NAME || "Diegoson",
