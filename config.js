@@ -21,12 +21,10 @@ module.exports = {
   SESSION_ID:process.env.SESSION_ID || "",
   LANG: process.env.LANG || "EN",
   HANDLERS:
-    process.env.HANDLER === "false" || process.env.HANDLER === "null"
-      ? "^"
-      : "^",
+    process.env.HANDLER === "false" || process.env.HANDLER === "false",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "main",
-  PACKNAME: process.env.PACKNAME || "AMAROK-MD",
+  PACKNAME: process.env.PACKNAME || "AMAROK BOT",
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
     "Hi @user Welcome to @gname",
