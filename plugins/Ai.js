@@ -1,3 +1,6 @@
+/*
+   CREATED BY TOXIC CHAOS 
+ */
 const {command , getJson} = require("../lib");
 
 command({
