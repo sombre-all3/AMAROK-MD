@@ -35,5 +35,7 @@
     buttonText: "《TAPE HERE》",
 sections 
 }
-return await message.client.sendMessage(message.jid, listMessage})
+return await message.client.sendMessage(message.jid, listMessage, {
+  quoted: message 
+ })
 });
