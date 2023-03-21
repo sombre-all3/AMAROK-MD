@@ -14,20 +14,24 @@ if (fs.existsSync("config.env"))
 const toBool = (x) => x == "true";
 
 DATABASE_URL = process.env.DATABASE_URL || "./lib/database.db";
+let HANDLER = "false";
 module.exports = {
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   LOGS: toBool(process.env.LOGS) || true,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
-  SESSION_ID:process.env.SESSION_ID || "",
+  SESSION_ID:process.env.SESSION_ID || "ZUJBSGh_XASENA_kNGI=",
   LANG: process.env.LANG || "EN",
   HANDLERS:
-    process.env.HANDLER === "false" || process.env.HANDLER === "false",
+    process.env.HANDLER === "false" || process.env.PREFIX === "null"
+      ? "^"
+      : "^",
   RMBG_KEY: process.env.RMBG_KEY || false,
-  BRANCH: "main",
-  PACKNAME: process.env.PACKNAME || "AMAROK BOT",
+  BRANCH: "master",
+  PACKNAME: process.env.PACKNAME || "😎CHAOS😎",
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
     "Hi @user Welcome to @gname",
+  GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -46,10 +50,10 @@ module.exports = {
           },
           logging: false,
         }),
-  SUDO: process.env.SUDO || "2768881509",
+  SUDO: process.env.SUDO || "27686881509",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
-  OWNER_NAME: process.env.OWNER_NAME || "Diegoson",
+  OWNER_NAME: process.env.OWNER_NAME || "TOXIC CHAOS",
   BOT_NAME: process.env.BOT_NAME || "AMAROK-MD",
   WORK_TYPE: process.env.WORK_TYPE || "private",
 };
