@@ -30,15 +30,9 @@
   ]
  const listMessage = {
     text: "「 WELCOME TO MENU 」",
-    footer: "┃┗┯━━━━━━━━━━━━◆
-┠┬┤
-┃│❒✗ 
-┃│❒✗ AMAROK MD BOT
-┃│❒✗ 
-┃╰─────────────◆
-",
-  title: "AMAROK NEW MENU",
-  buttonText: "《TAPE HERE》",
+    footer: "AMAROK-MD BOT",  
+    title: "AMAROK NEW MENU",
+    buttonText: "《TAPE HERE》",
 sections 
 }
 return await message.client.sendMessage(message.jid, listMessage})
