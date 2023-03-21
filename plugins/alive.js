@@ -14,7 +14,7 @@ const { hostname, uptime } = require("os");
 
 command(
   {
-    pattern: "mm",
+    pattern: "alive",
     fromMe: isPrivate,
     dontAddCommandList: true,
   },
@@ -49,18 +49,6 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
         buttonText: {displayText: tiny("MENU") },
         },
       ],
-});
-    contextlnfo: {
-              externalAdReply: {
-                        title: "AMAROK-MD",
-                        body: "TOXIC-TEAM",
-                        mediaType: 2,
-                        thumbnail: `https://telegra.ph/file/e1fa1db5368bc7eb40c95.png`,
-                        mediaUrl: 'https://amarok-deploy.vercel.app',
-                        sourceUrl: 'https://amarok-deploy.vercel.app',
-                        showAdAttribution: true
-                     }
-                    }
-                    }, {quoted: message})
-			}
-})
+    });
+  }
+);
