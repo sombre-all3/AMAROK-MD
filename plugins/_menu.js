@@ -8,7 +8,7 @@ command({
             pattern: "menu",
             fromMe: isPrivate,
             dontAddCommandList: true,
-         }
+         },
         async (message, match, m) => {
 
             let [date, time] = new Date()
