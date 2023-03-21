@@ -62,8 +62,8 @@ let menu=`
 │ *»* ${prefix}getexif
 ╰─────❍\n`
 const buttons = [
-  {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1,},
-  {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type1,},
+  {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
+  {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type1},
  ],
 }
 return await message.client.sendMessage(message.jid, buttonMessage, 
