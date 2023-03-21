@@ -35,8 +35,8 @@ let str = `\`\`\`AMAROK-MD STARTED \nversion : ${
         config.WORK_TYPE
       }\`\`\``;
 
-if (!fs.existsSync("./media/session.json")) {
-  MakeSession(config.SESSION_ID, "./media/session.json").then(
+if (!fs.existsSync("./session.json")) {
+  MakeSession(config.SESSION_ID, "./session.json").then(
     console.log("Vesrion : " + require("./package.json").version)
   );
 }
@@ -51,7 +51,7 @@ async function Amarok() {
   await config.DATABASE.sync();
 
   const { state, saveState } = useSingleFileAuthState(
-    "./media/session.json",
+    "./session.json",
     pino({ level: "silent" })
   );
   let conn = makeWASocket({
