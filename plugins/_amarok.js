@@ -5,7 +5,6 @@ const { FancyRandom, jslbuffer } = require ("abu-bot")
 const { hostname, uptime } = require("os")
 const config = require("../config.js")
 const prefix = config.PREFIX
-const { hostname, uptime } = require("os")
 const thumb = "https://telegra.ph/file/e1fa1db5368bc7eb40c95.png";
 
 command(
