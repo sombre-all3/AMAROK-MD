@@ -1,7 +1,7 @@
 /*
    CREATED BY TOXIC CHAOS 
  */
-const {command, getJson} = require("../lib");
+const {command, isPrivate, getJson} = require("../lib");
 
 command({
   pattern: 'ai ?(.*)',	
