@@ -46,6 +46,7 @@ return await message.client.sendMessage(message.jid, listMessage, {
  command({ pattern: "downloads", fromMe: isPublic, },
 async(message,match) => {
 
+let menu=`
 ╭──❍「 *DOWNLOAD* 」
 │ *»* ${prefix}song
 │ *»* ${prefix}tik
@@ -59,7 +60,7 @@ async(message,match) => {
 │ *»* ${prefix}play
 │ *»* ${prefix}video
 │ *»* ${prefix}getexif
-╰─────❍`
+╰─────❍\n`
 let buttons = [
   {
    buttonld: prefix + `alive`,
