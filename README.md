@@ -6,7 +6,8 @@
 ## DEPLOYMENT BELOW
 ## LICENSE
 
-### [DEPLOY ON HEROKU](https://amarok-deploy.vercel.app/)
+<a href='https://amarok-deploy.vercel.app/' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
+
 ## THANKS TO 
 - [Neeraj-x0](https://github.com/Neeraj-x0)
 - [Toxic Kichu](https://github.com/TOXIC-KICHUX)
