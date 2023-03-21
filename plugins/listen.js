@@ -29,11 +29,9 @@
    },
   ]
  const listMessage = {
-    text: "AMAROK MD",
-    footer: "┏━━━━━━━━━━━━━
-┫ 
-┃",
-    title: "┗━━━━━━━━━━━╾",
+    text: "[AMAROK MD]",
+    footer: "LIST MENU BOT
+    title: "LIST MENU BOT
     buttonText: "《TAPE HERE》",
 sections 
 }
