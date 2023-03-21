@@ -21,7 +21,9 @@ module.exports = {
   SESSION_ID:process.env.SESSION_ID || "",
   LANG: process.env.LANG || "EN",
   HANDLERS:
-    process.env.HANDLER === "false" || process.env.HANDLER === "false",
+    process.env.HANDLER === "false" || process.env.HANDLER === "null"
+    ? "^"
+    : "^",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "main",
   PACKNAME: process.env.PACKNAME || "AMAROK BOT",
