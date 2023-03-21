@@ -23,18 +23,15 @@ async (message,match) => {
       .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
       .split(",");
 let alive = `
-╭━━〘 "A ✰ L ✰ I ✰ V ✰ E" 〙━━──⊷` 
-alive+= `
-┃ ⛥  *BOTNAME* : ${BOT_NAME}
-┃ ⛥  *USER* : ${message.pushName}
-┃ ⛥  *OWNER* :  ${OWNER_NAME}
-┃ ⛥  *MY PREFIX* : ${HANDLERS}
-┃ ⛥  *CURRENT DATE* : ${date}
-┃ ⛥  *TIME* : ${time}
-┃ ⛥  *I've been up for* : ${clockString(uptime())} 
-╰━━━━━━━━━━━──⊷\n
-*Powered by ${message.pushName}*
-`
+
+ *🚦Uptime: ${time}
+ *⌚Date: ${date}
+ *🕸Version: ${require("../package.json").version}
+ *👤Owner: ${OWNER_NAME}
+ *🎗Prefix: ${HANDLERS}
+ *🏅Useer: ${message.pushName}
+ *🚦Working hours: ${clockString (uptime())}
+`;
 
 await message.client.sendMessage(message.jid,{
 image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
@@ -43,11 +40,11 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
       buttons: [
         {
         buttonId: ".owner",
-        buttonText: {displayText: tiny("⫷OWNER⫸") },
+        buttonText: {displayText: tiny("OWNER") },
         },
         {
         buttonId: ".menu",
-        buttonText: {displayText: tiny("⫷ MENU⫸") },
+        buttonText: {displayText: tiny("MENU") },
         },
       ],
     });
