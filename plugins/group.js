@@ -171,12 +171,12 @@ command(
     if (!message.isGroup) return;
     const { participants } = await message.client.groupMetadata(message.jid);
     let teks = 
-`╭─────────────⊷❍`;
-    let count= `│🪀:`;
+  `╭══════〘*TAG ALL*〙═══⊷❍`
+    let count=` ║🪀:`;
     for (let mem of participants) {
       teks += ` ${count} @${mem.id.split("@")[0]}\n`;
     }
-       teks += `╰─────────────⊷❍`;
+       teks += `╰══════════⊷❍`;
     message.sendMessage(teks.trim(), {
       mentions: participants.map((a) => a.id),
     });
