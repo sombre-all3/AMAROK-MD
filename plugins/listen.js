@@ -61,7 +61,7 @@ let menu=`
 │ *»* ${prefix}video
 │ *»* ${prefix}getexif
 ╰─────❍\n`
-let buttons = {
+let buttons = [
   {
    buttonld: prefix + `alive`,
    buttonText: {
