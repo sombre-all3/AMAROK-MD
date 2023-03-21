@@ -1,4 +1,4 @@
-<h1 align="center">☯︎ᴀᴍᴀʀᴏᴋ ᴍᴅ ʙᴏᴛ☯︎<br></h1>
+<h1 align="center">ᴀᴍᴀʀᴏᴋ ᴍᴅ ʙᴏᴛ<br></h1>
 <p align="center">
 <img src="https://i.ibb.co/TTytLYJ/c1d13a0be07f.jpg"/>
 
