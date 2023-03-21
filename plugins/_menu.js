@@ -69,5 +69,3 @@ command({
                     quoted: message
                 })
         })
-
-}
