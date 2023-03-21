@@ -1,5 +1,5 @@
 const { command, isPrivate, tiny, serif_B, clockString } = require('../lib')
-const { WORK_TYPE, HANDLERS, BOT_NAME, OWNER_NAME, HANDLERS } = require('../config.js')
+const { WORK_TYPE, BOT_NAME, OWNER_NAME, HANDLERS } = require('../config.js')
 const events = require("../lib/event")
 const { FancyRandom, jslbuffer } = require ("abu-bot")
 const { hostname, uptime } = require("os")
