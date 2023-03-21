@@ -39,3 +39,51 @@ return await message.client.sendMessage(message.jid, listMessage, {
   quoted: message 
  })
 });
+//====================================================
+//                   AMAROK LIST MENU
+//====================================================
+
+ command({ pattern: "downloads", fromMe: isPublic, },
+async(message,match) => {
+
+╭──❍「 *DOWNLOAD* 」
+│ *»* ${prefix}song
+│ *»* ${prefix}tik
+│ *»* ${prefix}insta
+│ *»* ${prefix}mp3
+│ *»* ${prefix}fetch
+│ *»* ${prefix}img
+│ *»* ${prefix}yts
+│ *»* ${prefix}ytv
+│ *»* ${prefix}yta
+│ *»* ${prefix}play
+│ *»* ${prefix}video
+│ *»* ${prefix}getexif
+╰─────❍`
+let buttons = [
+  {
+   buttonld: prefix + `alive`,
+   buttonText: {
+   displayText: "🎗ALIVE🎗"
+ },
+type: 1
+},{
+ buttonld: prefix + `list`,
+ buttonText: {
+ displayText: "🎗LIST🎗"
+},
+type: 1
+}],
+headerType: 1
+}
+return await message.client.sendMessage(message.jid, buttonMessage,
+{
+quoted: message 
+})
+});
+
+  
+
+
+
+                
