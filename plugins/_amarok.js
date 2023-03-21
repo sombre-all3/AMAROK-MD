@@ -3,7 +3,6 @@ const { WORK_TYPE, HANDLERS, BOT_NAME, OWNER_NAME } = require('../config.js')
 const events = require("../lib/event")
 const { FancyRandom, jslbuffer } = require ("abu-bot")
 const { hostname, uptime } = require("os");
-const events = require("../lib/event");
 const { FancyRandom, jslbuffer } = require ("abu-bot");
 const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
 const config = require("../config.js");
