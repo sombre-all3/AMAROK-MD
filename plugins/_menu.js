@@ -1,9 +1,16 @@
-const { command, isPrivate, tiny, clockString } = require('../lib')
+const { command, isPrivate, tiny, serif_B, clockString } = require('../lib')
 const { WORK_TYPE, HANDLERS, BOT_NAME, OWNER_NAME } = require('../config.js')
 const events = require("../lib/event")
 const { FancyRandom, jslbuffer } = require ("abu-bot")
 const { hostname, uptime } = require("os");
-
+const events = require("../lib/event");
+const { FancyRandom, jslbuffer } = require ("abu-bot");
+const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
+const config = require("../config.js");
+const prefix = config.PREFIX
+const { hostname, uptime } = require("os");
+const thumb = "https://telegra.ph/file/e1fa1db5368bc7eb40c95.png";
+ //==============================================================
 command({
             pattern: "menu",
             fromMe: isPrivate,
