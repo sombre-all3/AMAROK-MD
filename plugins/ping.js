@@ -9,10 +9,10 @@ command(
   },
   async (message, match) => {
     const start = new Date().getTime();
-    await message.sendMessage("ᴘɪɴɢ!");
+    await message.sendMessage("```Checking speed process```");
     const end = new Date().getTime();
     return await message.sendMessage(
-      "ᴘᴏɴɢ! " + (end - start) + " ᴍs"
+      "```Response in```" + (end - start) + " ᴍs"
     );
   }
 );
