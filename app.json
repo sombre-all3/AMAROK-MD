@@ -31,7 +31,8 @@
     },
     "LOGS": {
       "description": "need to show message logs ?",
-      "required": false
+      "required": true,
+      "value": "😎CHAOS😎"
     },
     "PACKNAME": {
       "description": "Sticker Packname",
