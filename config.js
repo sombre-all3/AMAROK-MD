@@ -27,7 +27,7 @@ module.exports = {
       : "^",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
-  PACKNAME: process.env.PACKNAME || "😎CHAOS😎",
+  PACKNAME: process.env.PACKNAME || "ᴛᴏxɪᴄツ",
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
     "Hi @user Welcome to @gname",
