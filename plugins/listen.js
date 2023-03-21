@@ -29,9 +29,11 @@
    },
   ]
  const listMessage = {
-    text: "「 WELCOME TO MENU 」",
-    footer: "AMAROK-MD BOT",  
-    title: "AMAROK NEW MENU",
+    text: "AMAROK MD",
+    footer: "┏━━━━━━━━━━━━━
+┫ 
+┃",
+    title: "┗━━━━━━━━━━━╾",
     buttonText: "《TAPE HERE》",
 sections 
 }
