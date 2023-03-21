@@ -61,28 +61,13 @@ let menu=`
 │ *»* ${prefix}video
 │ *»* ${prefix}getexif
 ╰─────❍\n`
-let buttons = [
-  {
-   buttonld: prefix + `alive`,
-   buttonText: {
-   displayText: "🎗ALIVE🎗"
- },
-type: 1
-},{
- buttonld: prefix + `list`,
- buttonText: {
- displayText: "🎗LIST🎗"
-},
-type: 1
-}],
-headerType: 1
+const buttons = [
+  {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1,},
+  {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type1,},
+ ],
 }
-return await message.client.sendMessage(message.jid, buttonMessage, { quoted: message 
-})
-}
-
-  
-
-
-
-                
+return await message.client.sendMessage(message.jid, buttonMessage, 
+{ 
+ quoted: message 
+ })
+ });
