@@ -3,11 +3,11 @@ const { WORK_TYPE, HANDLERS, BOT_NAME, OWNER_NAME } = require('../config.js')
 const events = require("../lib/event")
 const { FancyRandom, jslbuffer } = require ("abu-bot")
 const { hostname, uptime } = require("os");
-const { FancyRandom, jslbuffer } = require ("abu-bot");
-const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config");
-const config = require("../config.js");
+const { FancyRandom, jslbuffer } = require ("abu-bot")
+const { OWNER_NAME, BOT_NAME, HANDLERS } = require("../config")
+const config = require("../config.js")
 const prefix = config.PREFIX
-const { hostname, uptime } = require("os");
+const { hostname, uptime } = require("os")
 const thumb = "https://telegra.ph/file/e1fa1db5368bc7eb40c95.png";
 
 command(
