@@ -42,10 +42,6 @@
       "description": "goodbye Message",
       "required": false
     },
-    "AUTHOR": {
-      "description": "Sticker Pack AUTHOR",
-      "required": false
-    },
     "SUDO": {
       "description": "sudo numbers with country code seperate with , for multiple numbers",
       "required": false
