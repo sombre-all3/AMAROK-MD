@@ -1,3 +1,6 @@
+const { command, isPrivate, tiny } = require('../lib')
+const { WORK_TYPE, HANDLERS, BOT_NAME, OWNER_NAME } = require('../config.js')
+
 command({
             pattern: "menu"
             , fromMe: isPrivate
