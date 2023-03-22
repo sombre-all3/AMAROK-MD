@@ -45,7 +45,8 @@ return await message.client.sendMessage(message.jid, listMessage, {
 
  command({ pattern: "downloads", fromMe: isPublic, },
 async(message,match) => {
-if(!match) return await message.sendMessage(`
+
+let menu=`
 ╭──❍「 *DOWNLOAD* 」
 │ *»* song
 │ *»* tik
@@ -59,7 +60,7 @@ if(!match) return await message.sendMessage(`
 │ *»* play
 │ *»* video
 │ *»* getexif
-╰─────❍
+╰─────❍\n`
 const buttons = [
   {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
   {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type:1},
