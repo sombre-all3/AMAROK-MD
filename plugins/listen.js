@@ -48,18 +48,18 @@ async(message,match) => {
 
 let menu=`
 ╭──❍「 *DOWNLOAD* 」
-│ *»* ${prefix}song
-│ *»* ${prefix}tik
-│ *»* ${prefix}insta
-│ *»* ${prefix}mp3
-│ *»* ${prefix}fetch
-│ *»* ${prefix}img
-│ *»* ${prefix}yts
-│ *»* ${prefix}ytv
-│ *»* ${prefix}yta
-│ *»* ${prefix}play
-│ *»* ${prefix}video
-│ *»* ${prefix}getexif
+│ *»* song
+│ *»* tik
+│ *»* insta
+│ *»* mp3
+│ *»* fetch
+│ *»* img
+│ *»* yts
+│ *»* ytv
+│ *»* yta
+│ *»* play
+│ *»* video
+│ *»* getexif
 ╰─────❍\n`
 const buttons = [
   {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
