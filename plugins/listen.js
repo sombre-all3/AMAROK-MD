@@ -80,5 +80,5 @@ return await message.client.sendMessage(message.jid, buttonMessage,
 { 
  quoted: message 
  })
-)
+})
 
