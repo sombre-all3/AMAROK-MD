@@ -102,7 +102,7 @@ Description : ${i.desc}\`\`\``
 })
 
  //===========================================================================
-command({
+/*command({
             pattern: "menu",
             fromMe: isPrivate,
             dontAddCommandList: true,
@@ -173,7 +173,7 @@ command({
                     quoted: message
                 })
         });
-
+*/
 //=======================================================================================
 //               AMAROK ALIVE MSG
 //========================================================================================
@@ -235,3 +235,61 @@ var api = await getJson(`https://mfarels.my.id/api/openai?text=${match}`)
 await message.reply(api.result);
 
 });
+
+//===============================================
+//           MENU DESIGN 
+//================================================
+
+command(
+  {
+    pattern: "menu",
+    fromMe: isPrivate,
+    dontAddCommandList: true,
+  },
+async (message,match) => {
+	let logo = await jslbuffer(thumb)
+	let [date, time] = new Date()
+      .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
+      .split(",");
+let alive = `
+
+ ╭───────────㋰
+    │╭──[ ${BOT_NAME} ]──㋰
+    ││USER :  ${message.pushName}
+    ││NUMBER :  ${m.sender.split("@")[0]}
+    ││WORKTYPE : ${WORK_TYPE}
+    │╰──㋰
+    │
+    │╭──[ "INFO BOT"]──㋰
+    ││BOTNAME : ${BOT_NAME}
+    ││TIME : ${time}
+    ││DATE : ${date}
+    ││OWNER : ${OWNER_NAME}
+    ││PREFIX : ${HANDLERS}
+    ││HOSTNAME : ${hostname().split("-")[0]}
+    │╰──㋰
+    ╰───────────㋰\n`;
+
+await message.client.sendMessage(message.jid,{
+image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
+      caption: tiny(alive),
+      footer: tiny(`amarok md` ),
+      buttons: [
+        {buttonId: '${prefix}alive', buttonText: {displayText: 'LIST MENU'}},
+      {buttonId: '${prefix}ping', buttonText: {displayText: 'ALIVE MENU'}}
+    ],
+ 
+  contextInfo: {
+				externalAdReply: {
+					title:  "AMAROK-MD",
+					body: "TOXIC-TEAM",
+					mediaType: 2,
+					thumbnail: logo,
+					mediaUrl: 'https://amarok-deploy.vercel.app',
+					sourceUrl: 'https://amarok-deploy.vercel.app',
+					showAdAttribution: true
+					}
+				}
+			}, {quoted: message})
+			}
+})
