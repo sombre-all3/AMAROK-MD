@@ -1,8 +1,12 @@
   const {
      command,
      isPublic,
-     tiny
+     tiny,
+     clockString
   } = require("../lib")
+ const { 
+  HANDLERS
+} = require("../config");
 
   command(
      {     pattern: "menu",
