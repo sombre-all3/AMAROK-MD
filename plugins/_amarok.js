@@ -292,5 +292,3 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
 				}
 			}, {quoted: message})
 			})
-}
-);
