@@ -74,7 +74,7 @@ async function Amarok() {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
       console.log("Amarok");
-      console.log("ℹ️ Connecting to WhatsApp... Please Wait.");
+      console.log("⭕ Beggan to Connect to WhatsApp...");
     }
 
     if (
@@ -88,8 +88,8 @@ async function Amarok() {
     }
 
     if (connection === "open") {
-      console.log("✅ Login Successful!");
-      console.log("⬇️ Installing External Plugins...");
+      console.log("🙂 Login Successful!");
+      console.log("🟢 Marking External Plugins...");
 
       let plugins = await PluginDB.findAll();
       plugins.map(async (plugin) => {
@@ -106,7 +106,7 @@ async function Amarok() {
         }
       });
 
-      console.log("⬇️  Installing Plugins...");
+      console.log("♻ Loading  Plugins...");
 
       fs.readdirSync("./plugins").forEach((plugin) => {
         if (path.extname(plugin).toLowerCase() == ".js") {
