@@ -64,7 +64,7 @@ let menu=`
 const buttons = [
   {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
   {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type:1},
- ],
+ ]
 return await message.client.sendMessage(message.jid, buttonMessage, 
 { 
  quoted: message 
