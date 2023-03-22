@@ -9,7 +9,7 @@
 } = require("../config")
 
   command(
-     {     pattern: "menu",
+     {     pattern: "help",
            fromMe: isPublic,
            type: "user",
     },
