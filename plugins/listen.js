@@ -45,8 +45,8 @@ return await message.client.sendMessage(message.jid, listMessage, {
 
  command({ pattern: "downloads", fromMe: isPublic, },
 async(message,match) => {
-
-let menu=`
+if(!match) return await message.sendMessage(
+`
 ╭──❍「 *DOWNLOAD* 」
 │ *»* song
 │ *»* tik
