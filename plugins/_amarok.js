@@ -82,8 +82,8 @@ Description : ${i.desc}\`\`\``
       footer: tiny(
              `amarok-md`),
       buttons: [
-        {buttonId: '${prefix}alive', buttonText: {displayText: 'ALIVE TEST'}},
-      {buttonId: '${prefix}ping', buttonText: {displayText: 'SPEED TEST'}}
+        {buttonId: 'alive', buttonText: {displayText: 'ALIVE TEST'}},
+      {buttonId: 'ping', buttonText: {displayText: 'SPEED TEST'}}
     ],
     
     contextInfo: {
@@ -255,18 +255,18 @@ let alive = `
 
  ╭───────────㋰
     │╭──[ ${BOT_NAME} ]──㋰
-    ││USER :  ${message.pushName}
-    ││NUMBER :  ${m.sender.split("@")[0]}
-    ││WORKTYPE : ${WORK_TYPE}
+    ││*USER* :  ${message.pushName}
+    ││*NUMBER* :  ${m.sender.split("@")[0]}
+    ││*WORKTYPE* : ${WORK_TYPE}
     │╰──㋰
     │
-    │╭──[ "INFO BOT"]──㋰
-    ││BOTNAME : ${BOT_NAME}
-    ││TIME : ${time}
-    ││DATE : ${date}
-    ││OWNER : ${OWNER_NAME}
-    ││PREFIX : ${HANDLERS}
-    ││HOSTNAME : ${hostname().split("-")[0]}
+    │╭──[ ${OWNER_NAME}]──㋰
+    ││*BOTNAME* : ${BOT_NAME}
+    ││*TIME* : ${time}
+    ││*DATE* : ${date}
+    ││*OWNER* : ${OWNER_NAME}
+    ││*PREFIX* : ${HANDLERS}
+    ││*HOSTNAME* : ${hostname().split("-")[0]}
     │╰──㋰
     ╰───────────㋰\n`;
 
