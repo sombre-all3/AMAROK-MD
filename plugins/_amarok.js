@@ -173,3 +173,48 @@ command({
                     quoted: message
                 })
         });
+
+//=======================================================================================
+//               AMAROK ALIVE MSG
+//========================================================================================
+
+command(
+  {
+    pattern: "alive",
+    fromMe: isPrivate,
+    dontAddCommandList: true,
+  },
+async (message,match) => {
+	
+	let [date, time] = new Date()
+      .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
+      .split(",");
+let alive = `
+
+ *🚦Botname: ${BOT_NAME}
+ *🚦Uptime: ${time}
+ *⌚Date: ${date}
+ *🕸Version: ${require("../package.json").version}
+ *👤Owner: ${OWNER_NAME}
+ *🎗Prefix: ${HANDLERS}
+ *🏅Useer: ${message.pushName}
+ *🚦Working hours: ${clockString (uptime())}
+`;
+
+await message.client.sendMessage(message.jid,{
+image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
+      caption: tiny(alive),
+      footer: tiny(`amarok md` ),
+      buttons: [
+        {
+        buttonId: `owner`,
+        buttonText: {displayText: tiny("OWNER") },
+        },
+        {
+        buttonId: `menu`,
+        buttonText: {displayText: tiny("MENU") },
+        },
+      ],
+    });
+  }
+);
