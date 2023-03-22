@@ -1,4 +1,4 @@
-const { command, isPrivate, tiny, serif_B, clockString } = require('../lib')
+const { command, isPrivate, tiny, serif_B, clockString, getJson } = require('../lib')
 const { WORK_TYPE, BOT_NAME, OWNER_NAME, HANDLERS } = require('../config.js')
 const events = require("../lib/event")
 const { FancyRandom, jslbuffer } = require ("abu-bot")
@@ -218,3 +218,20 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
     });
   }
 );
+
+//=======================================================================
+//                    ChatGpT AI 
+//=======================================================================
+
+command({
+  pattern: 'gpt ?(.*)',	
+  fromMe: isPrivate,
+  type: 'misc',
+}, 
+async (message, match) => {
+if (!match) return await message.sendMessage("_need text example ai who is diegoson_");
+var api = await getJson(`https://mfarels.my.id/api/openai?text=${match}`)
+
+await message.reply(api.result);
+
+});
