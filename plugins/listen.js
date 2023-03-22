@@ -60,7 +60,7 @@ let menu=`
 │ *»* play
 │ *»* video
 │ *»* getexif
-╰─────❍\n`
+╰─────❍\n`;
 const buttons = [
   {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
   {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type:1},
