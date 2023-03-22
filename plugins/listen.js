@@ -6,7 +6,7 @@
   } = require("../lib")
  const { 
   HANDLERS
-} = require("../config");
+} = require("../config")
 
   command(
      {     pattern: "menu",
@@ -71,7 +71,7 @@ async(message,match) => {
 │ *»* play
 │ *»* video
 │ *»* getexif
-╰─────❍`
+╰─────❍`;
 const buttons = [
   {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
   {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type:1},
