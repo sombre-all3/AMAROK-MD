@@ -43,7 +43,7 @@ command({
         {
           index: 2,
           quickReplyButton: {
-            displayText: "AS SONG,
+            displayText: "AS SONG",
             id: `${message.prefix}song ${data.song}`,
           },
         },
