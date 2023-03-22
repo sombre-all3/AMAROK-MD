@@ -50,7 +50,6 @@ return await message.client.sendMessage(message.jid, listMessage, {
  command({ pattern: "downloads", fromMe: isPublic, },
 async(message,match) => {
 
-     try {
             let [date, time] = new Date()
             .toLocaleString("en-IN", {
                 timeZone: "Africa/Johannesburg"
