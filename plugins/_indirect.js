@@ -50,4 +50,5 @@ command({
       ],
     };
     await message.sendMessage(buttonMessage, {}, "template");
- );
+ })
+});
