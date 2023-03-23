@@ -33,9 +33,22 @@
    },
   ]
  const listMessage = {
-    text: "[AMAROK MD]",
-    footer: "LIST MENU BOT",
-    title: "LIST MENU BOT",
+    text:`    ╭───────────㋰
+    │╭──[ ${BOT_NAME} ]──㋰
+    ││*USER* :  ${message.pushName}
+    ││*NUMBER* :  ${m.sender.split("@")[0]}
+    ││*WORKTYPE* : ${WORK_TYPE}
+    │╰──㋰
+    │
+    │╭──[ ${OWNER_NAME}]──㋰
+    ││*BOTNAME* : ${BOT_NAME}
+    ││*TIME* : ${time}
+    ││*DATE* : ${date}
+    ││*OWNER* : ${OWNER_NAME}
+    ││*PREFIX* : ${HANDLERS}
+    ││*HOSTNAME* : ${hostname().split("-")[0]}
+    │╰──㋰
+    ╰───────────㋰`,
     buttonText: "《TAPE HERE》",
 sections 
 }
