@@ -2,7 +2,14 @@
 //      WELCOME TO AMAROK NEW UPDATE 
 //      POWERD BY DIEGOSON DEMANDED
 //-------------------------------------------------------------------------
-
+//                     |
+//                     |
+//                     |
+//                     |
+//                     |
+//                     |
+//                     |
+//                     ------------------------------------------------------
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 if (fs.existsSync("config.env"))
