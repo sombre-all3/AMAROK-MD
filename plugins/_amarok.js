@@ -224,7 +224,7 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
 //=======================================================================
 
 command({
-  pattern: 'ai ?(.*)',	
+  pattern: "ai ?(.*)",	
   fromMe: isPrivate,
   type: 'misc',
 }, 
