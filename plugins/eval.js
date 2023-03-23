@@ -53,6 +53,7 @@ AMAROK MD - Diegoson
 
 command({pattern:'eval', on: "text", fromMe: true,desc :'Runs a server code'}, async (message, match, m, client) => {
   if (match.startsWith(">")) {
+  if(!match) return await message.sendMessage("𝐔𝚴𝐅𝚯𝚪𝚻𝐔𝚴𝚫𝚻𝚵𝐋𝐘 𝚻𝚮𝚰𝐒 𝐂𝐃𝚳 𝚰𝐒 𝐅𝚯𝚪 𝚯𝐖𝚴𝚵𝚪");
     //const m = message;
     try {
       let evaled = await eval(`${match.replace(">", "")}`);
