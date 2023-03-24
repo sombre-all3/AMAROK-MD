@@ -7,7 +7,7 @@
  const config = require("../config")
 const { hostname, uptime } = require("os");
   command(
-     {     pattern: "help",
+     {     pattern: "menu",
            fromMe: isPublic,
            type: "user",
     },
@@ -18,7 +18,8 @@ const { hostname, uptime } = require("os");
     title: "AMAROK MENU",
     rows: [
          {title: "「 DOWNLOAD 」", rowld: `downloads`, description: `☆THIS IS THE DOWNLOAD MENU☆`},
-         {title: "「 GROUP 」", rowld: `groups`, description: `☆GROUPS COMMAND LIST HERE☆`}
+         {title: "「 GROUP 」", rowld: `groups`, description: `☆GROUPS COMMAND LIST HERE☆`},
+         {title: "「 LIST 」", rowld: `list`, description: `☆CHECK OUT THE LIST☆`}
     ]
  },{
      title: "BOT COMMANDS",
