@@ -40,7 +40,7 @@ const { hostname, uptime } = require("os");
 *││ USER : ${message.pushName}*
 *││ VERSION : ${require("../package.json").version}*
 *│╰──㋰*
-*│
+│
 *│╭──[ ${config.OWNER_NAME} ]──㋰*
 *││ BOTNAME : ${config.BOT_NAME}*
 *││ TIME : ${time}*
