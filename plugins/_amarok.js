@@ -32,7 +32,7 @@ Description : ${i.desc}\`\`\``
       let menu = `┏━━━━━⟪ ${BOT_NAME} ⟫━━━⦿
 ┃ ✗ *OWNER* :  ${OWNER_NAME}
 ┃ ✗ *PREFIX* : ${HANDLERS}
-┃ ✗ *USER* : ${message. pushName}
+┃ ✗ *USER* : ${message.pushName}
 ┃ ✗ *NUMBER* : ${m.sender.split ("@")[0]}
 ┃ ✗ *MODE* : ${WORK_TYPE}
 ┃ ✗ *DATE* : ${date}
