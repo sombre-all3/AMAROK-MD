@@ -38,9 +38,9 @@ const { hostname, uptime } = require("os");
     text:`*╭───────────㋰*
 *│╭──[ ${config.BOT_NAME} ]──㋰*
 *││ USER : ${message.pushName}*
-*││ NUM : ${m.sender.split("@")[0]}*
+*││ VERSION : ${require("../package.json").version}*
 *│╰──㋰*
-*│*
+*│
 *│╭──[ ${config.OWNER_NAME} ]──㋰*
 *││ BOTNAME : ${config.BOT_NAME}*
 *││ TIME : ${time}*
