@@ -36,8 +36,7 @@
     text:`    ╭───────────㋰
     │╭──[ ${BOT_NAME} ]──㋰
     ││*USER* :  ${message.pushName}
-    ││*NUMBER* :  ${m.sender.split("@")[0]}
-    ││*WORKTYPE* : ${WORK_TYPE}
+    ││*OWNER* : ${OWNER_NAME}
     │╰──㋰
     │
     │╭──[ ${OWNER_NAME}]──㋰
