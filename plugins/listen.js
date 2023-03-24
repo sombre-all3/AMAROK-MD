@@ -4,10 +4,8 @@
      tiny,
      clockString
   } = require("../lib")
- const { 
-  HANDLERS
-} = require("../config")
-
+ const config = require("../config")
+const { hostname, uptime } = require("os");
   command(
      {     pattern: "help",
            fromMe: isPublic,
@@ -32,23 +30,26 @@
        ]
    },
   ]
+     let [date, time] = new Date()
+        .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
+        .split(",");
  const listMessage = {
-    text:`    ╭───────────㋰
-    │╭──[ ${BOT_NAME} ]──㋰
-    ││*USER* :  ${message.pushName}
-    ││*OWNER* : ${OWNER_NAME}
-    │╰──㋰
-    │
-    │╭──[ ${OWNER_NAME}]──㋰
-    ││*BOTNAME* : ${BOT_NAME}
-    ││*TIME* : ${time}
-    ││*DATE* : ${date}
-    ││*OWNER* : ${OWNER_NAME}
-    ││*PREFIX* : ${HANDLERS}
-    ││*HOSTNAME* : ${hostname().split("-")[0]}
-    │╰──㋰
-    ╰───────────㋰`,
-    buttonText: "《TAPE HERE》",
+    text:`*╭───────────㋰*
+*│╭──[ ${config.BOT_NAME} ]──㋰*
+*││ USER :  ${message.pushName}*
+*││ WORKTYPE : ${config.WORK_TYPE}*
+*│╰──㋰*
+*│*
+*│╭──[ ${config.OWNER_NAME} ]──㋰*
+*││ BOTNAME : ${config.BOT_NAME}*
+*││ TIME : ${time}*
+*││ DATE : ${date}*
+*││ OWNER : ${config.OWNER_NAME}*
+*││ PREFIX : ${config.HANDLERS}*
+*││ HOSTNAME : ${hostname().split("-")[0]}*
+*│╰──㋰*
+*╰───────────㋰*`,
+    buttonText: "COLLECT",
 sections 
 }
 return await message.client.sendMessage(message.jid, listMessage, {
