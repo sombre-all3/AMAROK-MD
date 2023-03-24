@@ -33,6 +33,8 @@ Description : ${i.desc}\`\`\``
 ┃ ✗ *OWNER* :  ${OWNER_NAME}
 ┃ ✗ *PREFIX* : ${HANDLERS}
 ┃ ✗ *USER* : ${message. pushName}
+┃ ✗ *NUMBER* : ${m.sender.split ("@")[0]}
+┃ ✗ *MODE* : ${WORK_TYPE}
 ┃ ✗ *DATE* : ${date}
 ┃ ✗ *TIME* : ${time}
 ┗━━━━━━━━━━━━━━━⦿
@@ -223,18 +225,7 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
 //                    ChatGpT AI 
 //=======================================================================
 
-command({
-  pattern: "ai ?(.*)",	
-  fromMe: isPrivate,
-  type: 'misc',
-}, 
-async (message, match) => {
-if (!match) return await message.sendMessage("_need text example ai who is diegoson_");
-var api = await getJson(`https://mfarels.my.id/api/openai?text=${match}`)
 
-await message.reply(api.result);
-
-});
 
 //===============================================
 //           MENU DESIGN 
