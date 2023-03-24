@@ -17,17 +17,17 @@ const { hostname, uptime } = require("os");
      {  
     title: "AMAROK MENU",
     rows: [
-         {title: "「 DOWNLOAD 」", rowld: `downloads`, description: `☆THIS IS THE DOWNLOAD MENU☆`},
-         {title: "「 GROUP 」", rowld: `groups`, description: `☆GROUPS COMMAND LIST HERE☆`},
-         {title: "「 LIST 」", rowld: `list`, description: `☆CHECK OUT THE LIST☆`}
+         {title: "「 Ꭰownloสd 」", rowld: `downloads`, description: `☆THIS IS THE DOWNLOAD MENU☆`},
+         {title: "「 ɢʀᴏᴜᴘ 」", rowld: `groups`, description: `☆GROUPS COMMAND LIST HERE☆`},
+         {title: "「 Lΐsτ 」", rowld: `.list`, description: `☆CHECK OUT THE LIST☆`}
     ]
  },{
      title: "BOT COMMANDS",
      rows: [
-           {title: "「 CONVERTER 」", rowld: `vectors`, description: `☆CONVERTER TO STICKERS`},
-           {title: "「 USER MENU 」", rowld: `users`, description: `☆USER MENU LIST☆`},
-           {title: "「 TOOLS MENU 」", rowld: `toolz`, description: `☆TOOLS MENU LIST☆`},
-           {title: "「 SEARCH MENU 」", rowld: `searchz`, description: `☆SEARCH MENU LIST☆`}
+           {title: "「 ᴄᴏɴᴠᴇʀᴛᴇʀ 」", rowld: `vectors`, description: `☆CONVERTER TO STICKERS`},
+           {title: "「 ᴜꜱᴇʀ ᴍᴇɴᴜ 」", rowld: `users`, description: `☆USER MENU LIST☆`},
+           {title: "「 ᴛᴏᴏʟꜱ ᴍᴇɴᴜ 」", rowld: `toolz`, description: `☆TOOLS MENU LIST☆`},
+           {title: "「 ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ 」", rowld: `searchz`, description: `☆SEARCH MENU LIST☆`}
        ]
    },
   ]
@@ -50,7 +50,7 @@ const { hostname, uptime } = require("os");
 *││ HOSTNAME : ${hostname().split("-")[0]}*
 *│╰──㋰*
 *╰───────────㋰*`,
-    buttonText: "COLLECT",
+    buttonText: "ꜱᴇʟᴇᴄᴛ ϻᴇnu:)",
 sections 
 }
 return await message.client.sendMessage(message.jid, listMessage, {
