@@ -231,7 +231,7 @@ image: { url: `https://i.ibb.co/6yVCHcL/38aa5206e8bc.jpg` },
 
 command(
   {
-    pattern: "menu",
+    pattern: "men",
     fromMe: isPrivate,
     dontAddCommandList: true,
   },
