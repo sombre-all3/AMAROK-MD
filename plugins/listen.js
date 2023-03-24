@@ -36,7 +36,7 @@ const { hostname, uptime } = require("os");
  const listMessage = {
     text:`*╭───────────㋰*
 *│╭──[ ${config.BOT_NAME} ]──㋰*
-*││ USER :  ${message.pushName}*
+*││ USER : ${message.pushName}*
 *││ WORKTYPE : ${config.WORK_TYPE}*
 *│╰──㋰*
 *│*
