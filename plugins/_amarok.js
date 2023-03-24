@@ -33,8 +33,6 @@ Description : ${i.desc}\`\`\``
 ┃ ✗ *OWNER* :  ${OWNER_NAME}
 ┃ ✗ *PREFIX* : ${HANDLERS}
 ┃ ✗ *USER* : ${message.pushName}
-┃ ✗ *NUMBER* : ${m.sender.split ("@")[0]}
-┃ ✗ *MODE* : ${WORK_TYPE}
 ┃ ✗ *DATE* : ${date}
 ┃ ✗ *TIME* : ${time}
 ┗━━━━━━━━━━━━━━━⦿
