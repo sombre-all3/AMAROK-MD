@@ -1,4 +1,4 @@
-
+/*
 const fs = require("fs")
 const { writeFile, readFile } = require("fs");
 const { command, transplate } = require("../lib");
@@ -67,11 +67,12 @@ command({ pattern: "delsudo ?(.*)",
   }
 );
 
+*/
 //-------------------------------------------------------------------
 //                DELL SUDO 2023
 //-------------------------------------------------------------------
 
-
+/*
 command({ pattern: "getsudo ?(.*)", 
     fromMe: true, 
     desc: "shows sudo", 
@@ -83,5 +84,6 @@ let r = await transplate(`SUDO Numbers are : ${SUDO}`)
    return await message.sendMessage('```'+r+'```');
   }
 );
+*/
 
 
