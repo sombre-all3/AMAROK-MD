@@ -15,24 +15,24 @@ const { hostname, uptime } = require("os");
  
   let sections = [
      {  
-    title: "AMAROK MENU",
+    title: "ᴀᴍᴀʀᴏᴋ ᴍᴇɴᴜ",
     rows: [
-         {title: "「 Ꭰownloสd 」", rowld: `downloads`, description: `☆THIS IS THE DOWNLOAD MENU☆`},
-         {title: "「 ɢʀᴏᴜᴘ 」", rowld: `groups`, description: `☆GROUPS COMMAND LIST HERE☆`},
-         {title: "「 Lΐsτ 」", rowld: `.list`, description: `☆CHECK OUT THE LIST☆`}
+         {title: "「 ᴅᴏᴡɴʟᴏᴀᴅs 」", rowld: `downloads`, description: `ғᴇᴀᴛᴜʀᴇᴅ ʙʏ ᴀᴍᴀʀᴏᴋ`},
+         {title: "「 ɢʀᴏᴜᴘ ᴍᴇɴᴜ 」", rowld: `groups`, description: `ғᴇᴀᴛᴜʀᴇᴅ ʙʏ ᴀᴍᴀʀᴏᴋ`},
+         {title: "「 ʟɪsᴛ ᴍᴇɴᴜ 」", rowld: `.list`, description: `ғᴇᴀᴛᴜʀᴇᴅ ʙʏ ᴀᴍᴀʀᴏᴋ`}
     ]
  },{
-     title: "BOT COMMANDS",
+     title: "ɴᴏᴛ ᴄᴏᴍᴍᴀɴᴅs",
      rows: [
-           {title: "「 ᴄᴏɴᴠᴇʀᴛᴇʀ 」", rowld: `vectors`, description: `☆CONVERTER TO STICKERS`},
-           {title: "「 ᴜꜱᴇʀ ᴍᴇɴᴜ 」", rowld: `users`, description: `☆USER MENU LIST☆`},
-           {title: "「 ᴛᴏᴏʟꜱ ᴍᴇɴᴜ 」", rowld: `toolz`, description: `☆TOOLS MENU LIST☆`},
-           {title: "「 ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ 」", rowld: `searchz`, description: `☆SEARCH MENU LIST☆`}
+           {title: "「 ᴄᴏɴᴠᴇʀᴛᴇʀ 」", rowld: `vectors`, description: `ғᴇᴀᴛᴜʀᴇᴅ ʙʏ ᴀᴍᴀʀᴏᴋ`},
+           {title: "「 ᴜꜱᴇʀ ᴍᴇɴᴜ 」", rowld: `users`, description: `ғᴇᴀᴛᴜʀᴇᴅ ʙʏ ᴀᴍᴀʀᴏᴋ`},
+           {title: "「 ᴛᴏᴏʟꜱ ᴍᴇɴᴜ 」", rowld: `toolz`, description: `ғᴇᴀᴛᴜʀᴇᴅ ʙʏ ᴀᴍᴀʀᴏᴋ`},
+           {title: "「 ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ 」", rowld: `searchz`, description: `ғᴇᴀᴛᴜʀᴇᴅ ʙʏ ᴀᴍᴀʀᴏᴋ`}
        ]
    },
   ]
      let [date, time] = new Date()
-        .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
+        .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
         .split(",");
  const listMessage = {
     text:`*╭───────────㋰*
