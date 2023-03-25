@@ -28,7 +28,7 @@ const buttonMessage = {
     headerType: 2
 }
 
-return await message.client.ssendMessage(message.jid,button message)
+return await message.client.sendMessage(message.jid,buttonMessage)
 })
 
 command(
