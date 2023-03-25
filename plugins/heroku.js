@@ -10,10 +10,42 @@ const git = simpleGit();
 const exec = require("child_process").exec;
 const { SUDO } = require("../config");
 
+const got = require("got");
+const Heroku = require("heroku-client");
+const { command, isPrivate, tiny } = require("../lib/");
+const Config = require("../config");
+const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
+const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
+const simpleGit = require("simple-git");
+const { secondsToDHMS } = require("../lib/");
+const git = simpleGit();
+const exec = require("child_process").exec;
+const { SUDO } = require("../config");
+
+command(
+  {       pattern: "restart",
+          fromMe: false,
+          type: "owner"
+ },
+ async(message,match) => {
+ const buttons = [
+   {buttonld: `.amarok`, buttonText: {displayText: 'RESTART'}, type: 1},
+   {buttonld: `.st`, buttonText: {displayText: 'SHUTDOWN'}, type: 1}
+ ]
+
+const buttonMessage = {
+    text: 'HEROKU SYSTEM VAR',
+    footer: 'AMAROK SYSTEM',
+    buttons: buttons,
+    headerType: 2
+}
+
+return await message.client.ssendMessage(message.jid,button message)
+})
 
 command(
   {
-    pattern: "restart",
+    pattern: "amarok",
     fromMe: true,
     type: "Vps",
     type: "Vps",
@@ -28,7 +60,7 @@ command(
 
 command(
   {
-    pattern: "shutdown",
+    pattern: "st",
     fromMe: true,
     type: "Vps",
     type: "Vps",
