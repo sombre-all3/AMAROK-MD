@@ -38,7 +38,10 @@
       "description": "Sticker Packname",
       "required": false
     },
-
+    "GPTAPIKEY": {
+      "description": "Add api key for chatgptai"
+      "required": false
+    },
     "GOODBYE_MSG": {
       "description": "goodbye Message",
       "required": false
