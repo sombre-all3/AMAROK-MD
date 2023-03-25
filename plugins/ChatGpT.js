@@ -7,7 +7,7 @@ const {
 } = require("../lib")
 
 command({
-  pattern: "got ?(.*)",	
+  pattern: "ai ?(.*)",	
   fromMe: isPrivate,
   type: 'misc',
 }, 
