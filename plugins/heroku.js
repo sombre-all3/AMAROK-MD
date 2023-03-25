@@ -16,9 +16,22 @@ command(
           type: "owner"
  },
  async(message,match) => {
- const buttons = [
-   {buttonld: `.amarok`, buttonText: {displayText: 'RESTART'}, type: 1},
-   {buttonld: `.st`, buttonText: {displayText: 'SHUTDOWN'}, type: 1}
+ 
+let buttonsntilink = [
+     {
+        buttonId: `amarok`,
+        buttonText: {
+           displayText: 'RESTART'
+        },
+        type: 1
+             },
+     {
+        buttonId: `st`,
+        buttonText: {
+           displayText: 'SHUTDOWN'
+        },
+        type: 1
+             }
  ]
 
 const buttonMessage = {
@@ -28,7 +41,7 @@ const buttonMessage = {
     headerType: 2
 }
 
-return await message.client.sendMessage(message.jid,buttonMessage)
+return await message.client.sendMessage(message.jid, buttonMessage)
 })
 
 command(
