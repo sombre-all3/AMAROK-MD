@@ -2,7 +2,7 @@
 const fs = require("fs")
 const { writeFile, readFile } = require("fs");
 const { command, transplate } = require("../lib");
-const Config = require("config");
+const config = require("config");
 const config = require("../config.js");
 const Heroku = require("heroku-client");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
