@@ -34,7 +34,7 @@ let buttonsntilink = [
              }
  ]
 
-const buttonMessage = {
+let buttonMessage = {
     text: 'HEROKU SYSTEM VAR',
     footer: 'AMAROK SYSTEM',
     buttons: buttons,
