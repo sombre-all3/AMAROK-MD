@@ -1,3 +1,11 @@
+//------------------------------------------------------------------------------------
+//               AMAROK AI BOT 2023
+//               BY DIEGOSON TOXIC CYBER 
+//                THANKS KICHU 
+//------------------------------------------------------------------------------------
+
+
+
 const config = require("../config.js")
 const gptapikey = config.GPTAPIKEY
 const {
