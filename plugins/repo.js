@@ -15,7 +15,7 @@ let buttonMessage = {
   headerType: 4
 }
 return await message.client.sendMessage(message.jid, buttonMessage)
-const reactionMessage = {
+let reactionMessage = {
      react: {
      text: "😎",
      key: message.key
