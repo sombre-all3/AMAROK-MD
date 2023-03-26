@@ -12,7 +12,7 @@ let buttonMessage = {
   caption: tiny(`Amarok\n\n🌟Start: ${data.stargazers_count\n\n🚦Forks: ${data.forks_count}\n\n👀Views: ${data.watchers_count}\n\n📑Language: ${data.language}\n\n🌲Branch: ${data.default_branch}\n\n💡Created At: ${data.created_at}\n\n💈Last Update: ${data.updated_at}\n\n👁️Mode: public\n\n🔗Git Link: https://github.com/Diegoson/AMAROK-MD`),
 footer: tiny(`amarok md`),  
   footer: tiny(`team toxic`),
-  buttons:
+  buttons: buttons,
   headerType: 4
 }
 return await message.client.sendMessage(message.jid, buttonMessage)
@@ -25,4 +25,4 @@ const reactionMessage = {
 return await message.client.sendMessage(message.jid, reactionMessage, {
  quoted: message 
  })
-}
+});
