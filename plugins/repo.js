@@ -25,4 +25,4 @@ const reactionMessage = {
 return await message.client.sendMessage(message.jid, reactionMessage, {
  quoted: message 
  })
-});
+}
