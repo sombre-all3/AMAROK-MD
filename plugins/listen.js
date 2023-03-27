@@ -53,7 +53,7 @@ const { hostname, uptime } = require("os");
     buttonText: "ꜱᴇʟᴇᴄᴛ ϻᴇnu:)",
 sections 
 }
-return await message.client.sendMessage(message.jid, listMessage, { react: { text: "🫂", key: message.key
+return await message.client.sendMessage(message.jid, listMessage, { react: { text: "🫂", key: message.key,
   quoted: message 
  }})
 });
