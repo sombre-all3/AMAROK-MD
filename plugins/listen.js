@@ -61,16 +61,15 @@ return await message.client.sendMessage(message.jid, listMessage, { react: { tex
 //                   AMAROK LIST MENU
 //====================================================
 
- command({ pattern: "downloads", fromMe: isPublic, },
+command({ pattern: "downloads", fromMe: isPublic, },
 async(message,match) => {
 
-            let [date, time] = new Date()
+let [date, time] = new Date()
             .toLocaleString("en-IN", {
                 timeZone: "Africa/Johannesburg"
             })
             .split(",");
             let menu = `
-
 ╭──❍「 *DOWNLOAD* 」
 │ *»* song
 │ *»* tik
@@ -89,8 +88,18 @@ const buttons = [
   {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
   {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type:1},
  ]
-return await message.client.sendMessage(message.jid, buttonMessage, 
+
+let buttonMessage = {
+    text: menu,
+    footer: 'AlienAlfa',
+    buttons: buttons,
+    headerType: 1
+}
+
+message.client.sendMessage(message.jid, buttonMessage, 
 { 
  quoted: message 
  })
+
 });
+ 
