@@ -98,8 +98,4 @@ message.client.sendMessage(message.jid, buttonMessage,
 { 
  quoted: message 
  })
-
-//====================================================
-//                   AMAROK LIST MENU
-//====================================================
-
+});
