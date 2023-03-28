@@ -16,29 +16,15 @@ command(
           type: "owner"
  },
  async(message,match) => {
- 
-let buttonsntilink = [
-     {
-        buttonId: `amarok`,
-        buttonText: {
-           displayText: 'RESTART'
-        },
-        type: 1
-             },
-     {
-        buttonId: `st`,
-        buttonText: {
-           displayText: 'SHUTDOWN'
-        },
-        type: 1
-             }
- ]
+ const buttons = [
+    {buttonld: 'amarok', buttonText: 'RESTART'}, type: 1},
+    {buttonld: 'st', buttonText: 'SHUTDOWN'}, type: 1}
 
 let buttonMessage = {
     text: 'HEROKU SYSTEM VAR',
     footer: 'AMAROK SYSTEM',
     buttons: buttons,
-    headerType: 2
+    headerType: 1
 }
 
 return await message.client.sendMessage(message.jid, buttonMessage)
