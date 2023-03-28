@@ -17,8 +17,8 @@ command(
  },
  async(message,match) => {
  const buttons = [
-    {buttonld: 'amarok', buttonText: 'RESTART'}, type: 1},
-    {buttonld: 'st', buttonText: 'SHUTDOWN'}, type: 1}
+    {buttonld: 'amarok', buttonText:{displayText:'RESTART'},type: 1},
+    {buttonld: 'st', buttonText:{displayText:'SHUTDOWN'},type: 1}
 
 let buttonMessage = {
     text: 'HEROKU SYSTEM VAR',
