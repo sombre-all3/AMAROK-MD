@@ -1,6 +1,7 @@
   const {
      command,
      isPublic,
+     isPrivate,
      tiny,
      clockString
   } = require("../lib")
