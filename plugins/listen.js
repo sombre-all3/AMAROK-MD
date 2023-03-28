@@ -99,3 +99,46 @@ message.client.sendMessage(message.jid, buttonMessage,
  quoted: message 
  })
 });
+
+//--------------------------
+//     SCRIPT BY AMAROK
+// OPEN SOURCE
+//---------------------------
+
+command(
+  {
+          pattern: "vectors",
+          fromMe: isPrivate,
+  },
+  async(message,match) => {
+ 
+let [date, time] = new Date()
+            .toLocaleString("en-IN", {
+                timeZone: "Africa/Johannesburg"
+            })
+            .split(",");
+            let menu = `
+┌─(ᴄᴏɴᴠᴇᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ)
+│take
+│photo
+│fancy
+│sticker
+│mp4
+└─────────◉`;
+const buttons = [
+  {buttonId: 'owner', buttonText: {displayText: 'OWNER'}, type: 1},
+]
+
+let buttonMessage = {
+    text: menu,
+    footer: 'amarok',
+    buttons: buttons,
+    headerType: 1
+}
+
+message.client.sendMessage(message.jid, buttonMessage, 
+{ 
+ quoted: message 
+ })
+});
+
