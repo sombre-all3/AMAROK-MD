@@ -70,28 +70,26 @@ let [date, time] = new Date()
             })
             .split(",");
             let menu = `
-╭──❍「 *DOWNLOAD* 」
-│ *»* song
-│ *»* tik
-│ *»* insta
-│ *»* mp3
-│ *»* fetch
-│ *»* img
-│ *»* yts
-│ *»* ytv
-│ *»* yta
-│ *»* play
-│ *»* video
-│ *»* getexif
-╰─────❍`;
+┌─(ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏɴᴅs)
+│song
+│play
+│mp3
+│yts
+│ytv
+│yta
+│img
+│fetch
+│video
+│tik
+│insta
+└─────────◉`;
 const buttons = [
-  {buttonld: `alive`, buttonText: {displayText: "🎗ALIVE🎗"}, type:1},
-  {buttonld: `menu`, buttonText: {displayText: "🎗MENU🎗"}, type:1},
- ]
+  {buttonId: 'ping', buttonText: {displayText: 'PING'}, type: 1},
+]
 
 let buttonMessage = {
     text: menu,
-    footer: 'AlienAlfa',
+    footer: 'amarok',
     buttons: buttons,
     headerType: 1
 }
@@ -101,5 +99,7 @@ message.client.sendMessage(message.jid, buttonMessage,
  quoted: message 
  })
 
-});
- 
+//====================================================
+//                   AMAROK LIST MENU
+//====================================================
+
