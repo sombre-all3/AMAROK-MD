@@ -16,6 +16,7 @@ command(
           type: "owner"
  },
  async(message,match) => {
+  const buttons = [
   {buttonId: 'amarok', buttonText: {displayText: 'RESTART'}, type: 1},
   {buttonId: 'st', buttonText: {displayText: 'SHUTDOWN'}, type: 1}
 ]
