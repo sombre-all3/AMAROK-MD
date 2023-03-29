@@ -18,7 +18,7 @@ const buttons = [
       sourceUrl: 'https://amarok-deploy.vercel.app',
       showAdAttribution: true
   }
-},
+}
 })
 const buttonMessage = {
   image: {url: `https://telegra.ph/file/6086f101a36f7fc14bff6.png` },
