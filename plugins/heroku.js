@@ -22,8 +22,8 @@ command(
 ]
 let buttonMessage = {
     text: `◉═════════════◉
-             ᴀᴍᴀʀᴏᴋ ʀᴇsᴛᴀʀᴛ sʏsᴛᴇᴍ
-           ◉═════════════◉`;
+         ᴀᴍᴀʀᴏᴋ ʀᴇsᴛᴀʀᴛ sʏsᴛᴇᴍ
+ ◉═════════════◉`,
     footer: 'AMAROK SYSTEM',
     buttons: buttons,
     headerType: 1
