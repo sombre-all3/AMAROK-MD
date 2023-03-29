@@ -12,7 +12,7 @@ const buttons = [
    externalAdReply: {
       title: 'ᴀᴍᴀʀᴏᴋ MD',
       body: message.pushName,
-      mediaType: 2
+      mediaType: 2,
       thumbnail: 'https://telegra.ph/file/e1fa1db5368bc7eb40c95.png',
       mediaUrl: 'https://amarok-deploy.vercel.app',
       sourceUrl: 'https://amarok-deploy.vercel.app',
