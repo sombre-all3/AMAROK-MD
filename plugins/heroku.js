@@ -21,7 +21,9 @@ command(
   {buttonId: 'st', buttonText: {displayText: 'SHUTDOWN'}, type: 1}
 ]
 let buttonMessage = {
-    text: 'HEROKU SYSTEM VAR',
+    text: `◉═════════════◉
+             ᴀᴍᴀʀᴏᴋ ʀᴇsᴛᴀʀᴛ sʏsᴛᴇᴍ
+           ◉═════════════◉`;
     footer: 'AMAROK SYSTEM',
     buttons: buttons,
     headerType: 1
