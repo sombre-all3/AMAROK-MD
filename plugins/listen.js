@@ -66,7 +66,7 @@ return await message.client.sendMessage(message.jid, listMessage, { react: { tex
 //                   AMAROK LIST MENU
 //====================================================
 
-command({ pattern: "downloads", fromMe: isPublic, },
+command({ pattern: "downloads", on: "text", fromMe: isPublic, },
 async(message,match) => {
 
 let [date, time] = new Date()
