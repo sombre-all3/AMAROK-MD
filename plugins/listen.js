@@ -6,7 +6,9 @@
      clockString
   } = require("../lib")
  const config = require("../config")
-const { hostname, uptime } = require("os");
+ const prefix = config.PREFIX
+
+ const { hostname, uptime } = require("os");
   command(
      {     pattern: "menu",
            fromMe: isPublic,
