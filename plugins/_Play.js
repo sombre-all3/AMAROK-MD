@@ -31,7 +31,7 @@
 ◑ᴀ ᴜʀʟ : ${anulay.url}`,
                     footer: BOT_NAME,
                     buttons: buttons,
-                    headerType: 1
+                    headerType: 4
                 }
                 message.client.sendMessage(message.jid, buttonMessage, { quoted: message });
   })
