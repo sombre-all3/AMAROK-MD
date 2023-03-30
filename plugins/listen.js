@@ -11,7 +11,7 @@
  const { hostname, uptime } = require("os");
   command(
      {     pattern: "menu",
-           fromMe: isPublic,
+           fromMe: isPrivate,
            type: "user",
     },
    async(message,match) => {
