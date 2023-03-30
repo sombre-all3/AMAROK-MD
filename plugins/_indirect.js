@@ -26,32 +26,14 @@ command({
 🚦ARTIST : ${data.artists}            
 🚦ALBUM : ${data.album}                     
 🚦RELEASE : ${data.release_date}`,
-      templateButtons: [
-        {
-          urlButton: {
-            displayText: "YOUTUBE PLAY",
-            url: data.youtube,
-          },
-        },
-        {
-          index: 1,
-          urlButton: {
-            displayText: "SPOTIFY PLAY",
-            url: data.spotify,
-          },
-        },
-        {
-          index: 2,
-          quickReplyButton: {
-            displayText: "AS SONG",
-            id: `${message.prefix}song ${data.song}`,
-          },
-        },
-      ],
-    };
-    await message.sendMessage(buttonMessage, {}, "template");
- }
-);
+      const buttons = [
+       {bittonld: 'song', buttonText: {displayText: 'DOWNLOAD SONG'}, type: 1},
+       {bittonld: 'video', buttonText: {displayText: 'DOWNLOAD VIDEO'}, type: 1}
+]
+    await message.sendMessage(buttonMessage, buttonMessage, { 
+  quoted: message 
+ })
+});
 
   //------------------------------------------------------------------------------------------------
   //                          AMAROK NEW FEATURES 2023
