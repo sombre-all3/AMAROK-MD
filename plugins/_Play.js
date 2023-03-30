@@ -20,15 +20,15 @@
                 let buttonMessage = {
                     image: { url: anulay.thumbnail },
                     caption: `
-𒈒 𝑻𝑰𝑻𝑳𝑬 : ${anulay.title}
-𒈒 𝑰𝑫 : ${anulay.videoId}
+◑ᴛɪᴛʟᴇ  : ${anulay.title}
+◑ᴀɴᴏɴʏᴍᴜs : ${anulay.videoId}
 𒈒 𝑫𝑼𝑹𝑨𝑻𝑰𝑶𝑵 : ${anulay.timestamp}
-𒈒 𝑽𝑰𝑬𝑾𝑺 : ${anulay.views}
-𒈒 𝑼𝑷𝑳𝑶𝑨𝑫 𝑨𝑻 : ${anulay.ago}
-𒈒 𝑨𝑼𝑻𝑯𝑶𝑹 : ${anulay.author.name}
-𒈒 𝑪𝑯𝑨𝑵𝑵𝑬𝑳 : ${anulay.author.url}
-𒈒 𝑫𝑬𝑺𝑪𝑹𝑰𝑷𝑻𝑰𝑶𝑵 : ${anulay.description}
-𒈒 𝑼𝑹𝑳 : ${anulay.url}`,
+◑ᴠɪᴇᴡs : ${anulay.views}
+◑ᴘʟᴜsʜᴇᴅ : ${anulay.ago}
+◑ᴀᴜᴛʜᴏʀ : ${anulay.author.name}
+◑ᴜʀʟ : ${anulay.author.url}
+◑ᴅᴇsᴄʀɪᴘᴛᴜᴏɴ : ${anulay.description}
+◑ᴀ ᴜʀʟ : ${anulay.url}`,
                     footer: BOT_NAME,
                     buttons: buttons,
                     headerType: 1
