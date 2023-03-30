@@ -8,33 +8,6 @@ const { promisify } = require("util");
 const pipeline = promisify(stream.pipeline);
 const fs = require("fs");
 
-command({
-    pattern: "find ?(.*)",
-    fromMe: true,
-    desc: "find the replied music",
-    type: "tools",
-  },
-  async (message, match, msg) => {
-    if (!message.reply_message)
-      return await message.treply("_Reply to a audio or video_");
-    let buff = await msg.quoted.download();
-    let data = await findMusic(buff);
-    if (!data.status) return message.treply(data);
-
-    let buttonMessage = {
-      text: `Title : ${data.title}            
-🚦ARTIST : ${data.artists}            
-🚦ALBUM : ${data.album}                     
-🚦RELEASE : ${data.release_date}`,
-      const buttons = [
-       {bittonld: 'song', buttonText: {displayText: 'DOWNLOAD SONG'}, type: 1},
-       {bittonld: 'video', buttonText: {displayText: 'DOWNLOAD VIDEO'}, type: 1}
-]
-  return await message.sendMessage(message.jid, buttonMessage, { 
-  quoted: message 
- })
-});
-
   //------------------------------------------------------------------------------------------------
   //                          AMAROK NEW FEATURES 2023
   //------------------------------------------------------------------------------------------------
