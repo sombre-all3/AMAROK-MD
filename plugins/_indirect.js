@@ -30,7 +30,7 @@ command({
        {bittonld: 'song', buttonText: {displayText: 'DOWNLOAD SONG'}, type: 1},
        {bittonld: 'video', buttonText: {displayText: 'DOWNLOAD VIDEO'}, type: 1}
 ]
-  return await message.sendMessage(buttonMessage, buttonMessage, { 
+  return await message.sendMessage(buttonMessage, { 
   quoted: message 
  })
 });
